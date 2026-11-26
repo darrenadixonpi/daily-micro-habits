@@ -1,6 +1,6 @@
 {
  "format": "dmh-fsrs-reference-vectors-1",
- "tsFsrsVersion": "6.0.1-main-src",
+ "tsFsrsVersion": "6.0.1",
  "modelVersion": "FSRS-6",
  "cases": [
   {
