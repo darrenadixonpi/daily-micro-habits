@@ -1,4 +1,4 @@
-import { useLocalSearchParams, useNavigation } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { promptForDate } from '../../src/daily/journal_prompts';
@@ -14,7 +14,6 @@ const AUTOSAVE_MS = 5000;
 /** D3 editor: autosaves every 5 s and on leaving; light Markdown preview; optional prompt and mood. */
 export default function JournalEntryScreen() {
   const { date } = useLocalSearchParams<{ date: string }>();
-  const navigation = useNavigation();
   const { database, daily, refreshDaily } = useAppState();
   const [body, setBody] = useState('');
   const [mood, setMood] = useState<number | null>(null);
@@ -75,13 +74,15 @@ export default function JournalEntryScreen() {
     return () => clearInterval(timer);
   }, [saveIfChanged, refreshDaily]);
 
-  useEffect(
-    () =>
-      navigation.addListener('beforeRemove', () => {
+  // Save when the screen loses focus (back, tab switch, or leaving the app via navigation).
+  useFocusEffect(
+    useCallback(
+      () => () => {
         saveIfChanged();
         void refreshDaily();
-      }),
-    [navigation, saveIfChanged, refreshDaily],
+      },
+      [saveIfChanged, refreshDaily],
+    ),
   );
 
   if (!database || !daily || !date) return null;
