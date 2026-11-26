@@ -18,9 +18,9 @@ The app is installed by sideloading with SideStore on a free Apple ID; there is 
 
 ## Building
 
-Push a tag (`git tag v0.0.2 && git push origin v0.0.2`) or run **Build iOS (unsigned .ipa for SideStore)**
-from the Actions tab. Tag builds publish the `.ipa` as a GitHub Release asset; download it on the
-iPhone and open it in SideStore, which signs it.
+Run **Build iOS (unsigned .ipa for SideStore)** from the Actions tab (optionally entering a version),
+or push a tag such as `v0.0.2`. Every successful build publishes the `.ipa` as an asset of GitHub
+Release `v<version>`; download it on the iPhone and open it in SideStore, which signs it.
 
 Data persists across re-signs and updates only if the **bundle ID**
 (`com.darrendixon.dailymicrohabits`) and the **signing Apple ID** never change.
