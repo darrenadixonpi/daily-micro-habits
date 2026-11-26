@@ -104,6 +104,20 @@ jobs:
           ls -lh "$NAME"
           echo "name=$NAME" >> "$GITHUB_OUTPUT"
 
+      - name: Verify .app contents
+        run: |
+          APP="Payload/$SCHEME.app"
+          PB=/usr/libexec/PlistBuddy
+          echo "Bundle ID:        $($PB -c 'Print :CFBundleIdentifier' "$APP/Info.plist")"
+          echo "Version (build):  $($PB -c 'Print :CFBundleShortVersionString' "$APP/Info.plist") ($($PB -c 'Print :CFBundleVersion' "$APP/Info.plist"))"
+          echo "Minimum iOS:      $($PB -c 'Print :MinimumOSVersion' "$APP/Info.plist")"
+          echo "File sharing:     $($PB -c 'Print :UIFileSharingEnabled' "$APP/Info.plist" 2>/dev/null || echo MISSING)"
+          echo "Open in place:    $($PB -c 'Print :LSSupportsOpeningDocumentsInPlace' "$APP/Info.plist" 2>/dev/null || echo MISSING)"
+          file "$APP/$SCHEME"
+          du -sh "$APP"
+          if [ -f "$APP/main.jsbundle" ]; then ls -lh "$APP/main.jsbundle"; else echo "::error::main.jsbundle missing - app would open to a blank screen"; exit 1; fi
+          if [ -d "$APP/_CodeSignature" ]; then echo "::warning::app is signed (expected unsigned)"; else echo "Unsigned, as intended"; fi
+
       - name: Upload .ipa and lockfile as workflow artifacts
         uses: actions/upload-artifact@v4
         with:
