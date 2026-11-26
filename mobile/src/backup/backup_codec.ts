@@ -9,7 +9,9 @@ import type { CryptoPrimitives } from '../platform/crypto_primitives';
 import { runInTransaction, type SqlExecutor, type SqlValue } from '../platform/sql_executor';
 import {
   openWithPassphrase,
+  sealWithDerivedKey,
   sealWithPassphrase,
+  type DerivedKeyMaterial,
   type PassphraseEnvelope,
 } from '../security/passphrase_encryption';
 import { utf8Decode, utf8Encode } from '../util/byte_encoding';
@@ -94,6 +96,16 @@ export async function encryptBackup(
   const envelope = await sealWithPassphrase(
     crypto, passphrase, 'dmh-backup', utf8Encode(JSON.stringify(document)), iterations,
   );
+  return backupFileText(document, envelope);
+}
+
+/** Encrypts with the stored backup key (no passphrase prompt); decryptable with the passphrase. */
+export function encryptBackupWithKey(crypto: CryptoPrimitives, material: DerivedKeyMaterial, document: BackupDocument): string {
+  const envelope = sealWithDerivedKey(crypto, material, 'dmh-backup', utf8Encode(JSON.stringify(document)));
+  return backupFileText(document, envelope);
+}
+
+function backupFileText(document: BackupDocument, envelope: PassphraseEnvelope): string {
   const file: BackupFile = {
     format: 'dmh-mhbak-1',
     schema_version: document.schema_version,

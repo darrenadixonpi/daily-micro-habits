@@ -31,7 +31,7 @@ jobs:
           npx expo install \
             react react-dom react-native expo-router expo-linking expo-constants \
             react-native-screens react-native-safe-area-context expo-status-bar \
-            expo-sqlite expo-secure-store expo-notifications expo-application expo-file-system \
+            expo-sqlite expo-secure-store expo-notifications expo-application expo-file-system expo-local-authentication \
             react-native-quick-crypto react-native-nitro-modules react-native-quick-base64
           npx expo install typescript @types/react -- --save-dev
           npm install --no-audit --no-fund ts-fsrs@^6.0.1

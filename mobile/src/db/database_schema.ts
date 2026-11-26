@@ -1,4 +1,5 @@
 import { M0001_INITIAL_SCHEMA } from './migrations/m0001_initial_schema';
+import { M0002_REFLECTION_AND_PINGS } from './migrations/m0002_reflection_and_pings';
 
 export interface Migration {
   readonly version: number;
@@ -9,6 +10,7 @@ export interface Migration {
 /** Forward-only migrations, in order. The database's PRAGMA user_version equals the last applied version. */
 export const MIGRATIONS: readonly Migration[] = [
   { version: 1, name: 'm0001_initial_schema', sql: M0001_INITIAL_SCHEMA },
+  { version: 2, name: 'm0002_reflection_and_pings', sql: M0002_REFLECTION_AND_PINGS },
 ];
 
 export const CURRENT_SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]?.version ?? 0;
@@ -71,7 +73,9 @@ export const EXPECTED_COLUMNS: Record<DataTableName, readonly string[]> = {
     'revlog_json',
   ],
   priority: ['id', 'date', 'position', 'text', 'status', 'note', 'carried_from_id'],
-  journal_entry: ['id', 'date', 'body_md', 'mood', 'prompt_id', 'created_at', 'updated_at'],
-  notification_schedule: ['id', 'os_notification_id', 'window', 'fire_at', 'summary'],
+  journal_entry: ['id', 'date', 'body_md', 'mood', 'prompt_id', 'created_at', 'updated_at', 'last_edited_at'],
+  notification_schedule: [
+    'id', 'os_notification_id', 'window', 'fire_at', 'summary', 'date', 'status', 'status_changed_at',
+  ],
   streak_freeze: ['id', 'earned_on', 'used_on'],
 };

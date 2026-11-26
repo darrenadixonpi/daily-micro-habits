@@ -1,5 +1,5 @@
 import type { CryptoPrimitives } from '../platform/crypto_primitives';
-import { base64ToBytes, bytesToBase64, utf8Encode } from '../util/byte_encoding';
+import { base64ToBytes, bytesToBase64, bytesToHex, hexToBytes, utf8Encode } from '../util/byte_encoding';
 
 /**
  * Passphrase-based encryption shared by database-key wrapping and backup files
@@ -37,15 +37,45 @@ export async function sealWithPassphrase(
   plaintext: Uint8Array,
   iterations: number = PBKDF2_ITERATIONS,
 ): Promise<PassphraseEnvelope> {
+  const material = await derivePassphraseKey(crypto, passphrase, iterations);
+  return sealWithDerivedKey(crypto, material, purpose, plaintext);
+}
+
+/** A passphrase-derived key together with the salt and iteration count that reproduce it. */
+export interface DerivedKeyMaterial {
+  readonly salt_b64: string;
+  readonly iterations: number;
+  readonly key_hex: string;
+}
+
+export async function derivePassphraseKey(
+  crypto: CryptoPrimitives,
+  passphrase: string,
+  iterations: number = PBKDF2_ITERATIONS,
+): Promise<DerivedKeyMaterial> {
   if (passphrase.length === 0) throw new Error('Passphrase must not be empty');
   const salt = crypto.randomBytes(SALT_LENGTH);
-  const iv = crypto.randomBytes(IV_LENGTH);
   const key = await crypto.pbkdf2Sha256(utf8Encode(passphrase), salt, iterations, KEY_LENGTH);
-  const sealed = crypto.aes256GcmEncrypt(key, iv, plaintext, utf8Encode(purpose));
+  return { salt_b64: bytesToBase64(salt), iterations, key_hex: bytesToHex(key) };
+}
+
+/**
+ * Seals with an already-derived key (decision E2: the backup key is derived once at
+ * passphrase setup and kept in the Keychain, so daily backups need no input). The
+ * envelope records the salt, so openWithPassphrase can re-derive the key from the passphrase.
+ */
+export function sealWithDerivedKey(
+  crypto: CryptoPrimitives,
+  material: DerivedKeyMaterial,
+  purpose: EnvelopePurpose,
+  plaintext: Uint8Array,
+): PassphraseEnvelope {
+  const iv = crypto.randomBytes(IV_LENGTH);
+  const sealed = crypto.aes256GcmEncrypt(hexToBytes(material.key_hex), iv, plaintext, utf8Encode(purpose));
   return {
     format: 'dmh-passphrase-envelope-1',
     purpose,
-    kdf: { name: 'PBKDF2-HMAC-SHA256', iterations, salt_b64: bytesToBase64(salt) },
+    kdf: { name: 'PBKDF2-HMAC-SHA256', iterations: material.iterations, salt_b64: material.salt_b64 },
     cipher: { name: 'AES-256-GCM', iv_b64: bytesToBase64(iv), tag_b64: bytesToBase64(sealed.tag) },
     ciphertext_b64: bytesToBase64(sealed.ciphertext),
   };

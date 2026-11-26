@@ -1,12 +1,29 @@
+import * as Application from 'expo-application';
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
-import { appDiagnosticEnvironment } from '../diagnostics/app_diagnostic_environment';
+import { AppState as NativeAppState } from 'react-native';
+import { runDailyCycle, type DailyCycleReport } from '../daily/daily_cycle';
+import { createAppDiagnosticEnvironment } from '../diagnostics/app_diagnostic_environment';
 import type { DiagnosticResult } from '../diagnostics/diagnostic_environment';
 import { runDiagnostics, type DiagnosticRun } from '../diagnostics/run_diagnostics';
 import { openAppDatabase, type AppDatabase } from '../maintenance/open_app_database';
+import { createAppBackupFileStore } from '../platform/app_backup_file_store';
+import { appCryptoPrimitives } from '../platform/app_crypto_primitives';
+import { configureForegroundNotifications, expoNotifier, notificationsPermitted } from '../platform/expo_notifier';
+import { readBackupKey } from '../security/recovery_passphrase';
+import type { DerivedKeyMaterial } from '../security/passphrase_encryption';
+import { readInternalValue } from '../settings/settings_repository';
 
 interface AppState {
   readonly database: AppDatabase | null;
   readonly openError: string | null;
+  readonly daily: DailyCycleReport | null;
+  readonly dailyError: string | null;
+  readonly notificationsAllowed: boolean | null;
+  readonly passphraseSet: boolean;
+  /** Re-runs the daily cycle (status, streaks, backup, notifications). Calls are serialized. */
+  refreshDaily(): Promise<void>;
+  /** Re-reads the backup key after the passphrase is set. */
+  reloadSecurity(): Promise<void>;
   readonly diagnostics: DiagnosticRun | null;
   readonly diagnosticsProgress: readonly DiagnosticResult[];
   readonly diagnosticsRunning: boolean;
@@ -15,23 +32,65 @@ interface AppState {
 
 const AppStateContext = createContext<AppState | null>(null);
 
-/** Opens the database once per launch, then runs the diagnostics automatically. */
+/** Opens the database, runs the daily cycle, then runs diagnostics; repeats the cycle on every return to the foreground. */
 export function AppStateProvider({ children }: { readonly children: ReactNode }) {
   const [database, setDatabase] = useState<AppDatabase | null>(null);
   const [openError, setOpenError] = useState<string | null>(null);
+  const [daily, setDaily] = useState<DailyCycleReport | null>(null);
+  const [dailyError, setDailyError] = useState<string | null>(null);
+  const [notificationsAllowed, setNotificationsAllowed] = useState<boolean | null>(null);
+  const [backupKey, setBackupKey] = useState<DerivedKeyMaterial | null>(null);
+  const [passphraseSet, setPassphraseSet] = useState(false);
   const [diagnostics, setDiagnostics] = useState<DiagnosticRun | null>(null);
   const [progress, setProgress] = useState<DiagnosticResult[]>([]);
   const [running, setRunning] = useState(false);
   const runningRef = useRef(false);
+  const cycleChain = useRef<Promise<void>>(Promise.resolve());
+  const databaseRef = useRef<AppDatabase | null>(null);
+  const backupKeyRef = useRef<DerivedKeyMaterial | null>(null);
+  const allowedRef = useRef(false);
+
+  const refreshDaily = useCallback((): Promise<void> => {
+    const next = cycleChain.current.then(async () => {
+      const opened = databaseRef.current;
+      if (!opened) return;
+      try {
+        const report = await runDailyCycle({
+          executor: opened.executor,
+          crypto: appCryptoPrimitives,
+          now: new Date(),
+          appVersion: `${Application.nativeApplicationVersion ?? '?'} (${Application.nativeBuildVersion ?? '?'})`,
+          notifier: allowedRef.current ? expoNotifier : null,
+          backupStore: createAppBackupFileStore(),
+          backupKey: backupKeyRef.current,
+        });
+        setDaily(report);
+        setDailyError(null);
+      } catch (error) {
+        setDailyError(error instanceof Error ? error.message : String(error));
+      }
+    });
+    cycleChain.current = next;
+    return next;
+  }, []);
+
+  const reloadSecurity = useCallback(async () => {
+    const key = await readBackupKey();
+    backupKeyRef.current = key;
+    setBackupKey(key);
+    const opened = databaseRef.current;
+    setPassphraseSet(Boolean(key && opened && readInternalValue(opened.executor, 'passphrase_set_at')));
+  }, []);
 
   const startDiagnostics = useCallback(() => {
     if (runningRef.current) return;
     runningRef.current = true;
     setRunning(true);
     setProgress([]);
-    // Yield one frame so the "running" state renders before synchronous database work starts.
     setTimeout(() => {
-      runDiagnostics(appDiagnosticEnvironment, (result) => setProgress((previous) => [...previous, result]))
+      runDiagnostics(createAppDiagnosticEnvironment(databaseRef.current?.executor ?? null), (result) =>
+        setProgress((previous) => [...previous, result]),
+      )
         .then(setDiagnostics)
         .finally(() => {
           runningRef.current = false;
@@ -41,19 +100,44 @@ export function AppStateProvider({ children }: { readonly children: ReactNode })
   }, []);
 
   useEffect(() => {
-    openAppDatabase()
-      .then((opened) => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const opened = await openAppDatabase();
+        if (cancelled) return;
+        databaseRef.current = opened;
         setDatabase(opened);
+        configureForegroundNotifications();
+        const allowed = await notificationsPermitted();
+        allowedRef.current = allowed;
+        setNotificationsAllowed(allowed);
+        await reloadSecurity();
+        await refreshDaily();
         startDiagnostics();
-      })
-      .catch((error: unknown) => setOpenError(error instanceof Error ? error.message : String(error)));
-  }, [startDiagnostics]);
+      } catch (error) {
+        setOpenError(error instanceof Error ? error.message : String(error));
+      }
+    })();
+    const subscription = NativeAppState.addEventListener('change', (next) => {
+      if (next === 'active') void refreshDaily();
+    });
+    return () => {
+      cancelled = true;
+      subscription.remove();
+    };
+  }, [refreshDaily, reloadSecurity, startDiagnostics]);
 
   return (
     <AppStateContext.Provider
       value={{
         database,
         openError,
+        daily,
+        dailyError,
+        notificationsAllowed,
+        passphraseSet: passphraseSet && backupKey !== null,
+        refreshDaily,
+        reloadSecurity,
         diagnostics,
         diagnosticsProgress: progress,
         diagnosticsRunning: running,

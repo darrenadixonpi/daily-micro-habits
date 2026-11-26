@@ -8,9 +8,10 @@ import type { SqlExecutor, SqlValue } from './sql_executor';
  * @param databaseName file name, e.g. "microhabits.db"
  * @param keyHex 64 hex characters (256-bit raw key), or null to open without a key
  *               (used only by the encryption diagnostic to prove the file is unreadable).
+ * @param directory folder path; defaults to expo-sqlite's Documents/SQLite.
  */
-export function openExpoDatabase(databaseName: string, keyHex: string | null): SqlExecutor {
-  const database = SQLite.openDatabaseSync(databaseName);
+export function openExpoDatabase(databaseName: string, keyHex: string | null, directory?: string): SqlExecutor {
+  const database = SQLite.openDatabaseSync(databaseName, undefined, directory);
   if (keyHex !== null) {
     if (!/^[0-9a-f]{64}$/.test(keyHex)) {
       database.closeSync();
@@ -23,8 +24,8 @@ export function openExpoDatabase(databaseName: string, keyHex: string | null): S
   return wrapExpoDatabase(database);
 }
 
-export function deleteExpoDatabase(databaseName: string): void {
-  SQLite.deleteDatabaseSync(databaseName);
+export function deleteExpoDatabase(databaseName: string, directory?: string): void {
+  SQLite.deleteDatabaseSync(databaseName, directory);
 }
 
 function bind(params: readonly SqlValue[] | undefined): SQLite.SQLiteBindValue[] {

@@ -14,9 +14,10 @@ export function readSchemaVersion(executor: SqlExecutor): number {
 /**
  * Applies every pending migration, each in its own transaction together with the
  * user_version bump, so a crash leaves the database at a consistent version.
- * Refuses to open a database written by a newer app version.
+ * Refuses to open a database written by a newer app version. `targetVersion` lets
+ * diagnostic T13 stop at an older version to test an upgrade with data in place.
  */
-export function runMigrations(executor: SqlExecutor): MigrationReport {
+export function runMigrations(executor: SqlExecutor, targetVersion: number = CURRENT_SCHEMA_VERSION): MigrationReport {
   const fromVersion = readSchemaVersion(executor);
   if (fromVersion > CURRENT_SCHEMA_VERSION) {
     throw new Error(
@@ -25,7 +26,7 @@ export function runMigrations(executor: SqlExecutor): MigrationReport {
   }
   const applied: string[] = [];
   for (const migration of MIGRATIONS) {
-    if (migration.version <= fromVersion) continue;
+    if (migration.version <= fromVersion || migration.version > targetVersion) continue;
     runInTransaction(executor, () => {
       executor.exec(migration.sql);
       executor.exec(`PRAGMA user_version = ${migration.version}`);

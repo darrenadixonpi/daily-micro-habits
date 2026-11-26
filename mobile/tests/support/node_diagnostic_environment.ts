@@ -1,5 +1,5 @@
 import * as nodeCrypto from 'node:crypto';
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import type { DiagnosticEnvironment } from '../../src/diagnostics/diagnostic_environment';
@@ -32,6 +32,17 @@ export function createNodeDiagnosticEnvironment(): DiagnosticEnvironment & { dis
       const read = readFileSync(path, 'utf8');
       rmSync(path, { force: true });
       return read;
+    },
+    createScratchBackupStore() {
+      const folder = join(directory, `backups_${Date.now()}_${Math.random().toString(36).slice(2)}`);
+      mkdirSync(folder, { recursive: true });
+      return {
+        listNames: () => readdirSync(folder),
+        writeText: (name: string, text: string) => writeFileSync(join(folder, name), text, 'utf8'),
+        readText: async (name: string) => readFileSync(join(folder, name), 'utf8'),
+        remove: (name: string) => rmSync(join(folder, name), { force: true }),
+        dispose: () => rmSync(folder, { recursive: true, force: true }),
+      };
     },
     dispose() {
       rmSync(directory, { recursive: true, force: true });

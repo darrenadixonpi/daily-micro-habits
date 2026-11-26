@@ -3,7 +3,7 @@
     "name": "Micro-Habits",
     "slug": "daily-micro-habits",
     "scheme": "microhabits",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "ios": {
@@ -18,9 +18,21 @@
     },
     "plugins": [
       "expo-router",
-      ["expo-sqlite", { "useSQLCipher": true, "enableFTS": true }],
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true,
+          "enableFTS": true
+        }
+      ],
       "expo-secure-store",
       "react-native-quick-crypto",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Micro-Habits uses Face ID to unlock your journal when App lock is on."
+        }
+      ],
       "./plugins/withNoPushEntitlement"
     ]
   }

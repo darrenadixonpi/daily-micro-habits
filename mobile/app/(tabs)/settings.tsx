@@ -1,18 +1,24 @@
+import * as Application from 'expo-application';
+import { Link } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Switch, Text, TextInput, View } from 'react-native';
+import { listBackupNames, writeDailyBackup } from '../../src/backup/daily_backup';
+import { createAppBackupFileStore } from '../../src/platform/app_backup_file_store';
+import { appCryptoPrimitives } from '../../src/platform/app_crypto_primitives';
+import { readBackupKey, verifyRecoveryPassphrase } from '../../src/security/recovery_passphrase';
 import {
   SETTING_DEFINITIONS,
   type SettingDefinition,
   type SettingValue,
-} from '../src/settings/settings_definitions';
-import { readAllSettings, writeSetting } from '../src/settings/settings_repository';
-import { readAnthropicApiKeyPresent, saveAnthropicApiKey } from '../src/settings/settings_secrets';
-import { useAppState } from '../src/ui/app_state_context';
-import { COLORS, ui } from '../src/ui/ui_styles';
+} from '../../src/settings/settings_definitions';
+import { readAllSettings, writeSetting } from '../../src/settings/settings_repository';
+import { readAnthropicApiKeyPresent, saveAnthropicApiKey } from '../../src/settings/settings_secrets';
+import { useAppState } from '../../src/ui/app_state_context';
+import { COLORS, ui } from '../../src/ui/ui_styles';
 
 /** Every spec Section 3 setting, stored immediately on change and validated against its definition. */
 export default function SettingsScreen() {
-  const { database } = useAppState();
+  const { database, refreshDaily } = useAppState();
   const [values, setValues] = useState<Map<string, SettingValue> | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -41,6 +47,7 @@ export default function SettingsScreen() {
       writeSetting(database.executor, key, value);
       setValues(readAllSettings(database.executor));
       setErrors(({ [key]: _removed, ...rest }) => rest);
+      void refreshDaily();
     } catch (error) {
       setErrors((previous) => ({ ...previous, [key]: error instanceof Error ? error.message : String(error) }));
     }
@@ -48,6 +55,7 @@ export default function SettingsScreen() {
 
   return (
     <ScrollView style={ui.screen} contentContainerStyle={ui.body} keyboardShouldPersistTaps="handled">
+      <DataAndSecurityCard />
       <Text style={ui.muted}>
         Settings are saved as you change them. Each shows the milestone in which it starts to take effect.
       </Text>
@@ -238,6 +246,89 @@ function ApiKeyEditor() {
           <Text style={ui.chipText}>Save</Text>
         </Pressable>
       </View>
+    </View>
+  );
+}
+
+/** Recovery passphrase, backups, notifications and diagnostics. */
+function DataAndSecurityCard() {
+  const { database, daily, passphraseSet, notificationsAllowed, refreshDaily } = useAppState();
+  const [testInput, setTestInput] = useState('');
+  const [testResult, setTestResult] = useState<string | null>(null);
+  const [backupMessage, setBackupMessage] = useState<string | null>(null);
+  if (!database || !daily) return null;
+  const store = createAppBackupFileStore();
+  const backups = listBackupNames(store);
+
+  const testPassphrase = async () => {
+    const ok = await verifyRecoveryPassphrase(testInput, database.keyHex, database.location.directory);
+    setTestResult(ok ? 'Correct: this passphrase unlocks your data.' : 'Does not match.');
+    setTestInput('');
+  };
+  const backupNow = async () => {
+    const key = await readBackupKey();
+    if (!key) {
+      setBackupMessage('Set a recovery passphrase first.');
+      return;
+    }
+    const result = writeDailyBackup(database.executor, appCryptoPrimitives, store, {
+      keyMaterial: key,
+      date: daily.today,
+      appVersion: `${Application.nativeApplicationVersion ?? '?'} (${Application.nativeBuildVersion ?? '?'})`,
+      retention: Number(readAllSettings(database.executor).get('backup.retention_files')),
+      now: new Date(),
+    });
+    setBackupMessage(`Wrote ${result.fileName} (${Math.round(result.bytes / 1024)} KB).`);
+  };
+
+  return (
+    <View style={ui.card}>
+      <Text style={ui.h2}>Data and security</Text>
+      <View style={ui.row}>
+        <Text style={ui.text}>Recovery passphrase</Text>
+        <Link href="/setup/passphrase" asChild>
+          <Pressable>
+            <Text style={ui.buttonText}>{passphraseSet ? 'Change' : 'Set'}</Text>
+          </Pressable>
+        </Link>
+      </View>
+      {passphraseSet ? (
+        <View style={[ui.row, { justifyContent: 'flex-start' }]}>
+          <TextInput style={[ui.input, { flex: 1 }]} value={testInput} onChangeText={setTestInput} secureTextEntry placeholder="Test your passphrase" autoCapitalize="none" autoCorrect={false} />
+          <Pressable style={ui.chip} onPress={() => void testPassphrase()}>
+            <Text style={ui.chipText}>Test</Text>
+          </Pressable>
+        </View>
+      ) : (
+        <Text style={ui.muted}>Not set: daily backups are off.</Text>
+      )}
+      {testResult ? <Text style={ui.muted}>{testResult}</Text> : null}
+
+      <View style={ui.row}>
+        <Text style={ui.text}>Backups in Files → On My iPhone</Text>
+        <Text style={ui.muted}>{backups.length}</Text>
+      </View>
+      <Text style={ui.muted}>{backups.length > 0 ? `Newest: ${backups[backups.length - 1]}` : 'None yet.'}</Text>
+      <Pressable style={ui.button} onPress={() => void backupNow()}>
+        <Text style={ui.buttonText}>Write a backup now</Text>
+      </Pressable>
+      {backupMessage ? <Text style={ui.muted}>{backupMessage}</Text> : null}
+
+      <View style={ui.row}>
+        <Text style={ui.text}>Notifications</Text>
+        <Text style={ui.muted}>
+          {notificationsAllowed === false ? 'off in iOS Settings' : daily.notifications ? `${daily.notifications.scheduled} scheduled` : '—'}
+        </Text>
+      </View>
+      <Pressable style={ui.button} onPress={() => void refreshDaily()}>
+        <Text style={ui.buttonText}>Rebuild notification schedule</Text>
+      </Pressable>
+
+      <Link href="/diagnostics" asChild>
+        <Pressable style={ui.button}>
+          <Text style={ui.buttonText}>Diagnostics</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }

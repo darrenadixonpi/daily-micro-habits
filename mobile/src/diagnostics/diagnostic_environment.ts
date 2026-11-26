@@ -1,3 +1,4 @@
+import type { BackupFileStore } from '../backup/daily_backup';
 import type { CryptoPrimitives } from '../platform/crypto_primitives';
 import type { SqlExecutor } from '../platform/sql_executor';
 import type { ReferenceVectorFile } from '../srs/fsrs_reference_cases';
@@ -20,6 +21,13 @@ export interface DiagnosticEnvironment {
   readonly referenceVectors: ReferenceVectorFile;
   /** Writes text to a scratch file, reads it back, deletes it, and returns what was read. */
   writeAndReadBackFile(name: string, text: string): Promise<string>;
+  /** An empty scratch folder for backup files; dispose() removes it. */
+  createScratchBackupStore(): BackupFileStore & { dispose(): void };
+  /**
+   * On the phone: the OS's pending notification IDs and the IDs the main database's
+   * ledger expects to be pending. Absent under Node.
+   */
+  inspectLiveNotifications?(): Promise<{ readonly pending: readonly string[]; readonly tracked: readonly string[] } | null>;
 }
 
 export type DiagnosticStatus = 'passed' | 'failed' | 'skipped';

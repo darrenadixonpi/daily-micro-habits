@@ -16,6 +16,7 @@ import { compareReferenceCases, computeAllReferenceCases } from '../srs/fsrs_ref
 import { Rating } from '../srs/fsrs_scheduler';
 import { createSrsCard, loadSrsCard, recordReview } from '../srs/review_service';
 import { bytesEqual, bytesToHex } from '../util/byte_encoding';
+import { M2_DIAGNOSTIC_CASES } from './diagnostic_cases_m2';
 import { check, type DiagnosticCase, type DiagnosticEnvironment } from './diagnostic_environment';
 import { insertSampleRows, SAMPLE_JOURNAL_SEARCH_TERM } from './sample_data';
 
@@ -261,4 +262,5 @@ export const DIAGNOSTIC_CASES: readonly DiagnosticCase[] = [
   t5KeyWrapping,
   t6BackupRoundTrip,
   t7JournalSearch,
+  ...M2_DIAGNOSTIC_CASES,
 ];

@@ -11,8 +11,8 @@ issue is fixed); there is no App Store build.
 
 | Path | Contents |
 | --- | --- |
-| `mobile/app/` | expo-router screens (M1: home with diagnostics, settings, placeholders). |
-| `mobile/src/` | App code: `db/` schema + migrations, `security/` keys and passphrase encryption, `srs/` FSRS scheduling, `settings/`, `backup/`, `diagnostics/` (on-device tests T1–T7). |
+| `mobile/app/` | expo-router screens: tabs (Today, Review, Journal, Stats, Settings), D1, D2, journal editor, passphrase setup, diagnostics. |
+| `mobile/src/` | App code: `db/` schema + migrations, `security/` keys and passphrase encryption, `srs/` FSRS scheduling, `settings/`, `backup/`, `daily/` (D1–D3 rules, daily cycle), `notifications/`, `streaks/`, `time/`, `diagnostics/` (on-device tests T1–T13). |
 | `mobile/tests/` | Node tests; they run the same diagnostic cases under `node:sqlite` and `node:crypto`. |
 | `mobile/tools/` | `generate_fsrs_reference_vectors.ts` (expected FSRS outputs for diagnostic T1). |
 | `content/` | Bundled content: words (A1), concepts (A3), Spanish phrases (A4), on-this-day (A5). |
@@ -24,12 +24,12 @@ issue is fixed); there is no App Store build.
 
 1. After changing dependencies, run **Refresh lockfile and FSRS reference vectors** (commits
    `package-lock.json` and `src/srs/fsrs_reference_vectors.json`).
-2. **Test mobile app** runs on every push: type-check, unit tests, and diagnostics T1–T7 under Node.
+2. **Test mobile app** runs on every push: type-check, unit tests, and diagnostics T1–T13 under Node.
 3. Run **Build iOS (unsigned .ipa for sideloading)** from the Actions tab (optionally entering a version).
    Every successful build publishes the `.ipa` as an asset of GitHub Release `v<version>`; install it with
    iloader (Import IPA), over the existing app.
 
-On launch the app runs diagnostics T1–T7 automatically and shows the result on its home screen.
+On launch the app runs diagnostics T1–T13 automatically (Settings → Diagnostics).
 
 Data persists across re-signs and updates only if the **bundle ID**
 (`com.darrendixon.dailymicrohabits`) and the **signing Apple ID** never change.
