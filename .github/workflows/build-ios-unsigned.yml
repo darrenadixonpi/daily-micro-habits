@@ -1,7 +1,8 @@
-name: Build iOS (unsigned .ipa for SideStore)
+name: Build iOS (unsigned .ipa for sideloading)
 
-# Produces an UNSIGNED .ipa. SideStore re-signs it on the iPhone with the
-# owner's free Apple ID, so no Apple credentials are stored in this repo.
+# Produces an UNSIGNED .ipa. iloader (or SideStore) re-signs it with the owner's
+# free Apple ID at install time, so no Apple credentials are stored in this repo.
+# Dependencies come from mobile/package-lock.json (see refresh-lockfile-and-vectors.yml).
 #
 # Trigger: push a tag like v0.0.1, or run manually from the Actions tab.
 
@@ -29,7 +30,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Select newest installed Xcode
         run: |
@@ -52,12 +53,10 @@ jobs:
           echo "build=$BUILD" >> "$GITHUB_OUTPUT"
           echo "Building version $V (build $BUILD)"
 
-      - name: Install Expo SDK 58 and native modules
+      - name: Install locked dependencies
         run: |
-          npm install --no-audit --no-fund expo@~58.0.0
-          npx expo install react react-native expo-status-bar expo-sqlite expo-secure-store \
-            expo-crypto expo-notifications expo-application expo-file-system
-          npx expo install --check || npx expo install --fix
+          npm ci --no-audit --no-fund
+          npx expo install --check || echo '::warning::dependency versions differ from Expo SDK recommendations'
           node -p "'expo ' + require('expo/package.json').version + ', react-native ' + require('react-native/package.json').version"
 
       - name: Generate native iOS project (prebuild + CocoaPods)
@@ -138,4 +137,5 @@ jobs:
           files: mobile/${{ steps.ipa.outputs.name }}
           body: |
             Unsigned iOS build ${{ steps.ver.outputs.version }} (build ${{ steps.ver.outputs.build }}).
-            Download on the iPhone and install through SideStore, which signs it with the owner's Apple ID.
+            Install with iloader (Import IPA) from the Mac, which signs it with the owner's Apple ID.
+            Install over the existing app; never delete it first.

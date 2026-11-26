@@ -1,0 +1,6147 @@
+{
+ "format": "dmh-fsrs-reference-vectors-1",
+ "tsFsrsVersion": "6.0.1-main-src",
+ "modelVersion": "FSRS-6",
+ "cases": [
+  {
+   "caseId": "r0.8-s11",
+   "desiredRetention": 0.8,
+   "seed": 11,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-07T22:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s11",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-07T22:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-08T19:05:30.000Z",
+     "card": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s11",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "reviewTime": "2026-01-08T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-12T19:15:30.000Z",
+     "card": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s11",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "reviewTime": "2026-01-12T19:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T18:21:00.000Z",
+     "card": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-06-10T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s11",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 139,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "reviewTime": "2026-01-22T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-06-16T20:21:00.000Z",
+     "card": {
+      "stability": 296.28032346,
+      "difficulty": 4.15197285,
+      "dueAt": "2029-01-09T20:21:00.000Z",
+      "lastReviewAt": "2026-06-16T20:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s11",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 938,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-06-10T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "reviewTime": "2026-06-16T20:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 139,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2029-01-17T13:21:00.000Z",
+     "card": {
+      "stability": 6.51828859,
+      "difficulty": 8.06302161,
+      "dueAt": "2029-01-17T13:31:00.000Z",
+      "lastReviewAt": "2029-01-17T13:21:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s11",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 296.28032346,
+      "difficulty": 4.15197285,
+      "dueAt": "2029-01-09T20:21:00.000Z",
+      "lastReviewAt": "2026-06-16T20:21:00.000Z",
+      "reviewTime": "2029-01-17T13:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 938,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2029-01-22T09:31:00.000Z",
+     "card": {
+      "stability": 10.25230642,
+      "difficulty": 8.69937185,
+      "dueAt": "2029-01-22T09:46:00.000Z",
+      "lastReviewAt": "2029-01-22T09:31:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s11",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 6.51828859,
+      "difficulty": 8.06302161,
+      "dueAt": "2029-01-17T13:31:00.000Z",
+      "lastReviewAt": "2029-01-17T13:21:00.000Z",
+      "reviewTime": "2029-01-22T09:31:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 3,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2029-01-25T04:46:00.000Z",
+     "card": {
+      "stability": 16.26152018,
+      "difficulty": 8.2499909,
+      "dueAt": "2029-03-23T04:46:00.000Z",
+      "lastReviewAt": "2029-01-25T04:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s11",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 57,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.25230642,
+      "difficulty": 8.69937185,
+      "dueAt": "2029-01-22T09:46:00.000Z",
+      "lastReviewAt": "2029-01-22T09:31:00.000Z",
+      "reviewTime": "2029-01-25T04:46:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2029-03-31T10:46:00.000Z",
+     "card": {
+      "stability": 50.85248986,
+      "difficulty": 8.23696928,
+      "dueAt": "2029-09-06T10:46:00.000Z",
+      "lastReviewAt": "2029-03-31T10:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s11",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 159,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 16.26152018,
+      "difficulty": 8.2499909,
+      "dueAt": "2029-03-23T04:46:00.000Z",
+      "lastReviewAt": "2029-01-25T04:46:00.000Z",
+      "reviewTime": "2029-03-31T10:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 57,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2029-09-14T07:46:00.000Z",
+     "card": {
+      "stability": 132.38578863,
+      "difficulty": 8.22396068,
+      "dueAt": "2030-12-02T07:46:00.000Z",
+      "lastReviewAt": "2029-09-14T07:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s11",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 444,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 50.85248986,
+      "difficulty": 8.23696928,
+      "dueAt": "2029-09-06T10:46:00.000Z",
+      "lastReviewAt": "2029-03-31T10:46:00.000Z",
+      "reviewTime": "2029-09-14T07:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.8-s11",
+      "scheduledDays": 159,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.8-s23",
+   "desiredRetention": 0.8,
+   "seed": 23,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-10T10:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-10T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-13T03:10:00.000Z",
+     "card": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "reviewTime": "2026-01-13T03:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-20T07:15:30.000Z",
+     "card": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "reviewTime": "2026-01-20T07:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-20T18:21:00.000Z",
+     "card": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "reviewTime": "2026-01-20T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-22T00:22:00.000Z",
+     "card": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "reviewTime": "2026-01-22T00:22:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:32:00.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "reviewTime": "2026-01-24T05:32:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:37:30.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s23",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "reviewTime": "2026-01-24T05:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-03T04:43:00.000Z",
+     "card": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-03-27T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s23",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 52,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "reviewTime": "2026-02-03T04:43:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-03-31T22:43:00.000Z",
+     "card": {
+      "stability": 25.4532994,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-06-19T22:43:00.000Z",
+      "lastReviewAt": "2026-03-31T22:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s23",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 80,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-03-27T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "reviewTime": "2026-03-31T22:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 2,
+      "state": 2,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 52,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-06-28T07:43:00.000Z",
+     "card": {
+      "stability": 69.84379541,
+      "difficulty": 9.47130088,
+      "dueAt": "2027-02-18T07:43:00.000Z",
+      "lastReviewAt": "2026-06-28T07:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s23",
+      "reps": 10,
+      "lapses": 0,
+      "scheduledDays": 235,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 25.4532994,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-06-19T22:43:00.000Z",
+      "lastReviewAt": "2026-03-31T22:43:00.000Z",
+      "reviewTime": "2026-06-28T07:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.8-s23",
+      "scheduledDays": 80,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.8-s47",
+   "desiredRetention": 0.8,
+   "seed": 47,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-05T10:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s47",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-05T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-11T19:05:30.000Z",
+     "card": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s47",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "reviewTime": "2026-01-11T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T15:15:30.000Z",
+     "card": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s47",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "reviewTime": "2026-01-14T15:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T10:16:30.000Z",
+     "card": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s47",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "reviewTime": "2026-01-15T10:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-17T00:17:30.000Z",
+     "card": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s47",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "reviewTime": "2026-01-17T00:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-18T05:23:00.000Z",
+     "card": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-24T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s47",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 6,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "reviewTime": "2026-01-18T05:23:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-24T13:23:00.000Z",
+     "card": {
+      "stability": 5.33677423,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-02-12T13:23:00.000Z",
+      "lastReviewAt": "2026-01-24T13:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s47",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 19,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-24T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "reviewTime": "2026-01-24T13:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 6,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-16T20:23:00.000Z",
+     "card": {
+      "stability": 20.14282437,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-04-19T20:23:00.000Z",
+      "lastReviewAt": "2026-02-16T20:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s47",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 62,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 5.33677423,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-02-12T13:23:00.000Z",
+      "lastReviewAt": "2026-01-24T13:23:00.000Z",
+      "reviewTime": "2026-02-16T20:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 19,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-04-27T14:23:00.000Z",
+     "card": {
+      "stability": 44.39931632,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-09-15T14:23:00.000Z",
+      "lastReviewAt": "2026-04-27T14:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s47",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 141,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 20.14282437,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-04-19T20:23:00.000Z",
+      "lastReviewAt": "2026-02-16T20:23:00.000Z",
+      "reviewTime": "2026-04-27T14:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 62,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-09-23T15:23:00.000Z",
+     "card": {
+      "stability": 3.11272888,
+      "difficulty": 9.74124893,
+      "dueAt": "2026-09-23T15:33:00.000Z",
+      "lastReviewAt": "2026-09-23T15:23:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s47",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 44.39931632,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-09-15T14:23:00.000Z",
+      "lastReviewAt": "2026-04-27T14:23:00.000Z",
+      "reviewTime": "2026-09-23T15:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.8-s47",
+      "scheduledDays": 141,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.8-s101",
+   "desiredRetention": 0.8,
+   "seed": 101,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-06T16:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s101",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-06T16:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T23:10:00.000Z",
+     "card": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s101",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "reviewTime": "2026-01-15T23:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-18T01:11:00.000Z",
+     "card": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s101",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "reviewTime": "2026-01-18T01:11:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-19T18:16:30.000Z",
+     "card": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s101",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "reviewTime": "2026-01-19T18:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-24T14:17:30.000Z",
+     "card": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s101",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "reviewTime": "2026-01-24T14:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-30T17:27:30.000Z",
+     "card": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-26T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s101",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 27,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "reviewTime": "2026-01-30T17:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-03-06T23:27:30.000Z",
+     "card": {
+      "stability": 1.49082586,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-03-06T23:37:30.000Z",
+      "lastReviewAt": "2026-03-06T23:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s101",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-26T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "reviewTime": "2026-03-06T23:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 27,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-03-08T04:37:30.000Z",
+     "card": {
+      "stability": 3.70382438,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-03-20T04:37:30.000Z",
+      "lastReviewAt": "2026-03-08T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s101",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 12,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.49082586,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-03-06T23:37:30.000Z",
+      "lastReviewAt": "2026-03-06T23:27:30.000Z",
+      "reviewTime": "2026-03-08T04:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-03-27T04:37:30.000Z",
+     "card": {
+      "stability": 14.4375065,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-05-16T04:37:30.000Z",
+      "lastReviewAt": "2026-03-27T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s101",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 50,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.70382438,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-03-20T04:37:30.000Z",
+      "lastReviewAt": "2026-03-08T04:37:30.000Z",
+      "reviewTime": "2026-03-27T04:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 12,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-05-24T11:37:30.000Z",
+     "card": {
+      "stability": 32.01743104,
+      "difficulty": 9.44619304,
+      "dueAt": "2026-09-09T11:37:30.000Z",
+      "lastReviewAt": "2026-05-24T11:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s101",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 108,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.4375065,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-05-16T04:37:30.000Z",
+      "lastReviewAt": "2026-03-27T04:37:30.000Z",
+      "reviewTime": "2026-05-24T11:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.8-s101",
+      "scheduledDays": 50,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.8-s9001",
+   "desiredRetention": 0.8,
+   "seed": 9001,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-08T20:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s9001",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-08T20:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-10T23:05:30.000Z",
+     "card": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s9001",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "reviewTime": "2026-01-10T23:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T13:06:30.000Z",
+     "card": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s9001",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "reviewTime": "2026-01-14T13:06:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-21T02:07:30.000Z",
+     "card": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s9001",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "reviewTime": "2026-01-21T02:07:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T02:17:30.000Z",
+     "card": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-30T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s9001",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 8,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "reviewTime": "2026-01-22T02:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-03T09:17:30.000Z",
+     "card": {
+      "stability": 0.79833591,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-02-03T09:27:30.000Z",
+      "lastReviewAt": "2026-02-03T09:17:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s9001",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-30T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "reviewTime": "2026-02-03T09:17:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 8,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-04T11:27:30.000Z",
+     "card": {
+      "stability": 2.03687141,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-02-09T11:27:30.000Z",
+      "lastReviewAt": "2026-02-04T11:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s9001",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 5,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.79833591,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-02-03T09:27:30.000Z",
+      "lastReviewAt": "2026-02-03T09:17:30.000Z",
+      "reviewTime": "2026-02-04T11:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-09T12:27:30.000Z",
+     "card": {
+      "stability": 4.40440985,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-23T12:27:30.000Z",
+      "lastReviewAt": "2026-02-09T12:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s9001",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 14,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.03687141,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-02-09T11:27:30.000Z",
+      "lastReviewAt": "2026-02-04T11:27:30.000Z",
+      "reviewTime": "2026-02-09T12:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 5,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-26T00:27:30.000Z",
+     "card": {
+      "stability": 15.19910702,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-04-18T00:27:30.000Z",
+      "lastReviewAt": "2026-02-26T00:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.8-s9001",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 51,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 4.40440985,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-23T12:27:30.000Z",
+      "lastReviewAt": "2026-02-09T12:27:30.000Z",
+      "reviewTime": "2026-02-26T00:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 14,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-04-23T03:27:30.000Z",
+     "card": {
+      "stability": 1.97202613,
+      "difficulty": 9.81192511,
+      "dueAt": "2026-04-23T03:37:30.000Z",
+      "lastReviewAt": "2026-04-23T03:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.8-s9001",
+      "reps": 10,
+      "lapses": 2,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 15.19910702,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-04-18T00:27:30.000Z",
+      "lastReviewAt": "2026-02-26T00:27:30.000Z",
+      "reviewTime": "2026-04-23T03:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.8-s9001",
+      "scheduledDays": 51,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.85-s11",
+   "desiredRetention": 0.85,
+   "seed": 11,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-07T22:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s11",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-07T22:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-08T19:05:30.000Z",
+     "card": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s11",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "reviewTime": "2026-01-08T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-12T19:15:30.000Z",
+     "card": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s11",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "reviewTime": "2026-01-12T19:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T18:21:00.000Z",
+     "card": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-04-15T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s11",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 83,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "reviewTime": "2026-01-22T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-04-21T20:21:00.000Z",
+     "card": {
+      "stability": 237.24186541,
+      "difficulty": 4.15197285,
+      "dueAt": "2027-07-02T20:21:00.000Z",
+      "lastReviewAt": "2026-04-21T20:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s11",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 437,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-04-15T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "reviewTime": "2026-04-21T20:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 83,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2027-07-10T13:21:00.000Z",
+     "card": {
+      "stability": 5.5853757,
+      "difficulty": 8.06302161,
+      "dueAt": "2027-07-10T13:31:00.000Z",
+      "lastReviewAt": "2027-07-10T13:21:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s11",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 237.24186541,
+      "difficulty": 4.15197285,
+      "dueAt": "2027-07-02T20:21:00.000Z",
+      "lastReviewAt": "2026-04-21T20:21:00.000Z",
+      "reviewTime": "2027-07-10T13:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 437,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2027-07-15T09:31:00.000Z",
+     "card": {
+      "stability": 9.26882055,
+      "difficulty": 8.69937185,
+      "dueAt": "2027-07-15T09:46:00.000Z",
+      "lastReviewAt": "2027-07-15T09:31:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s11",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 5.5853757,
+      "difficulty": 8.06302161,
+      "dueAt": "2027-07-10T13:31:00.000Z",
+      "lastReviewAt": "2027-07-10T13:21:00.000Z",
+      "reviewTime": "2027-07-15T09:31:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 3,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2027-07-18T04:46:00.000Z",
+     "card": {
+      "stability": 15.30328572,
+      "difficulty": 8.2499909,
+      "dueAt": "2027-08-14T04:46:00.000Z",
+      "lastReviewAt": "2027-07-18T04:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s11",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 27,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.26882055,
+      "difficulty": 8.69937185,
+      "dueAt": "2027-07-15T09:46:00.000Z",
+      "lastReviewAt": "2027-07-15T09:31:00.000Z",
+      "reviewTime": "2027-07-18T04:46:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2027-08-22T10:46:00.000Z",
+     "card": {
+      "stability": 39.82259544,
+      "difficulty": 8.23696928,
+      "dueAt": "2027-11-01T10:46:00.000Z",
+      "lastReviewAt": "2027-08-22T10:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s11",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 71,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 15.30328572,
+      "difficulty": 8.2499909,
+      "dueAt": "2027-08-14T04:46:00.000Z",
+      "lastReviewAt": "2027-07-18T04:46:00.000Z",
+      "reviewTime": "2027-08-22T10:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 27,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2027-11-09T07:46:00.000Z",
+     "card": {
+      "stability": 90.12438951,
+      "difficulty": 8.22396068,
+      "dueAt": "2028-05-07T07:46:00.000Z",
+      "lastReviewAt": "2027-11-09T07:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s11",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 180,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 39.82259544,
+      "difficulty": 8.23696928,
+      "dueAt": "2027-11-01T10:46:00.000Z",
+      "lastReviewAt": "2027-08-22T10:46:00.000Z",
+      "reviewTime": "2027-11-09T07:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.85-s11",
+      "scheduledDays": 71,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.85-s23",
+   "desiredRetention": 0.85,
+   "seed": 23,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-10T10:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-10T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-13T03:10:00.000Z",
+     "card": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "reviewTime": "2026-01-13T03:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-20T07:15:30.000Z",
+     "card": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "reviewTime": "2026-01-20T07:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-20T18:21:00.000Z",
+     "card": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "reviewTime": "2026-01-20T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-22T00:22:00.000Z",
+     "card": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "reviewTime": "2026-01-22T00:22:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:32:00.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "reviewTime": "2026-01-24T05:32:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:37:30.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s23",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "reviewTime": "2026-01-24T05:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-03T04:43:00.000Z",
+     "card": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-03-05T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s23",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 30,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "reviewTime": "2026-02-03T04:43:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-03-09T22:43:00.000Z",
+     "card": {
+      "stability": 22.98487386,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-04-20T22:43:00.000Z",
+      "lastReviewAt": "2026-03-09T22:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s23",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 42,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-03-05T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "reviewTime": "2026-03-09T22:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 2,
+      "state": 2,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 30,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-04-29T07:43:00.000Z",
+     "card": {
+      "stability": 54.89038054,
+      "difficulty": 9.47130088,
+      "dueAt": "2026-08-14T07:43:00.000Z",
+      "lastReviewAt": "2026-04-29T07:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s23",
+      "reps": 10,
+      "lapses": 0,
+      "scheduledDays": 107,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 22.98487386,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-04-20T22:43:00.000Z",
+      "lastReviewAt": "2026-03-09T22:43:00.000Z",
+      "reviewTime": "2026-04-29T07:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.85-s23",
+      "scheduledDays": 42,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.85-s47",
+   "desiredRetention": 0.85,
+   "seed": 47,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-05T10:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s47",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-05T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-11T19:05:30.000Z",
+     "card": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s47",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "reviewTime": "2026-01-11T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T15:15:30.000Z",
+     "card": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s47",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "reviewTime": "2026-01-14T15:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T10:16:30.000Z",
+     "card": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s47",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "reviewTime": "2026-01-15T10:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-17T00:17:30.000Z",
+     "card": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s47",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "reviewTime": "2026-01-17T00:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-18T05:23:00.000Z",
+     "card": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-22T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s47",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "reviewTime": "2026-01-18T05:23:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-22T13:23:00.000Z",
+     "card": {
+      "stability": 4.69866276,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-01-30T13:23:00.000Z",
+      "lastReviewAt": "2026-01-22T13:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s47",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 8,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-22T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "reviewTime": "2026-01-22T13:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-03T20:23:00.000Z",
+     "card": {
+      "stability": 14.89241754,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-03-06T20:23:00.000Z",
+      "lastReviewAt": "2026-02-03T20:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s47",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 31,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 4.69866276,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-01-30T13:23:00.000Z",
+      "lastReviewAt": "2026-01-22T13:23:00.000Z",
+      "reviewTime": "2026-02-03T20:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 8,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-03-14T14:23:00.000Z",
+     "card": {
+      "stability": 31.14460863,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-05-13T14:23:00.000Z",
+      "lastReviewAt": "2026-03-14T14:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s47",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 60,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.89241754,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-03-06T20:23:00.000Z",
+      "lastReviewAt": "2026-02-03T20:23:00.000Z",
+      "reviewTime": "2026-03-14T14:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 31,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-05-21T15:23:00.000Z",
+     "card": {
+      "stability": 2.51747218,
+      "difficulty": 9.74124893,
+      "dueAt": "2026-05-21T15:33:00.000Z",
+      "lastReviewAt": "2026-05-21T15:23:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s47",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 31.14460863,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-05-13T14:23:00.000Z",
+      "lastReviewAt": "2026-03-14T14:23:00.000Z",
+      "reviewTime": "2026-05-21T15:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.85-s47",
+      "scheduledDays": 60,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.85-s101",
+   "desiredRetention": 0.85,
+   "seed": 101,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-06T16:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s101",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-06T16:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T23:10:00.000Z",
+     "card": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s101",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "reviewTime": "2026-01-15T23:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-18T01:11:00.000Z",
+     "card": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s101",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "reviewTime": "2026-01-18T01:11:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-19T18:16:30.000Z",
+     "card": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s101",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "reviewTime": "2026-01-19T18:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-24T14:17:30.000Z",
+     "card": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s101",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "reviewTime": "2026-01-24T14:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-30T17:27:30.000Z",
+     "card": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-17T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s101",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 18,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "reviewTime": "2026-01-30T17:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-25T23:27:30.000Z",
+     "card": {
+      "stability": 1.42287796,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-02-25T23:37:30.000Z",
+      "lastReviewAt": "2026-02-25T23:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s101",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-17T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "reviewTime": "2026-02-25T23:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 18,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-27T04:37:30.000Z",
+     "card": {
+      "stability": 3.61814288,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-03-06T04:37:30.000Z",
+      "lastReviewAt": "2026-02-27T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s101",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 7,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.42287796,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-02-25T23:37:30.000Z",
+      "lastReviewAt": "2026-02-25T23:27:30.000Z",
+      "reviewTime": "2026-02-27T04:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-03-13T04:37:30.000Z",
+     "card": {
+      "stability": 12.85343772,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-04-09T04:37:30.000Z",
+      "lastReviewAt": "2026-03-13T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s101",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 27,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.61814288,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-03-06T04:37:30.000Z",
+      "lastReviewAt": "2026-02-27T04:37:30.000Z",
+      "reviewTime": "2026-03-13T04:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 7,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-04-17T11:37:30.000Z",
+     "card": {
+      "stability": 25.93545338,
+      "difficulty": 9.44619304,
+      "dueAt": "2026-06-03T11:37:30.000Z",
+      "lastReviewAt": "2026-04-17T11:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s101",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 47,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 12.85343772,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-04-09T04:37:30.000Z",
+      "lastReviewAt": "2026-03-13T04:37:30.000Z",
+      "reviewTime": "2026-04-17T11:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.85-s101",
+      "scheduledDays": 27,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.85-s9001",
+   "desiredRetention": 0.85,
+   "seed": 9001,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-08T20:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s9001",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-08T20:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-10T23:05:30.000Z",
+     "card": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s9001",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "reviewTime": "2026-01-10T23:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T13:06:30.000Z",
+     "card": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s9001",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "reviewTime": "2026-01-14T13:06:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-21T02:07:30.000Z",
+     "card": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s9001",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "reviewTime": "2026-01-21T02:07:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T02:17:30.000Z",
+     "card": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-28T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s9001",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 6,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "reviewTime": "2026-01-22T02:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-01T09:17:30.000Z",
+     "card": {
+      "stability": 0.77570873,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-02-01T09:27:30.000Z",
+      "lastReviewAt": "2026-02-01T09:17:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s9001",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-28T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "reviewTime": "2026-02-01T09:17:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 6,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-02T11:27:30.000Z",
+     "card": {
+      "stability": 2.00859087,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-02-06T11:27:30.000Z",
+      "lastReviewAt": "2026-02-02T11:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s9001",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.77570873,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-02-01T09:27:30.000Z",
+      "lastReviewAt": "2026-02-01T09:17:30.000Z",
+      "reviewTime": "2026-02-02T11:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-06T12:27:30.000Z",
+     "card": {
+      "stability": 4.08211156,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-16T12:27:30.000Z",
+      "lastReviewAt": "2026-02-06T12:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s9001",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 10,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.00859087,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-02-06T11:27:30.000Z",
+      "lastReviewAt": "2026-02-02T11:27:30.000Z",
+      "reviewTime": "2026-02-06T12:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-19T00:27:30.000Z",
+     "card": {
+      "stability": 13.28332703,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-03-13T00:27:30.000Z",
+      "lastReviewAt": "2026-02-19T00:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.85-s9001",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 22,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 4.08211156,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-16T12:27:30.000Z",
+      "lastReviewAt": "2026-02-06T12:27:30.000Z",
+      "reviewTime": "2026-02-19T00:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 10,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-03-18T03:27:30.000Z",
+     "card": {
+      "stability": 1.68962968,
+      "difficulty": 9.81192511,
+      "dueAt": "2026-03-18T03:37:30.000Z",
+      "lastReviewAt": "2026-03-18T03:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.85-s9001",
+      "reps": 10,
+      "lapses": 2,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 13.28332703,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-03-13T00:27:30.000Z",
+      "lastReviewAt": "2026-02-19T00:27:30.000Z",
+      "reviewTime": "2026-03-18T03:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.85-s9001",
+      "scheduledDays": 22,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.9-s11",
+   "desiredRetention": 0.9,
+   "seed": 11,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-07T22:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s11",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-07T22:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-08T19:05:30.000Z",
+     "card": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s11",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "reviewTime": "2026-01-08T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-12T19:15:30.000Z",
+     "card": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s11",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "reviewTime": "2026-01-12T19:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T18:21:00.000Z",
+     "card": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-03-07T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s11",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 44,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "reviewTime": "2026-01-22T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-03-13T20:21:00.000Z",
+     "card": {
+      "stability": 177.37712712,
+      "difficulty": 4.15197285,
+      "dueAt": "2026-08-30T20:21:00.000Z",
+      "lastReviewAt": "2026-03-13T20:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s11",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 170,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-03-07T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "reviewTime": "2026-03-13T20:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 44,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-09-07T13:21:00.000Z",
+     "card": {
+      "stability": 4.66202152,
+      "difficulty": 8.06302161,
+      "dueAt": "2026-09-07T13:31:00.000Z",
+      "lastReviewAt": "2026-09-07T13:21:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s11",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 177.37712712,
+      "difficulty": 4.15197285,
+      "dueAt": "2026-08-30T20:21:00.000Z",
+      "lastReviewAt": "2026-03-13T20:21:00.000Z",
+      "reviewTime": "2026-09-07T13:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 170,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-09-12T09:31:00.000Z",
+     "card": {
+      "stability": 8.26947244,
+      "difficulty": 8.69937185,
+      "dueAt": "2026-09-12T09:46:00.000Z",
+      "lastReviewAt": "2026-09-12T09:31:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s11",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 4.66202152,
+      "difficulty": 8.06302161,
+      "dueAt": "2026-09-07T13:31:00.000Z",
+      "lastReviewAt": "2026-09-07T13:21:00.000Z",
+      "reviewTime": "2026-09-12T09:31:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 3,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-09-15T04:46:00.000Z",
+     "card": {
+      "stability": 14.32488567,
+      "difficulty": 8.2499909,
+      "dueAt": "2026-10-01T04:46:00.000Z",
+      "lastReviewAt": "2026-09-15T04:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s11",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 16,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 8.26947244,
+      "difficulty": 8.69937185,
+      "dueAt": "2026-09-12T09:46:00.000Z",
+      "lastReviewAt": "2026-09-12T09:31:00.000Z",
+      "reviewTime": "2026-09-15T04:46:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-10-09T10:46:00.000Z",
+     "card": {
+      "stability": 33.58184205,
+      "difficulty": 8.23696928,
+      "dueAt": "2026-11-16T10:46:00.000Z",
+      "lastReviewAt": "2026-10-09T10:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s11",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 38,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.32488567,
+      "difficulty": 8.2499909,
+      "dueAt": "2026-10-01T04:46:00.000Z",
+      "lastReviewAt": "2026-09-15T04:46:00.000Z",
+      "reviewTime": "2026-10-09T10:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 16,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-11-24T07:46:00.000Z",
+     "card": {
+      "stability": 68.15103479,
+      "difficulty": 8.22396068,
+      "dueAt": "2027-02-04T07:46:00.000Z",
+      "lastReviewAt": "2026-11-24T07:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s11",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 72,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 33.58184205,
+      "difficulty": 8.23696928,
+      "dueAt": "2026-11-16T10:46:00.000Z",
+      "lastReviewAt": "2026-10-09T10:46:00.000Z",
+      "reviewTime": "2026-11-24T07:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.9-s11",
+      "scheduledDays": 38,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.9-s23",
+   "desiredRetention": 0.9,
+   "seed": 23,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-10T10:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-10T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-13T03:10:00.000Z",
+     "card": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "reviewTime": "2026-01-13T03:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-20T07:15:30.000Z",
+     "card": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "reviewTime": "2026-01-20T07:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-20T18:21:00.000Z",
+     "card": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "reviewTime": "2026-01-20T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-22T00:22:00.000Z",
+     "card": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "reviewTime": "2026-01-22T00:22:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:32:00.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "reviewTime": "2026-01-24T05:32:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:37:30.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s23",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "reviewTime": "2026-01-24T05:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-03T04:43:00.000Z",
+     "card": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-02-19T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s23",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 16,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "reviewTime": "2026-02-03T04:43:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-02-23T22:43:00.000Z",
+     "card": {
+      "stability": 20.7060523,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-03-18T22:43:00.000Z",
+      "lastReviewAt": "2026-02-23T22:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s23",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 23,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-02-19T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "reviewTime": "2026-02-23T22:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 2,
+      "state": 2,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 16,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-03-27T07:43:00.000Z",
+     "card": {
+      "stability": 44.17104738,
+      "difficulty": 9.47130088,
+      "dueAt": "2026-05-12T07:43:00.000Z",
+      "lastReviewAt": "2026-03-27T07:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s23",
+      "reps": 10,
+      "lapses": 0,
+      "scheduledDays": 46,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 20.7060523,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-03-18T22:43:00.000Z",
+      "lastReviewAt": "2026-02-23T22:43:00.000Z",
+      "reviewTime": "2026-03-27T07:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.9-s23",
+      "scheduledDays": 23,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.9-s47",
+   "desiredRetention": 0.9,
+   "seed": 47,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-05T10:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s47",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-05T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-11T19:05:30.000Z",
+     "card": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s47",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "reviewTime": "2026-01-11T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T15:15:30.000Z",
+     "card": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s47",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "reviewTime": "2026-01-14T15:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T10:16:30.000Z",
+     "card": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s47",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "reviewTime": "2026-01-15T10:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-17T00:17:30.000Z",
+     "card": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s47",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "reviewTime": "2026-01-17T00:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-18T05:23:00.000Z",
+     "card": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-20T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s47",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "reviewTime": "2026-01-18T05:23:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-20T13:23:00.000Z",
+     "card": {
+      "stability": 3.80397628,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-01-24T13:23:00.000Z",
+      "lastReviewAt": "2026-01-20T13:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s47",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-20T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "reviewTime": "2026-01-20T13:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-28T20:23:00.000Z",
+     "card": {
+      "stability": 11.45613352,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-02-07T20:23:00.000Z",
+      "lastReviewAt": "2026-01-28T20:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s47",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 10,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.80397628,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-01-24T13:23:00.000Z",
+      "lastReviewAt": "2026-01-20T13:23:00.000Z",
+      "reviewTime": "2026-01-28T20:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-15T14:23:00.000Z",
+     "card": {
+      "stability": 21.1021403,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-03-07T14:23:00.000Z",
+      "lastReviewAt": "2026-02-15T14:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s47",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 20,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 11.45613352,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-02-07T20:23:00.000Z",
+      "lastReviewAt": "2026-01-28T20:23:00.000Z",
+      "reviewTime": "2026-02-15T14:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 10,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-03-15T15:23:00.000Z",
+     "card": {
+      "stability": 1.98358299,
+      "difficulty": 9.74124893,
+      "dueAt": "2026-03-15T15:33:00.000Z",
+      "lastReviewAt": "2026-03-15T15:23:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s47",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 21.1021403,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-03-07T14:23:00.000Z",
+      "lastReviewAt": "2026-02-15T14:23:00.000Z",
+      "reviewTime": "2026-03-15T15:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.9-s47",
+      "scheduledDays": 20,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.9-s101",
+   "desiredRetention": 0.9,
+   "seed": 101,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-06T16:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s101",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-06T16:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T23:10:00.000Z",
+     "card": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s101",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "reviewTime": "2026-01-15T23:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-18T01:11:00.000Z",
+     "card": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s101",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "reviewTime": "2026-01-18T01:11:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-19T18:16:30.000Z",
+     "card": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s101",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "reviewTime": "2026-01-19T18:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-24T14:17:30.000Z",
+     "card": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s101",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "reviewTime": "2026-01-24T14:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-30T17:27:30.000Z",
+     "card": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-07T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s101",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 8,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "reviewTime": "2026-01-30T17:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-15T23:27:30.000Z",
+     "card": {
+      "stability": 1.32399584,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-02-15T23:37:30.000Z",
+      "lastReviewAt": "2026-02-15T23:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s101",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-07T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "reviewTime": "2026-02-15T23:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 8,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-17T04:37:30.000Z",
+     "card": {
+      "stability": 3.49055444,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-02-20T04:37:30.000Z",
+      "lastReviewAt": "2026-02-17T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s101",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 3,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.32399584,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-02-15T23:37:30.000Z",
+      "lastReviewAt": "2026-02-15T23:27:30.000Z",
+      "reviewTime": "2026-02-17T04:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-27T04:37:30.000Z",
+     "card": {
+      "stability": 11.1804718,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-03-11T04:37:30.000Z",
+      "lastReviewAt": "2026-02-27T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s101",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 12,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.49055444,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-02-20T04:37:30.000Z",
+      "lastReviewAt": "2026-02-17T04:37:30.000Z",
+      "reviewTime": "2026-02-27T04:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 3,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-03-19T11:37:30.000Z",
+     "card": {
+      "stability": 20.31345377,
+      "difficulty": 9.44619304,
+      "dueAt": "2026-04-08T11:37:30.000Z",
+      "lastReviewAt": "2026-03-19T11:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s101",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 20,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 11.1804718,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-03-11T04:37:30.000Z",
+      "lastReviewAt": "2026-02-27T04:37:30.000Z",
+      "reviewTime": "2026-03-19T11:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.9-s101",
+      "scheduledDays": 12,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.9-s9001",
+   "desiredRetention": 0.9,
+   "seed": 9001,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-08T20:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s9001",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-08T20:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-10T23:05:30.000Z",
+     "card": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s9001",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "reviewTime": "2026-01-10T23:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T13:06:30.000Z",
+     "card": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s9001",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "reviewTime": "2026-01-14T13:06:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-21T02:07:30.000Z",
+     "card": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s9001",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "reviewTime": "2026-01-21T02:07:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T02:17:30.000Z",
+     "card": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-25T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s9001",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 3,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "reviewTime": "2026-01-22T02:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-29T09:17:30.000Z",
+     "card": {
+      "stability": 0.73459323,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-01-29T09:27:30.000Z",
+      "lastReviewAt": "2026-01-29T09:17:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s9001",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-25T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "reviewTime": "2026-01-29T09:17:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 3,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-30T11:27:30.000Z",
+     "card": {
+      "stability": 1.95636169,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-02-01T11:27:30.000Z",
+      "lastReviewAt": "2026-01-30T11:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s9001",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.73459323,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-01-29T09:27:30.000Z",
+      "lastReviewAt": "2026-01-29T09:17:30.000Z",
+      "reviewTime": "2026-01-30T11:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-01T12:27:30.000Z",
+     "card": {
+      "stability": 3.26781977,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-05T12:27:30.000Z",
+      "lastReviewAt": "2026-02-01T12:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s9001",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.95636169,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-02-01T11:27:30.000Z",
+      "lastReviewAt": "2026-01-30T11:27:30.000Z",
+      "reviewTime": "2026-02-01T12:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-08T00:27:30.000Z",
+     "card": {
+      "stability": 9.41398866,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-02-18T00:27:30.000Z",
+      "lastReviewAt": "2026-02-08T00:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.9-s9001",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 10,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.26781977,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-05T12:27:30.000Z",
+      "lastReviewAt": "2026-02-01T12:27:30.000Z",
+      "reviewTime": "2026-02-08T00:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-23T03:27:30.000Z",
+     "card": {
+      "stability": 1.37468205,
+      "difficulty": 9.81192511,
+      "dueAt": "2026-02-23T03:37:30.000Z",
+      "lastReviewAt": "2026-02-23T03:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.9-s9001",
+      "reps": 10,
+      "lapses": 2,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.41398866,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-02-18T00:27:30.000Z",
+      "lastReviewAt": "2026-02-08T00:27:30.000Z",
+      "reviewTime": "2026-02-23T03:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.9-s9001",
+      "scheduledDays": 10,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.95-s11",
+   "desiredRetention": 0.95,
+   "seed": 11,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-07T22:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s11",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-07T22:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-08T19:05:30.000Z",
+     "card": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s11",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-07T22:05:30.000Z",
+      "lastReviewAt": "2026-01-07T22:00:00.000Z",
+      "reviewTime": "2026-01-08T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-12T19:15:30.000Z",
+     "card": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s11",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 4.54602939,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-08T19:15:30.000Z",
+      "lastReviewAt": "2026-01-08T19:05:30.000Z",
+      "reviewTime": "2026-01-12T19:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T18:21:00.000Z",
+     "card": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-02-06T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s11",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 15,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.69801335,
+      "difficulty": 6.73389818,
+      "dueAt": "2026-01-12T19:21:00.000Z",
+      "lastReviewAt": "2026-01-12T19:15:30.000Z",
+      "reviewTime": "2026-01-22T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-12T20:21:00.000Z",
+     "card": {
+      "stability": 111.89685898,
+      "difficulty": 4.15197285,
+      "dueAt": "2026-03-25T20:21:00.000Z",
+      "lastReviewAt": "2026-02-12T20:21:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s11",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 41,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 40.25495881,
+      "difficulty": 5.62774752,
+      "dueAt": "2026-02-06T18:21:00.000Z",
+      "lastReviewAt": "2026-01-22T18:21:00.000Z",
+      "reviewTime": "2026-02-12T20:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 15,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-04-02T13:21:00.000Z",
+     "card": {
+      "stability": 3.6595689,
+      "difficulty": 8.06302161,
+      "dueAt": "2026-04-02T13:31:00.000Z",
+      "lastReviewAt": "2026-04-02T13:21:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s11",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 111.89685898,
+      "difficulty": 4.15197285,
+      "dueAt": "2026-03-25T20:21:00.000Z",
+      "lastReviewAt": "2026-02-12T20:21:00.000Z",
+      "reviewTime": "2026-04-02T13:21:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 41,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-04-07T09:31:00.000Z",
+     "card": {
+      "stability": 7.13763785,
+      "difficulty": 8.69937185,
+      "dueAt": "2026-04-07T09:46:00.000Z",
+      "lastReviewAt": "2026-04-07T09:31:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s11",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.6595689,
+      "difficulty": 8.06302161,
+      "dueAt": "2026-04-02T13:31:00.000Z",
+      "lastReviewAt": "2026-04-02T13:21:00.000Z",
+      "reviewTime": "2026-04-07T09:31:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 3,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-04-10T04:46:00.000Z",
+     "card": {
+      "stability": 13.2071157,
+      "difficulty": 8.2499909,
+      "dueAt": "2026-04-15T04:46:00.000Z",
+      "lastReviewAt": "2026-04-10T04:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s11",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 5,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 7.13763785,
+      "difficulty": 8.69937185,
+      "dueAt": "2026-04-07T09:46:00.000Z",
+      "lastReviewAt": "2026-04-07T09:31:00.000Z",
+      "reviewTime": "2026-04-10T04:46:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-04-23T10:46:00.000Z",
+     "card": {
+      "stability": 25.79344274,
+      "difficulty": 8.23696928,
+      "dueAt": "2026-05-01T10:46:00.000Z",
+      "lastReviewAt": "2026-04-23T10:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s11",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 8,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 13.2071157,
+      "difficulty": 8.2499909,
+      "dueAt": "2026-04-15T04:46:00.000Z",
+      "lastReviewAt": "2026-04-10T04:46:00.000Z",
+      "reviewTime": "2026-04-23T10:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 5,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-05-09T07:46:00.000Z",
+     "card": {
+      "stability": 41.39012759,
+      "difficulty": 8.22396068,
+      "dueAt": "2026-05-28T07:46:00.000Z",
+      "lastReviewAt": "2026-05-09T07:46:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s11",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 19,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 25.79344274,
+      "difficulty": 8.23696928,
+      "dueAt": "2026-05-01T10:46:00.000Z",
+      "lastReviewAt": "2026-04-23T10:46:00.000Z",
+      "reviewTime": "2026-05-09T07:46:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.95-s11",
+      "scheduledDays": 8,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.95-s23",
+   "desiredRetention": 0.95,
+   "seed": 23,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-10T10:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-10T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-13T03:10:00.000Z",
+     "card": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-10T10:10:00.000Z",
+      "lastReviewAt": "2026-01-10T10:00:00.000Z",
+      "reviewTime": "2026-01-13T03:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-20T07:15:30.000Z",
+     "card": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.23487052,
+      "difficulty": 4.75285849,
+      "dueAt": "2026-01-13T03:15:30.000Z",
+      "lastReviewAt": "2026-01-13T03:10:00.000Z",
+      "reviewTime": "2026-01-20T07:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-20T18:21:00.000Z",
+     "card": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 19.75761341,
+      "difficulty": 6.50193132,
+      "dueAt": "2026-01-20T07:21:00.000Z",
+      "lastReviewAt": "2026-01-20T07:15:30.000Z",
+      "reviewTime": "2026-01-20T18:21:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-22T00:22:00.000Z",
+     "card": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 5.76438256,
+      "difficulty": 8.83543698,
+      "dueAt": "2026-01-20T18:22:00.000Z",
+      "lastReviewAt": "2026-01-20T18:21:00.000Z",
+      "reviewTime": "2026-01-22T00:22:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:32:00.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 7.93150209,
+      "difficulty": 8.82182991,
+      "dueAt": "2026-01-22T00:32:00.000Z",
+      "lastReviewAt": "2026-01-22T00:22:00.000Z",
+      "reviewTime": "2026-01-24T05:32:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-24T05:37:30.000Z",
+     "card": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s23",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.20310416,
+      "dueAt": "2026-01-24T05:37:30.000Z",
+      "lastReviewAt": "2026-01-24T05:32:00.000Z",
+      "reviewTime": "2026-01-24T05:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-03T04:43:00.000Z",
+     "card": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-02-11T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s23",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 8,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.22417987,
+      "difficulty": 9.45621178,
+      "dueAt": "2026-01-24T05:43:00.000Z",
+      "lastReviewAt": "2026-01-24T05:37:30.000Z",
+      "reviewTime": "2026-02-03T04:43:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-02-15T22:43:00.000Z",
+     "card": {
+      "stability": 18.92583132,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-02-25T22:43:00.000Z",
+      "lastReviewAt": "2026-02-15T22:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s23",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 10,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 14.83451336,
+      "difficulty": 9.44198394,
+      "dueAt": "2026-02-11T04:43:00.000Z",
+      "lastReviewAt": "2026-02-03T04:43:00.000Z",
+      "reviewTime": "2026-02-15T22:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 2,
+      "state": 2,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 8,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-03-06T07:43:00.000Z",
+     "card": {
+      "stability": 35.17906034,
+      "difficulty": 9.47130088,
+      "dueAt": "2026-03-21T07:43:00.000Z",
+      "lastReviewAt": "2026-03-06T07:43:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s23",
+      "reps": 10,
+      "lapses": 0,
+      "scheduledDays": 15,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 18.92583132,
+      "difficulty": 9.61479131,
+      "dueAt": "2026-02-25T22:43:00.000Z",
+      "lastReviewAt": "2026-02-15T22:43:00.000Z",
+      "reviewTime": "2026-03-06T07:43:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.95-s23",
+      "scheduledDays": 10,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.95-s47",
+   "desiredRetention": 0.95,
+   "seed": 47,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-05T10:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s47",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-05T10:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-11T19:05:30.000Z",
+     "card": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s47",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-05T10:05:30.000Z",
+      "lastReviewAt": "2026-01-05T10:00:00.000Z",
+      "reviewTime": "2026-01-11T19:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T15:15:30.000Z",
+     "card": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s47",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.92292412,
+      "difficulty": 5.10228691,
+      "dueAt": "2026-01-11T19:15:30.000Z",
+      "lastReviewAt": "2026-01-11T19:05:30.000Z",
+      "reviewTime": "2026-01-14T15:15:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T10:16:30.000Z",
+     "card": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s47",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.30855166,
+      "difficulty": 8.37538339,
+      "dueAt": "2026-01-14T15:16:30.000Z",
+      "lastReviewAt": "2026-01-14T15:15:30.000Z",
+      "reviewTime": "2026-01-15T10:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-17T00:17:30.000Z",
+     "card": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s47",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.36703303,
+      "difficulty": 9.45122793,
+      "dueAt": "2026-01-15T10:17:30.000Z",
+      "lastReviewAt": "2026-01-15T10:16:30.000Z",
+      "reviewTime": "2026-01-17T00:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-18T05:23:00.000Z",
+     "card": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-19T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s47",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 1,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.94000746,
+      "difficulty": 9.62092789,
+      "dueAt": "2026-01-17T00:23:00.000Z",
+      "lastReviewAt": "2026-01-17T00:17:30.000Z",
+      "reviewTime": "2026-01-18T05:23:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-19T13:23:00.000Z",
+     "card": {
+      "stability": 3.17839141,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-01-21T13:23:00.000Z",
+      "lastReviewAt": "2026-01-19T13:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s47",
+      "reps": 7,
+      "lapses": 0,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3209434,
+      "difficulty": 9.47948803,
+      "dueAt": "2026-01-19T05:23:00.000Z",
+      "lastReviewAt": "2026-01-18T05:23:00.000Z",
+      "reviewTime": "2026-01-19T13:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 1,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-25T20:23:00.000Z",
+     "card": {
+      "stability": 9.35550202,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-01-29T20:23:00.000Z",
+      "lastReviewAt": "2026-01-25T20:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s47",
+      "reps": 8,
+      "lapses": 0,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.17839141,
+      "difficulty": 9.46523691,
+      "dueAt": "2026-01-21T13:23:00.000Z",
+      "lastReviewAt": "2026-01-19T13:23:00.000Z",
+      "reviewTime": "2026-01-25T20:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-02-06T14:23:00.000Z",
+     "card": {
+      "stability": 16.48895714,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-02-14T14:23:00.000Z",
+      "lastReviewAt": "2026-02-06T14:23:00.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s47",
+      "reps": 9,
+      "lapses": 0,
+      "scheduledDays": 8,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 9.35550202,
+      "difficulty": 9.27177238,
+      "dueAt": "2026-01-29T20:23:00.000Z",
+      "lastReviewAt": "2026-01-25T20:23:00.000Z",
+      "reviewTime": "2026-02-06T14:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-22T15:23:00.000Z",
+     "card": {
+      "stability": 1.70611353,
+      "difficulty": 9.74124893,
+      "dueAt": "2026-02-22T15:33:00.000Z",
+      "lastReviewAt": "2026-02-22T15:23:00.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s47",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 16.48895714,
+      "difficulty": 9.25772898,
+      "dueAt": "2026-02-14T14:23:00.000Z",
+      "lastReviewAt": "2026-02-06T14:23:00.000Z",
+      "reviewTime": "2026-02-22T15:23:00.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.95-s47",
+      "scheduledDays": 8,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.95-s101",
+   "desiredRetention": 0.95,
+   "seed": 101,
+   "steps": [
+    {
+     "grade": 3,
+     "now": "2026-01-06T16:00:00.000Z",
+     "card": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s101",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-06T16:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 3,
+      "state": 0,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-15T23:10:00.000Z",
+     "card": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s101",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "dueAt": "2026-01-06T16:10:00.000Z",
+      "lastReviewAt": "2026-01-06T16:00:00.000Z",
+      "reviewTime": "2026-01-15T23:10:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 2,
+     "now": "2026-01-18T01:11:00.000Z",
+     "card": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s101",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.74656965,
+      "difficulty": 7.39450274,
+      "dueAt": "2026-01-15T23:11:00.000Z",
+      "lastReviewAt": "2026-01-15T23:10:00.000Z",
+      "reviewTime": "2026-01-18T01:11:00.000Z",
+      "scheduleStatus": "learning",
+      "rating": 2,
+      "state": 1,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-19T18:16:30.000Z",
+     "card": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s101",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.84404092,
+      "difficulty": 8.25557787,
+      "dueAt": "2026-01-18T01:16:30.000Z",
+      "lastReviewAt": "2026-01-18T01:11:00.000Z",
+      "reviewTime": "2026-01-19T18:16:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-24T14:17:30.000Z",
+     "card": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s101",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.5957952,
+      "difficulty": 9.41184867,
+      "dueAt": "2026-01-19T18:17:30.000Z",
+      "lastReviewAt": "2026-01-19T18:16:30.000Z",
+      "reviewTime": "2026-01-24T14:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-30T17:27:30.000Z",
+     "card": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-02T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s101",
+      "reps": 6,
+      "lapses": 0,
+      "scheduledDays": 3,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.33817547,
+      "difficulty": 9.39766519,
+      "dueAt": "2026-01-24T14:27:30.000Z",
+      "lastReviewAt": "2026-01-24T14:17:30.000Z",
+      "reviewTime": "2026-01-30T17:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-10T23:27:30.000Z",
+     "card": {
+      "stability": 1.25916024,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-02-10T23:37:30.000Z",
+      "lastReviewAt": "2026-02-10T23:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s101",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 8.30287378,
+      "difficulty": 9.18162133,
+      "dueAt": "2026-02-02T17:27:30.000Z",
+      "lastReviewAt": "2026-01-30T17:27:30.000Z",
+      "reviewTime": "2026-02-10T23:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 3,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-12T04:37:30.000Z",
+     "card": {
+      "stability": 3.40478622,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-02-14T04:37:30.000Z",
+      "lastReviewAt": "2026-02-12T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s101",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.25916024,
+      "difficulty": 9.71623286,
+      "dueAt": "2026-02-10T23:37:30.000Z",
+      "lastReviewAt": "2026-02-10T23:27:30.000Z",
+      "reviewTime": "2026-02-12T04:37:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-21T04:37:30.000Z",
+     "card": {
+      "stability": 10.61597727,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-02-25T04:37:30.000Z",
+      "lastReviewAt": "2026-02-21T04:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s101",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.40478622,
+      "difficulty": 9.60663948,
+      "dueAt": "2026-02-14T04:37:30.000Z",
+      "lastReviewAt": "2026-02-12T04:37:30.000Z",
+      "reviewTime": "2026-02-21T04:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-03-05T11:37:30.000Z",
+     "card": {
+      "stability": 17.09231401,
+      "difficulty": 9.44619304,
+      "dueAt": "2026-03-11T11:37:30.000Z",
+      "lastReviewAt": "2026-03-05T11:37:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s101",
+      "reps": 10,
+      "lapses": 1,
+      "scheduledDays": 6,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 10.61597727,
+      "difficulty": 9.4604251,
+      "dueAt": "2026-02-25T04:37:30.000Z",
+      "lastReviewAt": "2026-02-21T04:37:30.000Z",
+      "reviewTime": "2026-03-05T11:37:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.95-s101",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    }
+   ]
+  },
+  {
+   "caseId": "r0.95-s9001",
+   "desiredRetention": 0.95,
+   "seed": 9001,
+   "steps": [
+    {
+     "grade": 2,
+     "now": "2026-01-08T20:00:00.000Z",
+     "card": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s9001",
+      "reps": 1,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0,
+      "difficulty": 0,
+      "dueAt": "2026-01-01T08:00:00.000Z",
+      "lastReviewAt": null,
+      "reviewTime": "2026-01-08T20:00:00.000Z",
+      "scheduleStatus": "new",
+      "rating": 2,
+      "state": 0,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-10T23:05:30.000Z",
+     "card": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s9001",
+      "reps": 2,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.2931,
+      "difficulty": 5.11217071,
+      "dueAt": "2026-01-08T20:05:30.000Z",
+      "lastReviewAt": "2026-01-08T20:00:00.000Z",
+      "reviewTime": "2026-01-10T23:05:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-14T13:06:30.000Z",
+     "card": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s9001",
+      "reps": 3,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.40717516,
+      "difficulty": 8.37863212,
+      "dueAt": "2026-01-10T23:06:30.000Z",
+      "lastReviewAt": "2026-01-10T23:05:30.000Z",
+      "reviewTime": "2026-01-14T13:06:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 1,
+      "state": 1,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-21T02:07:30.000Z",
+     "card": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "state": 1,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s9001",
+      "reps": 4,
+      "lapses": 0,
+      "scheduledDays": 0,
+      "learningStep": 1
+     },
+     "revlog": {
+      "stability": 0.20239251,
+      "difficulty": 9.45229578,
+      "dueAt": "2026-01-14T13:07:30.000Z",
+      "lastReviewAt": "2026-01-14T13:06:30.000Z",
+      "reviewTime": "2026-01-21T02:07:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 3,
+      "state": 1,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-22T02:17:30.000Z",
+     "card": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-24T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s9001",
+      "reps": 5,
+      "lapses": 0,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.26289757,
+      "difficulty": 9.43807185,
+      "dueAt": "2026-01-21T02:17:30.000Z",
+      "lastReviewAt": "2026-01-21T02:07:30.000Z",
+      "reviewTime": "2026-01-22T02:17:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 1,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 0,
+      "learningStep": 1
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-01-28T09:17:30.000Z",
+     "card": {
+      "stability": 0.7182293,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-01-28T09:27:30.000Z",
+      "lastReviewAt": "2026-01-28T09:17:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s9001",
+      "reps": 6,
+      "lapses": 1,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 2.87607308,
+      "difficulty": 9.23553002,
+      "dueAt": "2026-01-24T02:17:30.000Z",
+      "lastReviewAt": "2026-01-22T02:17:30.000Z",
+      "reviewTime": "2026-01-28T09:17:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-01-29T11:27:30.000Z",
+     "card": {
+      "stability": 1.93524765,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-01-31T11:27:30.000Z",
+      "lastReviewAt": "2026-01-29T11:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s9001",
+      "reps": 7,
+      "lapses": 1,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 0.7182293,
+      "difficulty": 9.73395229,
+      "dueAt": "2026-01-28T09:27:30.000Z",
+      "lastReviewAt": "2026-01-28T09:17:30.000Z",
+      "reviewTime": "2026-01-29T11:27:30.000Z",
+      "scheduleStatus": "learning",
+      "rating": 4,
+      "state": 3,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 0,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 3,
+     "now": "2026-01-31T12:27:30.000Z",
+     "card": {
+      "stability": 3.24495321,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-02T12:27:30.000Z",
+      "lastReviewAt": "2026-01-31T12:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s9001",
+      "reps": 8,
+      "lapses": 1,
+      "scheduledDays": 2,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 1.93524765,
+      "difficulty": 9.63027991,
+      "dueAt": "2026-01-31T11:27:30.000Z",
+      "lastReviewAt": "2026-01-29T11:27:30.000Z",
+      "reviewTime": "2026-01-31T12:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 3,
+      "state": 2,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 4,
+     "now": "2026-02-05T00:27:30.000Z",
+     "card": {
+      "stability": 8.23906265,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-02-09T00:27:30.000Z",
+      "lastReviewAt": "2026-02-05T00:27:30.000Z",
+      "state": 2,
+      "scheduleStatus": "review",
+      "cardId": "r0.95-s9001",
+      "reps": 9,
+      "lapses": 1,
+      "scheduledDays": 4,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 3.24495321,
+      "difficulty": 9.615878,
+      "dueAt": "2026-02-02T12:27:30.000Z",
+      "lastReviewAt": "2026-01-31T12:27:30.000Z",
+      "reviewTime": "2026-02-05T00:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 4,
+      "state": 2,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 2,
+      "learningStep": 0
+     }
+    },
+    {
+     "grade": 1,
+     "now": "2026-02-14T03:27:30.000Z",
+     "card": {
+      "stability": 1.22252059,
+      "difficulty": 9.81192511,
+      "dueAt": "2026-02-14T03:37:30.000Z",
+      "lastReviewAt": "2026-02-14T03:27:30.000Z",
+      "state": 3,
+      "scheduleStatus": "learning",
+      "cardId": "r0.95-s9001",
+      "reps": 10,
+      "lapses": 2,
+      "scheduledDays": 0,
+      "learningStep": 0
+     },
+     "revlog": {
+      "stability": 8.23906265,
+      "difficulty": 9.4727507,
+      "dueAt": "2026-02-09T00:27:30.000Z",
+      "lastReviewAt": "2026-02-05T00:27:30.000Z",
+      "reviewTime": "2026-02-14T03:27:30.000Z",
+      "scheduleStatus": "review",
+      "rating": 1,
+      "state": 2,
+      "cardId": "r0.95-s9001",
+      "scheduledDays": 4,
+      "learningStep": 0
+     }
+    }
+   ]
+  }
+ ]
+}

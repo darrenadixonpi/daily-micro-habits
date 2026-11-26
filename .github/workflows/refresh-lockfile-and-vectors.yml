@@ -1,0 +1,56 @@
+name: Refresh lockfile and FSRS reference vectors
+
+# Resolves the app's dependencies for Expo SDK 58, commits package.json +
+# package-lock.json, and regenerates src/srs/fsrs_reference_vectors.json with the
+# locked ts-fsrs version. Run manually after changing dependencies.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Resolve dependencies for Expo SDK 58
+        run: |
+          rm -f package-lock.json
+          npm install --no-audit --no-fund expo@~58.0.0
+          npx expo install \
+            react react-native expo-router expo-linking expo-constants \
+            react-native-screens react-native-safe-area-context expo-status-bar \
+            expo-sqlite expo-secure-store expo-notifications expo-application expo-file-system \
+            react-native-quick-crypto react-native-nitro-modules react-native-quick-base64
+          npx expo install typescript @types/react -- --save-dev
+          npm install --no-audit --no-fund ts-fsrs@^6.0.1
+          npm install --no-audit --no-fund --save-dev tsx @types/node@^24
+          npx expo install --check || npx expo install --fix
+          node -p "'expo ' + require('expo/package.json').version + ', react-native ' + require('react-native/package.json').version"
+
+      - name: Regenerate FSRS reference vectors
+        run: npm run generate:fsrs-vectors
+
+      - name: Commit changes
+        working-directory: .
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mobile/package.json mobile/package-lock.json mobile/src/srs/fsrs_reference_vectors.json
+          if git diff --cached --quiet; then
+            echo 'No changes.'
+          else
+            git commit -m 'Refresh lockfile and FSRS reference vectors'
+            git push
+          fi

@@ -1,0 +1,40 @@
+name: Test mobile app (typecheck + Node diagnostics)
+
+# Type-checks the app and runs the shared diagnostic cases (T1–T7) under Node, plus
+# unit tests. T3 (SQLCipher) is skipped here and runs only on the iPhone.
+
+on:
+  push:
+    paths:
+      - 'mobile/**'
+      - '.github/workflows/test-mobile.yml'
+  pull_request:
+    paths:
+      - 'mobile/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Unit tests and Node diagnostics
+        run: npm test
+
+      - name: FSRS reference vectors are current
+        run: npm run check:fsrs-vectors

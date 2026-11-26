@@ -2,7 +2,8 @@
   "expo": {
     "name": "Micro-Habits",
     "slug": "daily-micro-habits",
-    "version": "0.0.1",
+    "scheme": "microhabits",
+    "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "ios": {
@@ -16,8 +17,10 @@
       }
     },
     "plugins": [
-      ["expo-sqlite", { "useSQLCipher": true }],
+      "expo-router",
+      ["expo-sqlite", { "useSQLCipher": true, "enableFTS": true }],
       "expo-secure-store",
+      "react-native-quick-crypto",
       "./plugins/withNoPushEntitlement"
     ]
   }

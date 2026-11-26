@@ -4,23 +4,32 @@ A single-user iPhone app for small daily learning and reflection tasks: word of 
 spaced-repetition review, science and technology concept of the day, Latin American Spanish
 phrases, on-this-day history, morning top-3, evening review and a journal.
 
-The app is installed by sideloading with SideStore on a free Apple ID; there is no App Store build.
+The app is sideloaded on a free Apple ID (currently with iloader from a Mac; SideStore once its sign-in
+issue is fixed); there is no App Store build.
 
 ## Repository layout
 
 | Path | Contents |
 | --- | --- |
-| `mobile/` | Expo (React Native) app. Currently the **M0 pipeline test app**. |
+| `mobile/app/` | expo-router screens (M1: home with diagnostics, settings, placeholders). |
+| `mobile/src/` | App code: `db/` schema + migrations, `security/` keys and passphrase encryption, `srs/` FSRS scheduling, `settings/`, `backup/`, `diagnostics/` (on-device tests T1–T7). |
+| `mobile/tests/` | Node tests; they run the same diagnostic cases under `node:sqlite` and `node:crypto`. |
+| `mobile/tools/` | `generate_fsrs_reference_vectors.ts` (expected FSRS outputs for diagnostic T1). |
 | `content/` | Bundled content: words (A1), concepts (A3), Spanish phrases (A4), on-this-day (A5). |
 | `schemas/` | JSON Schemas for each content module. |
 | `tools/` | `validate_content.py` (schema + semantic checks), `balance_answer_keys.py`. |
-| `.github/workflows/` | Unsigned iOS build (macOS runner) and content validation. |
+| `.github/workflows/` | Unsigned iOS build (macOS runner), mobile tests, lockfile/vector refresh, content validation. |
 
 ## Building
 
-Run **Build iOS (unsigned .ipa for SideStore)** from the Actions tab (optionally entering a version),
-or push a tag such as `v0.0.2`. Every successful build publishes the `.ipa` as an asset of GitHub
-Release `v<version>`; download it on the iPhone and open it in SideStore, which signs it.
+1. After changing dependencies, run **Refresh lockfile and FSRS reference vectors** (commits
+   `package-lock.json` and `src/srs/fsrs_reference_vectors.json`).
+2. **Test mobile app** runs on every push: type-check, unit tests, and diagnostics T1–T7 under Node.
+3. Run **Build iOS (unsigned .ipa for sideloading)** from the Actions tab (optionally entering a version).
+   Every successful build publishes the `.ipa` as an asset of GitHub Release `v<version>`; install it with
+   iloader (Import IPA), over the existing app.
+
+On launch the app runs diagnostics T1–T7 automatically and shows the result on its home screen.
 
 Data persists across re-signs and updates only if the **bundle ID**
 (`com.darrendixon.dailymicrohabits`) and the **signing Apple ID** never change.
