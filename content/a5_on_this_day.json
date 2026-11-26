@@ -1,0 +1,1332 @@
+{
+  "schema_version": 1,
+  "module": "A5",
+  "items": [
+    {
+      "date_key": "11-26",
+      "events": [
+        {
+          "year": 1922,
+          "category": "history",
+          "summary": "Archaeologist Howard Carter and his patron Lord Carnarvon first looked into the sealed tomb of the Egyptian pharaoh Tutankhamun. Its largely intact treasures made it one of the most famous archaeological finds of the twentieth century.",
+          "source": {
+            "title": "November 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_26"
+          }
+        },
+        {
+          "year": 2011,
+          "category": "exploration",
+          "summary": "NASA launched the Mars Science Laboratory carrying the Curiosity rover. Curiosity landed in Gale Crater in August 2012 to study whether Mars once had environments able to support microbial life.",
+          "source": {
+            "title": "November 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_26"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "11-27",
+      "events": [
+        {
+          "year": 1895,
+          "category": "science",
+          "summary": "Alfred Nobel signed his last will at the Swedish-Norwegian Club in Paris, leaving most of his fortune to fund annual prizes. The first Nobel Prizes were awarded in 1901.",
+          "source": {
+            "title": "November 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_27"
+          }
+        },
+        {
+          "year": 1971,
+          "category": "exploration",
+          "summary": "The Soviet Mars 2 mission's descent capsule crashed onto Mars, making it the first human-made object to reach the planet's surface, even though the landing itself failed.",
+          "source": {
+            "title": "November 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_27"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "11-28",
+      "events": [
+        {
+          "year": 1660,
+          "category": "science",
+          "summary": "Twelve men, including Christopher Wren and Robert Boyle, met at Gresham College in London and resolved to found a society to promote experimental learning. It became the Royal Society, one of the oldest scientific academies in existence.",
+          "source": {
+            "title": "November 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_28"
+          }
+        },
+        {
+          "year": 1964,
+          "category": "exploration",
+          "summary": "NASA launched Mariner 4 toward Mars. In July 1965 it made the first successful flyby of the planet and sent back the first close-up images of another planet's surface.",
+          "source": {
+            "title": "November 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_28"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "11-29",
+      "events": [
+        {
+          "year": 1877,
+          "category": "technology",
+          "summary": "Thomas Edison demonstrated his phonograph for the first time, a machine that could record sound and play it back. He had announced the invention eight days earlier.",
+          "source": {
+            "title": "Phonograph - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Phonograph"
+          }
+        },
+        {
+          "year": 1929,
+          "category": "exploration",
+          "summary": "US Navy officer Richard E. Byrd led an aerial expedition that flew over the South Pole, a milestone of early polar aviation.",
+          "source": {
+            "title": "November 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_29"
+          }
+        },
+        {
+          "year": 1961,
+          "category": "exploration",
+          "summary": "The chimpanzee Enos orbited Earth twice aboard Mercury-Atlas 5 and splashed down off Puerto Rico. The flight cleared the way for John Glenn's crewed orbital mission in February 1962.",
+          "source": {
+            "title": "November 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_29"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "11-30",
+      "events": [
+        {
+          "year": 1954,
+          "category": "science",
+          "summary": "A meteorite crashed through the roof of a house in Sylacauga, Alabama, and struck a woman napping on her couch, leaving her badly bruised. It remains one of the very few documented cases of a person hit by a meteorite.",
+          "source": {
+            "title": "November 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_30"
+          }
+        },
+        {
+          "year": 2022,
+          "category": "technology",
+          "summary": "OpenAI released ChatGPT to the public as a free research preview. It reached millions of users within weeks and set off a wave of public interest in large language models.",
+          "source": {
+            "title": "November 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/November_30"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-01",
+      "events": [
+        {
+          "year": 1955,
+          "category": "history",
+          "summary": "Rosa Parks was arrested in Montgomery, Alabama, for refusing to give up her bus seat to a white passenger. Her arrest sparked the Montgomery bus boycott, a turning point of the civil rights movement.",
+          "source": {
+            "title": "December 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_1"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-02",
+      "events": [
+        {
+          "year": 1942,
+          "category": "science",
+          "summary": "A team led by Enrico Fermi achieved the first artificial self-sustaining nuclear chain reaction in Chicago Pile-1, a reactor built at the University of Chicago as part of the Manhattan Project.",
+          "source": {
+            "title": "December 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_2"
+          }
+        },
+        {
+          "year": 1993,
+          "category": "exploration",
+          "summary": "Space Shuttle Endeavour launched on STS-61, the first servicing mission to the Hubble Space Telescope. Astronauts installed corrective optics that fixed the blurred vision caused by Hubble's flawed main mirror.",
+          "source": {
+            "title": "December 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_2"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-03",
+      "events": [
+        {
+          "year": 1967,
+          "category": "medicine",
+          "summary": "Surgeon Christiaan Barnard led the team that performed the first human-to-human heart transplant, at Groote Schuur Hospital in Cape Town. The patient, Louis Washkansky, lived for 18 days.",
+          "source": {
+            "title": "December 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_3"
+          }
+        },
+        {
+          "year": 1992,
+          "category": "technology",
+          "summary": "A test engineer sent the world's first SMS text message, 'Merry Christmas', over the Vodafone network in the United Kingdom.",
+          "source": {
+            "title": "December 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_3"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-04",
+      "events": [
+        {
+          "year": 1791,
+          "category": "culture",
+          "summary": "The Observer was first published in London. It is the world's oldest Sunday newspaper.",
+          "source": {
+            "title": "December 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_4"
+          }
+        },
+        {
+          "year": 1996,
+          "category": "exploration",
+          "summary": "NASA launched Mars Pathfinder. After landing on July 4, 1997, it deployed Sojourner, the first wheeled rover to operate on Mars.",
+          "source": {
+            "title": "Mars Pathfinder - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Mars_Pathfinder"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-05",
+      "events": [
+        {
+          "year": 1933,
+          "category": "history",
+          "summary": "Ratification of the Twenty-first Amendment repealed the Eighteenth, ending nationwide Prohibition of alcohol in the United States after almost 14 years.",
+          "source": {
+            "title": "December 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_5"
+          }
+        },
+        {
+          "year": 1952,
+          "category": "history",
+          "summary": "The Great Smog began in London: cold, still air trapped coal smoke over the city for several days, causing thousands of deaths. It led to Britain's Clean Air Act of 1956.",
+          "source": {
+            "title": "December 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_5"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-06",
+      "events": [
+        {
+          "year": 1917,
+          "category": "history",
+          "summary": "In Halifax, Nova Scotia, a French cargo ship loaded with explosives collided with another vessel and blew up. The Halifax Explosion was one of the largest human-made explosions before nuclear weapons and killed nearly 2,000 people.",
+          "source": {
+            "title": "December 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_6"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-07",
+      "events": [
+        {
+          "year": 1941,
+          "category": "history",
+          "summary": "Japanese forces attacked the US naval base at Pearl Harbor, Hawaii. The United States declared war on Japan the next day and entered World War II.",
+          "source": {
+            "title": "December 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_7"
+          }
+        },
+        {
+          "year": 1972,
+          "category": "exploration",
+          "summary": "Apollo 17 launched on the final Apollo Moon mission. On the way out, the crew photographed the whole sunlit Earth, the image now known as The Blue Marble.",
+          "source": {
+            "title": "December 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_7"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-08",
+      "events": [
+        {
+          "year": 1953,
+          "category": "science",
+          "summary": "US President Dwight D. Eisenhower delivered his 'Atoms for Peace' speech, proposing international cooperation on peaceful uses of nuclear energy. It helped lead to the founding of the International Atomic Energy Agency in 1957.",
+          "source": {
+            "title": "December 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_8"
+          }
+        },
+        {
+          "year": 1980,
+          "category": "culture",
+          "summary": "Former Beatle John Lennon was shot and killed outside his New York City apartment building, The Dakota.",
+          "source": {
+            "title": "December 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_8"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-09",
+      "events": [
+        {
+          "year": 1968,
+          "category": "technology",
+          "summary": "Douglas Engelbart gave the demonstration later nicknamed 'The Mother of All Demos', publicly debuting the computer mouse, hypertext and a graphical user interface decades before they became mainstream.",
+          "source": {
+            "title": "December 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_9"
+          }
+        },
+        {
+          "year": 1979,
+          "category": "medicine",
+          "summary": "The eradication of smallpox was certified after a global vaccination campaign, and the World Health Organization declared the disease eradicated in 1980. The last natural case had been diagnosed in October 1977.",
+          "source": {
+            "title": "Smallpox - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Smallpox"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-10",
+      "events": [
+        {
+          "year": 1901,
+          "category": "science",
+          "summary": "The first Nobel Prize ceremony was held in Stockholm on the fifth anniversary of Alfred Nobel's death. Wilhelm Röntgen, discoverer of X-rays, received the first physics prize.",
+          "source": {
+            "title": "December 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_10"
+          }
+        },
+        {
+          "year": 1948,
+          "category": "history",
+          "summary": "The UN General Assembly, meeting at the Palais de Chaillot in Paris, adopted the Universal Declaration of Human Rights. The anniversary is observed every year as Human Rights Day.",
+          "source": {
+            "title": "Universal Declaration of Human Rights - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-11",
+      "events": [
+        {
+          "year": 1946,
+          "category": "history",
+          "summary": "The United Nations established UNICEF, the International Children's Emergency Fund, to provide food and health care to children in countries devastated by World War II.",
+          "source": {
+            "title": "December 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_11"
+          }
+        },
+        {
+          "year": 1972,
+          "category": "exploration",
+          "summary": "Apollo 17 landed in the Taurus-Littrow valley, the sixth and final Apollo mission to land astronauts on the Moon.",
+          "source": {
+            "title": "December 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_11"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-12",
+      "events": [
+        {
+          "year": 1901,
+          "category": "technology",
+          "summary": "Guglielmo Marconi received the first transatlantic radio signal, the Morse letter S sent from Cornwall, England, to Signal Hill in Newfoundland.",
+          "source": {
+            "title": "December 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_12"
+          }
+        },
+        {
+          "year": 2015,
+          "category": "science",
+          "summary": "Nearly 200 parties adopted the Paris Agreement on climate change, committing to hold global warming well below 2 degrees Celsius above pre-industrial levels and to pursue a 1.5 degree limit.",
+          "source": {
+            "title": "December 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_12"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-13",
+      "events": [
+        {
+          "year": 1577,
+          "category": "exploration",
+          "summary": "Francis Drake set sail from Plymouth, England, on the voyage that made him the first Englishman to circumnavigate the globe. He returned in 1580.",
+          "source": {
+            "title": "December 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_13"
+          }
+        },
+        {
+          "year": 1642,
+          "category": "exploration",
+          "summary": "Dutch navigator Abel Tasman became the first recorded European to sight New Zealand.",
+          "source": {
+            "title": "December 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_13"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-14",
+      "events": [
+        {
+          "year": 1911,
+          "category": "exploration",
+          "summary": "Roald Amundsen's five-man Norwegian team became the first people to reach the South Pole, about a month ahead of Robert Falcon Scott's British party.",
+          "source": {
+            "title": "December 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_14"
+          }
+        },
+        {
+          "year": 1972,
+          "category": "exploration",
+          "summary": "Apollo 17 commander Eugene Cernan climbed back into the lunar module after the mission's third moonwalk. He remains the most recent person to have walked on the Moon.",
+          "source": {
+            "title": "December 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_14"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-15",
+      "events": [
+        {
+          "year": 1791,
+          "category": "history",
+          "summary": "The first ten amendments to the US Constitution, the Bill of Rights, became law when the Virginia General Assembly ratified them.",
+          "source": {
+            "title": "December 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_15"
+          }
+        },
+        {
+          "year": 1970,
+          "category": "exploration",
+          "summary": "The Soviet probe Venera 7 landed on Venus and transmitted data from the surface, the first successful soft landing on another planet.",
+          "source": {
+            "title": "December 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_15"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-16",
+      "events": [
+        {
+          "year": 1773,
+          "category": "history",
+          "summary": "In the Boston Tea Party, members of the Sons of Liberty dumped chests of British tea into Boston Harbor to protest the Tea Act and taxation without representation.",
+          "source": {
+            "title": "December 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_16"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-17",
+      "events": [
+        {
+          "year": 1903,
+          "category": "technology",
+          "summary": "Orville and Wilbur Wright made the first controlled, powered, heavier-than-air flights near Kitty Hawk, North Carolina. The first flight lasted about 12 seconds.",
+          "source": {
+            "title": "December 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_17"
+          }
+        },
+        {
+          "year": 1989,
+          "category": "culture",
+          "summary": "The Simpsons premiered as a series with the episode 'Simpsons Roasting on an Open Fire'. It became the longest-running American scripted primetime series.",
+          "source": {
+            "title": "December 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_17"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-18",
+      "events": [
+        {
+          "year": 1865,
+          "category": "history",
+          "summary": "US Secretary of State William Seward proclaimed the adoption of the Thirteenth Amendment, abolishing slavery throughout the United States.",
+          "source": {
+            "title": "December 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_18"
+          }
+        },
+        {
+          "year": 1958,
+          "category": "technology",
+          "summary": "Project SCORE, the world's first communications satellite, was launched. It relayed a recorded Christmas message from President Eisenhower.",
+          "source": {
+            "title": "December 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_18"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-19",
+      "events": [
+        {
+          "year": 1843,
+          "category": "culture",
+          "summary": "Charles Dickens published A Christmas Carol through Chapman & Hall in London. The story of Ebenezer Scrooge helped shape modern Christmas traditions.",
+          "source": {
+            "title": "A Christmas Carol - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/A_Christmas_Carol"
+          }
+        },
+        {
+          "year": 1972,
+          "category": "exploration",
+          "summary": "Apollo 17 splashed down in the Pacific Ocean, ending the last crewed flight to the Moon to date.",
+          "source": {
+            "title": "December 19 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_19"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-20",
+      "events": [
+        {
+          "year": 1803,
+          "category": "history",
+          "summary": "The Louisiana Purchase was completed at a ceremony in New Orleans, transferring a vast territory from France and roughly doubling the size of the United States.",
+          "source": {
+            "title": "December 20 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_20"
+          }
+        },
+        {
+          "year": 1951,
+          "category": "technology",
+          "summary": "Experimental Breeder Reactor I near Arco, Idaho, became the first nuclear power plant to generate electricity, lighting four light bulbs.",
+          "source": {
+            "title": "December 20 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_20"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-21",
+      "events": [
+        {
+          "year": 1937,
+          "category": "culture",
+          "summary": "Walt Disney's Snow White and the Seven Dwarfs premiered at the Carthay Circle Theatre in Los Angeles. It was the first cel-animated feature film.",
+          "source": {
+            "title": "Snow White and the Seven Dwarfs (1937 film) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)"
+          }
+        },
+        {
+          "year": 1968,
+          "category": "exploration",
+          "summary": "Apollo 8 launched from Kennedy Space Center, the first crewed spacecraft to leave Earth orbit and travel to the Moon.",
+          "source": {
+            "title": "December 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_21"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-22",
+      "events": [
+        {
+          "year": 1938,
+          "category": "science",
+          "summary": "A fishing trawler landed a strange fish at East London, South Africa. Museum curator Marjorie Courtenay-Latimer sought expert help, and ichthyologist JLB Smith identified it as a coelacanth, a group known only from fossils and long thought extinct.",
+          "source": {
+            "title": "West Indian Ocean coelacanth - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/West_Indian_Ocean_coelacanth"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-23",
+      "events": [
+        {
+          "year": 1947,
+          "category": "technology",
+          "summary": "John Bardeen and Walter Brattain demonstrated the first working transistor at Bell Labs. With William Shockley, they shared the 1956 Nobel Prize in Physics for the invention.",
+          "source": {
+            "title": "December 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_23"
+          }
+        },
+        {
+          "year": 1954,
+          "category": "medicine",
+          "summary": "Surgeon Joseph Murray and his team in Boston performed the first successful human kidney transplant, between identical twins.",
+          "source": {
+            "title": "December 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_23"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-24",
+      "events": [
+        {
+          "year": 1968,
+          "category": "exploration",
+          "summary": "Apollo 8 entered lunar orbit, and astronaut Bill Anders photographed the Earth rising over the Moon's horizon, the famous Earthrise image.",
+          "source": {
+            "title": "December 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_24"
+          }
+        },
+        {
+          "year": 1979,
+          "category": "technology",
+          "summary": "Europe's first Ariane rocket launched successfully from Kourou, French Guiana.",
+          "source": {
+            "title": "December 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_24"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-25",
+      "events": [
+        {
+          "year": 1642,
+          "category": "science",
+          "summary": "Isaac Newton was born in Woolsthorpe, England, by the Julian calendar then used in England. His laws of motion and gravitation laid the foundations of classical physics.",
+          "source": {
+            "title": "December 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_25"
+          }
+        },
+        {
+          "year": 2021,
+          "category": "exploration",
+          "summary": "The James Webb Space Telescope launched on an Ariane 5 rocket from French Guiana. Its infrared instruments observe some of the earliest galaxies in the universe.",
+          "source": {
+            "title": "December 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_25"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-26",
+      "events": [
+        {
+          "year": 1898,
+          "category": "science",
+          "summary": "Marie and Pierre Curie announced to the French Academy of Sciences that they had found a new radioactive element, which they named radium.",
+          "source": {
+            "title": "December 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_26"
+          }
+        },
+        {
+          "year": 2004,
+          "category": "history",
+          "summary": "A magnitude 9.1 to 9.3 undersea earthquake off Sumatra triggered tsunamis across the Indian Ocean, killing more than 200,000 people in over a dozen countries.",
+          "source": {
+            "title": "December 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_26"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-27",
+      "events": [
+        {
+          "year": 1831,
+          "category": "science",
+          "summary": "Charles Darwin set sail aboard HMS Beagle. Observations from the five-year voyage, including in the Galápagos Islands, later shaped his theory of evolution by natural selection.",
+          "source": {
+            "title": "December 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_27"
+          }
+        },
+        {
+          "year": 1945,
+          "category": "history",
+          "summary": "The International Monetary Fund was created when 29 nations signed its founding agreement, part of the postwar international financial system.",
+          "source": {
+            "title": "December 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_27"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-28",
+      "events": [
+        {
+          "year": 1612,
+          "category": "science",
+          "summary": "Galileo recorded Neptune in his notes while observing Jupiter but mistook it for a fixed star. Neptune was not identified as a planet until 1846.",
+          "source": {
+            "title": "Discovery of Neptune - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Discovery_of_Neptune"
+          }
+        },
+        {
+          "year": 1895,
+          "category": "culture",
+          "summary": "The Lumière brothers screened films for their first paying audience at the Grand Café on the Boulevard des Capucines in Paris, a landmark in the birth of cinema.",
+          "source": {
+            "title": "December 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_28"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-29",
+      "events": [
+        {
+          "year": 1890,
+          "category": "history",
+          "summary": "US Army troops killed hundreds of Lakota men, women and children at Wounded Knee Creek in South Dakota.",
+          "source": {
+            "title": "December 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_29"
+          }
+        },
+        {
+          "year": 1959,
+          "category": "science",
+          "summary": "Richard Feynman gave his lecture 'There's Plenty of Room at the Bottom' at an American Physical Society meeting at Caltech, imagining the manipulation of matter atom by atom. It is often cited as an inspiration for nanotechnology.",
+          "source": {
+            "title": "There's Plenty of Room at the Bottom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/There%27s_Plenty_of_Room_at_the_Bottom"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-30",
+      "events": [
+        {
+          "year": 1922,
+          "category": "history",
+          "summary": "The Union of Soviet Socialist Republics was formally established. It lasted until its dissolution in December 1991.",
+          "source": {
+            "title": "December 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_30"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "12-31",
+      "events": [
+        {
+          "year": 1879,
+          "category": "technology",
+          "summary": "Thomas Edison gave the first public demonstration of his incandescent lighting system at his laboratory in Menlo Park, New Jersey.",
+          "source": {
+            "title": "December 31 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_31"
+          }
+        },
+        {
+          "year": 1999,
+          "category": "history",
+          "summary": "The United States transferred control of the Panama Canal to Panama, under treaties signed in 1977.",
+          "source": {
+            "title": "December 31 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/December_31"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-01",
+      "events": [
+        {
+          "year": 1801,
+          "category": "science",
+          "summary": "Astronomer Giuseppe Piazzi discovered Ceres from Palermo, Sicily. It was the first asteroid found and is now classified as a dwarf planet.",
+          "source": {
+            "title": "January 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_1"
+          }
+        },
+        {
+          "year": 1983,
+          "category": "technology",
+          "summary": "ARPANET officially switched to the TCP/IP protocols, a cutover often described as the birth of the modern internet.",
+          "source": {
+            "title": "January 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_1"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-02",
+      "events": [
+        {
+          "year": 1959,
+          "category": "exploration",
+          "summary": "The Soviet Union launched Luna 1, the first spacecraft to reach the vicinity of the Moon and the first to go into orbit around the Sun.",
+          "source": {
+            "title": "January 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_2"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-03",
+      "events": [
+        {
+          "year": 1888,
+          "category": "science",
+          "summary": "The 36-inch Great Lick Refractor on Mount Hamilton, California, saw first light. It was the world's largest refracting telescope until 1897.",
+          "source": {
+            "title": "Lick Observatory - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Lick_Observatory"
+          }
+        },
+        {
+          "year": 2019,
+          "category": "exploration",
+          "summary": "China's Chang'e 4 made the first soft landing on the far side of the Moon and later deployed the Yutu-2 rover.",
+          "source": {
+            "title": "January 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_3"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-04",
+      "events": [
+        {
+          "year": 1958,
+          "category": "technology",
+          "summary": "Sputnik 1, the first artificial satellite, fell back into Earth's atmosphere and burned up, about three months after its launch in October 1957.",
+          "source": {
+            "title": "January 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_4"
+          }
+        },
+        {
+          "year": 2004,
+          "category": "exploration",
+          "summary": "NASA's Spirit rover landed on Mars. Planned for a 90-day mission, it kept exploring for more than six years.",
+          "source": {
+            "title": "January 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_4"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-05",
+      "events": [
+        {
+          "year": 1914,
+          "category": "history",
+          "summary": "The Ford Motor Company announced an eight-hour workday and a minimum daily wage of $5, roughly doubling pay for many of its workers.",
+          "source": {
+            "title": "January 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_5"
+          }
+        },
+        {
+          "year": 1933,
+          "category": "technology",
+          "summary": "Construction began on the Golden Gate Bridge in San Francisco. It opened in 1937 as the world's longest suspension bridge span at the time.",
+          "source": {
+            "title": "January 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_5"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-06",
+      "events": [
+        {
+          "year": 1838,
+          "category": "technology",
+          "summary": "Alfred Vail and colleagues, working with Samuel Morse, demonstrated a telegraph that sent messages as patterns of dots and dashes, the forerunner of Morse code.",
+          "source": {
+            "title": "January 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_6"
+          }
+        },
+        {
+          "year": 1912,
+          "category": "science",
+          "summary": "Geophysicist Alfred Wegener first presented his theory of continental drift. Long rejected, it was vindicated by plate tectonics in the 1960s.",
+          "source": {
+            "title": "January 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_6"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-07",
+      "events": [
+        {
+          "year": 1610,
+          "category": "science",
+          "summary": "Galileo first observed the moons of Jupiter through his telescope, initially taking them for fixed stars. Their motion around Jupiter undermined the idea that everything orbits Earth.",
+          "source": {
+            "title": "January 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_7"
+          }
+        },
+        {
+          "year": 1927,
+          "category": "technology",
+          "summary": "The first transatlantic commercial telephone service opened between New York City and London, carried by radio.",
+          "source": {
+            "title": "January 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_7"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-08",
+      "events": [
+        {
+          "year": 1642,
+          "category": "science",
+          "summary": "Galileo Galilei died at his villa near Florence, where he had spent his last years under house arrest after his trial by the Inquisition.",
+          "source": {
+            "title": "January 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_8"
+          }
+        },
+        {
+          "year": 1889,
+          "category": "technology",
+          "summary": "Herman Hollerith received a US patent for his punched-card method for tabulating statistics. His machines processed the 1890 US census, and his company became part of IBM.",
+          "source": {
+            "title": "January 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_8"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-09",
+      "events": [
+        {
+          "year": 1793,
+          "category": "exploration",
+          "summary": "Jean-Pierre Blanchard became the first person to fly in a balloon in the United States, lifting off from Philadelphia.",
+          "source": {
+            "title": "January 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_9"
+          }
+        },
+        {
+          "year": 2007,
+          "category": "technology",
+          "summary": "Steve Jobs introduced the original iPhone at the Macworld conference in San Francisco.",
+          "source": {
+            "title": "January 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_9"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-10",
+      "events": [
+        {
+          "year": 1946,
+          "category": "science",
+          "summary": "The US Army's Project Diana bounced radar signals off the Moon and detected the echoes, the first radar contact with another celestial body.",
+          "source": {
+            "title": "January 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_10"
+          }
+        },
+        {
+          "year": 1946,
+          "category": "history",
+          "summary": "The United Nations General Assembly held its first meeting, at Methodist Central Hall in Westminster, London.",
+          "source": {
+            "title": "January 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_10"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-11",
+      "events": [
+        {
+          "year": 1922,
+          "category": "medicine",
+          "summary": "Leonard Thompson, a 14-year-old boy with diabetes in Toronto, became the first person to be treated with an injection of insulin.",
+          "source": {
+            "title": "January 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_11"
+          }
+        },
+        {
+          "year": 1964,
+          "category": "medicine",
+          "summary": "US Surgeon General Luther Terry released the report 'Smoking and Health', which concluded that cigarette smoking causes lung cancer in men and launched decades of anti-smoking policy.",
+          "source": {
+            "title": "January 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_11"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-12",
+      "events": [
+        {
+          "year": 2010,
+          "category": "history",
+          "summary": "A magnitude 7.0 earthquake struck near Port-au-Prince, Haiti, devastating the capital and killing more than 100,000 people by most estimates.",
+          "source": {
+            "title": "January 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_12"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-13",
+      "events": [
+        {
+          "year": 1942,
+          "category": "technology",
+          "summary": "A German test pilot made the first use of an aircraft ejection seat, escaping from a Heinkel He 280 jet fighter.",
+          "source": {
+            "title": "January 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_13"
+          }
+        },
+        {
+          "year": 1968,
+          "category": "culture",
+          "summary": "Johnny Cash performed live at Folsom State Prison in California. The recording became one of his best-known albums.",
+          "source": {
+            "title": "January 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_13"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-14",
+      "events": [
+        {
+          "year": 1784,
+          "category": "history",
+          "summary": "The US Congress ratified the Treaty of Paris with Great Britain, formally ending the American Revolutionary War.",
+          "source": {
+            "title": "January 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_14"
+          }
+        },
+        {
+          "year": 2005,
+          "category": "exploration",
+          "summary": "The European Huygens probe, carried by NASA's Cassini spacecraft, landed on Saturn's moon Titan. It is still the only landing ever made in the outer Solar System.",
+          "source": {
+            "title": "Huygens (spacecraft) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Huygens_(spacecraft)"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-15",
+      "events": [
+        {
+          "year": 2001,
+          "category": "technology",
+          "summary": "Wikipedia went online, launched by Jimmy Wales and Larry Sanger as a free encyclopedia that anyone can edit.",
+          "source": {
+            "title": "January 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_15"
+          }
+        },
+        {
+          "year": 2009,
+          "category": "technology",
+          "summary": "After bird strikes disabled both engines, US Airways Flight 1549 glided to a landing on the Hudson River in New York. All 155 people on board were rescued.",
+          "source": {
+            "title": "January 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_15"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-16",
+      "events": [
+        {
+          "year": 1909,
+          "category": "exploration",
+          "summary": "Members of Ernest Shackleton's Antarctic expedition reached the area of the South Magnetic Pole.",
+          "source": {
+            "title": "January 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_16"
+          }
+        },
+        {
+          "year": 2003,
+          "category": "exploration",
+          "summary": "Space Shuttle Columbia launched on mission STS-107. It broke apart during re-entry on February 1, 2003, killing all seven crew members.",
+          "source": {
+            "title": "January 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_16"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-17",
+      "events": [
+        {
+          "year": 1773,
+          "category": "exploration",
+          "summary": "Captain James Cook led the first expedition known to sail south of the Antarctic Circle.",
+          "source": {
+            "title": "January 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_17"
+          }
+        },
+        {
+          "year": 1912,
+          "category": "exploration",
+          "summary": "Robert Falcon Scott's British party reached the South Pole, only to find that Roald Amundsen had arrived a month earlier. Scott and his companions died on the return journey.",
+          "source": {
+            "title": "January 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_17"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-18",
+      "events": [
+        {
+          "year": 1778,
+          "category": "exploration",
+          "summary": "James Cook became the first known European to reach the Hawaiian Islands, which he named the Sandwich Islands.",
+          "source": {
+            "title": "January 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_18"
+          }
+        },
+        {
+          "year": 1919,
+          "category": "history",
+          "summary": "The Paris Peace Conference opened at Versailles to settle the terms ending World War I, leading to the Treaty of Versailles.",
+          "source": {
+            "title": "January 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_18"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-19",
+      "events": [
+        {
+          "year": 1983,
+          "category": "technology",
+          "summary": "Apple introduced the Lisa, one of the first personal computers with a graphical user interface to be sold commercially. Its high price limited sales, but its ideas shaped the Macintosh.",
+          "source": {
+            "title": "Apple Lisa - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Apple_Lisa"
+          }
+        },
+        {
+          "year": 2006,
+          "category": "exploration",
+          "summary": "NASA launched the New Horizons probe. On July 14, 2015, it made the first flyby of Pluto, revealing mountains of water ice and vast nitrogen-ice plains.",
+          "source": {
+            "title": "New Horizons - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/New_Horizons"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-20",
+      "events": [
+        {
+          "year": 1961,
+          "category": "history",
+          "summary": "John F. Kennedy was inaugurated as US president. His address urged Americans to 'ask not what your country can do for you, ask what you can do for your country.'",
+          "source": {
+            "title": "Inauguration of John F. Kennedy - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Inauguration_of_John_F._Kennedy"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-21",
+      "events": [
+        {
+          "year": 1954,
+          "category": "technology",
+          "summary": "The USS Nautilus, the world's first nuclear-powered submarine, was launched in Groton, Connecticut.",
+          "source": {
+            "title": "January 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_21"
+          }
+        },
+        {
+          "year": 1976,
+          "category": "technology",
+          "summary": "Concorde began commercial supersonic passenger service, with flights from London to Bahrain and from Paris to Rio de Janeiro.",
+          "source": {
+            "title": "January 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_21"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-22",
+      "events": [
+        {
+          "year": 1905,
+          "category": "history",
+          "summary": "On Bloody Sunday in Saint Petersburg, imperial troops fired on peaceful marchers bringing a petition to the Tsar. The massacre helped ignite the Russian Revolution of 1905.",
+          "source": {
+            "title": "January 22 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_22"
+          }
+        },
+        {
+          "year": 1984,
+          "category": "technology",
+          "summary": "Apple's '1984' commercial for the Macintosh, directed by Ridley Scott, aired nationally during Super Bowl XVIII. It is often ranked among the most influential TV ads ever made.",
+          "source": {
+            "title": "1984 (advertisement) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/1984_(advertisement)"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-23",
+      "events": [
+        {
+          "year": 1849,
+          "category": "medicine",
+          "summary": "Elizabeth Blackwell received her medical degree from Geneva Medical College in New York, becoming the first woman to earn an MD in the United States.",
+          "source": {
+            "title": "January 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_23"
+          }
+        },
+        {
+          "year": 1960,
+          "category": "exploration",
+          "summary": "Jacques Piccard and Don Walsh piloted the bathyscaphe Trieste to a depth of about 10,900 meters in the Challenger Deep, the deepest point in the ocean.",
+          "source": {
+            "title": "January 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_23"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-24",
+      "events": [
+        {
+          "year": 1848,
+          "category": "history",
+          "summary": "James W. Marshall found gold at Sutter's Mill near Sacramento, setting off the California Gold Rush.",
+          "source": {
+            "title": "January 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_24"
+          }
+        },
+        {
+          "year": 1984,
+          "category": "technology",
+          "summary": "Apple released the original Macintosh at a price of $2,495, bringing the mouse-driven graphical interface to a mass market.",
+          "source": {
+            "title": "Macintosh 128K - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Macintosh_128K"
+          }
+        },
+        {
+          "year": 1986,
+          "category": "exploration",
+          "summary": "Voyager 2 made its closest approach to Uranus. It remains the only spacecraft ever to visit the planet.",
+          "source": {
+            "title": "January 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_24"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+name: Build iOS (unsigned .ipa for SideStore)
+
+# Produces an UNSIGNED .ipa. SideStore re-signs it on the iPhone with the
+# owner's free Apple ID, so no Apple credentials are stored in this repo.
+#
+# Trigger: push a tag like v0.0.1, or run manually from the Actions tab.
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'App version (e.g. 0.0.2). Defaults to app.json.'
+        required: false
+
+permissions:
+  contents: write   # needed to publish the GitHub Release
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Select newest installed Xcode
+        run: |
+          XC=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$XC" ]; then sudo xcode-select -s "$XC"; fi
+          xcodebuild -version
+
+      - name: Resolve version
+        id: ver
+        run: |
+          V="${{ github.event.inputs.version }}"
+          if [ -z "$V" ] && [[ "$GITHUB_REF" == refs/tags/v* ]]; then V="${GITHUB_REF#refs/tags/v}"; fi
+          if [ -z "$V" ]; then V=$(node -p "require('./app.json').expo.version"); fi
+          BUILD=${{ github.run_number }}
+          node -e "
+            const fs=require('fs'); const p='app.json'; const c=JSON.parse(fs.readFileSync(p,'utf8'));
+            c.expo.version='$V'; c.expo.ios.buildNumber='$BUILD';
+            fs.writeFileSync(p, JSON.stringify(c,null,2)+'\n');"
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          echo "build=$BUILD" >> "$GITHUB_OUTPUT"
+          echo "Building version $V (build $BUILD)"
+
+      - name: Install Expo SDK 58 and native modules
+        run: |
+          npm install --no-audit --no-fund expo@~58.0.0
+          npx expo install react react-native expo-status-bar expo-sqlite expo-secure-store \
+            expo-crypto expo-notifications expo-application expo-file-system
+          npx expo install --check || npx expo install --fix
+          node -p "'expo ' + require('expo/package.json').version + ', react-native ' + require('react-native/package.json').version"
+
+      - name: Generate native iOS project (prebuild + CocoaPods)
+        env:
+          CI: '1'
+        run: npx expo prebuild --platform ios --clean
+
+      - name: Check entitlements (no push capability)
+        run: |
+          ENT=$(ls ios/*/*.entitlements 2>/dev/null | head -1 || true)
+          if [ -n "$ENT" ]; then
+            echo "Entitlements file: $ENT"; cat "$ENT"
+            if grep -q 'aps-environment' "$ENT"; then echo "::error::aps-environment present"; exit 1; fi
+          else
+            echo "No entitlements file generated"
+          fi
+
+      - name: Build app without code signing
+        run: |
+          WS=$(ls -d ios/*.xcworkspace | head -1)
+          SCHEME=$(basename "$WS" .xcworkspace)
+          echo "Workspace $WS, scheme $SCHEME"
+          xcodebuild \
+            -workspace "$WS" \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build | tee xcodebuild.log | grep -E '^(\*\*|error:|.*error:)' || true
+          test -d "build/Build/Products/Release-iphoneos/$SCHEME.app" || { tail -200 xcodebuild.log; exit 1; }
+          echo "SCHEME=$SCHEME" >> "$GITHUB_ENV"
+
+      - name: Package unsigned .ipa
+        id: ipa
+        run: |
+          NAME="DailyMicroHabits-v${{ steps.ver.outputs.version }}-b${{ steps.ver.outputs.build }}-unsigned.ipa"
+          rm -rf Payload && mkdir Payload
+          cp -R "build/Build/Products/Release-iphoneos/$SCHEME.app" Payload/
+          /usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "Payload/$SCHEME.app/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "Payload/$SCHEME.app/Info.plist"
+          zip -qry "$NAME" Payload
+          ls -lh "$NAME"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Upload .ipa and lockfile as workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-unsigned-${{ steps.ver.outputs.version }}-b${{ steps.ver.outputs.build }}
+          path: |
+            mobile/${{ steps.ipa.outputs.name }}
+            mobile/package.json
+            mobile/package-lock.json
+          retention-days: 30
+
+      - name: Publish GitHub Release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: mobile/${{ steps.ipa.outputs.name }}
+          body: |
+            Unsigned iOS build ${{ steps.ver.outputs.version }} (build ${{ steps.ver.outputs.build }}).
+            Download on the iPhone and install through SideStore, which signs it with the owner's Apple ID.

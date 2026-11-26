@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A5 On this day - content file",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "module", "items"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "module": { "const": "A5" },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/date_entry" }
+    }
+  },
+  "$defs": {
+    "date_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date_key", "events"],
+      "properties": {
+        "date_key": { "type": "string", "pattern": "^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$" },
+        "events": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/event" }
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["year", "category", "summary", "source"],
+      "properties": {
+        "year": { "type": "integer", "minimum": -3000, "maximum": 2026 },
+        "category": {
+          "type": "string",
+          "enum": ["science", "technology", "medicine", "exploration", "history", "culture"]
+        },
+        "summary": { "type": "string", "minLength": 60, "maxLength": 500 },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "url"],
+          "properties": {
+            "title": { "type": "string", "minLength": 3 },
+            "url": { "type": "string", "pattern": "^https://" }
+          }
+        }
+      }
+    }
+  }
+}

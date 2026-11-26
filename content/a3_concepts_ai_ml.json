@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "module": "A3",
+  "domain": "ai_ml",
+  "items": [
+    {
+      "id": "a3-ai_ml-0001",
+      "domain": "ai_ml",
+      "title": "Gradient descent",
+      "depth": "introductory",
+      "explainer": "Most machine-learning models are trained by minimizing a loss function: a single number that measures how wrong the model's predictions are on the training data. Gradient descent is the workhorse algorithm for this job. The gradient of the loss with respect to the model's parameters points in the direction in which the loss increases fastest, so the algorithm takes a small step in the opposite direction, recomputes the gradient, and repeats until the loss stops improving. The size of each step is set by the learning rate. If the learning rate is too large, updates overshoot the minimum and the loss oscillates or even diverges; if it is too small, training becomes painfully slow and can stall on flat regions of the loss surface. Computing the exact gradient over an entire data set at every step is expensive, so stochastic gradient descent (SGD) estimates it from a small random mini-batch of examples instead. That estimate is noisy but cheap, and the noise can even help the optimizer escape shallow local minima. Refinements such as momentum and Adam adapt the step size for each parameter, and they are the default optimizers behind most modern neural networks.",
+      "formula": "\\theta_{t+1} = \\theta_t - \\eta \\, \\nabla_{\\theta} L(\\theta_t)",
+      "source": {
+        "title": "Gradient descent - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gradient_descent"
+      },
+      "question": {
+        "prompt": "In gradient descent, what is the most likely effect of setting the learning rate far too high?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Updates overshoot the minimum, so the loss oscillates or diverges"
+          },
+          {
+            "id": "b",
+            "text": "Training converges faster and more reliably"
+          },
+          {
+            "id": "c",
+            "text": "The gradient becomes exactly zero after one step"
+          },
+          {
+            "id": "d",
+            "text": "The optimizer automatically switches to mini-batches"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "A large learning rate makes each step jump past the minimum; successive steps can bounce back and forth or grow, so the loss oscillates or diverges instead of settling."
+      },
+      "tags": [
+        "optimization",
+        "training"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0002",
+      "domain": "ai_ml",
+      "title": "Overfitting and the bias-variance trade-off",
+      "depth": "intermediate",
+      "explainer": "A model overfits when it learns the noise and quirks of its training data instead of the underlying pattern. The symptom is a large gap between performance on the training set, which looks excellent, and performance on new data, which is much worse. The bias-variance trade-off gives a precise way to think about this. For squared-error loss, the expected error of a prediction on a new point splits into three parts: squared bias, the error from wrong assumptions such as fitting a straight line to a curved relationship; variance, the sensitivity of the fitted model to the particular training sample it happened to see; and irreducible noise in the outcome itself. Simple models tend to have high bias and low variance, while very flexible models have low bias and high variance. As model complexity grows, test error therefore often traces a U-shape: falling at first as bias shrinks, then rising as variance takes over. Standard remedies are more training data, regularization, early stopping, and using cross-validation to choose the complexity. Very large neural networks complicate this classical picture: they can show 'double descent', where test error falls again once a model has enough capacity to fit the training data perfectly.",
+      "formula": "\\mathbb{E}\\big[(y - \\hat f(x))^2\\big] = \\mathrm{Bias}\\big[\\hat f(x)\\big]^2 + \\mathrm{Var}\\big[\\hat f(x)\\big] + \\sigma^2",
+      "source": {
+        "title": "Bias-variance tradeoff - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff"
+      },
+      "question": {
+        "prompt": "A model has 1% error on its training data but 25% error on held-out data. What is the most likely diagnosis?",
+        "options": [
+          {
+            "id": "a",
+            "text": "High bias (underfitting)"
+          },
+          {
+            "id": "b",
+            "text": "High variance (overfitting)"
+          },
+          {
+            "id": "c",
+            "text": "Irreducible noise only"
+          },
+          {
+            "id": "d",
+            "text": "A learning rate that is too small"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Near-perfect training performance with much worse held-out performance means the model fits its specific sample too closely: the signature of high variance, i.e., overfitting."
+      },
+      "tags": [
+        "generalization",
+        "model_selection"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0003",
+      "domain": "ai_ml",
+      "title": "Backpropagation",
+      "depth": "intermediate",
+      "explainer": "Training a neural network with gradient descent requires the gradient of the loss with respect to every weight, and a large network can have billions of them. Backpropagation computes all of these gradients efficiently by applying the chain rule of calculus systematically. In the forward pass, the input flows through the network layer by layer and each layer's intermediate values are stored. In the backward pass, the algorithm starts from the derivative of the loss at the output and works back toward the input, multiplying by each layer's local derivative to obtain the gradient for that layer's weights. Because intermediate results are reused rather than recomputed, the whole backward pass costs only a small constant multiple of the forward pass. In modern terms, backpropagation is reverse-mode automatic differentiation, which frameworks such as PyTorch and JAX perform automatically. The method was popularized for neural networks by Rumelhart, Hinton and Williams in 1986. A well-known difficulty is the vanishing gradient: multiplying many factors smaller than one through a deep stack of layers shrinks the gradient reaching the early layers, so they barely learn. ReLU activations, careful weight initialization, normalization layers and residual connections were all developed partly to counter this effect.",
+      "formula": "\\frac{\\partial L}{\\partial w} = \\frac{\\partial L}{\\partial a} \\cdot \\frac{\\partial a}{\\partial z} \\cdot \\frac{\\partial z}{\\partial w}",
+      "source": {
+        "title": "Backpropagation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Backpropagation"
+      },
+      "question": {
+        "prompt": "Why do very deep networks without residual connections or careful initialization often suffer from vanishing gradients?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Backpropagation skips the early layers to save time"
+          },
+          {
+            "id": "b",
+            "text": "The forward pass discards activations before the backward pass"
+          },
+          {
+            "id": "c",
+            "text": "The chain rule multiplies many factors smaller than one, shrinking the gradient in early layers"
+          },
+          {
+            "id": "d",
+            "text": "The loss function becomes non-differentiable in deep networks"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Each layer contributes a multiplicative factor to the gradient. When many of those factors are below one, their product shrinks toward zero by the time it reaches the first layers."
+      },
+      "tags": [
+        "neural_networks",
+        "training"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0004",
+      "domain": "ai_ml",
+      "title": "Self-attention and the transformer",
+      "depth": "intermediate",
+      "explainer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need', underlies today's large language models. Its core operation is self-attention. Each token's representation is projected into three vectors: a query, a key and a value. The attention weight from one token to another is computed from the dot product of the first token's query with the second token's key, scaled by the square root of the key dimension and normalized with a softmax across all tokens. Each token's output is then the weighted average of all the value vectors. This lets every token draw information directly from every other token in a single step, however far apart they are, whereas recurrent networks had to pass information along the sequence one position at a time. Because all positions are processed in parallel, transformers train efficiently on GPUs. Two details matter in practice. First, multi-head attention runs several attention operations side by side so the model can track different kinds of relationships at once. Second, attention by itself ignores word order, so positional encodings are added to the token embeddings. The main cost is that attention compares every pair of tokens, so compute grows quadratically with sequence length.",
+      "formula": "\\mathrm{Attention}(Q, K, V) = \\mathrm{softmax}\\!\\left(\\frac{Q K^{\\top}}{\\sqrt{d_k}}\\right) V",
+      "source": {
+        "title": "Vaswani et al. (2017), Attention Is All You Need - arXiv",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      "question": {
+        "prompt": "Why do transformers add positional encodings to token embeddings?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To reduce the size of the vocabulary"
+          },
+          {
+            "id": "b",
+            "text": "To make the cost of attention grow linearly with length"
+          },
+          {
+            "id": "c",
+            "text": "To replace the value vectors in attention"
+          },
+          {
+            "id": "d",
+            "text": "Self-attention on its own is insensitive to the order of tokens"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Attention computes weighted averages over a set of tokens; shuffling the tokens would give the same result. Positional encodings inject order information so 'dog bites man' differs from 'man bites dog'."
+      },
+      "tags": [
+        "neural_networks",
+        "language_models"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0005",
+      "domain": "ai_ml",
+      "title": "Tokenization and byte-pair encoding",
+      "depth": "introductory",
+      "explainer": "Language models do not read text as letters or as whole words. Text is first split into tokens drawn from a fixed vocabulary, and the model only ever sees sequences of token IDs. The most common way to build that vocabulary is byte-pair encoding (BPE). It starts from individual characters or bytes, counts which adjacent pair occurs most often in a large training corpus, merges that pair into a new token, and repeats the process until the vocabulary reaches a target size, often tens of thousands of tokens or more. Frequent words end up as single tokens, while rare words are broken into smaller subword pieces, so no input is ever completely out of vocabulary. BPE began as a data-compression technique in the 1990s and was adapted for neural machine translation in 2016. Tokenization has visible consequences. Model context limits and API prices are counted in tokens rather than words. Languages that were underrepresented in the tokenizer's training data need more tokens per word, which makes them slower and costlier to process. And tasks that depend on individual letters, such as counting the r's in a word or reversing a string, are harder than they look, because the model sees chunks of characters rather than the letters themselves.",
+      "formula": null,
+      "source": {
+        "title": "Byte pair encoding - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
+      },
+      "question": {
+        "prompt": "Under byte-pair encoding, how is a rare word that never appeared during vocabulary training usually handled?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It is split into smaller subword tokens that are in the vocabulary"
+          },
+          {
+            "id": "b",
+            "text": "It is replaced with a single 'unknown' token"
+          },
+          {
+            "id": "c",
+            "text": "It is silently dropped from the input"
+          },
+          {
+            "id": "d",
+            "text": "The tokenizer retrains itself on the new word"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Because the vocabulary is built up from single characters or bytes, any string can be represented as a sequence of smaller known pieces."
+      },
+      "tags": [
+        "language_models",
+        "text_processing"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0006",
+      "domain": "ai_ml",
+      "title": "Embeddings",
+      "depth": "introductory",
+      "explainer": "An embedding maps a discrete item, such as a word, a token, a product or a user, to a dense vector of real numbers, typically with a few hundred to a few thousand dimensions. The vectors are learned so that items that appear in similar contexts or play similar roles end up close together in that space. Closeness is usually measured with cosine similarity, which compares the directions of two vectors while ignoring their lengths. The word2vec models of 2013 made embeddings famous by showing that simple vector arithmetic could capture relationships: the vector for 'king' minus 'man' plus 'woman' lands near the vector for 'queen'. Today embeddings power semantic search, where a query and a collection of documents are embedded and the nearest documents are retrieved even if they share no exact words with the query. They also drive recommendation systems, clustering, duplicate detection, and retrieval-augmented generation, in which relevant passages are fetched and handed to a language model as context. One caution: embeddings absorb the statistical patterns of their training data, including social biases. Early word embeddings, for example, placed many occupations closer to one gender than the other, mirroring the text they were trained on.",
+      "formula": "\\cos(\\mathbf{u}, \\mathbf{v}) = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\lVert \\mathbf{u} \\rVert \\, \\lVert \\mathbf{v} \\rVert}",
+      "source": {
+        "title": "Word embedding - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Word_embedding"
+      },
+      "question": {
+        "prompt": "In a semantic search system, what does a high cosine similarity between a query embedding and a document embedding indicate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The document is longer than the query"
+          },
+          {
+            "id": "b",
+            "text": "The vectors point in similar directions, suggesting similar meaning"
+          },
+          {
+            "id": "c",
+            "text": "The document contains every word of the query"
+          },
+          {
+            "id": "d",
+            "text": "The two vectors have exactly the same length"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Cosine similarity measures the angle between vectors, not their length or word overlap. A value near 1 means the embeddings point the same way, which the model learned to associate with related meaning."
+      },
+      "tags": [
+        "representation",
+        "search"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0007",
+      "domain": "ai_ml",
+      "title": "Cross-validation",
+      "depth": "introductory",
+      "explainer": "A model's error on the data it was trained on is an overly optimistic guide to how it will perform on new data. Cross-validation gives a more honest estimate. In k-fold cross-validation, the data set is split into k roughly equal parts, or folds. The model is trained on k minus 1 folds and evaluated on the remaining fold, and this is repeated k times so that every fold serves as the test set exactly once. The k error estimates are then averaged. Common choices are k equal to 5 or 10. Compared with a single train-test split, cross-validation uses all the data for both training and evaluation and gives a less noisy estimate, which makes it the standard tool for choosing hyperparameters such as regularization strength or tree depth. Three pitfalls are common. First, data leakage: any preprocessing that learns from data, such as scaling or feature selection, must be fit inside each training fold, never on the full data set. Second, time series: random folds let the model train on the future, so forward-chaining splits are needed. Third, grouped data: if one patient contributes several samples, all of them must stay in the same fold.",
+      "formula": "\\mathrm{CV}_k = \\frac{1}{k} \\sum_{i=1}^{k} \\mathrm{Err}_i",
+      "source": {
+        "title": "Cross-validation (statistics) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cross-validation_(statistics)"
+      },
+      "question": {
+        "prompt": "A team standardizes all features using the mean and standard deviation of the full data set, then runs 10-fold cross-validation. What is the problem?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ten folds is too many for most data sets"
+          },
+          {
+            "id": "b",
+            "text": "Standardization is never allowed before model fitting"
+          },
+          {
+            "id": "c",
+            "text": "Information from the held-out folds leaks into training, making the estimate optimistic"
+          },
+          {
+            "id": "d",
+            "text": "Cross-validation only works for classification problems"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "The scaling statistics were computed using the test folds, so each model has indirectly seen its evaluation data. Preprocessing must be fit within each training fold."
+      },
+      "tags": [
+        "model_selection",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0008",
+      "domain": "ai_ml",
+      "title": "Regularization: L1 and L2 penalties",
+      "depth": "intermediate",
+      "explainer": "Regularization discourages a model from fitting noise by adding a penalty on the size of its parameters to the loss being minimized. The two classic penalties behave differently. L2 regularization, used in ridge regression and called weight decay in deep learning, adds the sum of squared weights. It shrinks all weights smoothly toward zero but rarely makes any of them exactly zero. L1 regularization, used in the lasso, adds the sum of absolute values of the weights. Because of the sharp corner of the absolute-value function at zero, it tends to push some weights exactly to zero, so it also performs feature selection and yields sparse, easier-to-interpret models. The elastic net combines both penalties. The penalty strength, often written lambda, controls the trade-off: larger values mean simpler models with more bias and less variance. It is usually chosen by cross-validation. Regularization also has a Bayesian reading: minimizing the L2-penalized loss is equivalent to finding the most probable weights under a Gaussian prior, and the L1 penalty corresponds to a Laplace prior. In deep learning, dropout, early stopping and data augmentation serve as additional regularizers that limit overfitting without an explicit penalty term.",
+      "formula": "L_{\\text{reg}}(\\mathbf{w}) = L(\\mathbf{w}) + \\lambda_1 \\lVert \\mathbf{w} \\rVert_1 + \\lambda_2 \\lVert \\mathbf{w} \\rVert_2^2",
+      "source": {
+        "title": "Regularization (mathematics) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Regularization_(mathematics)"
+      },
+      "question": {
+        "prompt": "Which penalty tends to set some coefficients exactly to zero, performing feature selection?",
+        "options": [
+          {
+            "id": "a",
+            "text": "L2 penalty (ridge regression)"
+          },
+          {
+            "id": "b",
+            "text": "Dropout"
+          },
+          {
+            "id": "c",
+            "text": "No penalty (ordinary least squares)"
+          },
+          {
+            "id": "d",
+            "text": "L1 penalty (lasso)"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "The L1 penalty's corner at zero makes zero an attractive solution for weak features, so the lasso drops them entirely. Ridge only shrinks coefficients toward zero."
+      },
+      "tags": [
+        "generalization",
+        "statistics"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0009",
+      "domain": "ai_ml",
+      "title": "Reinforcement learning from human feedback (RLHF)",
+      "depth": "advanced",
+      "explainer": "A pretrained language model is trained to predict the next token of internet text, which is not the same as being helpful, honest or safe. Reinforcement learning from human feedback is one of the main techniques used to close that gap. It typically runs in three stages. First, the model is fine-tuned on examples of good responses written by people. Second, people compare pairs of model responses to the same prompt, and a separate reward model is trained to predict which response they prefer. Third, the language model is optimized with a reinforcement-learning algorithm, commonly proximal policy optimization (PPO), to produce responses that the reward model scores highly. A penalty on the KL divergence from the original model keeps the tuned model from drifting too far, which limits reward hacking: producing text that scores well with the reward model without actually being better. The approach was popularized for instruction-following models in 2022. Newer methods simplify or extend it. Direct preference optimization (DPO) learns from the preference pairs without a separate reward model or reinforcement-learning loop, and AI-feedback methods such as Constitutional AI use model judgments guided by written principles. A known limitation is that optimizing for human approval can reward flattery over accuracy.",
+      "formula": "\\max_{\\pi} \\; \\mathbb{E}_{x,\\, y \\sim \\pi}\\big[ r(x, y) \\big] - \\beta \\, \\mathrm{KL}\\big( \\pi(\\cdot \\mid x) \\,\\|\\, \\pi_{\\text{ref}}(\\cdot \\mid x) \\big)",
+      "source": {
+        "title": "Reinforcement learning from human feedback - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback"
+      },
+      "question": {
+        "prompt": "What is the main purpose of the KL-divergence penalty in RLHF fine-tuning?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To keep the tuned model close to the reference model, limiting reward hacking and degenerate outputs"
+          },
+          {
+            "id": "b",
+            "text": "To speed up training by skipping the reward model"
+          },
+          {
+            "id": "c",
+            "text": "To train the reward model from human comparisons"
+          },
+          {
+            "id": "d",
+            "text": "To reduce the size of the tokenizer vocabulary"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Without the penalty, the policy can exploit flaws in the learned reward model and drift into odd text. The KL term anchors it to the original model's distribution."
+      },
+      "tags": [
+        "language_models",
+        "alignment",
+        "reinforcement_learning"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0010",
+      "domain": "ai_ml",
+      "title": "Convolutional neural networks",
+      "depth": "introductory",
+      "explainer": "Convolutional neural networks, or CNNs, are designed for data arranged on a grid, above all images. Instead of connecting every input pixel to every unit in the next layer, a convolutional layer slides small learnable filters, often 3 by 3 pixels, across the image. Each filter responds to a particular local pattern, such as an edge at a certain angle, wherever that pattern appears. Because the same filter weights are reused at every position, a convolutional layer needs far fewer parameters than a fully connected layer, and a feature learned in one corner of an image is automatically recognized in the others. Stacking layers builds a hierarchy: early layers detect edges and colors, middle layers detect textures and parts, and deeper layers respond to whole objects. Pooling or strided convolutions shrink the spatial resolution along the way, so each unit in a deep layer sees a large region of the original image. The 2012 ImageNet competition, won decisively by the CNN known as AlexNet, is widely seen as the moment deep learning took over computer vision. Vision transformers now rival CNNs on many benchmarks, but CNNs remain widespread, especially on phones and other devices with limited compute.",
+      "formula": "(I * K)(i, j) = \\sum_{m} \\sum_{n} I(i + m,\\, j + n)\\, K(m, n)",
+      "source": {
+        "title": "Convolutional neural network - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network"
+      },
+      "question": {
+        "prompt": "Why does a convolutional layer need far fewer parameters than a fully connected layer on the same image?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It ignores the color channels of the image"
+          },
+          {
+            "id": "b",
+            "text": "The same small filter weights are reused at every position in the image"
+          },
+          {
+            "id": "c",
+            "text": "It only processes the center of the image"
+          },
+          {
+            "id": "d",
+            "text": "It has no bias terms"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Weight sharing means one 3x3 filter has just nine weights per channel, applied everywhere, instead of a separate weight for every pixel-to-unit connection."
+      },
+      "tags": [
+        "neural_networks",
+        "computer_vision"
+      ]
+    }
+  ]
+}

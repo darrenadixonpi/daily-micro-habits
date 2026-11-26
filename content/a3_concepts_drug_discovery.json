@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "module": "A3",
+  "domain": "drug_discovery",
+  "items": [
+    {
+      "id": "a3-drug_discovery-0001",
+      "domain": "drug_discovery",
+      "title": "The drug development pipeline",
+      "depth": "introductory",
+      "explainer": "Bringing a new medicine from idea to pharmacy shelf typically takes 10 to 15 years. The pipeline begins with discovery: identifying a biological target linked to a disease and finding molecules that act on it. Promising candidates then enter preclinical testing in cells and animals to assess how they work, how the body handles them, and whether they are toxic. Only then can a drug be tested in people, under an investigational application to a regulator such as the US Food and Drug Administration. Phase I trials give the drug to a small group, often healthy volunteers, mainly to assess safety and dosing. Phase II trials, in a few hundred patients, look for signs of effectiveness and refine the dose. Phase III trials, often in thousands of patients, confirm effectiveness against placebo or existing treatment and detect less common side effects. If the evidence holds up, the company applies for approval, and after approval phase IV monitoring continues to watch for rare problems in the wider population. Attrition is severe: only roughly one in ten drugs that enter phase I eventually reaches approval, most often failing for lack of efficacy or for safety problems. Estimates of total cost per approved drug range widely, often into billions of dollars.",
+      "formula": null,
+      "source": {
+        "title": "Drug development - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Drug_development"
+      },
+      "question": {
+        "prompt": "What is the primary purpose of a Phase I clinical trial?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To assess safety and determine a tolerable dose in a small group of people"
+          },
+          {
+            "id": "b",
+            "text": "To prove the drug works better than existing treatments in thousands of patients"
+          },
+          {
+            "id": "c",
+            "text": "To monitor rare side effects after the drug is on the market"
+          },
+          {
+            "id": "d",
+            "text": "To identify the biological target of the disease"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Phase I focuses on safety, tolerability and dosing; efficacy is explored in Phase II and confirmed in Phase III."
+      },
+      "tags": [
+        "clinical_development",
+        "regulation"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0002",
+      "domain": "drug_discovery",
+      "title": "Target identification and validation",
+      "depth": "intermediate",
+      "explainer": "Most modern drug programs start by choosing a target: usually a protein, such as an enzyme, receptor or ion channel, whose activity drives a disease and that a drug could plausibly change. Target identification draws on many kinds of evidence. Human genetics is among the most persuasive. If people who carry a naturally occurring mutation that disables a gene are protected from a disease, inhibiting that gene's protein with a drug may protect others too. The classic example is PCSK9: people with loss-of-function variants have very low LDL cholesterol and fewer heart attacks, and drugs blocking PCSK9 followed. Other evidence comes from gene expression studies comparing diseased and healthy tissue, from CRISPR screens that switch off genes one at a time in cells, and from animal models. Validation is the harder step: showing convincingly that modulating the target changes the disease, in a way that will translate to patients. Weak validation is a major reason drugs fail in Phase II, where many compounds hit their target exactly as designed but the patients do not improve, because the target was not truly driving the disease. Analyses of past pipelines have found that drug programs whose targets are supported by human genetic evidence are more likely to succeed in development.",
+      "formula": null,
+      "source": {
+        "title": "Drug discovery - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Drug_discovery"
+      },
+      "question": {
+        "prompt": "Why are people with natural loss-of-function mutations in a gene valuable for target validation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Their mutations can be copied directly into a drug"
+          },
+          {
+            "id": "b",
+            "text": "They show what happens to human health when that protein's activity is reduced"
+          },
+          {
+            "id": "c",
+            "text": "They are exempt from clinical trial requirements"
+          },
+          {
+            "id": "d",
+            "text": "They are immune to all side effects"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Such people are a natural experiment: if lifelong reduced activity of the protein is protective and safe, a drug that inhibits it is more likely to work."
+      },
+      "tags": [
+        "target_discovery",
+        "genetics"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0003",
+      "domain": "drug_discovery",
+      "title": "High-throughput screening",
+      "depth": "introductory",
+      "explainer": "Once a target is chosen, chemists need a starting molecule that acts on it. High-throughput screening finds such molecules by brute force. Robots test large libraries of compounds, often hundreds of thousands to millions of them, against the target in miniaturized assays run in plates containing hundreds or thousands of tiny wells. Each well holds the target, for example an enzyme with a substrate that produces light or color when the reaction runs, plus one test compound. Wells where the signal changes in the expected way flag potential hits. Most initial hits are false positives. Some compounds interfere with the assay itself, for instance by absorbing light, aggregating into clumps that nonspecifically disrupt proteins, or reacting chemically with anything they touch. Confirmatory testing, counterscreens and dose-response measurements weed these out, leaving a small set of validated hits. Medicinal chemists then pick the most promising chemical series as leads and begin optimizing them for potency, selectivity and drug-like properties. Alternatives to classical screening include fragment-based discovery, which screens very small molecules and grows them into larger ones, DNA-encoded libraries that tag each compound with a DNA barcode so billions can be tested at once, and computational virtual screening of enormous digital libraries.",
+      "formula": null,
+      "source": {
+        "title": "High-throughput screening - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/High-throughput_screening"
+      },
+      "question": {
+        "prompt": "Why must hits from a high-throughput screen be confirmed with follow-up tests?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Robots cannot measure signals accurately"
+          },
+          {
+            "id": "b",
+            "text": "Regulators require every library compound to be retested"
+          },
+          {
+            "id": "c",
+            "text": "Many hits are false positives that interfere with the assay rather than acting on the target"
+          },
+          {
+            "id": "d",
+            "text": "Hits always lose activity after one week"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Compounds can mimic activity by disrupting the readout, aggregating or reacting nonspecifically. Counterscreens and dose-response tests separate real binders from artifacts."
+      },
+      "tags": [
+        "screening",
+        "lab_automation"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0004",
+      "domain": "drug_discovery",
+      "title": "Lipinski's rule of five",
+      "depth": "introductory",
+      "explainer": "Most patients prefer to take a pill, so a drug usually needs to be absorbed from the gut into the bloodstream. In 1997 Christopher Lipinski and colleagues at Pfizer analyzed thousands of compounds that had reached clinical trials and identified simple properties shared by most orally absorbed drugs. Their 'rule of five', named because every threshold is a multiple of five, says poor absorption is more likely when a molecule breaks more than one of these limits: a molecular weight above 500 daltons; a calculated logP, a measure of how strongly it prefers fat over water, above 5; more than 5 hydrogen-bond donors, such as OH and NH groups; and more than 10 hydrogen-bond acceptors, such as nitrogen and oxygen atoms. The logic is physical. To cross the gut wall, a molecule must pass through fatty cell membranes, which favors compounds that are not too large, not too polar, and not too greasy to dissolve in the first place. The rule became a widely used filter for screening libraries and guiding chemists. It is a rule of thumb, not a law. Natural products, antibiotics and drugs absorbed by active transporters often violate it, and newer drug classes such as some macrocycles and targeted protein degraders deliberately operate beyond it.",
+      "formula": null,
+      "source": {
+        "title": "Lipinski's rule of five - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lipinski%27s_rule_of_five"
+      },
+      "question": {
+        "prompt": "Under Lipinski's rule of five, which property suggests a compound may be poorly absorbed when taken orally?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Exactly five carbon atoms"
+          },
+          {
+            "id": "b",
+            "text": "A melting point above 5 degrees Celsius"
+          },
+          {
+            "id": "c",
+            "text": "Fewer than 5 hydrogen-bond donors"
+          },
+          {
+            "id": "d",
+            "text": "A molecular weight above 500 daltons"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "The rule flags molecular weight over 500, logP over 5, more than 5 H-bond donors and more than 10 H-bond acceptors; breaking more than one limit predicts poor absorption."
+      },
+      "tags": [
+        "medicinal_chemistry",
+        "pharmacokinetics"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0005",
+      "domain": "drug_discovery",
+      "title": "Pharmacokinetics and drug half-life",
+      "depth": "intermediate",
+      "explainer": "Pharmacokinetics describes what the body does to a drug, often summarized as ADME: absorption into the bloodstream, distribution into tissues, metabolism, mostly by liver enzymes such as the cytochrome P450 family, and excretion, mainly through the kidneys. These processes determine how much drug reaches its target and for how long. A central summary number is the elimination half-life, the time for the drug's concentration in the blood to fall by half. It depends on two underlying quantities. Clearance is the volume of blood effectively cleared of the drug per unit of time. Volume of distribution describes how widely the drug spreads into tissues rather than staying in the blood. A larger volume or a lower clearance means a longer half-life. Half-life has direct practical consequences. With repeated dosing, a drug takes about four to five half-lives to approach a steady concentration, and about the same time to wash out after the last dose. A drug with a half-life of a few hours may need dosing several times a day, while one with a half-life of a day or more can be taken once daily. Interactions often work through metabolism: a second drug that blocks a P450 enzyme can raise the first drug's levels to toxic concentrations.",
+      "formula": "t_{1/2} = \\frac{\\ln 2 \\cdot V_d}{CL}",
+      "source": {
+        "title": "Pharmacokinetics - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pharmacokinetics"
+      },
+      "question": {
+        "prompt": "With regular repeated dosing, roughly how long does a drug take to approach steady-state concentration?",
+        "options": [
+          {
+            "id": "a",
+            "text": "About four to five elimination half-lives"
+          },
+          {
+            "id": "b",
+            "text": "Exactly one half-life"
+          },
+          {
+            "id": "c",
+            "text": "Immediately after the first dose"
+          },
+          {
+            "id": "d",
+            "text": "It never reaches a steady state"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Each half-life closes half the remaining gap to steady state, so after four to five half-lives the concentration is within about 94 to 97 percent of its plateau."
+      },
+      "tags": [
+        "pharmacokinetics",
+        "pharmacology"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0006",
+      "domain": "drug_discovery",
+      "title": "Structure-activity relationships and lead optimization",
+      "depth": "intermediate",
+      "explainer": "A screening hit is rarely a drug. It may bind its target weakly, hit other proteins too, be quickly broken down by the liver, or be toxic. Lead optimization is the iterative process in which medicinal chemists make many variants of a promising molecule to fix these problems while keeping its activity. The guiding tool is the structure-activity relationship, or SAR: a systematic map of how changes to a molecule's structure change its biological activity. Chemists might add a methyl group here, swap a hydrogen for a fluorine there, or replace a ring, then measure potency, selectivity and other properties for each variant. Patterns emerge, revealing which parts of the molecule are essential for binding, which can be modified freely, and which cause problems. The objectives frequently conflict. Adding greasy groups may increase potency but reduce solubility and increase metabolic breakdown; blocking a site of metabolism can introduce new toxicity. Optimization is therefore a multi-parameter balancing act, tracked with design-make-test-analyze cycles that may run for years and involve thousands of compounds. Structure-based design, using three-dimensional structures of the target with the molecule bound, and computational models increasingly guide which compounds are worth making, reducing the number of costly syntheses.",
+      "formula": null,
+      "source": {
+        "title": "Structure-activity relationship - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Structure%E2%80%93activity_relationship"
+      },
+      "question": {
+        "prompt": "What does a structure-activity relationship (SAR) study map out?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The order in which clinical trial phases are run"
+          },
+          {
+            "id": "b",
+            "text": "How changes in a molecule's structure affect its biological activity"
+          },
+          {
+            "id": "c",
+            "text": "The price of raw chemical materials"
+          },
+          {
+            "id": "d",
+            "text": "How a drug is packaged for sale"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "SAR links specific structural modifications to changes in potency, selectivity and other properties, guiding which analogs to make next."
+      },
+      "tags": [
+        "medicinal_chemistry",
+        "optimization"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0007",
+      "domain": "drug_discovery",
+      "title": "AlphaFold and protein structure prediction",
+      "depth": "intermediate",
+      "explainer": "A protein's function depends on the three-dimensional shape its chain of amino acids folds into, and knowing that shape is a powerful aid to drug design. For decades, structures had to be determined experimentally with X-ray crystallography, nuclear magnetic resonance or cryo-electron microscopy, methods that can take months or years per protein. Predicting structure directly from the amino-acid sequence was a grand challenge of biology. In 2020, DeepMind's AlphaFold 2 achieved accuracy comparable to experimental methods for many proteins at the biennial CASP structure-prediction competition. It uses deep learning trained on known structures and on evolutionary information from related protein sequences. Predicted structures for most known proteins were then released in a public database. Demis Hassabis and John Jumper of DeepMind shared the 2024 Nobel Prize in Chemistry for this work with David Baker, honored for computational protein design. For drug discovery, predicted structures help identify pockets where small molecules might bind and support structure-based design for targets that have never been crystallized. Limits remain. Predictions are less reliable for flexible regions, for the precise positions of side chains in binding sites, and for how a protein changes shape when a drug binds, so experimental validation is still essential before investing heavily in a target.",
+      "formula": null,
+      "source": {
+        "title": "AlphaFold - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/AlphaFold"
+      },
+      "question": {
+        "prompt": "What problem did AlphaFold 2 largely solve for many proteins in 2020?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Synthesizing proteins without cells"
+          },
+          {
+            "id": "b",
+            "text": "Running clinical trials without patients"
+          },
+          {
+            "id": "c",
+            "text": "Predicting a protein's 3D structure from its amino-acid sequence"
+          },
+          {
+            "id": "d",
+            "text": "Sequencing the human genome"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "AlphaFold 2 predicted folded protein structures from sequence with accuracy rivaling experimental methods for many proteins at CASP14."
+      },
+      "tags": [
+        "structural_biology",
+        "ai_in_science"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0008",
+      "domain": "drug_discovery",
+      "title": "Small molecules versus biologics",
+      "depth": "introductory",
+      "explainer": "Medicines fall into two broad families. Small-molecule drugs, such as aspirin, statins and most traditional pills, are chemically synthesized compounds, typically with molecular weights below about 900 daltons. Their small size lets many of them be absorbed from the gut and slip inside cells to reach intracellular targets, and they can be manufactured reproducibly at low cost. Biologics are large molecules made by living cells, such as monoclonal antibodies, therapeutic proteins like insulin, and vaccines. An antibody weighs roughly 150,000 daltons, more than a hundred times a typical small molecule. Biologics can bind large, flat surfaces on proteins that small molecules struggle to grip, and they often achieve exceptional selectivity. But they are usually digested in the stomach, so most must be injected or infused, and they generally cannot enter cells. Manufacturing is complex, since tiny changes in cell culture conditions can alter the product. That complexity shapes competition after patents expire. A generic small molecule can be shown to be chemically identical to the original, while a follow-on biologic, called a biosimilar, must be shown to be highly similar with no clinically meaningful differences, a costlier process. Newer modalities blur the line, including peptides, oligonucleotides, gene therapies and antibody-drug conjugates.",
+      "formula": null,
+      "source": {
+        "title": "Biopharmaceutical - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Biopharmaceutical"
+      },
+      "question": {
+        "prompt": "Why must most biologic drugs, such as monoclonal antibodies, be injected rather than taken as pills?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They are too small to be retained in the body"
+          },
+          {
+            "id": "b",
+            "text": "Regulations forbid oral biologics"
+          },
+          {
+            "id": "c",
+            "text": "They only work when injected into muscle"
+          },
+          {
+            "id": "d",
+            "text": "As large proteins they are broken down in the digestive tract and poorly absorbed"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Digestive enzymes degrade proteins, and very large molecules cross the gut wall poorly, so injection or infusion is usually required."
+      },
+      "tags": [
+        "modalities",
+        "manufacturing"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0009",
+      "domain": "drug_discovery",
+      "title": "The therapeutic index",
+      "depth": "introductory",
+      "explainer": "Every drug is toxic at some dose, so the useful question is how far apart the effective dose and the harmful dose are. The therapeutic index summarizes that gap. It is classically defined as the dose that is toxic in 50 percent of subjects divided by the dose that is effective in 50 percent; in animal studies, the lethal dose is sometimes used in place of the toxic dose. A large ratio means a wide safety margin, while a ratio close to one means the effective and toxic doses nearly overlap. Many common drugs have wide margins, so modest dosing errors are rarely dangerous. Drugs with a narrow therapeutic index demand care. The anticoagulant warfarin, the heart drug digoxin, the mood stabilizer lithium and certain anti-epilepsy drugs all fall in this category. For such drugs, small changes in dose, diet, kidney function or interacting medications can tip a patient from ineffective to toxic, so doctors measure blood levels or clinical markers, such as clotting time for warfarin, and adjust doses individually. Regulators also apply stricter requirements when generic versions of narrow-index drugs are approved. In development, an inadequate safety margin found in preclinical or early clinical studies is a common reason to abandon a compound.",
+      "formula": "\\mathrm{TI} = \\frac{TD_{50}}{ED_{50}}",
+      "source": {
+        "title": "Therapeutic index - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Therapeutic_index"
+      },
+      "question": {
+        "prompt": "What does a therapeutic index close to 1 indicate about a drug?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Its effective and toxic doses nearly overlap, so it needs careful monitoring"
+          },
+          {
+            "id": "b",
+            "text": "It is extremely safe at any dose"
+          },
+          {
+            "id": "c",
+            "text": "It works in exactly one patient out of two"
+          },
+          {
+            "id": "d",
+            "text": "It has no measurable effect"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "TI = TD50 / ED50. A value near 1 means the dose that causes toxicity is close to the dose that works, leaving little safety margin."
+      },
+      "tags": [
+        "pharmacology",
+        "drug_safety"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0010",
+      "domain": "drug_discovery",
+      "title": "Drug repurposing",
+      "depth": "introductory",
+      "explainer": "Drug repurposing, also called repositioning, finds new uses for drugs that already exist, either approved medicines or compounds that were shelved after failing for their original purpose. Its appeal is efficiency. Because the drug's safety, dosing and manufacturing have already been studied in people, a repurposed drug can often skip early development steps, reducing cost, time and the risk of failure for safety reasons. Some of the best-known successes were accidental. Sildenafil was developed to treat angina, chest pain caused by reduced blood flow to the heart; trial participants reported an unexpected side effect, and it was approved for erectile dysfunction as Viagra, and later for pulmonary arterial hypertension. Thalidomide, notorious for causing birth defects, was later approved under strict controls to treat a complication of leprosy and the blood cancer multiple myeloma. Minoxidil, originally a blood-pressure drug, became a treatment for hair loss after patients grew more hair. Repurposing is increasingly systematic, using analyses of electronic health records, genetic data and computational matching of drug effects to disease signatures. It has limits. Commercial incentives can be weak when the drug is already off-patent and cheap, and some highly publicized repurposing hopes have failed in rigorous randomized trials.",
+      "formula": null,
+      "source": {
+        "title": "Drug repositioning - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Drug_repositioning"
+      },
+      "question": {
+        "prompt": "What is the main advantage of repurposing an existing drug compared with developing a new one?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Repurposed drugs never need clinical trials"
+          },
+          {
+            "id": "b",
+            "text": "Its safety and dosing in humans are already known, saving time and cost"
+          },
+          {
+            "id": "c",
+            "text": "Repurposed drugs always have stronger patent protection"
+          },
+          {
+            "id": "d",
+            "text": "Repurposing guarantees the drug will work for the new disease"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Existing human safety and pharmacokinetic data let developers skip or shorten early stages, although efficacy for the new use must still be proven."
+      },
+      "tags": [
+        "clinical_development",
+        "strategy"
+      ]
+    }
+  ]
+}

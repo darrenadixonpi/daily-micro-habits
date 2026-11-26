@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "module": "A3",
+  "domain": "biomedicine",
+  "items": [
+    {
+      "id": "a3-biomedicine-0001",
+      "domain": "biomedicine",
+      "title": "Vaccines, immune memory and herd immunity",
+      "depth": "introductory",
+      "explainer": "A vaccine trains the adaptive immune system to recognize a pathogen without the person having to survive the disease first. It presents an antigen, a recognizable piece or version of the pathogen, such as an inactivated virus, a purified protein, or genetic instructions for making a protein. B cells respond by producing antibodies that bind the antigen, and T cells learn to recognize infected cells. Crucially, some of these cells persist for years as memory cells. If the real pathogen arrives later, the memory cells respond within days instead of the week or more a first response takes, often clearing the infection before it causes serious illness. Vaccination also protects people who are not vaccinated. When enough of a population is immune, an infected person passes the disease on to fewer than one other person on average, and outbreaks fizzle out. The threshold depends on the basic reproduction number, R0, the average number of people one case infects in a fully susceptible population. Under simple assumptions the threshold is one minus one over R0. Measles, with an R0 commonly estimated between 12 and 18, needs immunity above 90 percent, which is why small declines in measles vaccination can quickly lead to outbreaks.",
+      "formula": "p_{c} = 1 - \\frac{1}{R_0}",
+      "source": {
+        "title": "Herd immunity - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Herd_immunity"
+      },
+      "question": {
+        "prompt": "Under the simple model, what fraction of a population must be immune to stop sustained spread of a disease with R0 = 4?",
+        "options": [
+          {
+            "id": "a",
+            "text": "75 percent"
+          },
+          {
+            "id": "b",
+            "text": "25 percent"
+          },
+          {
+            "id": "c",
+            "text": "40 percent"
+          },
+          {
+            "id": "d",
+            "text": "100 percent"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "The threshold is 1 - 1/R0 = 1 - 1/4 = 0.75, so 75 percent of the population must be immune."
+      },
+      "tags": [
+        "immunology",
+        "epidemiology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0002",
+      "domain": "biomedicine",
+      "title": "mRNA vaccines",
+      "depth": "intermediate",
+      "explainer": "An mRNA vaccine delivers genetic instructions rather than the antigen itself. A strand of messenger RNA encoding a viral protein, such as the spike protein of SARS-CoV-2, is packaged inside lipid nanoparticles, tiny fatty droplets that protect the fragile RNA and help it enter cells near the injection site. The cells' own ribosomes translate the mRNA into the protein, which the immune system then learns to recognize. The mRNA never enters the cell nucleus and cannot alter the cell's DNA, and it is broken down within days. Two technical problems held the approach back for decades. Injected RNA provoked strong inflammation and was quickly destroyed. Katalin Kariko and Drew Weissman showed in 2005 that replacing the nucleoside uridine with a modified version such as pseudouridine greatly reduced this inflammatory reaction while increasing protein production, work recognized with the 2023 Nobel Prize in Physiology or Medicine. Improved lipid nanoparticle formulations solved the delivery problem. When COVID-19 emerged, the platform allowed vaccine candidates to be designed within days of the viral sequence being published. Because changing the target only requires changing the RNA sequence, mRNA is now being studied for influenza, other infectious diseases and personalized cancer vaccines.",
+      "formula": null,
+      "source": {
+        "title": "mRNA vaccine - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/MRNA_vaccine"
+      },
+      "question": {
+        "prompt": "What discovery by Kariko and Weissman helped make mRNA vaccines practical?",
+        "options": [
+          {
+            "id": "a",
+            "text": "mRNA can integrate into the human genome for lasting protection"
+          },
+          {
+            "id": "b",
+            "text": "Modified nucleosides such as pseudouridine reduce inflammation and boost protein production"
+          },
+          {
+            "id": "c",
+            "text": "mRNA is stable at room temperature for years"
+          },
+          {
+            "id": "d",
+            "text": "Vaccines work without any immune response"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Swapping uridine for modified nucleosides let the mRNA avoid triggering strong innate immune alarms, allowing it to be translated efficiently."
+      },
+      "tags": [
+        "immunology",
+        "vaccines",
+        "biotechnology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0003",
+      "domain": "biomedicine",
+      "title": "Antimicrobial resistance",
+      "depth": "introductory",
+      "explainer": "Antimicrobial resistance occurs when bacteria and other microbes evolve the ability to survive drugs designed to kill them. It is natural selection in fast motion: when an antibiotic kills susceptible bacteria, any resistant ones survive and multiply, and resistance genes can then spread to other bacteria through horizontal gene transfer. Bacteria resist in a handful of ways. They can produce enzymes that destroy the drug, such as the beta-lactamases that break down penicillins; alter the drug's molecular target so it no longer binds; pump the drug out of the cell with efflux pumps; or reduce how much drug gets in. Misuse accelerates the problem: taking antibiotics for viral infections they cannot treat, stopping courses inconsistently against medical advice, and using large quantities in livestock all give resistant strains an advantage. The scale is substantial. A major study published in The Lancet in 2022 estimated that bacterial resistance was directly responsible for about 1.27 million deaths worldwide in 2019 and associated with millions more. Responses include antibiotic stewardship programs that reserve powerful drugs for when they are truly needed, better infection control in hospitals, faster diagnostics to identify the right drug, and incentives to develop new antibiotics, a market that has struggled commercially.",
+      "formula": null,
+      "source": {
+        "title": "Antimicrobial resistance - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Antimicrobial_resistance"
+      },
+      "question": {
+        "prompt": "Why does taking antibiotics for a viral cold contribute to antibiotic resistance?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It makes the cold virus resistant to antibiotics"
+          },
+          {
+            "id": "b",
+            "text": "It weakens the patient's own antibodies permanently"
+          },
+          {
+            "id": "c",
+            "text": "It exposes the body's bacteria to the drug, favoring resistant strains, while doing nothing against the virus"
+          },
+          {
+            "id": "d",
+            "text": "It has no effect on resistance at all"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Antibiotics do not act on viruses, but they still kill susceptible bacteria in the body, giving any resistant bacteria a survival advantage."
+      },
+      "tags": [
+        "microbiology",
+        "public_health"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0004",
+      "domain": "biomedicine",
+      "title": "Monoclonal antibodies",
+      "depth": "intermediate",
+      "explainer": "Antibodies are Y-shaped proteins that bind specific molecular targets with high precision. A natural immune response produces a mixture of antibodies from many different B cells, each recognizing a slightly different part of an antigen. A monoclonal antibody is a single antibody type produced by clones of one cell, so every molecule binds exactly the same target. In 1975 Georges Kohler and Cesar Milstein developed the hybridoma technique, fusing an antibody-producing B cell with an immortal myeloma cell to create a cell line that makes one antibody indefinitely; they shared a Nobel Prize in 1984. Early mouse antibodies triggered immune reactions in patients, so later methods produced chimeric, humanized and finally fully human antibodies. The naming convention reflects this history: drug names ending in '-ximab' are chimeric and those ending in '-zumab' are humanized. Monoclonal antibodies are now among the best-selling medicines. They block inflammatory signals in rheumatoid arthritis, mark cancer cells for destruction, release brakes on the immune system in cancer immunotherapy, and deliver toxic payloads directly to tumors as antibody-drug conjugates. They are also everyday laboratory tools and the basis of rapid diagnostic tests. Because they are large proteins, most must be injected or infused rather than swallowed.",
+      "formula": null,
+      "source": {
+        "title": "Monoclonal antibody - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Monoclonal_antibody"
+      },
+      "question": {
+        "prompt": "What distinguishes a monoclonal antibody preparation from the antibodies produced in a natural immune response?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It contains antibodies against many different pathogens"
+          },
+          {
+            "id": "b",
+            "text": "It is made of DNA rather than protein"
+          },
+          {
+            "id": "c",
+            "text": "It can be taken as a pill because it survives digestion"
+          },
+          {
+            "id": "d",
+            "text": "All its molecules come from one cell clone and bind exactly the same target"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "A natural response is polyclonal, a mixture of antibodies from many B cells. A monoclonal preparation is identical antibodies from a single clone."
+      },
+      "tags": [
+        "immunology",
+        "therapeutics"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0005",
+      "domain": "biomedicine",
+      "title": "Oncogenes and tumor suppressor genes",
+      "depth": "intermediate",
+      "explainer": "Cancer is fundamentally a disease of genes that control cell growth and division. Two broad classes matter most. Oncogenes are mutated versions of normal genes, called proto-oncogenes, that promote cell growth. A mutation can lock such a gene in the 'on' position, like a car accelerator stuck to the floor; the RAS gene family is a common example. Because one altered copy is enough to push growth, these mutations act dominantly. Tumor suppressor genes are the brakes. They halt the cell cycle, repair DNA, or trigger cell death when damage is severe. The p53 gene, sometimes called the guardian of the genome, is mutated in roughly half of human cancers. Losing a tumor suppressor usually requires both copies to be disabled. Alfred Knudson's 1971 'two-hit hypothesis', based on the childhood eye cancer retinoblastoma, explained why: children who inherit one defective copy of the RB1 gene need only one further mutation, so they develop tumors earlier and more often, frequently in both eyes. Inherited mutations in tumor suppressors such as BRCA1 and BRCA2 similarly raise lifetime cancer risk. Most cancers accumulate several such mutations over years, which is one reason cancer risk rises with age.",
+      "formula": null,
+      "source": {
+        "title": "Tumor suppressor gene - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tumor_suppressor_gene"
+      },
+      "question": {
+        "prompt": "According to Knudson's two-hit hypothesis, why do children who inherit one defective RB1 gene develop retinoblastoma more often?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They already carry one hit, so a single further mutation can disable the gene completely"
+          },
+          {
+            "id": "b",
+            "text": "The inherited gene acts as a dominant oncogene"
+          },
+          {
+            "id": "c",
+            "text": "Their immune system cannot recognize eye cells"
+          },
+          {
+            "id": "d",
+            "text": "The disease is caused by a virus passed from the parent"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Tumor suppressors usually need both copies inactivated. Inheriting one defective copy means only one more mutation is needed in a retinal cell."
+      },
+      "tags": [
+        "oncology",
+        "genetics"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0006",
+      "domain": "biomedicine",
+      "title": "Immune checkpoint inhibitors",
+      "depth": "intermediate",
+      "explainer": "The immune system has built-in brakes, called checkpoints, that stop T cells from attacking the body's own tissues and keep immune responses from running out of control. Two important checkpoint proteins on T cells are CTLA-4 and PD-1. When PD-1 binds its partner molecule, PD-L1, on another cell, the T cell is told to stand down. Many tumors exploit this by displaying PD-L1 on their surface, effectively telling attacking T cells to switch off. Checkpoint inhibitors are monoclonal antibodies that block these brakes, releasing the immune system to attack the cancer. James Allison, working on CTLA-4, and Tasuku Honjo, working on PD-1, shared the 2018 Nobel Prize in Physiology or Medicine for this approach. The results transformed treatment of some cancers. A subset of patients with advanced melanoma, which was once almost uniformly fatal within months, now survive for many years, and checkpoint inhibitors are used in lung, kidney, bladder and other cancers. The approach has clear limits. Only a minority of patients respond in many cancer types, and researchers are still learning to predict who will. Because the brakes are released body-wide, side effects can include autoimmune inflammation of the skin, gut, liver, lungs or hormone glands.",
+      "formula": null,
+      "source": {
+        "title": "Checkpoint inhibitor - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Checkpoint_inhibitor"
+      },
+      "question": {
+        "prompt": "How do PD-1 checkpoint inhibitors help the immune system fight cancer?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They directly poison dividing cancer cells"
+          },
+          {
+            "id": "b",
+            "text": "They block an inhibitory signal that tumors use to switch off T cells"
+          },
+          {
+            "id": "c",
+            "text": "They suppress the immune system to reduce inflammation"
+          },
+          {
+            "id": "d",
+            "text": "They repair mutated DNA in tumor cells"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Tumors can display PD-L1 to engage PD-1 and silence T cells. Blocking that interaction releases the brake so T cells can attack."
+      },
+      "tags": [
+        "oncology",
+        "immunology",
+        "therapeutics"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0007",
+      "domain": "biomedicine",
+      "title": "CAR-T cell therapy",
+      "depth": "advanced",
+      "explainer": "CAR-T cell therapy turns a patient's own immune cells into a living drug. T cells are collected from the patient's blood and genetically engineered, usually with a modified virus, to express a chimeric antigen receptor, or CAR. The receptor combines the targeting part of an antibody, which recognizes a specific protein on cancer cells, with signaling components that activate the T cell when it binds. The engineered cells are multiplied in the laboratory and infused back into the patient, typically after chemotherapy that makes room for them in the immune system. Once inside, they seek out and kill cells carrying the target and can keep multiplying, sometimes persisting for years. The first CAR-T therapy approved in the United States, in 2017, targeted the CD19 protein found on B cells and treated children and young adults with a form of acute lymphoblastic leukemia that had resisted other treatments. Several products for leukemias, lymphomas and multiple myeloma have followed. Serious risks include cytokine release syndrome, a dangerous surge of immune signaling, and neurological toxicity. Each dose is custom-made for one patient, which makes the therapy very expensive, and solid tumors have proved much harder to treat than blood cancers.",
+      "formula": null,
+      "source": {
+        "title": "CAR T cell - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/CAR_T_cell"
+      },
+      "question": {
+        "prompt": "What is the chimeric antigen receptor in CAR-T therapy designed to do?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Block T cells from dividing after infusion"
+          },
+          {
+            "id": "b",
+            "text": "Replace the patient's red blood cells"
+          },
+          {
+            "id": "c",
+            "text": "Let engineered T cells recognize a chosen protein on cancer cells and activate on binding"
+          },
+          {
+            "id": "d",
+            "text": "Deliver chemotherapy drugs directly into the bloodstream"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "The CAR fuses antibody-like targeting with T-cell activation signals, redirecting the patient's T cells against cells carrying the target antigen."
+      },
+      "tags": [
+        "oncology",
+        "immunology",
+        "cell_therapy"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0008",
+      "domain": "biomedicine",
+      "title": "Sensitivity, specificity and predictive value",
+      "depth": "intermediate",
+      "explainer": "Diagnostic tests are judged by two properties of the test itself. Sensitivity is the proportion of people with the disease who test positive; specificity is the proportion of people without the disease who test negative. A highly sensitive test rarely misses true cases, which makes it useful for ruling disease out, while a highly specific test rarely raises false alarms. What a patient actually wants to know is different: given a positive result, how likely is it that I have the disease? That is the positive predictive value, and it depends heavily on how common the disease is in the population being tested. Consider a test with 99 percent sensitivity and 95 percent specificity used to screen a population where 1 percent have the disease. Of 10,000 people, 100 are sick and 99 of them test positive. Of the 9,900 healthy people, 5 percent, or 495, also test positive. So only 99 of 594 positive results are true positives, a predictive value of about 17 percent. This base-rate effect is a direct application of Bayes' theorem. It explains why screening for rare conditions produces many false positives and why positive screening results are usually confirmed with a second, more specific test.",
+      "formula": "\\mathrm{PPV} = \\frac{\\mathrm{sens} \\cdot p}{\\mathrm{sens} \\cdot p + (1 - \\mathrm{spec})(1 - p)}",
+      "source": {
+        "title": "Sensitivity and specificity - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sensitivity_and_specificity"
+      },
+      "question": {
+        "prompt": "A test with 99 percent sensitivity and 95 percent specificity is used where 1 percent of people have the disease. Roughly what fraction of positive results are true positives?",
+        "options": [
+          {
+            "id": "a",
+            "text": "About 99 percent"
+          },
+          {
+            "id": "b",
+            "text": "About 95 percent"
+          },
+          {
+            "id": "c",
+            "text": "About 50 percent"
+          },
+          {
+            "id": "d",
+            "text": "About 17 percent"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Per 10,000 people: 99 true positives and 495 false positives, so 99 / 594 is about 17 percent. Low prevalence drags the predictive value down."
+      },
+      "tags": [
+        "diagnostics",
+        "statistics",
+        "epidemiology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0009",
+      "domain": "biomedicine",
+      "title": "The human microbiome",
+      "depth": "introductory",
+      "explainer": "The human body hosts trillions of microbes, mostly bacteria, living on the skin, in the mouth and above all in the large intestine. Together they are called the microbiota, and their combined genes the microbiome. A widely repeated claim held that bacterial cells outnumber human cells ten to one, but a careful 2016 estimate put the numbers at roughly 38 trillion bacteria and 30 trillion human cells, a ratio closer to one to one. Gut bacteria perform jobs our own cells cannot. They ferment dietary fiber into short-chain fatty acids that nourish the cells lining the colon, synthesize certain vitamins such as vitamin K, help train the immune system, and occupy space that harmful microbes might otherwise colonize. Disrupting this community can cause disease. Broad-spectrum antibiotics can wipe out protective species and allow Clostridioides difficile to take over, causing severe, recurrent diarrhea. Transplanting stool from a healthy donor restores a diverse community and cures most recurrent cases, one of the clearest demonstrations that the microbiome matters for health. Associations have also been reported with obesity, inflammatory bowel disease, allergies and even mood, but for many of these it remains unclear whether changes in the microbiome are a cause of disease or a consequence of it.",
+      "formula": null,
+      "source": {
+        "title": "Human microbiome - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Human_microbiome"
+      },
+      "question": {
+        "prompt": "Which treatment most clearly demonstrated that restoring the gut microbiome can cure a disease?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Fecal microbiota transplant for recurrent C. difficile infection"
+          },
+          {
+            "id": "b",
+            "text": "Antibiotics for viral infections"
+          },
+          {
+            "id": "c",
+            "text": "Vitamin K injections for newborns"
+          },
+          {
+            "id": "d",
+            "text": "Probiotic yogurt for seasonal allergies"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Transplanting a healthy donor's stool restores microbial diversity and resolves most cases of recurrent C. difficile infection."
+      },
+      "tags": [
+        "microbiology",
+        "physiology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0010",
+      "domain": "biomedicine",
+      "title": "Randomized controlled trials and blinding",
+      "depth": "introductory",
+      "explainer": "The randomized controlled trial, or RCT, is the standard method for testing whether a medical treatment works. Participants are assigned at random to receive either the treatment or a comparison, which may be a placebo or the current standard treatment. Randomization is the crucial step. It balances the groups, on average, for every factor that might affect the outcome, including factors nobody has thought to measure, such as diet, genetics or motivation. Any difference in outcomes can then be attributed to the treatment rather than to pre-existing differences between the groups, something observational studies cannot guarantee. Blinding adds protection against bias in expectations and judgments. In a single-blind trial participants do not know which group they are in; in a double-blind trial neither the participants nor the researchers assessing them know. This matters because beliefs change behavior and perception: patients given a placebo often report real improvements, and doctors who know who got the drug may judge outcomes differently. Trials are also registered in advance with their planned outcomes, so results cannot quietly be reported only for whichever measures looked best. RCTs have limits too. They can be expensive, slow, unethical for some questions, and their volunteers may differ from the broader population of patients.",
+      "formula": null,
+      "source": {
+        "title": "Randomized controlled trial - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Randomized_controlled_trial"
+      },
+      "question": {
+        "prompt": "What is the main advantage of random assignment in a clinical trial?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It guarantees that the treatment will work"
+          },
+          {
+            "id": "b",
+            "text": "It balances the groups on average for both measured and unmeasured factors"
+          },
+          {
+            "id": "c",
+            "text": "It removes the need for a control group"
+          },
+          {
+            "id": "d",
+            "text": "It ensures every participant receives the active drug"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Randomization makes the groups comparable in expectation, including on unknown confounders, so outcome differences can be attributed to the treatment."
+      },
+      "tags": [
+        "clinical_research",
+        "statistics"
+      ]
+    }
+  ]
+}

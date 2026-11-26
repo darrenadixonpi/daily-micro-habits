@@ -1,0 +1,1116 @@
+{
+  "schema_version": 1,
+  "module": "A1",
+  "tier": 2,
+  "items": [
+    {
+      "id": "a1-t2-0001",
+      "headword": "obviate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈɑbviˌeɪt/",
+      "definition": "To remove a need or difficulty in advance, so that it never has to be dealt with.",
+      "etymology": "From Late Latin obviare 'to meet in the way, to prevent', built from ob 'against' and via 'way'.",
+      "example_sentence": "Automated backups obviate the need to remember a weekly export.",
+      "inflections": [
+        "obviate",
+        "obviates",
+        "obviated",
+        "obviating"
+      ],
+      "tier": 2,
+      "tags": [
+        "prevention",
+        "problem_solving"
+      ]
+    },
+    {
+      "id": "a1-t2-0002",
+      "headword": "ephemeral",
+      "part_of_speech": "adjective",
+      "ipa": "/əˈfɛmərəl/",
+      "definition": "Lasting only a very short time; quickly fading or passing away.",
+      "etymology": "From Greek ephemeros 'lasting only a day', from epi 'on' and hemera 'day'.",
+      "example_sentence": "Most social-media trends are ephemeral, gone within a week.",
+      "inflections": [
+        "ephemeral",
+        "ephemerally"
+      ],
+      "tier": 2,
+      "tags": [
+        "time",
+        "change"
+      ]
+    },
+    {
+      "id": "a1-t2-0003",
+      "headword": "sanguine",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈsæŋɡwɪn/",
+      "definition": "Cheerfully optimistic, especially about an outcome that others may doubt.",
+      "etymology": "From Latin sanguineus 'of blood'; in medieval humoral theory a blood-dominant temperament was thought to make a person confident and hopeful.",
+      "example_sentence": "The team stayed sanguine about the launch despite two failed tests.",
+      "inflections": [
+        "sanguine",
+        "sanguinely"
+      ],
+      "tier": 2,
+      "tags": [
+        "attitude",
+        "emotion"
+      ]
+    },
+    {
+      "id": "a1-t2-0004",
+      "headword": "laconic",
+      "part_of_speech": "adjective",
+      "ipa": "/ləˈkɑnɪk/",
+      "definition": "Using very few words; brief to the point of seeming terse.",
+      "etymology": "From Greek Lakonikos 'of Laconia', the region around Sparta, whose people were known for blunt brevity of speech.",
+      "example_sentence": "Her laconic reply, 'Fine,' ended the discussion.",
+      "inflections": [
+        "laconic",
+        "laconically"
+      ],
+      "tier": 2,
+      "tags": [
+        "communication",
+        "style"
+      ]
+    },
+    {
+      "id": "a1-t2-0005",
+      "headword": "ubiquitous",
+      "part_of_speech": "adjective",
+      "ipa": "/juˈbɪkwətəs/",
+      "definition": "Present, appearing or found everywhere at the same time.",
+      "etymology": "From Latin ubique 'everywhere', via the theological term ubiquity.",
+      "example_sentence": "Smartphones became ubiquitous within a decade of their introduction.",
+      "inflections": [
+        "ubiquitous",
+        "ubiquitously"
+      ],
+      "tier": 2,
+      "tags": [
+        "frequency",
+        "technology"
+      ]
+    },
+    {
+      "id": "a1-t2-0006",
+      "headword": "pernicious",
+      "part_of_speech": "adjective",
+      "ipa": "/pərˈnɪʃəs/",
+      "definition": "Causing serious harm in a gradual or hidden way.",
+      "etymology": "From Latin perniciosus 'destructive', from pernicies 'ruin', from per 'completely' and nex 'death'.",
+      "example_sentence": "Small daily distractions can have a pernicious effect on deep work.",
+      "inflections": [
+        "pernicious",
+        "perniciously"
+      ],
+      "tier": 2,
+      "tags": [
+        "harm",
+        "risk"
+      ]
+    },
+    {
+      "id": "a1-t2-0007",
+      "headword": "garrulous",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈɡærələs/",
+      "definition": "Excessively talkative, especially about unimportant matters.",
+      "etymology": "From Latin garrulus 'chattering', from garrire 'to chatter'.",
+      "example_sentence": "A garrulous seatmate turned the short flight into a long one.",
+      "inflections": [
+        "garrulous",
+        "garrulously"
+      ],
+      "tier": 2,
+      "tags": [
+        "communication",
+        "character"
+      ]
+    },
+    {
+      "id": "a1-t2-0008",
+      "headword": "equanimity",
+      "part_of_speech": "noun",
+      "ipa": "/ˌikwəˈnɪməti/",
+      "definition": "Calmness and evenness of temper, especially under stress.",
+      "etymology": "From Latin aequanimitas, from aequus 'even, level' and animus 'mind'.",
+      "example_sentence": "She received the unexpected results with equanimity and simply reran the analysis.",
+      "inflections": [
+        "equanimity"
+      ],
+      "tier": 2,
+      "tags": [
+        "emotion",
+        "character"
+      ]
+    },
+    {
+      "id": "a1-t2-0009",
+      "headword": "mitigate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈmɪtəˌɡeɪt/",
+      "definition": "To make something less severe, serious or painful without removing it entirely.",
+      "etymology": "From Latin mitigare 'to soften', from mitis 'mild' and agere 'to make, to drive'.",
+      "example_sentence": "Daily backups mitigate the risk of losing journal entries.",
+      "inflections": [
+        "mitigate",
+        "mitigates",
+        "mitigated",
+        "mitigating"
+      ],
+      "tier": 2,
+      "tags": [
+        "risk",
+        "problem_solving"
+      ]
+    },
+    {
+      "id": "a1-t2-0010",
+      "headword": "cogent",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈkoʊdʒənt/",
+      "definition": "Clear, logical and convincing.",
+      "etymology": "From Latin cogent-, the present participle stem of cogere 'to compel', from co- 'together' and agere 'to drive'.",
+      "example_sentence": "The reviewer found the second argument far more cogent than the first.",
+      "inflections": [
+        "cogent",
+        "cogently"
+      ],
+      "tier": 2,
+      "tags": [
+        "reasoning",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0011",
+      "headword": "alacrity",
+      "part_of_speech": "noun",
+      "ipa": "/əˈlækrəti/",
+      "definition": "Brisk and cheerful readiness to do something.",
+      "etymology": "From Latin alacritas, from alacer 'brisk, lively'.",
+      "example_sentence": "He accepted the invitation with an alacrity that surprised everyone.",
+      "inflections": [
+        "alacrity"
+      ],
+      "tier": 2,
+      "tags": [
+        "attitude",
+        "speed"
+      ]
+    },
+    {
+      "id": "a1-t2-0012",
+      "headword": "perfunctory",
+      "part_of_speech": "adjective",
+      "ipa": "/pərˈfʌŋktəri/",
+      "definition": "Done routinely and with minimal effort, only to get it over with.",
+      "etymology": "From Late Latin perfunctorius 'careless', from perfungi 'to get through, to discharge', from per 'through' and fungi 'to perform'.",
+      "example_sentence": "A perfunctory code review missed the obvious bug.",
+      "inflections": [
+        "perfunctory",
+        "perfunctorily"
+      ],
+      "tier": 2,
+      "tags": [
+        "effort",
+        "work"
+      ]
+    },
+    {
+      "id": "a1-t2-0013",
+      "headword": "sycophant",
+      "part_of_speech": "noun",
+      "ipa": "/ˈsɪkəfənt/",
+      "definition": "A person who flatters someone powerful in order to gain advantage.",
+      "etymology": "Via Latin from Greek sykophantes 'informer', literally 'fig-shower' (sykon 'fig' + phainein 'to show'); why figs were involved is uncertain.",
+      "example_sentence": "The director surrounded herself with sycophants and stopped hearing bad news.",
+      "inflections": [
+        "sycophant",
+        "sycophants",
+        "sycophantic"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "power"
+      ]
+    },
+    {
+      "id": "a1-t2-0014",
+      "headword": "obsequious",
+      "part_of_speech": "adjective",
+      "ipa": "/əbˈsikwiəs/",
+      "definition": "Excessively eager to please or obey.",
+      "etymology": "From Latin obsequiosus, from obsequium 'compliance', from ob 'toward' and sequi 'to follow'.",
+      "example_sentence": "The waiter's obsequious attention made the dinner uncomfortable.",
+      "inflections": [
+        "obsequious",
+        "obsequiously"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "behavior"
+      ]
+    },
+    {
+      "id": "a1-t2-0015",
+      "headword": "recalcitrant",
+      "part_of_speech": "adjective",
+      "ipa": "/rɪˈkælsətrənt/",
+      "definition": "Stubbornly resistant to authority, control or treatment.",
+      "etymology": "From Latin recalcitrare 'to kick back', from re- 'back' and calx 'heel'.",
+      "example_sentence": "A recalcitrant dependency kept breaking the build after every update.",
+      "inflections": [
+        "recalcitrant",
+        "recalcitrance"
+      ],
+      "tier": 2,
+      "tags": [
+        "behavior",
+        "resistance"
+      ]
+    },
+    {
+      "id": "a1-t2-0016",
+      "headword": "inchoate",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪnˈkoʊət/",
+      "definition": "Just begun and not yet fully formed or developed.",
+      "etymology": "From Latin inchoatus, past participle of inchoare 'to begin'.",
+      "example_sentence": "The plan was still inchoate, little more than a list of ideas.",
+      "inflections": [
+        "inchoate"
+      ],
+      "tier": 2,
+      "tags": [
+        "development",
+        "time"
+      ]
+    },
+    {
+      "id": "a1-t2-0017",
+      "headword": "quixotic",
+      "part_of_speech": "adjective",
+      "ipa": "/kwɪkˈsɑtɪk/",
+      "definition": "Idealistic to an impractical degree; pursuing noble but unrealistic goals.",
+      "etymology": "From Don Quixote, the idealistic hero of Miguel de Cervantes's novel (1605-1615) who attacks windmills he believes are giants.",
+      "example_sentence": "His quixotic plan to read every book in the library lasted a month.",
+      "inflections": [
+        "quixotic",
+        "quixotically"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "literature"
+      ]
+    },
+    {
+      "id": "a1-t2-0018",
+      "headword": "truculent",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈtrʌkjələnt/",
+      "definition": "Eager to argue or fight; aggressively defiant.",
+      "etymology": "From Latin truculentus 'fierce, savage', from trux 'fierce'.",
+      "example_sentence": "The truculent caller refused every solution the agent offered.",
+      "inflections": [
+        "truculent",
+        "truculently",
+        "truculence"
+      ],
+      "tier": 2,
+      "tags": [
+        "behavior",
+        "conflict"
+      ]
+    },
+    {
+      "id": "a1-t2-0019",
+      "headword": "vicarious",
+      "part_of_speech": "adjective",
+      "ipa": "/vaɪˈkɛriəs/",
+      "definition": "Experienced through imagining another person's actions or feelings rather than directly.",
+      "etymology": "From Latin vicarius 'substitute', from vicis 'change, turn, place'.",
+      "example_sentence": "Travel videos give a vicarious thrill to people who cannot leave home.",
+      "inflections": [
+        "vicarious",
+        "vicariously"
+      ],
+      "tier": 2,
+      "tags": [
+        "experience",
+        "emotion"
+      ]
+    },
+    {
+      "id": "a1-t2-0020",
+      "headword": "sagacious",
+      "part_of_speech": "adjective",
+      "ipa": "/səˈɡeɪʃəs/",
+      "definition": "Having or showing keen judgment and practical wisdom.",
+      "etymology": "From Latin sagax 'of keen perception', related to sagire 'to perceive keenly'.",
+      "example_sentence": "A sagacious mentor knows when to stay silent and let you find the error.",
+      "inflections": [
+        "sagacious",
+        "sagaciously",
+        "sagacity"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "a1-t2-0021",
+      "headword": "ameliorate",
+      "part_of_speech": "verb",
+      "ipa": "/əˈmiljəˌreɪt/",
+      "definition": "To make a bad or unsatisfactory situation better.",
+      "etymology": "From French ameliorer, from Latin melior 'better'.",
+      "example_sentence": "Better lighting ameliorated the eye strain from long study sessions.",
+      "inflections": [
+        "ameliorate",
+        "ameliorates",
+        "ameliorated",
+        "ameliorating"
+      ],
+      "tier": 2,
+      "tags": [
+        "improvement",
+        "change"
+      ]
+    },
+    {
+      "id": "a1-t2-0022",
+      "headword": "prosaic",
+      "part_of_speech": "adjective",
+      "ipa": "/proʊˈzeɪɪk/",
+      "definition": "Lacking imagination or excitement; ordinary and matter-of-fact.",
+      "etymology": "From Late Latin prosaicus 'in prose', from prosa 'prose', contrasted with the heightened language of poetry.",
+      "example_sentence": "The breakthrough had a prosaic cause: someone finally read the manual.",
+      "inflections": [
+        "prosaic",
+        "prosaically"
+      ],
+      "tier": 2,
+      "tags": [
+        "style",
+        "quality"
+      ]
+    },
+    {
+      "id": "a1-t2-0023",
+      "headword": "tenacious",
+      "part_of_speech": "adjective",
+      "ipa": "/təˈneɪʃəs/",
+      "definition": "Holding firmly to a goal, position or grip; persistent.",
+      "etymology": "From Latin tenax 'holding fast', from tenere 'to hold'.",
+      "example_sentence": "Only a tenacious learner keeps a streak alive for a full year.",
+      "inflections": [
+        "tenacious",
+        "tenaciously",
+        "tenacity"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "persistence"
+      ]
+    },
+    {
+      "id": "a1-t2-0024",
+      "headword": "placate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈpleɪˌkeɪt/",
+      "definition": "To calm someone's anger or reduce their hostility, often by concessions.",
+      "etymology": "From Latin placare 'to calm, to appease'.",
+      "example_sentence": "A refund was enough to placate the frustrated customer.",
+      "inflections": [
+        "placate",
+        "placates",
+        "placated",
+        "placating"
+      ],
+      "tier": 2,
+      "tags": [
+        "conflict",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0025",
+      "headword": "enervate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈɛnərˌveɪt/",
+      "definition": "To drain someone of energy or vitality. Often misused to mean the opposite, 'to energize'.",
+      "etymology": "From Latin enervare 'to weaken', from e- 'out of' and nervus 'sinew'.",
+      "example_sentence": "The humid afternoon enervated the whole hiking group.",
+      "inflections": [
+        "enervate",
+        "enervates",
+        "enervated",
+        "enervating"
+      ],
+      "tier": 2,
+      "tags": [
+        "energy",
+        "commonly_confused"
+      ]
+    },
+    {
+      "id": "a1-t2-0026",
+      "headword": "esoteric",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌɛsəˈtɛrɪk/",
+      "definition": "Understood by or intended for only a small group with specialized knowledge.",
+      "etymology": "From Greek esoterikos 'belonging to an inner circle', from esotero 'further inward'.",
+      "example_sentence": "The talk drifted into esoteric details of compiler design.",
+      "inflections": [
+        "esoteric",
+        "esoterically"
+      ],
+      "tier": 2,
+      "tags": [
+        "knowledge",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0027",
+      "headword": "fastidious",
+      "part_of_speech": "adjective",
+      "ipa": "/fæˈstɪdiəs/",
+      "definition": "Very attentive to accuracy and detail; hard to please.",
+      "etymology": "From Latin fastidiosus 'disdainful', from fastidium 'loathing, squeamishness'.",
+      "example_sentence": "A fastidious editor caught every inconsistent date in the manuscript.",
+      "inflections": [
+        "fastidious",
+        "fastidiously"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "detail"
+      ]
+    },
+    {
+      "id": "a1-t2-0028",
+      "headword": "insidious",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪnˈsɪdiəs/",
+      "definition": "Proceeding gradually and subtly, but with harmful effects.",
+      "etymology": "From Latin insidiosus 'cunning', from insidiae 'ambush', from insidere 'to sit in or on'.",
+      "example_sentence": "Scope creep is insidious because each small addition seems harmless.",
+      "inflections": [
+        "insidious",
+        "insidiously"
+      ],
+      "tier": 2,
+      "tags": [
+        "harm",
+        "risk"
+      ]
+    },
+    {
+      "id": "a1-t2-0029",
+      "headword": "salient",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈseɪliənt/",
+      "definition": "Most noticeable or important; standing out from the rest.",
+      "etymology": "From Latin salient-, present participle stem of salire 'to leap'; the sense moved from 'leaping' to 'jutting out' to 'prominent'.",
+      "example_sentence": "The summary lists only the salient findings of the study.",
+      "inflections": [
+        "salient",
+        "salience"
+      ],
+      "tier": 2,
+      "tags": [
+        "importance",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0030",
+      "headword": "capricious",
+      "part_of_speech": "adjective",
+      "ipa": "/kəˈprɪʃəs/",
+      "definition": "Changing mood or behavior suddenly and without apparent reason.",
+      "etymology": "From French capricieux, from Italian capriccio; probably capo 'head' + riccio 'hedgehog', hair standing on end in fright, though the origin is disputed.",
+      "example_sentence": "Capricious spring weather made the outdoor event hard to plan.",
+      "inflections": [
+        "capricious",
+        "capriciously",
+        "caprice"
+      ],
+      "tier": 2,
+      "tags": [
+        "change",
+        "behavior"
+      ]
+    },
+    {
+      "id": "a1-t2-0031",
+      "headword": "ostensible",
+      "part_of_speech": "adjective",
+      "ipa": "/ɑˈstɛnsəbəl/",
+      "definition": "Stated or appearing to be true, though possibly not the real reason or situation.",
+      "etymology": "Via French from Medieval Latin ostensibilis, from Latin ostendere 'to show', from ob 'before' and tendere 'to stretch'.",
+      "example_sentence": "The ostensible purpose of the meeting was budgeting, but everyone expected layoffs.",
+      "inflections": [
+        "ostensible",
+        "ostensibly"
+      ],
+      "tier": 2,
+      "tags": [
+        "appearance",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "a1-t2-0032",
+      "headword": "venerate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈvɛnəˌreɪt/",
+      "definition": "To regard with deep respect, often bordering on reverence.",
+      "etymology": "From Latin venerari 'to worship, to revere'.",
+      "example_sentence": "Many physicists venerate Feynman's lectures as a model of clear teaching.",
+      "inflections": [
+        "venerate",
+        "venerates",
+        "venerated",
+        "venerating"
+      ],
+      "tier": 2,
+      "tags": [
+        "respect",
+        "emotion"
+      ]
+    },
+    {
+      "id": "a1-t2-0033",
+      "headword": "acrimonious",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌækrəˈmoʊniəs/",
+      "definition": "Angry and bitter in tone, especially in a dispute.",
+      "etymology": "From Latin acrimonia 'sharpness', from acer 'sharp, keen'.",
+      "example_sentence": "The partnership ended in an acrimonious dispute over credit.",
+      "inflections": [
+        "acrimonious",
+        "acrimoniously",
+        "acrimony"
+      ],
+      "tier": 2,
+      "tags": [
+        "conflict",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0034",
+      "headword": "ambivalent",
+      "part_of_speech": "adjective",
+      "ipa": "/æmˈbɪvələnt/",
+      "definition": "Having mixed or contradictory feelings about something at the same time.",
+      "etymology": "From German Ambivalenz, coined by the psychiatrist Eugen Bleuler around 1910 from Latin ambi- 'both' and valentia 'strength'.",
+      "example_sentence": "She felt ambivalent about the promotion: more pay, but far less research time.",
+      "inflections": [
+        "ambivalent",
+        "ambivalently",
+        "ambivalence"
+      ],
+      "tier": 2,
+      "tags": [
+        "emotion",
+        "decision"
+      ]
+    },
+    {
+      "id": "a1-t2-0035",
+      "headword": "cajole",
+      "part_of_speech": "verb",
+      "ipa": "/kəˈdʒoʊl/",
+      "definition": "To persuade someone through flattery, gentle pressure or repeated coaxing.",
+      "etymology": "From French cajoler 'to coax'; the earlier history of the French word is uncertain.",
+      "example_sentence": "He cajoled his roommate into joining the morning runs.",
+      "inflections": [
+        "cajole",
+        "cajoles",
+        "cajoled",
+        "cajoling"
+      ],
+      "tier": 2,
+      "tags": [
+        "persuasion",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0036",
+      "headword": "candor",
+      "part_of_speech": "noun",
+      "ipa": "/ˈkændər/",
+      "definition": "The quality of being open, honest and direct, even when the truth is uncomfortable.",
+      "etymology": "From Latin candor 'whiteness, brightness', from candere 'to shine'; the sense moved from purity to frankness.",
+      "example_sentence": "The reviewer's candor about the flawed method improved the final paper.",
+      "inflections": [
+        "candor",
+        "candour"
+      ],
+      "tier": 2,
+      "tags": [
+        "honesty",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0037",
+      "headword": "circumspect",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈsɜrkəmˌspɛkt/",
+      "definition": "Careful to consider all circumstances and risks before acting or speaking.",
+      "etymology": "From Latin circumspectus, past participle of circumspicere 'to look around', from circum 'around' and specere 'to look'.",
+      "example_sentence": "Be circumspect about sharing preliminary results before peer review.",
+      "inflections": [
+        "circumspect",
+        "circumspectly",
+        "circumspection"
+      ],
+      "tier": 2,
+      "tags": [
+        "caution",
+        "decision"
+      ]
+    },
+    {
+      "id": "a1-t2-0038",
+      "headword": "conundrum",
+      "part_of_speech": "noun",
+      "ipa": "/kəˈnʌndrəm/",
+      "definition": "A confusing and difficult problem or question with no obvious answer.",
+      "etymology": "Recorded from the 1590s; origin unknown, possibly a mock-Latin coinage from university slang.",
+      "example_sentence": "Balancing privacy with useful data collection is a real conundrum.",
+      "inflections": [
+        "conundrum",
+        "conundrums"
+      ],
+      "tier": 2,
+      "tags": [
+        "problem_solving",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "a1-t2-0039",
+      "headword": "deleterious",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌdɛləˈtɪriəs/",
+      "definition": "Causing harm or damage, often in a way that is not immediately obvious.",
+      "etymology": "From Greek deleterios 'noxious', from deleisthai 'to hurt, to injure'.",
+      "example_sentence": "Chronic sleep loss has deleterious effects on memory consolidation.",
+      "inflections": [
+        "deleterious",
+        "deleteriously"
+      ],
+      "tier": 2,
+      "tags": [
+        "harm",
+        "health"
+      ]
+    },
+    {
+      "id": "a1-t2-0040",
+      "headword": "didactic",
+      "part_of_speech": "adjective",
+      "ipa": "/daɪˈdæktɪk/",
+      "definition": "Intended to teach or instruct, sometimes in a way that feels preachy.",
+      "etymology": "From Greek didaktikos 'apt at teaching', from didaskein 'to teach'.",
+      "example_sentence": "The documentary was informative but too didactic to be enjoyable.",
+      "inflections": [
+        "didactic",
+        "didactically"
+      ],
+      "tier": 2,
+      "tags": [
+        "teaching",
+        "style"
+      ]
+    },
+    {
+      "id": "a1-t2-0041",
+      "headword": "diffident",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈdɪfədənt/",
+      "definition": "Modest or shy because of a lack of self-confidence.",
+      "etymology": "From Latin diffidere 'to mistrust', from dis- 'not' and fidere 'to trust'.",
+      "example_sentence": "The diffident student had the best answer but almost didn't share it.",
+      "inflections": [
+        "diffident",
+        "diffidently",
+        "diffidence"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "emotion"
+      ]
+    },
+    {
+      "id": "a1-t2-0042",
+      "headword": "disparate",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈdɪspərət/",
+      "definition": "Essentially different in kind; not easily compared or combined.",
+      "etymology": "From Latin disparatus 'separated', past participle of disparare, from dis- 'apart' and parare 'to prepare, arrange'.",
+      "example_sentence": "The report merges data from disparate sources into one table.",
+      "inflections": [
+        "disparate"
+      ],
+      "tier": 2,
+      "tags": [
+        "difference",
+        "data"
+      ]
+    },
+    {
+      "id": "a1-t2-0043",
+      "headword": "ebullient",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪˈbʊljənt/",
+      "definition": "Cheerful and full of energy; bubbling over with enthusiasm.",
+      "etymology": "From Latin ebullire 'to boil over', from e- 'out' and bullire 'to boil'.",
+      "example_sentence": "An ebullient host kept the conversation moving all evening.",
+      "inflections": [
+        "ebullient",
+        "ebulliently",
+        "ebullience"
+      ],
+      "tier": 2,
+      "tags": [
+        "emotion",
+        "energy"
+      ]
+    },
+    {
+      "id": "a1-t2-0044",
+      "headword": "eclectic",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪˈklɛktɪk/",
+      "definition": "Drawing ideas, styles or tastes from a broad and diverse range of sources.",
+      "etymology": "From Greek eklektikos 'selective', from eklegein 'to pick out'.",
+      "example_sentence": "Her reading list is eclectic, mixing physics, poetry and economics.",
+      "inflections": [
+        "eclectic",
+        "eclectically"
+      ],
+      "tier": 2,
+      "tags": [
+        "variety",
+        "style"
+      ]
+    },
+    {
+      "id": "a1-t2-0045",
+      "headword": "egregious",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪˈɡridʒəs/",
+      "definition": "Outstandingly bad; shocking in how obvious the error or offense is.",
+      "etymology": "From Latin egregius 'standing out from the flock', from e- 'out of' and grex 'flock'; the sense shifted from 'remarkably good' to 'remarkably bad'.",
+      "example_sentence": "Plotting only the favorable months was an egregious misuse of the data.",
+      "inflections": [
+        "egregious",
+        "egregiously"
+      ],
+      "tier": 2,
+      "tags": [
+        "error",
+        "commonly_confused"
+      ]
+    },
+    {
+      "id": "a1-t2-0046",
+      "headword": "elucidate",
+      "part_of_speech": "verb",
+      "ipa": "/ɪˈlusəˌdeɪt/",
+      "definition": "To make something clear by explaining it in detail.",
+      "etymology": "From Late Latin elucidare 'to make light', from e- 'out' and lucidus 'bright'.",
+      "example_sentence": "A single diagram elucidated what three pages of text had obscured.",
+      "inflections": [
+        "elucidate",
+        "elucidates",
+        "elucidated",
+        "elucidating"
+      ],
+      "tier": 2,
+      "tags": [
+        "explanation",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t2-0047",
+      "headword": "erudite",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈɛrjəˌdaɪt/",
+      "definition": "Having or showing great knowledge gained from extensive study.",
+      "etymology": "From Latin eruditus 'instructed', past participle of erudire, from e- 'out of' and rudis 'untrained, rough'.",
+      "example_sentence": "His erudite footnotes were longer than the chapters themselves.",
+      "inflections": [
+        "erudite",
+        "eruditely",
+        "erudition"
+      ],
+      "tier": 2,
+      "tags": [
+        "knowledge",
+        "character"
+      ]
+    },
+    {
+      "id": "a1-t2-0048",
+      "headword": "exacerbate",
+      "part_of_speech": "verb",
+      "ipa": "/ɪɡˈzæsərˌbeɪt/",
+      "definition": "To make an existing problem, situation or feeling worse.",
+      "etymology": "From Latin exacerbare 'to irritate, provoke', from ex- 'thoroughly' and acerbus 'harsh, bitter'.",
+      "example_sentence": "Skipping the warm-up exacerbated the old knee injury.",
+      "inflections": [
+        "exacerbate",
+        "exacerbates",
+        "exacerbated",
+        "exacerbating"
+      ],
+      "tier": 2,
+      "tags": [
+        "harm",
+        "change"
+      ]
+    },
+    {
+      "id": "a1-t2-0049",
+      "headword": "fortuitous",
+      "part_of_speech": "adjective",
+      "ipa": "/fɔrˈtuətəs/",
+      "definition": "Happening by chance rather than design. Often used loosely to mean 'lucky'.",
+      "etymology": "From Latin fortuitus 'happening by chance', from fors 'chance, luck'.",
+      "example_sentence": "Penicillin's discovery began with a fortuitous contamination of a culture plate.",
+      "inflections": [
+        "fortuitous",
+        "fortuitously"
+      ],
+      "tier": 2,
+      "tags": [
+        "chance",
+        "commonly_confused"
+      ]
+    },
+    {
+      "id": "a1-t2-0050",
+      "headword": "gregarious",
+      "part_of_speech": "adjective",
+      "ipa": "/ɡrɪˈɡɛriəs/",
+      "definition": "Fond of company and sociable; in biology, living in flocks or groups.",
+      "etymology": "From Latin gregarius 'belonging to a flock', from grex 'flock, herd'.",
+      "example_sentence": "Gregarious by nature, he knew everyone on the floor within a week.",
+      "inflections": [
+        "gregarious",
+        "gregariously"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "social"
+      ]
+    },
+    {
+      "id": "a1-t2-0051",
+      "headword": "iconoclast",
+      "part_of_speech": "noun",
+      "ipa": "/aɪˈkɑnəˌklæst/",
+      "definition": "A person who attacks cherished beliefs or established institutions.",
+      "etymology": "From Medieval Greek eikonoklastes 'image-breaker', from eikon 'image' and klan 'to break'; first applied to opponents of religious images in the Byzantine Empire.",
+      "example_sentence": "An iconoclast in her field, she questioned a model everyone else took for granted.",
+      "inflections": [
+        "iconoclast",
+        "iconoclasts",
+        "iconoclastic"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "history"
+      ]
+    },
+    {
+      "id": "a1-t2-0052",
+      "headword": "idiosyncrasy",
+      "part_of_speech": "noun",
+      "ipa": "/ˌɪdioʊˈsɪŋkrəsi/",
+      "definition": "A habit, behavior or way of thinking peculiar to one person or thing.",
+      "etymology": "From Greek idiosynkrasia 'peculiar temperament', from idios 'one's own' and synkrasis 'mixture'.",
+      "example_sentence": "One idiosyncrasy of the old code base is that every date is stored as text.",
+      "inflections": [
+        "idiosyncrasy",
+        "idiosyncrasies",
+        "idiosyncratic"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "difference"
+      ]
+    },
+    {
+      "id": "a1-t2-0053",
+      "headword": "impetuous",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪmˈpɛtʃuəs/",
+      "definition": "Acting quickly and without thought or care for consequences.",
+      "etymology": "From Late Latin impetuosus, from impetus 'attack, force'.",
+      "example_sentence": "An impetuous purchase at midnight became a regret by morning.",
+      "inflections": [
+        "impetuous",
+        "impetuously"
+      ],
+      "tier": 2,
+      "tags": [
+        "behavior",
+        "decision"
+      ]
+    },
+    {
+      "id": "a1-t2-0054",
+      "headword": "innocuous",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪˈnɑkjuəs/",
+      "definition": "Not harmful or offensive; often so mild as to go unnoticed.",
+      "etymology": "From Latin innocuus, from in- 'not' and nocuus 'harmful', from nocere 'to harm'.",
+      "example_sentence": "The bug began as an innocuous warning that everyone ignored.",
+      "inflections": [
+        "innocuous",
+        "innocuously"
+      ],
+      "tier": 2,
+      "tags": [
+        "harm",
+        "risk"
+      ]
+    },
+    {
+      "id": "a1-t2-0055",
+      "headword": "lethargic",
+      "part_of_speech": "adjective",
+      "ipa": "/ləˈθɑrdʒɪk/",
+      "definition": "Sluggish and lacking energy or enthusiasm.",
+      "etymology": "From Greek lethargikos, from lethargos 'forgetful', from lethe 'forgetfulness'.",
+      "example_sentence": "A heavy lunch left the whole seminar lethargic by two o'clock.",
+      "inflections": [
+        "lethargic",
+        "lethargically",
+        "lethargy"
+      ],
+      "tier": 2,
+      "tags": [
+        "energy",
+        "health"
+      ]
+    },
+    {
+      "id": "a1-t2-0056",
+      "headword": "magnanimous",
+      "part_of_speech": "adjective",
+      "ipa": "/mæɡˈnænəməs/",
+      "definition": "Generous and forgiving, especially toward a rival or someone less powerful.",
+      "etymology": "From Latin magnanimus 'great-souled', from magnus 'great' and animus 'soul, mind'.",
+      "example_sentence": "The winner was magnanimous, crediting her opponent's strategy in the interview.",
+      "inflections": [
+        "magnanimous",
+        "magnanimously",
+        "magnanimity"
+      ],
+      "tier": 2,
+      "tags": [
+        "character",
+        "generosity"
+      ]
+    },
+    {
+      "id": "a1-t2-0057",
+      "headword": "meticulous",
+      "part_of_speech": "adjective",
+      "ipa": "/məˈtɪkjələs/",
+      "definition": "Showing great care and precision about every detail.",
+      "etymology": "From Latin meticulosus 'fearful, timid', from metus 'fear'; the sense 'careful about details' developed in the 19th century.",
+      "example_sentence": "Meticulous lab notes made the experiment easy to reproduce.",
+      "inflections": [
+        "meticulous",
+        "meticulously"
+      ],
+      "tier": 2,
+      "tags": [
+        "detail",
+        "work"
+      ]
+    },
+    {
+      "id": "a1-t2-0058",
+      "headword": "nonchalant",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌnɑnʃəˈlɑnt/",
+      "definition": "Appearing casually calm and relaxed; showing no concern or anxiety.",
+      "etymology": "From French nonchalant, from non- 'not' and chaloir 'to be concerned', from Latin calere 'to be warm'.",
+      "example_sentence": "He gave a nonchalant shrug when the server crashed mid-demo.",
+      "inflections": [
+        "nonchalant",
+        "nonchalantly",
+        "nonchalance"
+      ],
+      "tier": 2,
+      "tags": [
+        "attitude",
+        "emotion"
+      ]
+    },
+    {
+      "id": "a1-t2-0059",
+      "headword": "obdurate",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈɑbdərət/",
+      "definition": "Stubbornly refusing to change an opinion or course of action.",
+      "etymology": "From Latin obduratus, past participle of obdurare 'to harden', from ob 'against' and durus 'hard'.",
+      "example_sentence": "The committee remained obdurate despite new evidence.",
+      "inflections": [
+        "obdurate",
+        "obdurately"
+      ],
+      "tier": 2,
+      "tags": [
+        "resistance",
+        "behavior"
+      ]
+    },
+    {
+      "id": "a1-t2-0060",
+      "headword": "paucity",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpɔsəti/",
+      "definition": "The presence of something in only small or insufficient amounts.",
+      "etymology": "From Latin paucitas 'fewness', from paucus 'few'.",
+      "example_sentence": "The paucity of long-term data limits what the study can conclude.",
+      "inflections": [
+        "paucity"
+      ],
+      "tier": 2,
+      "tags": [
+        "quantity",
+        "data"
+      ]
+    }
+  ]
+}

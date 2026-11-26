@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "module": "A3",
+  "domain": "physics",
+  "items": [
+    {
+      "id": "a3-physics-0001",
+      "domain": "physics",
+      "title": "Time dilation and GPS",
+      "depth": "intermediate",
+      "explainer": "Relativity says that clocks do not all tick at the same rate. Special relativity predicts that a moving clock runs slow compared with a stationary one, and general relativity predicts that a clock deeper in a gravitational field runs slow compared with one higher up. Both effects are tiny at everyday speeds and heights, but the Global Positioning System cannot ignore them. GPS satellites orbit at about 14,000 kilometers per hour, which slows their clocks by roughly 7 microseconds per day relative to clocks on the ground. They also sit about 20,000 kilometers up, where gravity is weaker, which speeds their clocks up by roughly 45 microseconds per day. The net effect is that satellite clocks gain about 38 microseconds every day. That sounds negligible, but GPS works by timing radio signals that travel at the speed of light, about 300 meters per microsecond. Left uncorrected, the drift would make computed positions wander by around 10 kilometers per day. Engineers therefore set the satellite clocks to tick slightly slow before launch and apply further corrections in the receivers. Every phone that finds its location is, in effect, running a daily experimental confirmation of both special and general relativity.",
+      "formula": "\\Delta t' = \\frac{\\Delta t}{\\sqrt{1 - v^2/c^2}}",
+      "source": {
+        "title": "Error analysis for the Global Positioning System - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System"
+      },
+      "question": {
+        "prompt": "Taking both relativistic effects together, how do GPS satellite clocks behave compared with clocks on the ground?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They run fast by about 38 microseconds per day"
+          },
+          {
+            "id": "b",
+            "text": "They run slow by about 7 microseconds per day"
+          },
+          {
+            "id": "c",
+            "text": "They run at exactly the same rate"
+          },
+          {
+            "id": "d",
+            "text": "They run fast by about 38 seconds per day"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Weaker gravity speeds the satellite clocks up by about 45 microseconds per day and orbital speed slows them by about 7, for a net gain of about 38 microseconds per day."
+      },
+      "tags": [
+        "relativity",
+        "technology"
+      ]
+    },
+    {
+      "id": "a3-physics-0002",
+      "domain": "physics",
+      "title": "Noether's theorem",
+      "depth": "advanced",
+      "explainer": "Why is energy conserved? In 1918 the mathematician Emmy Noether proved a theorem that answers questions like this one with remarkable generality. Noether's theorem states that every continuous symmetry of a physical system's laws corresponds to a conserved quantity. If the laws of physics are the same today as they will be tomorrow, a symmetry under shifts in time, then energy is conserved. If the laws are the same here as they are a meter to the left, a symmetry under shifts in space, then linear momentum is conserved. If the laws do not depend on which direction you face, a symmetry under rotations, then angular momentum is conserved. The theorem turned conservation laws from a list of empirical rules into consequences of deeper structure, and it became a guiding principle of modern physics. The gauge symmetries of the Standard Model of particle physics, for example, are tied to the conservation of electric charge and other quantities. The theorem also clarifies when conservation can fail. In an expanding universe the background itself changes with time, so the usual time-shift symmetry does not hold globally, and there is no simple universal law of energy conservation for light stretched by cosmic expansion.",
+      "formula": null,
+      "source": {
+        "title": "Noether's theorem - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Noether%27s_theorem"
+      },
+      "question": {
+        "prompt": "According to Noether's theorem, conservation of linear momentum follows from which symmetry?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The laws of physics are the same at every moment in time"
+          },
+          {
+            "id": "b",
+            "text": "The laws of physics are the same at every location in space"
+          },
+          {
+            "id": "c",
+            "text": "The laws of physics are the same in every direction"
+          },
+          {
+            "id": "d",
+            "text": "The laws of physics are the same for matter and antimatter"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Invariance under translations in space gives conservation of linear momentum; time translation gives energy and rotation gives angular momentum."
+      },
+      "tags": [
+        "symmetry",
+        "conservation_laws",
+        "history_of_science"
+      ]
+    },
+    {
+      "id": "a3-physics-0003",
+      "domain": "physics",
+      "title": "Entropy and the second law of thermodynamics",
+      "depth": "intermediate",
+      "explainer": "The second law of thermodynamics states that the total entropy of an isolated system never decreases. Ludwig Boltzmann gave entropy a statistical meaning in the 1870s: it measures the number of microscopic arrangements, or microstates, consistent with what we observe at the large scale. His formula, carved on his tombstone in Vienna, says entropy equals Boltzmann's constant times the logarithm of that number. The second law then becomes a statement about probability. A gas released into an empty box spreads out because there are overwhelmingly more arrangements with the molecules spread throughout the box than with all of them crowded in one corner. Nothing forbids the gas from gathering back into the corner; it is simply so improbable that it would not be expected to happen in the lifetime of the universe. This explains the apparent arrow of time: eggs break but do not unbreak, and heat flows from hot to cold. Local decreases in entropy are allowed when they are paid for elsewhere. A refrigerator cools its interior by dumping more entropy into the kitchen, and living cells maintain their exquisite order by consuming food or sunlight and releasing heat and waste to their surroundings.",
+      "formula": "S = k_B \\ln W",
+      "source": {
+        "title": "Entropy (statistical thermodynamics) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)"
+      },
+      "question": {
+        "prompt": "In Boltzmann's statistical view, why does a gas spread evenly through a container rather than gathering in one corner?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A physical law forbids molecules from ever gathering in a corner"
+          },
+          {
+            "id": "b",
+            "text": "The molecules repel each other strongly"
+          },
+          {
+            "id": "c",
+            "text": "Spread-out arrangements vastly outnumber gathered ones, so they are overwhelmingly more probable"
+          },
+          {
+            "id": "d",
+            "text": "Energy is not conserved when gases expand"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "The second law is statistical: the gathered state is possible but has so few microstates compared with the spread state that it is practically never observed."
+      },
+      "tags": [
+        "thermodynamics",
+        "statistical_mechanics"
+      ]
+    },
+    {
+      "id": "a3-physics-0004",
+      "domain": "physics",
+      "title": "The double-slit experiment",
+      "depth": "introductory",
+      "explainer": "Few experiments capture the strangeness of quantum mechanics as cleanly as the double-slit experiment. Shine light through two narrow, closely spaced slits onto a screen and you see a pattern of bright and dark stripes, an interference pattern, because waves passing through the two slits reinforce each other in some places and cancel in others. Thomas Young used this setup around 1801 as evidence that light is a wave. The surprise came in the twentieth century. If the source is dimmed until single photons, or even single electrons, pass through one at a time, each one lands at a single point on the screen like a particle. Yet as thousands of hits accumulate, the same striped interference pattern builds up. Each particle behaves as if it went through both slits at once and interfered with itself. Quantum mechanics describes this with a wave function that passes through both slits and gives the probability of where the particle will be detected. If a detector is placed at the slits to record which one each particle used, the interference pattern disappears and the hits form two plain bands. Obtaining which-path information destroys the interference, a direct illustration of how measurement affects quantum systems.",
+      "formula": null,
+      "source": {
+        "title": "Double-slit experiment - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Double-slit_experiment"
+      },
+      "question": {
+        "prompt": "In the double-slit experiment with single electrons, what happens when a detector records which slit each electron passes through?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The interference pattern becomes sharper"
+          },
+          {
+            "id": "b",
+            "text": "The electrons stop reaching the screen"
+          },
+          {
+            "id": "c",
+            "text": "The electrons split into two smaller particles"
+          },
+          {
+            "id": "d",
+            "text": "The interference pattern disappears and two plain bands appear"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Gaining which-path information removes the conditions for interference, so the screen shows the particle-like pattern of two bands instead of stripes."
+      },
+      "tags": [
+        "quantum_mechanics",
+        "experiments"
+      ]
+    },
+    {
+      "id": "a3-physics-0005",
+      "domain": "physics",
+      "title": "The Heisenberg uncertainty principle",
+      "depth": "intermediate",
+      "explainer": "In 1927 Werner Heisenberg showed that quantum mechanics places a fundamental limit on how precisely certain pairs of properties can be known at the same time. The best-known pair is position and momentum: the product of the uncertainty in a particle's position and the uncertainty in its momentum can never be smaller than the reduced Planck constant divided by two. Squeeze a particle into a smaller region and the spread of its possible momenta must grow, and vice versa. A common misunderstanding is that the principle is about clumsy measurement, as if the act of observing simply disturbs the particle. The limit is deeper than that. It follows from the wave nature of matter: a wave that is sharply localized in space must be built from many different wavelengths, and in quantum mechanics wavelength corresponds to momentum. A particle in a state with a definite position simply does not have a definite momentum. The principle has observable consequences. It explains why electrons in an atom do not spiral into the nucleus, since confining them too tightly would give them large momentum and energy. It also means that even at absolute zero, atoms retain a minimum zero-point motion, which is why helium stays liquid at normal pressure no matter how cold it gets.",
+      "formula": "\\Delta x \\, \\Delta p \\geq \\frac{\\hbar}{2}",
+      "source": {
+        "title": "Uncertainty principle - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Uncertainty_principle"
+      },
+      "question": {
+        "prompt": "What is the most accurate description of the Heisenberg uncertainty principle?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A particle cannot simultaneously have a precisely defined position and momentum"
+          },
+          {
+            "id": "b",
+            "text": "Measuring instruments are too imprecise to locate particles exactly"
+          },
+          {
+            "id": "c",
+            "text": "Particles move randomly unless they are observed"
+          },
+          {
+            "id": "d",
+            "text": "Energy cannot be measured to more than three significant figures"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "The limit is built into the wave nature of quantum states, not a shortcoming of instruments: a state with sharp position necessarily has a broad spread of momentum."
+      },
+      "tags": [
+        "quantum_mechanics"
+      ]
+    },
+    {
+      "id": "a3-physics-0006",
+      "domain": "physics",
+      "title": "Quantum tunneling",
+      "depth": "intermediate",
+      "explainer": "In classical physics, a ball without enough energy to roll over a hill simply rolls back. In quantum mechanics, a particle facing an energy barrier higher than its own energy has a small but nonzero probability of appearing on the other side. This is quantum tunneling. It happens because the particle's wave function does not stop abruptly at the barrier; it decays exponentially inside it, and if the barrier is thin enough, some of the wave leaks through. The probability drops very steeply as the barrier gets wider or taller, which is why we never see people walk through walls but routinely see electrons cross gaps of a nanometer. Tunneling is not an exotic curiosity. The Sun shines because of it: the protons in its core do not have enough energy to overcome their electrical repulsion classically, but tunneling lets enough of them get close enough to fuse. Alpha decay of radioactive nuclei is a tunneling process. The scanning tunneling microscope, invented in 1981, images individual atoms by measuring the tunneling current between a sharp tip and a surface. Flash memory in phones and USB drives stores data by tunneling electrons through a thin insulating layer, and tunneling leakage is one of the limits on shrinking transistors further.",
+      "formula": "T \\approx e^{-2 \\kappa L}, \\qquad \\kappa = \\frac{\\sqrt{2m(V - E)}}{\\hbar}",
+      "source": {
+        "title": "Quantum tunnelling - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Quantum_tunnelling"
+      },
+      "question": {
+        "prompt": "How does the probability of tunneling through a barrier change as the barrier gets wider?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It increases, because there is more room for the wave"
+          },
+          {
+            "id": "b",
+            "text": "It decreases roughly exponentially"
+          },
+          {
+            "id": "c",
+            "text": "It stays the same; only barrier height matters"
+          },
+          {
+            "id": "d",
+            "text": "It drops to exactly zero beyond one nanometer"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "The wave function decays exponentially inside the barrier, so transmission falls roughly exponentially with width, but never to exactly zero."
+      },
+      "tags": [
+        "quantum_mechanics",
+        "technology"
+      ]
+    },
+    {
+      "id": "a3-physics-0007",
+      "domain": "physics",
+      "title": "Blackbody radiation and the birth of the quantum",
+      "depth": "intermediate",
+      "explainer": "Every object glows with thermal radiation whose color depends on its temperature: a stove element glows red, a hotter filament glows yellow-white, and the hottest stars look blue. An idealized perfect absorber and emitter is called a blackbody. Toward the end of the nineteenth century, classical physics predicted that a blackbody should emit ever more energy at ever shorter wavelengths, adding up to an infinite total, a failure later nicknamed the ultraviolet catastrophe. Experiments showed instead that emission peaks at a particular wavelength and falls off on both sides. In 1900 Max Planck found a formula that matched the measurements perfectly, but only by assuming that energy is emitted in discrete packets, or quanta, each with energy equal to a constant times the frequency. Planck regarded this as a mathematical trick, but in 1905 Einstein took it literally to explain the photoelectric effect, and quantum physics was born. The constant, now called Planck's constant, has had an exact defined value since the 2019 SI redefinition and underpins the kilogram. Blackbody physics is still practical: infrared thermometers infer temperature from emitted radiation, and the cosmic microwave background matches a blackbody spectrum at about 2.7 kelvin with extraordinary precision.",
+      "formula": "E = h f, \\qquad h = 6.62607015 \\times 10^{-34}\\ \\mathrm{J\\,s}",
+      "source": {
+        "title": "Black-body radiation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Black-body_radiation"
+      },
+      "question": {
+        "prompt": "What key assumption did Max Planck make in 1900 to explain the blackbody spectrum?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Light travels at a speed that depends on its color"
+          },
+          {
+            "id": "b",
+            "text": "Hot objects emit only ultraviolet light"
+          },
+          {
+            "id": "c",
+            "text": "Energy is emitted in discrete quanta proportional to frequency"
+          },
+          {
+            "id": "d",
+            "text": "Atoms have a nucleus surrounded by electrons"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Planck's quantum hypothesis, E = hf, suppressed the high-frequency emission that classical theory overpredicted and reproduced the measured spectrum."
+      },
+      "tags": [
+        "quantum_mechanics",
+        "history_of_science",
+        "thermodynamics"
+      ]
+    },
+    {
+      "id": "a3-physics-0008",
+      "domain": "physics",
+      "title": "The Doppler effect and cosmological redshift",
+      "depth": "introductory",
+      "explainer": "When an ambulance drives toward you, its siren sounds higher in pitch than when it drives away. This is the Doppler effect: when a wave source approaches, the wave crests arriving at the observer are bunched closer together, raising the frequency, and when it recedes they are stretched apart, lowering it. The same principle applies to light. Light from a source moving away is shifted toward longer, redder wavelengths, a redshift; light from an approaching source is shifted toward shorter, bluer wavelengths. Because atoms emit and absorb light at precisely known wavelengths, astronomers can measure these shifts in starlight with great accuracy. In 1929 Edwin Hubble combined such measurements with distance estimates and found that more distant galaxies are receding faster, evidence that the universe is expanding. Strictly, the redshift of distant galaxies is not an ordinary Doppler shift from motion through space: the wavelength of light is stretched because space itself expands while the light travels, but for nearby galaxies the two descriptions agree. Doppler techniques are everywhere on Earth too. Police radar guns measure vehicle speeds this way, weather radar tracks wind inside storms, and Doppler ultrasound measures blood flow in arteries and in a fetal heart.",
+      "formula": "z = \\frac{\\lambda_{\\text{observed}} - \\lambda_{\\text{emitted}}}{\\lambda_{\\text{emitted}}}",
+      "source": {
+        "title": "Redshift - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Redshift"
+      },
+      "question": {
+        "prompt": "Light from a distant galaxy shows its spectral lines at longer wavelengths than in the laboratory. What does this indicate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The galaxy is approaching the Milky Way"
+          },
+          {
+            "id": "b",
+            "text": "The galaxy is unusually hot"
+          },
+          {
+            "id": "c",
+            "text": "The galaxy contains different chemical elements"
+          },
+          {
+            "id": "d",
+            "text": "The galaxy is receding, consistent with an expanding universe"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "A shift to longer wavelengths is a redshift. For distant galaxies it reflects the stretching of light by cosmic expansion, so they appear to recede."
+      },
+      "tags": [
+        "waves",
+        "cosmology"
+      ]
+    },
+    {
+      "id": "a3-physics-0009",
+      "domain": "physics",
+      "title": "Electromagnetic induction",
+      "depth": "introductory",
+      "explainer": "In 1831 Michael Faraday discovered that a changing magnetic field produces an electric voltage in a nearby loop of wire. This is electromagnetic induction, and modern electrical technology depends on it. Faraday's law states that the induced voltage equals the rate of change of the magnetic flux through the loop, which is the amount of magnetic field passing through it. A steady magnet sitting next to a coil produces nothing; moving the magnet, rotating the coil or changing the current in a nearby circuit does. Lenz's law adds the direction: the induced current always flows so as to oppose the change that created it, which is the origin of the minus sign in Faraday's law and a consequence of energy conservation. Power-station generators use induction to turn mechanical rotation, driven by steam, water or wind, into electricity. Transformers use it to step voltage up for efficient long-distance transmission and down again for safe household use, which only works with alternating current because the flux must keep changing. The same physics charges phones on wireless pads, heats pans on induction cooktops and lets electric cars recover energy during braking, where the motor acts as a generator and its opposing force slows the car.",
+      "formula": "\\mathcal{E} = -\\frac{d\\Phi_B}{dt}",
+      "source": {
+        "title": "Electromagnetic induction - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Electromagnetic_induction"
+      },
+      "question": {
+        "prompt": "Why does a transformer work with alternating current but not with steady direct current?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Induction requires a changing magnetic flux, which steady current does not produce"
+          },
+          {
+            "id": "b",
+            "text": "Direct current cannot flow through copper coils"
+          },
+          {
+            "id": "c",
+            "text": "Alternating current carries more energy per electron"
+          },
+          {
+            "id": "d",
+            "text": "Transformers only work at high frequencies above 1 MHz"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Faraday's law depends on the rate of change of flux. A steady current produces a constant field, so no voltage is induced in the secondary coil."
+      },
+      "tags": [
+        "electromagnetism",
+        "technology",
+        "energy"
+      ]
+    },
+    {
+      "id": "a3-physics-0010",
+      "domain": "physics",
+      "title": "Semiconductors and the band gap",
+      "depth": "intermediate",
+      "explainer": "Solids differ in how easily electrons can move through them, and band theory explains why. In a crystal, the allowed electron energies merge into bands separated by forbidden gaps. In a metal, the highest occupied band is only partly filled, so electrons move freely and the material conducts. In an insulator, a filled band is separated from the next empty band by a large gap, so electrons cannot easily gain the energy needed to move. A semiconductor has a modest gap: about 1.1 electronvolts for silicon at room temperature. A few electrons are thermally excited across it, so pure silicon conducts weakly, and its conductivity rises with temperature, the opposite of a metal. The real power of semiconductors comes from doping, adding tiny amounts of impurity atoms. Phosphorus contributes extra electrons, creating n-type silicon; boron creates electron vacancies called holes, giving p-type silicon. Junctions between p-type and n-type regions form diodes and transistors, the switches at the heart of every computer chip. The band gap also determines how semiconductors interact with light. A solar cell absorbs photons with energy above its gap, and a light-emitting diode emits photons with energy close to its gap, which is why blue LEDs required materials with wide band gaps such as gallium nitride.",
+      "formula": null,
+      "source": {
+        "title": "Band gap - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Band_gap"
+      },
+      "question": {
+        "prompt": "How does the electrical conductivity of a pure semiconductor such as silicon change as it is heated?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It decreases, just as in a metal"
+          },
+          {
+            "id": "b",
+            "text": "It increases, because more electrons are excited across the band gap"
+          },
+          {
+            "id": "c",
+            "text": "It stays constant at all temperatures"
+          },
+          {
+            "id": "d",
+            "text": "It drops to zero above room temperature"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Higher temperature gives more electrons enough thermal energy to cross the gap into the conduction band, so a semiconductor conducts better when warm."
+      },
+      "tags": [
+        "condensed_matter",
+        "electronics"
+      ]
+    }
+  ]
+}

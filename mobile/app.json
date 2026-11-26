@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Micro-Habits",
+    "slug": "daily-micro-habits",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.darrendixon.dailymicrohabits",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "infoPlist": {
+        "UIFileSharingEnabled": true,
+        "LSSupportsOpeningDocumentsInPlace": true,
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      ["expo-sqlite", { "useSQLCipher": true }],
+      "expo-secure-store",
+      "./plugins/withNoPushEntitlement"
+    ]
+  }
+}

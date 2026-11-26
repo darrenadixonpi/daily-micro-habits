@@ -1,0 +1,28 @@
+# Node / Expo
+node_modules/
+.expo/
+dist/
+npm-debug.log*
+
+# Generated native projects (recreated by `expo prebuild`)
+mobile/ios/
+mobile/android/
+
+# Build outputs
+mobile/build/
+mobile/Payload/
+*.ipa
+*.apk
+xcodebuild.log
+
+# Python
+__pycache__/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Never commit secrets
+.env
+.env.*

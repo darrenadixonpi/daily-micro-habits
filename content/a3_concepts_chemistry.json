@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "module": "A3",
+  "domain": "chemistry",
+  "items": [
+    {
+      "id": "a3-chemistry-0001",
+      "domain": "chemistry",
+      "title": "The mole and Avogadro's number",
+      "depth": "introductory",
+      "explainer": "Atoms and molecules are far too small to count one by one, so chemists count them in batches called moles. Since the 2019 redefinition of the SI units, one mole is defined as exactly 6.02214076 times ten to the twenty-third elementary entities, a fixed value known as the Avogadro constant. Before 2019 the mole was defined as the number of atoms in exactly 12 grams of carbon-12, which is why the two definitions agree so closely in everyday work. The mole links the invisible particle scale to the laboratory scale of grams. The molar mass of a substance, in grams per mole, is numerically very close to the mass of one of its molecules in daltons. Water has a molar mass of about 18 grams per mole, so 18 grams of water, roughly a tablespoon, contains about 6.02 times ten to the twenty-third molecules. Balanced chemical equations are written in moles: the equation for burning hydrogen says that 2 moles of hydrogen react with 1 mole of oxygen to give 2 moles of water. Converting between grams, moles and numbers of particles is therefore the first step in almost every quantitative chemistry calculation, from preparing solutions to calculating drug doses.",
+      "formula": "n = \\frac{m}{M}, \\qquad N = n \\, N_A, \\qquad N_A = 6.02214076 \\times 10^{23}\\ \\mathrm{mol^{-1}}",
+      "source": {"title": "Mole (unit) - Wikipedia", "url": "https://en.wikipedia.org/wiki/Mole_(unit)"},
+      "question": {
+        "prompt": "Approximately how many molecules are in 36 g of water (molar mass about 18 g/mol)?",
+        "options": [
+          {"id": "a", "text": "About 1.2 x 10^24"},
+          {"id": "b", "text": "About 6.0 x 10^23"},
+          {"id": "c", "text": "About 3.0 x 10^23"},
+          {"id": "d", "text": "About 2.2 x 10^25"}
+        ],
+        "correct_option_id": "a",
+        "explanation": "36 g divided by 18 g/mol is 2 mol, and 2 x 6.02 x 10^23 is about 1.2 x 10^24 molecules."
+      },
+      "tags": ["stoichiometry", "units"]
+    },
+    {
+      "id": "a3-chemistry-0002",
+      "domain": "chemistry",
+      "title": "Le Chatelier's principle",
+      "depth": "introductory",
+      "explainer": "Many reactions do not run to completion but reach an equilibrium in which the forward and reverse reactions proceed at the same rate, so the amounts of reactants and products stop changing. Le Chatelier's principle predicts what happens when such a system is disturbed: the equilibrium shifts in the direction that partly counteracts the change. Adding more of a reactant pushes the reaction toward products; removing a product does the same. Raising the pressure of a gas reaction favors the side with fewer gas molecules. Heating favors the endothermic direction, the one that absorbs heat. The industrial Haber-Bosch process for making ammonia from nitrogen and hydrogen illustrates the trade-offs. Four gas molecules become two and the reaction releases heat, so high pressure and low temperature both favor ammonia. Yet at low temperature the reaction is impractically slow, so plants compromise at roughly 400 to 500 degrees Celsius and 150 to 250 bar, with an iron catalyst. Two distinctions matter. Changes in concentration or pressure shift the position of equilibrium without changing the equilibrium constant; only a change in temperature changes the constant itself. And a catalyst does not shift the equilibrium at all: it only helps the system reach it faster.",
+      "formula": "\\mathrm{N_2 + 3\\,H_2 \\rightleftharpoons 2\\,NH_3}, \\qquad K = \\frac{[\\mathrm{NH_3}]^2}{[\\mathrm{N_2}][\\mathrm{H_2}]^3}",
+      "source": {"title": "Le Chatelier's principle - Wikipedia", "url": "https://en.wikipedia.org/wiki/Le_Chatelier%27s_principle"},
+      "question": {
+        "prompt": "What happens when a catalyst is added to a reaction mixture that is already at equilibrium?",
+        "options": [
+          {"id": "a", "text": "The equilibrium shifts toward the products"},
+          {"id": "b", "text": "The equilibrium composition does not change"},
+          {"id": "c", "text": "The equilibrium constant increases"},
+          {"id": "d", "text": "The equilibrium shifts toward the reactants"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A catalyst speeds the forward and reverse reactions equally, so it changes how fast equilibrium is reached, not where it lies."
+      },
+      "tags": ["equilibrium", "industrial_chemistry"]
+    },
+    {
+      "id": "a3-chemistry-0003",
+      "domain": "chemistry",
+      "title": "Activation energy and the Arrhenius equation",
+      "depth": "intermediate",
+      "explainer": "For a reaction to occur, molecules must collide with enough energy to break existing bonds and pass through a short-lived, high-energy arrangement called the transition state. The minimum energy required is the activation energy. The Arrhenius equation describes how the rate constant of a reaction depends on temperature: it grows exponentially as temperature rises, because a larger fraction of molecular collisions then carries enough energy to get over the barrier. A rough rule of thumb is that the rate of many reactions near room temperature approximately doubles for every 10 degree Celsius increase, which is why food spoils faster on the counter than in the fridge. Catalysts work by providing an alternative reaction pathway with a lower activation energy. Enzymes are biological catalysts that can accelerate reactions by factors of millions or more by holding reactants in precisely the right orientation and stabilizing the transition state. Importantly, a catalyst changes how fast a reaction happens, not whether it is energetically favorable: the overall energy difference between reactants and products, and therefore the equilibrium position, is unchanged. Plotting the logarithm of the rate constant against the reciprocal of temperature gives a straight line whose slope reveals the activation energy, a standard technique in kinetics laboratories.",
+      "formula": "k = A \\, e^{-E_a / (R T)}",
+      "source": {"title": "Arrhenius equation - Wikipedia", "url": "https://en.wikipedia.org/wiki/Arrhenius_equation"},
+      "question": {
+        "prompt": "How does a catalyst increase the rate of a chemical reaction?",
+        "options": [
+          {"id": "a", "text": "It raises the temperature of the reaction mixture"},
+          {"id": "b", "text": "It makes the overall reaction more energetically favorable"},
+          {"id": "c", "text": "It provides an alternative pathway with a lower activation energy"},
+          {"id": "d", "text": "It increases the concentration of the reactants"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "A catalyst lowers the energy barrier without changing the energies of reactants and products, so more collisions succeed while the equilibrium stays the same."
+      },
+      "tags": ["kinetics", "catalysis"]
+    },
+    {
+      "id": "a3-chemistry-0004",
+      "domain": "chemistry",
+      "title": "pH and the logarithmic scale",
+      "depth": "introductory",
+      "explainer": "The pH of a solution measures its acidity through the concentration of hydrogen ions it contains. Formally, pH is the negative base-ten logarithm of the hydrogen-ion activity, which in dilute solutions is close to the concentration in moles per liter. Because the scale is logarithmic, each step of one pH unit corresponds to a tenfold change in hydrogen-ion concentration. Lemon juice at about pH 2 is therefore roughly 100,000 times more acidic than pure water at pH 7, not merely 'a few points' more acidic. Pure water is neutral at pH 7 only at 25 degrees Celsius. Water always splits slightly into hydrogen and hydroxide ions, and the product of their concentrations, the ion product of water, increases with temperature; at 100 degrees Celsius neutral water has a pH of about 6.1 even though it is not acidic. The human body regulates pH tightly: arterial blood stays between about 7.35 and 7.45, and values outside that narrow range can become life-threatening. In the laboratory, pH is measured with a glass electrode meter or estimated with indicator dyes that change color across a known pH range, such as the familiar universal indicator paper.",
+      "formula": "\\mathrm{pH} = -\\log_{10} [\\mathrm{H^+}]",
+      "source": {"title": "pH - Wikipedia", "url": "https://en.wikipedia.org/wiki/PH"},
+      "question": {
+        "prompt": "Solution A has a pH of 3 and solution B has a pH of 5. How do their hydrogen-ion concentrations compare?",
+        "options": [
+          {"id": "a", "text": "A is 2 times more concentrated than B"},
+          {"id": "b", "text": "B is 100 times more concentrated than A"},
+          {"id": "c", "text": "They are equal, since both are acidic"},
+          {"id": "d", "text": "A is 100 times more concentrated than B"}
+        ],
+        "correct_option_id": "d",
+        "explanation": "A difference of 2 pH units is a factor of 10^2 = 100, and the lower pH has the higher hydrogen-ion concentration."
+      },
+      "tags": ["acids_bases", "logarithms"]
+    },
+    {
+      "id": "a3-chemistry-0005",
+      "domain": "chemistry",
+      "title": "Chirality",
+      "depth": "intermediate",
+      "explainer": "A molecule is chiral if it cannot be superimposed on its mirror image, just as a left hand cannot be superimposed on a right hand. The most common cause is a carbon atom bonded to four different groups, called a stereocenter. The two mirror-image forms are enantiomers. In a symmetric environment they are nearly identical: the same melting point, boiling point, solubility and molar mass. They differ in how they rotate plane-polarized light, in equal amounts but in opposite directions, and, crucially, in how they interact with other chiral molecules. Biology is overwhelmingly chiral. Proteins are built almost entirely from L-amino acids and natural sugars are mostly D-sugars, so enzymes and receptors often distinguish sharply between enantiomers. One enantiomer of carvone smells of spearmint while the other smells of caraway. The thalidomide disaster of the late 1950s and early 1960s is the classic warning: one enantiomer had the intended sedative effect while the other was linked to severe birth defects. Because the two forms interconvert in the body, even giving a single enantiomer would not have prevented harm. Today regulators expect each enantiomer of a chiral drug candidate to be characterized, and many drugs are developed and sold as single enantiomers.",
+      "formula": null,
+      "source": {"title": "Chirality (chemistry) - Wikipedia", "url": "https://en.wikipedia.org/wiki/Chirality_(chemistry)"},
+      "question": {
+        "prompt": "Which property typically differs between the two enantiomers of a chiral compound?",
+        "options": [
+          {"id": "a", "text": "The direction in which they rotate plane-polarized light"},
+          {"id": "b", "text": "Their boiling point"},
+          {"id": "c", "text": "Their molar mass"},
+          {"id": "d", "text": "Their solubility in water"}
+        ],
+        "correct_option_id": "a",
+        "explanation": "Enantiomers share physical properties in achiral settings but rotate plane-polarized light by equal amounts in opposite directions."
+      },
+      "tags": ["stereochemistry", "pharmacology"]
+    },
+    {
+      "id": "a3-chemistry-0006",
+      "domain": "chemistry",
+      "title": "Gibbs free energy and spontaneity",
+      "depth": "intermediate",
+      "explainer": "Whether a process can happen on its own at constant temperature and pressure is decided by the change in Gibbs free energy. That change combines two tendencies: the change in enthalpy, roughly the heat released or absorbed, and the change in entropy, a measure of how many ways energy and matter can be arranged, multiplied by the absolute temperature. If the free-energy change is negative, the process is spontaneous; if it is positive, the reverse process is the spontaneous one. The balance between the two terms explains many everyday observations. Ice melting absorbs heat, which is unfavorable, but increases entropy, which is favorable. Below 0 degrees Celsius the enthalpy term wins and water freezes; above it the temperature-weighted entropy term wins and ice melts. The standard free-energy change is also tied to the equilibrium constant, so thermodynamics predicts how far a reaction will go. What it does not predict is how fast. The conversion of diamond into graphite has a negative free-energy change at ordinary conditions, yet diamonds last for geological time because the activation energy for rearranging their carbon lattice is enormous. Spontaneous therefore means thermodynamically allowed, not quick, a distinction that also applies to many metabolic reactions.",
+      "formula": "\\Delta G = \\Delta H - T \\Delta S, \\qquad \\Delta G^{\\circ} = -RT \\ln K",
+      "source": {"title": "Gibbs free energy - Wikipedia", "url": "https://en.wikipedia.org/wiki/Gibbs_free_energy"},
+      "question": {
+        "prompt": "Converting diamond to graphite has a negative Gibbs free-energy change at room conditions. Why do diamonds persist?",
+        "options": [
+          {"id": "a", "text": "The free-energy change is actually positive at room temperature"},
+          {"id": "b", "text": "The activation energy is so high that the reaction is immeasurably slow"},
+          {"id": "c", "text": "The entropy of graphite is lower than that of diamond"},
+          {"id": "d", "text": "Diamond and graphite are at equilibrium with each other"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "A negative free-energy change says the conversion is allowed, not that it is fast. The kinetic barrier keeps diamond effectively stable."
+      },
+      "tags": ["thermodynamics", "energy"]
+    },
+    {
+      "id": "a3-chemistry-0007",
+      "domain": "chemistry",
+      "title": "Electronegativity and bond polarity",
+      "depth": "introductory",
+      "explainer": "Electronegativity is the tendency of an atom to pull the shared electrons of a chemical bond toward itself. On the widely used Pauling scale, fluorine is the most electronegative element, at about 4.0, followed by oxygen and nitrogen, while metals such as sodium and cesium sit near the bottom. The difference in electronegativity between two bonded atoms determines how evenly the electrons are shared. Identical atoms, as in the hydrogen molecule, share electrons equally and form a nonpolar covalent bond. When the difference is moderate, as between oxygen and hydrogen, the electrons spend more time near the more electronegative atom, which carries a partial negative charge, giving a polar covalent bond. When the difference is large, as between sodium and chlorine, one atom effectively transfers an electron to the other and the bond is mostly ionic. The cutoffs between these categories are conventions, not sharp physical boundaries. Whether a whole molecule is polar also depends on its shape. Carbon dioxide has two polar carbon-oxygen bonds, but the molecule is linear, so the two bond dipoles point in opposite directions and cancel. Water's bent shape means its bond dipoles add up, making water strongly polar and an excellent solvent for salts.",
+      "formula": null,
+      "source": {"title": "Electronegativity - Wikipedia", "url": "https://en.wikipedia.org/wiki/Electronegativity"},
+      "question": {
+        "prompt": "Carbon dioxide contains polar C=O bonds, yet the molecule has no overall dipole moment. Why?",
+        "options": [
+          {"id": "a", "text": "Carbon and oxygen have identical electronegativities"},
+          {"id": "b", "text": "Carbon dioxide is an ionic compound"},
+          {"id": "c", "text": "Its linear shape makes the two bond dipoles cancel"},
+          {"id": "d", "text": "The bonds are too short to carry a dipole"}
+        ],
+        "correct_option_id": "c",
+        "explanation": "Molecular polarity depends on geometry as well as bond polarity. In the linear O=C=O molecule the two equal bond dipoles point in opposite directions."
+      },
+      "tags": ["bonding", "molecular_structure"]
+    },
+    {
+      "id": "a3-chemistry-0008",
+      "domain": "chemistry",
+      "title": "Hydrogen bonding",
+      "depth": "introductory",
+      "explainer": "A hydrogen bond is an attraction between a hydrogen atom covalently bonded to a strongly electronegative atom, usually nitrogen, oxygen or fluorine, and a lone pair of electrons on another such atom nearby. The electronegative partner pulls electron density away from the hydrogen, leaving it with a partial positive charge that is drawn toward the lone pair. Hydrogen bonds are much weaker than covalent bonds, typically a few to a few tens of kilojoules per mole, but they are stronger than most other attractions between molecules, and they add up. They explain why water boils at 100 degrees Celsius while hydrogen sulfide, a heavier molecule of similar shape, boils at around minus 60 degrees. They also explain why ice floats: in ice, hydrogen bonds lock water molecules into an open hexagonal lattice that is less dense than the liquid, so lakes freeze from the top down and the water beneath stays liquid. In biology, hydrogen bonds hold the two strands of DNA together, with two between adenine and thymine and three between guanine and cytosine, and they stabilize the helices and sheets that shape proteins. Their weakness is a feature: it lets DNA unzip for copying and proteins flex as they work.",
+      "formula": null,
+      "source": {"title": "Hydrogen bond - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hydrogen_bond"},
+      "question": {
+        "prompt": "Why does water boil at 100 degrees Celsius while hydrogen sulfide, a heavier molecule, boils near minus 60 degrees Celsius?",
+        "options": [
+          {"id": "a", "text": "Water molecules are larger than hydrogen sulfide molecules"},
+          {"id": "b", "text": "Sulfur forms stronger covalent bonds with hydrogen"},
+          {"id": "c", "text": "Hydrogen sulfide is an ionic compound"},
+          {"id": "d", "text": "Water molecules form extensive hydrogen bonds with each other"}
+        ],
+        "correct_option_id": "d",
+        "explanation": "Oxygen is far more electronegative than sulfur, so water forms a strong hydrogen-bond network that takes much more energy to break when boiling."
+      },
+      "tags": ["intermolecular_forces", "biochemistry"]
+    },
+    {
+      "id": "a3-chemistry-0009",
+      "domain": "chemistry",
+      "title": "Buffers and the Henderson-Hasselbalch equation",
+      "depth": "intermediate",
+      "explainer": "A buffer is a solution that resists changes in pH when small amounts of acid or base are added. It contains a weak acid together with its conjugate base, for example acetic acid and acetate. Added hydrogen ions are captured by the conjugate base, and added hydroxide ions are neutralized by the weak acid, so the pH moves only slightly. The Henderson-Hasselbalch equation relates the buffer's pH to the acid's pKa and the ratio of conjugate base to acid. When the two are present in equal amounts, the logarithm term is zero and the pH equals the pKa. Buffers work best within about one pH unit of the pKa, where both components are present in useful quantities; outside that range one component is nearly used up. Blood relies mainly on the carbonic acid and bicarbonate pair. Its pKa of about 6.1 is well below blood's pH of 7.4, which would make it a poor buffer in a sealed flask. It works in the body because the system is open: the lungs adjust carbon dioxide within minutes and the kidneys adjust bicarbonate over hours to days. Laboratory work depends on buffers too, since enzymes and cell cultures function only within narrow pH ranges.",
+      "formula": "\\mathrm{pH} = \\mathrm{p}K_a + \\log_{10} \\frac{[\\mathrm{A^-}]}{[\\mathrm{HA}]}",
+      "source": {"title": "Henderson-Hasselbalch equation - Wikipedia", "url": "https://en.wikipedia.org/wiki/Henderson%E2%80%93Hasselbalch_equation"},
+      "question": {
+        "prompt": "A buffer contains equal concentrations of a weak acid and its conjugate base. What is its pH?",
+        "options": [
+          {"id": "a", "text": "Equal to the pKa of the acid"},
+          {"id": "b", "text": "Exactly 7"},
+          {"id": "c", "text": "Half the pKa of the acid"},
+          {"id": "d", "text": "One unit above the pKa"}
+        ],
+        "correct_option_id": "a",
+        "explanation": "With equal concentrations the ratio is 1 and log10(1) = 0, so the Henderson-Hasselbalch equation gives pH = pKa."
+      },
+      "tags": ["acids_bases", "physiology"]
+    },
+    {
+      "id": "a3-chemistry-0010",
+      "domain": "chemistry",
+      "title": "Oxidation and reduction",
+      "depth": "introductory",
+      "explainer": "Oxidation-reduction, or redox, reactions involve the transfer of electrons from one species to another. Oxidation is the loss of electrons and reduction is the gain of electrons, captured in the mnemonic 'OIL RIG': oxidation is loss, reduction is gain. The two always occur together, because electrons lost by one species must be gained by another. The species that accepts electrons is the oxidizing agent and is itself reduced; the species that donates electrons is the reducing agent and is itself oxidized. Chemists track electron transfer with oxidation states, a bookkeeping system that assigns charges to atoms as if all bonds were ionic. Redox chemistry is everywhere. Iron rusts when it is oxidized by oxygen in the presence of water. In a lithium-ion battery, discharge involves oxidation at one electrode and reduction at the other, with lithium ions moving through the electrolyte while electrons travel through the external circuit and power the device. In cellular respiration, glucose is oxidized step by step and oxygen is the final electron acceptor, reduced to water, and the energy released along the way is captured to make ATP. Photosynthesis runs the process in reverse, using light energy to reduce carbon dioxide into sugars.",
+      "formula": "\\mathrm{Zn + Cu^{2+} \\rightarrow Zn^{2+} + Cu}",
+      "source": {"title": "Redox - Wikipedia", "url": "https://en.wikipedia.org/wiki/Redox"},
+      "question": {
+        "prompt": "In the reaction Zn + Cu2+ -> Zn2+ + Cu, which species is the oxidizing agent?",
+        "options": [
+          {"id": "a", "text": "Zn"},
+          {"id": "b", "text": "Cu2+"},
+          {"id": "c", "text": "Zn2+"},
+          {"id": "d", "text": "Cu"}
+        ],
+        "correct_option_id": "b",
+        "explanation": "Cu2+ gains two electrons and is reduced to Cu, so it is the oxidizing agent; zinc loses electrons and is the reducing agent."
+      },
+      "tags": ["redox", "electrochemistry"]
+    }
+  ]
+}

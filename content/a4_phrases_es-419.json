@@ -1,0 +1,857 @@
+{
+  "schema_version": 1,
+  "module": "A4",
+  "language": "es-419",
+  "tts_voice": "es-MX",
+  "items": [
+    {
+      "id": "a4-es419-0001",
+      "phrase": "Mucho gusto.",
+      "literal_translation": "Much pleasure.",
+      "idiomatic_translation": "Nice to meet you.",
+      "usage_note": "Standard reply when introduced to someone; works in any setting. The other person often answers 'Igualmente' (likewise).",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "a4-es419-0002",
+      "phrase": "¿Cómo te va?",
+      "literal_translation": "How does it go to you?",
+      "idiomatic_translation": "How's it going?",
+      "usage_note": "Casual greeting with friends or peers (tú). With someone you address as usted, say '¿Cómo le va?'.",
+      "register": "informal",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "greetings"
+      ]
+    },
+    {
+      "id": "a4-es419-0003",
+      "phrase": "¿De dónde eres?",
+      "literal_translation": "From where are you?",
+      "idiomatic_translation": "Where are you from?",
+      "usage_note": "Informal tú form for peers. Answer with 'Soy de...' plus a place.",
+      "register": "informal",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "greetings",
+        "personal_info"
+      ]
+    },
+    {
+      "id": "a4-es419-0004",
+      "phrase": "¿De dónde es usted?",
+      "literal_translation": "From where are you (formal)?",
+      "idiomatic_translation": "Where are you from? (polite)",
+      "usage_note": "Formal version for older people, officials or strangers. Usted takes third-person verb forms: 'es', not 'eres'.",
+      "register": "formal",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "greetings",
+        "personal_info",
+        "usted"
+      ]
+    },
+    {
+      "id": "a4-es419-0005",
+      "phrase": "Con permiso.",
+      "literal_translation": "With permission.",
+      "idiomatic_translation": "Excuse me (may I get by?).",
+      "usage_note": "Said when passing in front of someone or leaving a group. To get attention or apologize, use 'Disculpe' or 'Perdón' instead.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "courtesy"
+      ]
+    },
+    {
+      "id": "a4-es419-0006",
+      "phrase": "Disculpe, ¿dónde está el baño?",
+      "literal_translation": "Excuse (me), where is the bathroom?",
+      "idiomatic_translation": "Excuse me, where is the restroom?",
+      "usage_note": "'Disculpe' is the usted command form, polite with strangers and staff. 'Estar' is used for location: 'dónde está'.",
+      "register": "formal",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "travel",
+        "courtesy",
+        "grammar_estar"
+      ]
+    },
+    {
+      "id": "a4-es419-0007",
+      "phrase": "¿Me puede ayudar, por favor?",
+      "literal_translation": "Me can (you) help, please?",
+      "idiomatic_translation": "Could you help me, please?",
+      "usage_note": "Polite usted request. The object pronoun 'me' can also attach to the infinitive: '¿Puede ayudarme?'.",
+      "register": "formal",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "requests",
+        "travel"
+      ]
+    },
+    {
+      "id": "a4-es419-0008",
+      "phrase": "No entiendo. ¿Puede repetirlo más despacio?",
+      "literal_translation": "I don't understand. Can (you) repeat it more slowly?",
+      "idiomatic_translation": "I don't understand. Could you say that again more slowly?",
+      "usage_note": "Essential learner phrase. 'Lo' (it) attaches to the end of the infinitive 'repetir'.",
+      "register": "formal",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "learning",
+        "requests"
+      ]
+    },
+    {
+      "id": "a4-es419-0009",
+      "phrase": "¿Cuánto cuesta?",
+      "literal_translation": "How much does (it) cost?",
+      "idiomatic_translation": "How much is it?",
+      "usage_note": "Asking a price. For several items use the plural: '¿Cuánto cuestan?'.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "id": "a4-es419-0010",
+      "phrase": "La cuenta, por favor.",
+      "literal_translation": "The bill, please.",
+      "idiomatic_translation": "Check, please.",
+      "usage_note": "In most of Latin America the server will not bring the bill until you ask for it.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "a4-es419-0011",
+      "phrase": "¿Qué hora es?",
+      "literal_translation": "What hour is it?",
+      "idiomatic_translation": "What time is it?",
+      "usage_note": "Answer with 'Es la una' for one o'clock and 'Son las...' for every other hour.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0012",
+      "phrase": "Tengo hambre.",
+      "literal_translation": "I have hunger.",
+      "idiomatic_translation": "I'm hungry.",
+      "usage_note": "Spanish uses 'tener' (to have) for many physical states: tengo sed (thirsty), tengo frío (cold), tengo sueño (sleepy).",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "grammar_tener"
+      ]
+    },
+    {
+      "id": "a4-es419-0013",
+      "phrase": "Tengo que irme.",
+      "literal_translation": "I have to go myself.",
+      "idiomatic_translation": "I have to go.",
+      "usage_note": "'Tener que' plus an infinitive expresses obligation. 'Irse' (to leave) is reflexive, so the 'me' attaches to it.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "leaving",
+        "grammar_tener"
+      ]
+    },
+    {
+      "id": "a4-es419-0014",
+      "phrase": "Nos vemos mañana.",
+      "literal_translation": "We see each other tomorrow.",
+      "idiomatic_translation": "See you tomorrow.",
+      "usage_note": "Friendly goodbye; drop 'mañana' for a general 'see you'. 'Nos' here means 'each other'.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "leaving",
+        "greetings"
+      ]
+    },
+    {
+      "id": "a4-es419-0015",
+      "phrase": "Lo siento mucho.",
+      "literal_translation": "I feel it a lot.",
+      "idiomatic_translation": "I'm very sorry.",
+      "usage_note": "A sincere apology or condolence. For a minor bump or interruption, 'Perdón' is lighter.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "courtesy",
+        "feelings"
+      ]
+    },
+    {
+      "id": "a4-es419-0016",
+      "phrase": "Hace mucho calor hoy.",
+      "literal_translation": "It makes much heat today.",
+      "idiomatic_translation": "It's really hot today.",
+      "usage_note": "Weather often uses 'hacer': hace frío (it's cold), hace sol (it's sunny), hace viento (it's windy).",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "weather",
+        "grammar_hacer"
+      ]
+    },
+    {
+      "id": "a4-es419-0017",
+      "phrase": "¿Puedo pagar con tarjeta?",
+      "literal_translation": "Can I pay with card?",
+      "idiomatic_translation": "Can I pay by card?",
+      "usage_note": "Useful before ordering in small shops, where some places accept only cash ('efectivo').",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "shopping",
+        "restaurant"
+      ]
+    },
+    {
+      "id": "a4-es419-0018",
+      "phrase": "Me encanta esta canción.",
+      "literal_translation": "This song enchants me.",
+      "idiomatic_translation": "I love this song.",
+      "usage_note": "'Encantar' works like 'gustar': the thing loved is the subject. For plural things: 'Me encantan estas canciones'.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "grammar_gustar"
+      ]
+    },
+    {
+      "id": "a4-es419-0019",
+      "phrase": "Estoy de acuerdo.",
+      "literal_translation": "I am of agreement.",
+      "idiomatic_translation": "I agree.",
+      "usage_note": "Use 'estar', not 'ser'. To disagree politely: 'No estoy de acuerdo'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "opinions",
+        "grammar_estar"
+      ]
+    },
+    {
+      "id": "a4-es419-0020",
+      "phrase": "Me da igual.",
+      "literal_translation": "It gives me equal.",
+      "idiomatic_translation": "I don't mind either way.",
+      "usage_note": "Neutral way to say you have no preference. Tone matters: said flatly, it can sound like 'I don't care'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "opinions"
+      ]
+    },
+    {
+      "id": "a4-es419-0021",
+      "phrase": "¿Ustedes ya comieron?",
+      "literal_translation": "You all already ate?",
+      "idiomatic_translation": "Have you all eaten yet?",
+      "usage_note": "In Latin America 'ustedes' is the only plural 'you', for friends and strangers alike, and takes third-person plural verbs ('comieron').",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "ustedes",
+        "food",
+        "grammar_preterite"
+      ]
+    },
+    {
+      "id": "a4-es419-0022",
+      "phrase": "Que te vaya bien.",
+      "literal_translation": "That it may go well for you.",
+      "idiomatic_translation": "Take care. / All the best.",
+      "usage_note": "Warm farewell using the subjunctive 'vaya'. Formal: 'Que le vaya bien'; to a group: 'Que les vaya bien'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "leaving",
+        "grammar_subjunctive"
+      ]
+    },
+    {
+      "id": "a4-es419-0023",
+      "phrase": "¿Me podría traer un vaso de agua?",
+      "literal_translation": "Could (you) bring me a glass of water?",
+      "idiomatic_translation": "Could you bring me a glass of water?",
+      "usage_note": "The conditional 'podría' softens a request and is very polite with servers and staff.",
+      "register": "formal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "restaurant",
+        "requests",
+        "grammar_conditional"
+      ]
+    },
+    {
+      "id": "a4-es419-0024",
+      "phrase": "¿Me prestas tu cargador?",
+      "literal_translation": "Do you lend me your charger?",
+      "idiomatic_translation": "Can I borrow your charger?",
+      "usage_note": "Spanish asks the other person to lend ('prestar') rather than saying 'can I borrow'. Informal tú form; formal: '¿Me presta su cargador?'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "requests",
+        "technology"
+      ]
+    },
+    {
+      "id": "a4-es419-0025",
+      "phrase": "Se me olvidó.",
+      "literal_translation": "It forgot itself on me.",
+      "idiomatic_translation": "I forgot.",
+      "usage_note": "This 'accidental se' frames forgetting as something that happened to you. The more direct 'Olvidé...' is also correct.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "grammar_se",
+        "everyday"
+      ]
+    },
+    {
+      "id": "a4-es419-0026",
+      "phrase": "¿A qué te dedicas?",
+      "literal_translation": "To what do you dedicate yourself?",
+      "idiomatic_translation": "What do you do for a living?",
+      "usage_note": "Common, polite way to ask about someone's job. Formal: '¿A qué se dedica?'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "personal_info",
+        "work"
+      ]
+    },
+    {
+      "id": "a4-es419-0027",
+      "phrase": "Ahorita vengo.",
+      "literal_translation": "Right-now-ish I come.",
+      "idiomatic_translation": "I'll be right back.",
+      "usage_note": "Very common in Mexico. 'Ahorita' can mean 'right away' or 'in a while', so context and tone decide how soon.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "mexico",
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0028",
+      "phrase": "Voy a tomar el camión.",
+      "literal_translation": "I'm going to take the truck.",
+      "idiomatic_translation": "I'm going to take the bus.",
+      "usage_note": "In Mexico 'camión' means a city bus. Other countries say 'bus', 'autobús' or 'colectivo'; 'ir a' plus an infinitive expresses the near future.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "mexico",
+        "travel",
+        "grammar_future"
+      ]
+    },
+    {
+      "id": "a4-es419-0029",
+      "phrase": "¿Qué onda?",
+      "literal_translation": "What wave?",
+      "idiomatic_translation": "What's up?",
+      "usage_note": "Casual greeting among friends, especially in Mexico and Central America. Avoid with strangers or in formal settings.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "mexico",
+        "greetings",
+        "slang"
+      ]
+    },
+    {
+      "id": "a4-es419-0030",
+      "phrase": "¡Qué padre!",
+      "literal_translation": "How father!",
+      "idiomatic_translation": "How cool!",
+      "usage_note": "Mexican slang for enthusiasm. Elsewhere in Latin America 'genial' or '¡qué bueno!' is more widely understood.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "mexico",
+        "slang",
+        "feelings"
+      ]
+    },
+    {
+      "id": "a4-es419-0031",
+      "phrase": "No hay de qué.",
+      "literal_translation": "There is nothing of what.",
+      "idiomatic_translation": "You're welcome. / Don't mention it.",
+      "usage_note": "Common reply to 'gracias'. 'De nada' is equally standard; 'No hay de qué' sounds slightly warmer.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "courtesy"
+      ]
+    },
+    {
+      "id": "a4-es419-0032",
+      "phrase": "Necesito ir al médico.",
+      "literal_translation": "I need to go to the doctor.",
+      "idiomatic_translation": "I need to see a doctor.",
+      "usage_note": "'a' + 'el' contracts to 'al'. 'Médico' and 'doctor' are both used for a physician.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "health"
+      ]
+    },
+    {
+      "id": "a4-es419-0033",
+      "phrase": "Me duele la cabeza.",
+      "literal_translation": "The head hurts me.",
+      "idiomatic_translation": "I have a headache.",
+      "usage_note": "'Doler' works like 'gustar': the body part is the subject. Spanish uses 'la' (the), not 'mi', for body parts here.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "health",
+        "grammar_gustar"
+      ]
+    },
+    {
+      "id": "a4-es419-0034",
+      "phrase": "¿A qué hora abren?",
+      "literal_translation": "At what hour do (they) open?",
+      "idiomatic_translation": "What time do you open?",
+      "usage_note": "'Abren' is third-person plural: it addresses the staff as ustedes or refers to 'they'. Ask '¿A qué hora cierran?' for closing time.",
+      "register": "neutral",
+      "cefr": "A1",
+      "transliteration": null,
+      "tags": [
+        "time",
+        "shopping",
+        "ustedes"
+      ]
+    },
+    {
+      "id": "a4-es419-0035",
+      "phrase": "Quisiera hacer una reservación para dos personas.",
+      "literal_translation": "I would like to make a reservation for two people.",
+      "idiomatic_translation": "I'd like to book a table for two.",
+      "usage_note": "'Quisiera' is a polite softened 'I want'. Latin America says 'reservación'; Spain usually says 'reserva'.",
+      "register": "formal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "restaurant",
+        "requests",
+        "grammar_subjunctive"
+      ]
+    },
+    {
+      "id": "a4-es419-0036",
+      "phrase": "¿Está incluida la propina?",
+      "literal_translation": "Is the tip included?",
+      "idiomatic_translation": "Is the tip included?",
+      "usage_note": "Worth asking: some restaurants add a service charge, while in others a tip of about 10% is expected.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "a4-es419-0037",
+      "phrase": "¿Qué me recomienda?",
+      "literal_translation": "What do you (formal) recommend me?",
+      "idiomatic_translation": "What do you recommend?",
+      "usage_note": "Polite way to ask a server or shop assistant for advice. Informal: '¿Qué me recomiendas?'.",
+      "register": "formal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "restaurant",
+        "requests"
+      ]
+    },
+    {
+      "id": "a4-es419-0038",
+      "phrase": "¿Dónde queda la estación de metro?",
+      "literal_translation": "Where does the metro station remain?",
+      "idiomatic_translation": "Where is the subway station?",
+      "usage_note": "In Latin America 'quedar' is very common for the location of places; '¿Dónde está...?' also works.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "travel",
+        "directions"
+      ]
+    },
+    {
+      "id": "a4-es419-0039",
+      "phrase": "Siga derecho y luego dé vuelta a la izquierda.",
+      "literal_translation": "Continue straight and then give turn to the left.",
+      "idiomatic_translation": "Go straight, then turn left.",
+      "usage_note": "Directions use usted commands ('siga', 'dé'). 'Dar vuelta' is common in Latin America; 'girar' and 'doblar' are also understood.",
+      "register": "formal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "travel",
+        "directions",
+        "grammar_commands"
+      ]
+    },
+    {
+      "id": "a4-es419-0040",
+      "phrase": "¿Cuánto tiempo se tarda en llegar?",
+      "literal_translation": "How much time does one take to arrive?",
+      "idiomatic_translation": "How long does it take to get there?",
+      "usage_note": "Impersonal 'se' makes it general ('does one take'). For yourself: '¿Cuánto tiempo tardo en llegar?'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "travel",
+        "time",
+        "grammar_se"
+      ]
+    },
+    {
+      "id": "a4-es419-0041",
+      "phrase": "No te preocupes.",
+      "literal_translation": "Don't worry yourself.",
+      "idiomatic_translation": "Don't worry.",
+      "usage_note": "Negative informal command uses the subjunctive. Formal: 'No se preocupe'; to a group: 'No se preocupen'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "grammar_commands"
+      ]
+    },
+    {
+      "id": "a4-es419-0042",
+      "phrase": "¡Buen provecho!",
+      "literal_translation": "Good benefit!",
+      "idiomatic_translation": "Enjoy your meal!",
+      "usage_note": "Said to people who are eating, even strangers at a nearby table when you pass or leave. Reply: 'Gracias, igualmente'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "restaurant",
+        "courtesy"
+      ]
+    },
+    {
+      "id": "a4-es419-0043",
+      "phrase": "Acabo de llegar.",
+      "literal_translation": "I finish of arriving.",
+      "idiomatic_translation": "I just arrived.",
+      "usage_note": "'Acabar de' plus an infinitive means 'to have just done' something.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "time",
+        "grammar_acabar"
+      ]
+    },
+    {
+      "id": "a4-es419-0044",
+      "phrase": "Estoy buscando trabajo.",
+      "literal_translation": "I am looking for work.",
+      "idiomatic_translation": "I'm looking for a job.",
+      "usage_note": "Present progressive (estar + -ando/-iendo) for an ongoing action. 'Buscar' already includes 'for': no preposition needed.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "work",
+        "grammar_progressive"
+      ]
+    },
+    {
+      "id": "a4-es419-0045",
+      "phrase": "Tengo ganas de ir a la playa.",
+      "literal_translation": "I have desires of going to the beach.",
+      "idiomatic_translation": "I feel like going to the beach.",
+      "usage_note": "'Tener ganas de' plus an infinitive expresses wanting to do something right now.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "grammar_tener"
+      ]
+    },
+    {
+      "id": "a4-es419-0046",
+      "phrase": "Fue sin querer.",
+      "literal_translation": "It was without wanting.",
+      "idiomatic_translation": "It was an accident. / I didn't mean to.",
+      "usage_note": "Standard way to say an action was unintentional, often after bumping someone or breaking something.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "courtesy",
+        "everyday"
+      ]
+    },
+    {
+      "id": "a4-es419-0047",
+      "phrase": "¿Podrían hablar más despacio, por favor?",
+      "literal_translation": "Could (you all) speak more slowly, please?",
+      "idiomatic_translation": "Could you all speak more slowly, please?",
+      "usage_note": "Polite request to a group, using the ustedes conditional 'podrían'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "learning",
+        "requests",
+        "ustedes"
+      ]
+    },
+    {
+      "id": "a4-es419-0048",
+      "phrase": "Ya se me hizo tarde.",
+      "literal_translation": "It already made itself late on me.",
+      "idiomatic_translation": "I'm running late.",
+      "usage_note": "Very common across Latin America, especially Mexico. The 'se me' construction frames lateness as something that happened to you.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "time",
+        "grammar_se",
+        "mexico"
+      ]
+    },
+    {
+      "id": "a4-es419-0049",
+      "phrase": "Me cae bien tu hermano.",
+      "literal_translation": "Your brother falls well to me.",
+      "idiomatic_translation": "I like your brother.",
+      "usage_note": "'Caer bien' means you like someone as a person, without romantic overtones. 'Me cae mal' means you dislike them.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "social",
+        "grammar_gustar"
+      ]
+    },
+    {
+      "id": "a4-es419-0050",
+      "phrase": "Hace dos años que estudio español.",
+      "literal_translation": "It makes two years that I study Spanish.",
+      "idiomatic_translation": "I've been studying Spanish for two years.",
+      "usage_note": "'Hace' + time + 'que' + present tense describes an action that started in the past and continues now.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "learning",
+        "time",
+        "grammar_hacer"
+      ]
+    },
+    {
+      "id": "a4-es419-0051",
+      "phrase": "Vale la pena.",
+      "literal_translation": "It is worth the pain.",
+      "idiomatic_translation": "It's worth it.",
+      "usage_note": "Often followed by an infinitive: 'Vale la pena visitar el museo'. Negative: 'No vale la pena'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "opinions"
+      ]
+    },
+    {
+      "id": "a4-es419-0052",
+      "phrase": "Ojalá que no llueva mañana.",
+      "literal_translation": "May God will that it does not rain tomorrow.",
+      "idiomatic_translation": "I hope it doesn't rain tomorrow.",
+      "usage_note": "'Ojalá' comes from Arabic and always takes the subjunctive ('llueva'). The 'que' is optional.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "weather",
+        "grammar_subjunctive"
+      ]
+    },
+    {
+      "id": "a4-es419-0053",
+      "phrase": "Me tomó por sorpresa.",
+      "literal_translation": "It took me by surprise.",
+      "idiomatic_translation": "It caught me off guard.",
+      "usage_note": "Preterite of 'tomar'. In Spain 'me pilló por sorpresa' is also common; 'tomar' is the safe pan-Latin-American choice.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "grammar_preterite"
+      ]
+    },
+    {
+      "id": "a4-es419-0054",
+      "phrase": "Les agradezco mucho su ayuda.",
+      "literal_translation": "I thank you all much your help.",
+      "idiomatic_translation": "Thank you all very much for your help.",
+      "usage_note": "'Les' addresses ustedes as the indirect object. More formal and emphatic than 'gracias'; good for emails and speeches.",
+      "register": "formal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "courtesy",
+        "ustedes",
+        "work"
+      ]
+    },
+    {
+      "id": "a4-es419-0055",
+      "phrase": "¿Me lo puede envolver para regalo?",
+      "literal_translation": "Can you wrap it for me for gift?",
+      "idiomatic_translation": "Could you gift-wrap it for me?",
+      "usage_note": "Two object pronouns: indirect 'me' comes before direct 'lo'. Many shops wrap purchases for free when asked.",
+      "register": "formal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "shopping",
+        "requests",
+        "grammar_pronouns"
+      ]
+    },
+    {
+      "id": "a4-es419-0056",
+      "phrase": "¿Te late?",
+      "literal_translation": "Does it beat for you?",
+      "idiomatic_translation": "Sound good? / Are you in?",
+      "usage_note": "Mexican slang for checking if someone likes a plan. Answer 'Me late' (I'm in). Avoid outside casual settings.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "mexico",
+        "slang",
+        "social"
+      ]
+    },
+    {
+      "id": "a4-es419-0057",
+      "phrase": "Échale ganas.",
+      "literal_translation": "Throw desire at it.",
+      "idiomatic_translation": "Give it your all. / You've got this.",
+      "usage_note": "Common Mexican encouragement before an exam, game or hard task. To a group: 'Échenle ganas'.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "mexico",
+        "encouragement",
+        "grammar_commands"
+      ]
+    },
+    {
+      "id": "a4-es419-0058",
+      "phrase": "Más vale tarde que nunca.",
+      "literal_translation": "More is worth late than never.",
+      "idiomatic_translation": "Better late than never.",
+      "usage_note": "Proverb used the same way as in English, often jokingly to someone who arrives late.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "proverb",
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0059",
+      "phrase": "Si tuviera más tiempo, viajaría más.",
+      "literal_translation": "If I had more time, I would travel more.",
+      "idiomatic_translation": "If I had more time, I'd travel more.",
+      "usage_note": "Hypothetical: 'si' + imperfect subjunctive ('tuviera'), then the conditional ('viajaría'). Never use the conditional after 'si'.",
+      "register": "neutral",
+      "cefr": "B2",
+      "transliteration": null,
+      "tags": [
+        "travel",
+        "grammar_subjunctive",
+        "grammar_conditional"
+      ]
+    },
+    {
+      "id": "a4-es419-0060",
+      "phrase": "¿Me puedes recomendar un buen restaurante?",
+      "literal_translation": "Can you recommend me a good restaurant?",
+      "idiomatic_translation": "Can you recommend a good restaurant?",
+      "usage_note": "Informal tú request to a friend or peer. 'Bueno' shortens to 'buen' before a masculine singular noun.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "restaurant",
+        "requests"
+      ]
+    }
+  ]
+}

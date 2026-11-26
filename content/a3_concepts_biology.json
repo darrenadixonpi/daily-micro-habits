@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "module": "A3",
+  "domain": "biology",
+  "items": [
+    {
+      "id": "a3-biology-0001",
+      "domain": "biology",
+      "title": "The central dogma of molecular biology",
+      "depth": "introductory",
+      "explainer": "Francis Crick coined the phrase 'central dogma' in 1958 to describe how genetic information flows in cells. Information stored in DNA is copied into messenger RNA in a process called transcription, and the RNA sequence is then read by ribosomes and translated into a chain of amino acids that folds into a protein. The genetic code that links them is read in three-letter words called codons; with four nucleotide letters there are 64 possible codons, which specify 20 standard amino acids plus stop signals, so most amino acids are encoded by more than one codon. Crick's key claim was narrower than it is often presented: once information has passed into protein, it cannot flow back out into nucleic acid. Information can, however, flow from RNA back to DNA. Retroviruses such as HIV use an enzyme called reverse transcriptase, discovered in 1970, to copy their RNA genomes into DNA that is inserted into the host's chromosomes. The picture has also grown richer in other ways. Many RNA molecules are never translated at all and instead regulate genes or form parts of cellular machinery, and the mRNA vaccines deployed against COVID-19 work by delivering instructions directly at the RNA stage of the flow.",
+      "formula": null,
+      "source": {
+        "title": "Central dogma of molecular biology - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology"
+      },
+      "question": {
+        "prompt": "Which information transfer does the central dogma, as Crick stated it, say is impossible?",
+        "options": [
+          {
+            "id": "a",
+            "text": "From protein back to DNA or RNA"
+          },
+          {
+            "id": "b",
+            "text": "From RNA back to DNA"
+          },
+          {
+            "id": "c",
+            "text": "From DNA to RNA"
+          },
+          {
+            "id": "d",
+            "text": "From RNA to protein"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Crick's claim was that sequence information cannot flow out of protein. RNA-to-DNA transfer does occur, through reverse transcriptase."
+      },
+      "tags": [
+        "molecular_biology",
+        "genetics"
+      ]
+    },
+    {
+      "id": "a3-biology-0002",
+      "domain": "biology",
+      "title": "CRISPR-Cas9 gene editing",
+      "depth": "intermediate",
+      "explainer": "CRISPR began as a bacterial immune system. Bacteria store short snippets of DNA from viruses that have attacked them in a region of their genome called CRISPR, transcribe those snippets into guide RNAs, and use them to direct Cas proteins to cut matching viral DNA if the virus returns. In 2012 Jennifer Doudna and Emmanuelle Charpentier showed that the Cas9 protein could be programmed with a single engineered guide RNA to cut almost any chosen DNA sequence, work for which they shared the 2020 Nobel Prize in Chemistry. The guide RNA, about 20 nucleotides long, pairs with the target sequence, which must sit next to a short motif the protein recognizes. Cas9 then makes a double-strand break. The cell's own repair systems take over: error-prone repair often disrupts the gene, which is useful for switching genes off, while repair from a supplied template can write in a precise change. Newer variants called base editors and prime editors change individual letters without a full double-strand break, reducing unwanted damage. In late 2023, regulators in the United Kingdom and the United States approved the first CRISPR-based therapy, for sickle cell disease. Off-target cuts at similar sequences remain a key safety concern.",
+      "formula": null,
+      "source": {
+        "title": "CRISPR gene editing - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/CRISPR_gene_editing"
+      },
+      "question": {
+        "prompt": "What determines which DNA sequence the Cas9 protein cuts?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The shape of the Cas9 protein alone"
+          },
+          {
+            "id": "b",
+            "text": "A guide RNA that base-pairs with the target sequence"
+          },
+          {
+            "id": "c",
+            "text": "The cell's DNA repair enzymes"
+          },
+          {
+            "id": "d",
+            "text": "The temperature at which the edit is performed"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Cas9 is directed by its guide RNA; changing the roughly 20-nucleotide guide sequence retargets the cut to a different site."
+      },
+      "tags": [
+        "genetics",
+        "biotechnology"
+      ]
+    },
+    {
+      "id": "a3-biology-0003",
+      "domain": "biology",
+      "title": "Natural selection and fitness",
+      "depth": "introductory",
+      "explainer": "Natural selection, described by Charles Darwin and Alfred Russel Wallace in 1858, follows from three observations. Individuals in a population vary; some of that variation is inherited; and more offspring are produced than can survive and reproduce. Individuals whose inherited traits suit them better to their environment tend, on average, to leave more offspring, so those traits become more common over generations. In biology, 'fitness' has a specific meaning that differs from everyday usage: it is reproductive success, the relative number of offspring an individual contributes to the next generation, not strength or health as such. A strong animal that leaves no offspring has a fitness of zero. Selection acts only on variation that already exists; it does not create traits because they are needed. New variation arises from random mutation and from the reshuffling of genes during sexual reproduction. Selection is also not the only force that changes populations. Genetic drift, random change in gene frequencies, can dominate in small populations, and migration moves genes between populations. Selection can be observed directly today. Bacteria evolve antibiotic resistance within months, insects evolve resistance to pesticides, and the beaks of Darwin's finches in the Galapagos have measurably changed in size after droughts altered the available seeds.",
+      "formula": null,
+      "source": {
+        "title": "Natural selection - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Natural_selection"
+      },
+      "question": {
+        "prompt": "In evolutionary biology, what does 'fitness' measure?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Physical strength and endurance"
+          },
+          {
+            "id": "b",
+            "text": "Length of an individual's lifespan"
+          },
+          {
+            "id": "c",
+            "text": "Relative reproductive success: the offspring contributed to the next generation"
+          },
+          {
+            "id": "d",
+            "text": "Resistance to all diseases"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Fitness is about passing on genes. Traits like strength or longevity matter only insofar as they affect the number of surviving offspring."
+      },
+      "tags": [
+        "evolution"
+      ]
+    },
+    {
+      "id": "a3-biology-0004",
+      "domain": "biology",
+      "title": "Mitochondria and endosymbiosis",
+      "depth": "introductory",
+      "explainer": "Mitochondria are the organelles that produce most of a cell's usable energy, generating ATP by oxidizing nutrients in a process that consumes oxygen. They also have a remarkable origin. According to endosymbiotic theory, championed by the biologist Lynn Margulis from 1967 onward, mitochondria descend from free-living bacteria that were engulfed by an ancestral host cell more than a billion years ago. Rather than being digested, the bacteria survived inside the host, and over time the two became completely dependent on each other. Several lines of evidence support the theory. Mitochondria have two membranes, consistent with a bacterium wrapped in a host membrane. They carry their own small, circular DNA genome, as bacteria do, and they divide by a fission-like process rather than being built from scratch. Their ribosomes resemble bacterial ribosomes more than the host's, and gene sequencing places them close to a particular group of bacteria. Chloroplasts in plants have a similar origin from photosynthetic cyanobacteria. In humans, mitochondrial DNA is inherited almost entirely from the mother, which makes it a powerful tool for tracing maternal ancestry. Mutations in mitochondrial DNA cause a range of inherited diseases that affect energy-hungry tissues such as muscle and the brain.",
+      "formula": null,
+      "source": {
+        "title": "Symbiogenesis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Symbiogenesis"
+      },
+      "question": {
+        "prompt": "Which observation supports the theory that mitochondria descended from bacteria?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Mitochondria are found only in plant cells"
+          },
+          {
+            "id": "b",
+            "text": "Mitochondria are assembled from scratch by the nucleus"
+          },
+          {
+            "id": "c",
+            "text": "Mitochondria have no membranes"
+          },
+          {
+            "id": "d",
+            "text": "Mitochondria have their own circular DNA and bacteria-like ribosomes"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Their own circular genome, bacterial-type ribosomes, double membrane and division by fission all point to a bacterial ancestor."
+      },
+      "tags": [
+        "cell_biology",
+        "evolution"
+      ]
+    },
+    {
+      "id": "a3-biology-0005",
+      "domain": "biology",
+      "title": "The action potential",
+      "depth": "intermediate",
+      "explainer": "Neurons communicate along their length using brief electrical pulses called action potentials. At rest, the inside of a neuron is about 70 millivolts negative relative to the outside, a voltage maintained by pumps that move sodium out of the cell and potassium in. When incoming signals push the membrane voltage above a threshold, voltage-gated sodium channels open, sodium ions rush in, and the inside briefly becomes positive. Within about a millisecond the sodium channels inactivate and voltage-gated potassium channels open, letting potassium flow out and restoring the negative resting voltage. The pulse is all-or-none: a stimulus either triggers a full-size action potential or none at all, so neurons encode intensity through the frequency of firing rather than the size of individual spikes. Each spike triggers the next patch of membrane, so the signal travels along the axon without fading. Alan Hodgkin and Andrew Huxley worked out this mechanism using the giant axon of the squid, work recognized with a Nobel Prize in 1963. Many axons are wrapped in insulating myelin, which forces the signal to jump between gaps, greatly increasing conduction speed. In multiple sclerosis, damage to myelin slows or blocks these signals, producing the disease's varied neurological symptoms.",
+      "formula": null,
+      "source": {
+        "title": "Action potential - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Action_potential"
+      },
+      "question": {
+        "prompt": "What causes the rapid rising phase of a neuron's action potential?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Voltage-gated sodium channels open and sodium ions flow into the cell"
+          },
+          {
+            "id": "b",
+            "text": "Potassium ions flow into the cell"
+          },
+          {
+            "id": "c",
+            "text": "The sodium-potassium pump suddenly reverses direction"
+          },
+          {
+            "id": "d",
+            "text": "Myelin releases stored electrical charge"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Opening of voltage-gated sodium channels lets positive sodium ions rush in, driving the membrane potential from negative to positive."
+      },
+      "tags": [
+        "neuroscience",
+        "physiology"
+      ]
+    },
+    {
+      "id": "a3-biology-0006",
+      "domain": "biology",
+      "title": "Enzymes and Michaelis-Menten kinetics",
+      "depth": "intermediate",
+      "explainer": "Enzymes are biological catalysts, mostly proteins, that speed up chemical reactions in cells by binding their reactants, called substrates, in an active site shaped to stabilize the reaction's transition state. In 1913 Leonor Michaelis and Maud Menten described how the rate of an enzyme-catalyzed reaction depends on substrate concentration. At low substrate concentrations the rate rises almost in proportion to the amount of substrate. At high concentrations the enzyme molecules are nearly all occupied, and the rate levels off at a maximum, Vmax, set by how many enzyme molecules are present and how fast each one works. The Michaelis constant, Km, is the substrate concentration at which the rate reaches half of Vmax. A low Km means the enzyme reaches half its maximal speed at a low substrate concentration, which often, though not always, reflects tight binding. These two parameters are central to pharmacology and drug discovery. A competitive inhibitor binds the active site and competes with the substrate, raising the apparent Km without changing Vmax, because enough substrate can still outcompete it. A non-competitive inhibitor binds elsewhere and lowers Vmax. Many drugs, including statins that lower cholesterol, work as enzyme inhibitors.",
+      "formula": "v = \\frac{V_{\\max} [S]}{K_m + [S]}",
+      "source": {
+        "title": "Michaelis-Menten kinetics - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Michaelis%E2%80%93Menten_kinetics"
+      },
+      "question": {
+        "prompt": "How does a classic competitive inhibitor affect an enzyme's kinetic parameters?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It lowers Vmax but leaves Km unchanged"
+          },
+          {
+            "id": "b",
+            "text": "It raises the apparent Km but leaves Vmax unchanged"
+          },
+          {
+            "id": "c",
+            "text": "It lowers both Km and Vmax"
+          },
+          {
+            "id": "d",
+            "text": "It has no effect on either parameter"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "A competitive inhibitor competes for the active site; more substrate is needed to reach half-maximal rate, but at very high substrate the inhibitor is outcompeted, so Vmax is unchanged."
+      },
+      "tags": [
+        "biochemistry",
+        "pharmacology"
+      ]
+    },
+    {
+      "id": "a3-biology-0007",
+      "domain": "biology",
+      "title": "Gene regulation and the lac operon",
+      "depth": "intermediate",
+      "explainer": "Every cell in your body carries essentially the same DNA, yet a liver cell and a neuron behave completely differently, because cells control which genes are switched on. The first mechanism of gene regulation to be worked out was the lac operon of the bacterium E. coli, described by Francois Jacob and Jacques Monod in 1961, work honored with a Nobel Prize in 1965. The operon is a set of genes needed to use the sugar lactose. Using them costs energy, so the bacterium makes the enzymes only when they are useful. When lactose is absent, a repressor protein binds to a DNA region called the operator and blocks transcription. When lactose is present, a form of it binds the repressor, changing its shape so it releases the DNA, and the genes are transcribed. A second layer of control involves glucose, the bacterium's preferred fuel. When glucose is scarce, a signaling molecule called cyclic AMP accumulates and helps an activator protein boost transcription. The genes are therefore expressed strongly only when lactose is present and glucose is absent. This logic of repressors, activators and DNA switches turned out to be a general principle, and far more elaborate versions control development and cell identity in plants and animals.",
+      "formula": null,
+      "source": {
+        "title": "Lac operon - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lac_operon"
+      },
+      "question": {
+        "prompt": "Under which conditions are the lac operon genes expressed most strongly?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Lactose absent and glucose present"
+          },
+          {
+            "id": "b",
+            "text": "Both lactose and glucose present"
+          },
+          {
+            "id": "c",
+            "text": "Lactose present and glucose absent"
+          },
+          {
+            "id": "d",
+            "text": "Both lactose and glucose absent"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Lactose removes the repressor, and the absence of glucose allows cyclic AMP to activate transcription, so both conditions are needed for strong expression."
+      },
+      "tags": [
+        "genetics",
+        "molecular_biology"
+      ]
+    },
+    {
+      "id": "a3-biology-0008",
+      "domain": "biology",
+      "title": "Meiosis and genetic variation",
+      "depth": "introductory",
+      "explainer": "Meiosis is the specialized cell division that produces eggs and sperm. A human body cell carries 23 pairs of chromosomes, one set inherited from each parent. Meiosis halves that number, so each egg or sperm carries a single set of 23, and fertilization restores the full complement of 46. Beyond halving the chromosome number, meiosis is a powerful generator of genetic variation, through two mechanisms. The first is independent assortment. When the chromosome pairs separate, each pair splits independently of the others, so each gamete receives a random mix of maternal and paternal chromosomes. With 23 pairs, that alone allows 2 to the 23rd power, about 8.4 million, different combinations from each parent. The second mechanism is crossing over. Before they separate, the paired chromosomes exchange segments, creating new combinations of gene variants along each chromosome. Together with the random pairing of a particular egg and sperm, these processes make every child genetically unique, apart from identical twins. Errors in meiosis also matter medically. If a chromosome pair fails to separate properly, a gamete ends up with an extra or missing chromosome. Down syndrome most often results from such an error, which leaves an extra copy of chromosome 21.",
+      "formula": "2^{23} \\approx 8.4 \\times 10^{6}",
+      "source": {
+        "title": "Meiosis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Meiosis"
+      },
+      "question": {
+        "prompt": "How many chromosome combinations can independent assortment alone produce in a single human's gametes?",
+        "options": [
+          {
+            "id": "a",
+            "text": "46"
+          },
+          {
+            "id": "b",
+            "text": "About 529 (23 squared)"
+          },
+          {
+            "id": "c",
+            "text": "Exactly 2"
+          },
+          {
+            "id": "d",
+            "text": "About 8.4 million (2 to the 23rd power)"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Each of the 23 chromosome pairs can send either member to a gamete independently, giving 2^23, about 8.4 million, combinations before crossing over adds more."
+      },
+      "tags": [
+        "genetics",
+        "reproduction"
+      ]
+    },
+    {
+      "id": "a3-biology-0009",
+      "domain": "biology",
+      "title": "Horizontal gene transfer",
+      "depth": "intermediate",
+      "explainer": "Most organisms pass genes vertically, from parent to offspring. Bacteria can also exchange genes horizontally, between unrelated cells and even between different species, and this ability makes them extraordinarily adaptable. There are three main routes. In transformation, a bacterium takes up free DNA from its surroundings, often released by dead cells; Frederick Griffith's 1928 experiments with pneumonia bacteria first revealed this. In transduction, a virus that infects bacteria accidentally packages some host DNA and delivers it to the next cell it infects. In conjugation, one bacterium transfers DNA directly to another through a thin bridge, usually in the form of a plasmid, a small circle of DNA separate from the main chromosome. Horizontal gene transfer is the main reason antibiotic resistance spreads so quickly. A resistance gene that arises in one harmless species can be carried on a plasmid into a dangerous pathogen, and a single plasmid may carry resistance to several drugs at once. Hospitals, farms that use antibiotics heavily, and wastewater are hotspots for such exchange. Horizontal transfer is not limited to bacteria: part of the human genome derives from ancient viral infections, and some genes appear to have moved between distantly related plants and animals.",
+      "formula": null,
+      "source": {
+        "title": "Horizontal gene transfer - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Horizontal_gene_transfer"
+      },
+      "question": {
+        "prompt": "Which mechanism moves DNA directly from one bacterium to another through a physical connection, often carrying plasmids?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Conjugation"
+          },
+          {
+            "id": "b",
+            "text": "Transformation"
+          },
+          {
+            "id": "c",
+            "text": "Transduction"
+          },
+          {
+            "id": "d",
+            "text": "Binary fission"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Conjugation uses direct cell-to-cell contact; transformation uses free DNA from the environment and transduction uses viruses as carriers."
+      },
+      "tags": [
+        "microbiology",
+        "antibiotic_resistance"
+      ]
+    },
+    {
+      "id": "a3-biology-0010",
+      "domain": "biology",
+      "title": "Homeostasis and negative feedback",
+      "depth": "introductory",
+      "explainer": "Homeostasis is the body's ability to keep internal conditions such as temperature, blood pH and blood glucose within narrow ranges despite a changing environment. Most homeostatic systems work by negative feedback: a sensor detects a deviation from a set point, and a response pushes the variable back toward it, much as a thermostat switches on the heating when a room cools. Blood glucose regulation is a clear example. After a meal, rising glucose prompts beta cells in the pancreas to release insulin, which signals muscle, fat and liver cells to take up glucose and store it, bringing levels back down. Between meals, falling glucose prompts alpha cells in the pancreas to release glucagon, which tells the liver to release stored glucose. In a healthy person, fasting blood glucose is usually kept at roughly 70 to 100 milligrams per deciliter. When feedback breaks down, disease follows. In type 1 diabetes the immune system destroys the insulin-producing beta cells; in type 2 diabetes the body's cells respond poorly to insulin. Positive feedback, which amplifies a change instead of reversing it, is less common and usually drives a process to completion, as in blood clotting or the escalating contractions of childbirth.",
+      "formula": null,
+      "source": {
+        "title": "Homeostasis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Homeostasis"
+      },
+      "question": {
+        "prompt": "After a carbohydrate-rich meal, which response brings blood glucose back down?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The pancreas releases glucagon, prompting the liver to release glucose"
+          },
+          {
+            "id": "b",
+            "text": "The pancreas releases insulin, prompting cells to take up glucose"
+          },
+          {
+            "id": "c",
+            "text": "The kidneys stop filtering blood"
+          },
+          {
+            "id": "d",
+            "text": "Body temperature rises to burn the excess sugar"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Rising glucose triggers insulin release from pancreatic beta cells; insulin promotes glucose uptake and storage, a negative-feedback response."
+      },
+      "tags": [
+        "physiology",
+        "endocrinology"
+      ]
+    }
+  ]
+}
