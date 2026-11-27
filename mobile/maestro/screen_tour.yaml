@@ -192,13 +192,15 @@ appId: com.darrendixon.dailymicrohabits
     direction: DOWN
 - takeScreenshot: 22_settings_bottom
 
-# Diagnostics (waits for the full run)
+# Diagnostics (waits for the full run), reached from Today
+- tapOn:
+    id: "tab-today"
 - scrollUntilVisible:
     element:
-      id: "settings-diagnostics"
-    direction: UP
+      id: "today-diagnostics"
+    direction: DOWN
 - tapOn:
-    id: "settings-diagnostics"
+    id: "today-diagnostics"
 - extendedWaitUntil:
     visible:
       id: "diagnostics-summary"

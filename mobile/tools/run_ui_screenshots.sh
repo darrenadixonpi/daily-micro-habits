@@ -67,7 +67,8 @@ for PREFS in "iPhone Air|iPhone 17|iPhone 16" "iPhone 16e|iPhone SE (3rd generat
   if [ -n "$LATEST" ]; then
     find "$LATEST" -name '*.png' -exec cp {} "$DEVICE_DIR/" \;
     mkdir -p "$DEVICE_DIR/maestro_logs"
-    find "$LATEST" \( -name '*.json' -o -name '*.log' -o -name '*.txt' \) -exec cp {} "$DEVICE_DIR/maestro_logs/" \;
+    # Keep command logs; skip the device log (100+ MB, over GitHub's file limit).
+    find "$LATEST" \( -name '*.json' -o -name '*.log' -o -name '*.txt' \) -size -5M -exec cp {} "$DEVICE_DIR/maestro_logs/" \;
   fi
   COUNT=$(ls "$DEVICE_DIR"/*.png 2>/dev/null | wc -l | tr -d ' ')
   if [ $RESULT -eq 0 ]; then echo "| $NAME | pass | $COUNT |" >> "$SUMMARY"; else echo "| $NAME | FAIL | $COUNT |" >> "$SUMMARY"; STATUS=1; fi
