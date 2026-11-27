@@ -327,6 +327,26 @@ appId: com.darrendixon.dailymicrohabits
 - tapOn:
     id: "settings-intro"
 - takeScreenshot: 17_settings_passphrase_tested
+- scrollUntilVisible:
+    element:
+      id: "setting-schedule-morning_time"
+    direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
+- tapOn:
+    id: "setting-schedule-morning_time"
+- eraseText: 10
+- inputText: "07:45"
+- assertVisible:
+    text: "07:45"
+- tapOn:
+    text: "Morning window"
+- takeScreenshot: 18_settings_schedule
+- scrollUntilVisible:
+    element:
+      id: "settings-backup-now"
+    direction: UP
+- waitForAnimationToEnd
 - tapOn:
     id: "settings-backup-now"
 - assertVisible:
@@ -408,21 +428,22 @@ appId: com.darrendixon.dailymicrohabits
     direction: DOWN
 # A tap during scroll momentum only stops the scroll; let it settle first.
 - waitForAnimationToEnd
+# Probe: after Export and Restore, a text field on Settings must still take typing.
 - scrollUntilVisible:
     element:
-      id: "setting-schedule-morning_time"
+      id: "setting-schedule-evening_time"
     direction: DOWN
-# A tap during scroll momentum only stops the scroll; let it settle first.
 - waitForAnimationToEnd
 - tapOn:
-    id: "setting-schedule-morning_time"
+    id: "setting-schedule-evening_time"
 - eraseText: 10
-- inputText: "07:45"
+- inputText: "21:15"
+- takeScreenshot: 18b_settings_typing_after_detour
 - assertVisible:
-    text: "07:45"
+    text: "21:15"
+    optional: true
 - tapOn:
-    text: "Morning window"
-- takeScreenshot: 18_settings_schedule
+    text: "Evening window"
 - scroll
 - takeScreenshot: 19_settings_scrolled_1
 - scroll
