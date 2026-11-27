@@ -58,6 +58,131 @@ appId: com.darrendixon.dailymicrohabits
     timeout: 10000
 - takeScreenshot: 03_today_start
 
+# A3 Concept of the day (day 1: no recall question yet)
+- tapOn:
+    id: "today-module-A3"
+- extendedWaitUntil:
+    visible:
+      id: "screen-a3"
+    timeout: 10000
+- takeScreenshot: 03a_a3_concept
+- scrollUntilVisible:
+    element:
+      id: "a3-read"
+    direction: DOWN
+- takeScreenshot: 03b_a3_concept_end
+- tapOn:
+    id: "a3-read"
+- assertVisible:
+    id: "a3-done"
+- scrollUntilVisible:
+    element:
+      id: "a3-more"
+    direction: DOWN
+- tapOn:
+    id: "a3-more"
+- assertVisible:
+    id: "a3-tweak-message"
+- tapOn:
+    id: "a3-simpler"
+- assertVisible:
+    text: ".*API key.*"
+- takeScreenshot: 03c_a3_tweaks
+- tapOn: "Back"
+
+# A1 Word of the day (first tier-2 word: obviate)
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- tapOn:
+    id: "today-module-A1"
+- extendedWaitUntil:
+    visible:
+      id: "screen-a1"
+    timeout: 10000
+- takeScreenshot: 03d_a1_word
+- tapOn:
+    id: "a1-sentence"
+- inputText: "Good tooling can obviate most manual release steps."
+- assertVisible:
+    text: "Good tooling can obviate.*"
+- tapOn:
+    id: "a1-headword"
+- tapOn:
+    id: "a1-save"
+- assertVisible:
+    id: "a1-done"
+- takeScreenshot: 03e_a1_saved
+- tapOn: "Back"
+
+# A4 Phrase (first A2 phrase: Estoy de acuerdo.) — a miss, the reveal, then a pass
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- tapOn:
+    id: "today-module-A4"
+- extendedWaitUntil:
+    visible:
+      id: "screen-a4"
+    timeout: 10000
+- takeScreenshot: 03f_a4_prompt
+- tapOn:
+    id: "a4-answer"
+- inputText: "hola amigo"
+- tapOn:
+    id: "a4-meaning"
+- tapOn:
+    id: "a4-check"
+- assertVisible:
+    text: "Not quite.*"
+- takeScreenshot: 03g_a4_miss
+- tapOn:
+    id: "a4-reveal"
+- assertVisible:
+    id: "a4-phrase"
+- takeScreenshot: 03h_a4_revealed
+- tapOn:
+    id: "a4-answer"
+- eraseText: 20
+- inputText: "estoy de acuerdo"
+- tapOn:
+    id: "a4-meaning"
+- tapOn:
+    id: "a4-check"
+- scrollUntilVisible:
+    element:
+      id: "a4-done"
+    direction: DOWN
+- takeScreenshot: 03i_a4_done
+- tapOn: "Back"
+
+# A5 On this day (opening completes it); save the first event as a card
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- tapOn:
+    id: "today-module-A5"
+- extendedWaitUntil:
+    visible:
+      id: "screen-a5"
+    timeout: 10000
+- takeScreenshot: 03j_a5
+- tapOn:
+    id: "a5-save-0"
+- assertVisible:
+    text: "Saved as a review card.*"
+- scroll
+- takeScreenshot: 03k_a5_saved
+- tapOn: "Back"
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- takeScreenshot: 03l_today_after_learning
+
 # D1 Morning top-3 (first field is the one hidden in v0.2.0)
 - tapOn:
     id: "today-module-D1"
@@ -164,6 +289,12 @@ appId: com.darrendixon.dailymicrohabits
       id: "screen-stats"
     timeout: 10000
 - takeScreenshot: 14_stats
+- scroll
+- takeScreenshot: 14a_stats_scrolled_1
+- scroll
+- takeScreenshot: 14b_stats_scrolled_2
+- scroll
+- takeScreenshot: 14c_stats_scrolled_3
 - tapOn:
     id: "tab-review"
 - extendedWaitUntil:
@@ -190,6 +321,81 @@ appId: com.darrendixon.dailymicrohabits
 - tapOn:
     id: "settings-intro"
 - takeScreenshot: 17_settings_passphrase_tested
+- tapOn:
+    id: "settings-backup-now"
+- assertVisible:
+    text: "Wrote microhabits_backup_.*"
+
+# Export, then verify the export and the encrypted backup on the Restore screen
+- scrollUntilVisible:
+    element:
+      id: "settings-export"
+    direction: DOWN
+- tapOn:
+    id: "settings-export"
+- extendedWaitUntil:
+    visible:
+      id: "screen-export"
+    timeout: 10000
+- tapOn:
+    id: "export-run"
+- extendedWaitUntil:
+    visible:
+      id: "export-files"
+    timeout: 10000
+- takeScreenshot: 17a_export_done
+- tapOn: "Back"
+- extendedWaitUntil:
+    visible:
+      id: "screen-settings"
+    timeout: 10000
+- tapOn:
+    id: "settings-restore"
+- extendedWaitUntil:
+    visible:
+      id: "screen-restore"
+    timeout: 10000
+- takeScreenshot: 17b_restore_files
+- tapOn:
+    text: "Exports/.*microhabits_export_.*json"
+- tapOn:
+    id: "restore-verify"
+- extendedWaitUntil:
+    visible:
+      id: "restore-result"
+    timeout: 30000
+- assertVisible:
+    text: "All table checksums match."
+- takeScreenshot: 17c_restore_verified_export
+- scrollUntilVisible:
+    element:
+      text: "microhabits_backup_.*mhbak"
+    direction: UP
+- tapOn:
+    text: "microhabits_backup_.*mhbak"
+- tapOn:
+    id: "restore-passphrase"
+- inputText: "maestro screenshot passphrase"
+- tapOn:
+    text: "Recovery passphrase"
+- tapOn:
+    id: "restore-verify"
+- extendedWaitUntil:
+    visible:
+      id: "restore-result"
+    timeout: 30000
+- assertVisible:
+    text: "All table checksums match."
+- takeScreenshot: 17d_restore_verified_backup
+- tapOn: "Back"
+- extendedWaitUntil:
+    visible:
+      id: "screen-settings"
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      id: "settings-intro"
+    direction: DOWN
 - scrollUntilVisible:
     element:
       id: "setting-schedule-morning_time"
@@ -209,11 +415,20 @@ appId: com.darrendixon.dailymicrohabits
 - takeScreenshot: 20_settings_scrolled_2
 - scroll
 - takeScreenshot: 21_settings_scrolled_3
+- scroll
+- takeScreenshot: 21a_settings_scrolled_4
+- scroll
+- takeScreenshot: 21b_settings_scrolled_5
 - scrollUntilVisible:
     element:
       id: "setting-api-key"
     direction: DOWN
-- takeScreenshot: 22_settings_bottom
+- takeScreenshot: 22_settings_api_key
+- scrollUntilVisible:
+    element:
+      id: "settings-generation-run"
+    direction: DOWN
+- takeScreenshot: 22a_settings_bottom
 
 # Diagnostics (waits for the full run), reached from Today
 - tapOn:
@@ -233,4 +448,12 @@ appId: com.darrendixon.dailymicrohabits
 - scroll
 - takeScreenshot: 24_diagnostics_scrolled
 - scroll
-- takeScreenshot: 25_diagnostics_bottom
+- takeScreenshot: 25_diagnostics_scrolled_2
+- scroll
+- takeScreenshot: 26_diagnostics_scrolled_3
+- scroll
+- takeScreenshot: 27_diagnostics_bottom
+- assertVisible:
+    id: "diagnostics-summary"
+    text: "20/20 passed"
+

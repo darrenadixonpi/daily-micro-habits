@@ -1,0 +1,97 @@
+# Second launch after screen_tour.yaml: tools/run_ui_screenshots.sh sets the
+# dmhUiTourMakeCardsDue flag, which makes the cards created by the first tour due now,
+# so the Review screen can be photographed with real cards (A1 recognition, A4 production,
+# A5 saved event) and graded through to the empty state.
+appId: com.darrendixon.dailymicrohabits
+---
+- launchApp:
+    clearState: false
+    arguments:
+      dmhUiTourMakeCardsDue: "1"
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 60000
+- tapOn:
+    id: "tab-review"
+- extendedWaitUntil:
+    visible:
+      id: "review-card"
+    timeout: 15000
+- takeScreenshot: 30_review_a1_prompt
+- tapOn:
+    id: "review-reveal"
+- extendedWaitUntil:
+    visible:
+      id: "review-answer-card"
+    timeout: 5000
+- scrollUntilVisible:
+    element:
+      id: "review-grade-1"
+    direction: DOWN
+- takeScreenshot: 31_review_a1_answer
+- tapOn:
+    id: "review-grade-1"
+# A4 production card: type the phrase, then check and reveal
+- extendedWaitUntil:
+    visible:
+      id: "review-answer"
+    timeout: 10000
+- takeScreenshot: 32_review_a4_prompt
+- tapOn:
+    id: "review-answer"
+- inputText: "estoy de acuerdo"
+- tapOn:
+    id: "review-prompt"
+- tapOn:
+    id: "review-reveal"
+- assertVisible:
+    id: "review-match"
+- scrollUntilVisible:
+    element:
+      id: "review-grade-4"
+    direction: DOWN
+- takeScreenshot: 33_review_a4_answer
+- tapOn:
+    id: "review-grade-4"
+# A5 saved event, then the A1 card graded Again comes back in the same session
+- extendedWaitUntil:
+    visible:
+      id: "review-reveal"
+    timeout: 10000
+- takeScreenshot: 34_review_a5_prompt
+- tapOn:
+    id: "review-reveal"
+- scrollUntilVisible:
+    element:
+      id: "review-grade-4"
+    direction: DOWN
+- tapOn:
+    id: "review-grade-4"
+- extendedWaitUntil:
+    visible:
+      id: "review-reveal"
+    timeout: 10000
+- assertVisible:
+    text: "obviate"
+- takeScreenshot: 35_review_again_card_returns
+- tapOn:
+    id: "review-reveal"
+- scrollUntilVisible:
+    element:
+      id: "review-grade-4"
+    direction: DOWN
+- tapOn:
+    id: "review-grade-4"
+- extendedWaitUntil:
+    visible:
+      id: "review-empty"
+    timeout: 10000
+- takeScreenshot: 36_review_done
+- tapOn:
+    id: "tab-today"
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- takeScreenshot: 37_today_after_review

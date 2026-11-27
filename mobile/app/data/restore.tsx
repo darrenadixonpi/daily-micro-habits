@@ -115,6 +115,7 @@ export default function RestoreScreen() {
         </Text>
         {files.length === 0 ? <Text style={ui.text}>No backup or export files found.</Text> : null}
         <ChoiceList
+          showIds={false}
           testIDPrefix="restore-file"
           options={files.slice(0, 30).map((entry) => ({ id: entry.relativePath, text: entry.relativePath }))}
           selected={selected}

@@ -10,6 +10,8 @@ export MAESTRO_DRIVER_STARTUP_TIMEOUT=300000
 APP_PATH="$1"
 OUT_ROOT="$(pwd)/ui-screenshots"
 FLOW="$(pwd)/maestro/screen_tour.yaml"
+REVIEW_FLOW="$(pwd)/maestro/screen_tour_review.yaml"
+BUNDLE_ID="com.darrendixon.dailymicrohabits"
 rm -rf "$OUT_ROOT" && mkdir -p "$OUT_ROOT"
 
 RUNTIME=$(xcrun simctl list runtimes -j | python3 -c "
@@ -33,7 +35,7 @@ for t in json.load(sys.stdin)['devicetypes']:
 
 STATUS=0
 SUMMARY="$OUT_ROOT/SUMMARY.md"
-echo "| Device | Result | Screenshots |" > "$SUMMARY"
+echo "| Device | Result | Screenshots |" > "$SUMMARY"  # result covers screen_tour.yaml and screen_tour_review.yaml
 echo "|---|---|---|" >> "$SUMMARY"
 
 for PREFS in "iPhone Air|iPhone 17|iPhone 16" "iPhone 16e|iPhone SE (3rd generation)|iPhone 17"; do
@@ -62,16 +64,38 @@ for PREFS in "iPhone Air|iPhone 17|iPhone 16" "iPhone 16e|iPhone SE (3rd generat
     break
   done
   tail -40 "$DEVICE_DIR/maestro_output.txt"
+
+  # Second launch: make the tour's review cards due now (see applyUiTourHooks), then review them.
+  # The flag goes in as a launch argument (screen_tour_review.yaml) and, in case the driver does
+  # not forward it to NSUserDefaults, also into the app's preferences file.
+  REVIEW_RESULT=1
+  if [ $RESULT -eq 0 ]; then
+    xcrun simctl terminate "$UDID" "$BUNDLE_ID" || true
+    DATA=$(xcrun simctl get_app_container "$UDID" "$BUNDLE_ID" data 2>/dev/null || true)
+    if [ -n "$DATA" ]; then
+      mkdir -p "$DATA/Library/Preferences"
+      PLIST="$DATA/Library/Preferences/$BUNDLE_ID.plist"
+      [ -f "$PLIST" ] || plutil -create xml1 "$PLIST"
+      plutil -replace dmhUiTourMakeCardsDue -string 1 "$PLIST" || true
+    fi
+    ( cd "$DEVICE_DIR" && maestro --device "$UDID" test "$REVIEW_FLOW" --format junit --output "$DEVICE_DIR/maestro_review_report.xml" ) \
+      > "$DEVICE_DIR/maestro_review_output.txt" 2>&1
+    REVIEW_RESULT=$?
+    tail -30 "$DEVICE_DIR/maestro_review_output.txt"
+  fi
   # Maestro's own failure screenshot and logs.
-  LATEST=$(ls -td "$HOME"/.maestro/tests/*/ 2>/dev/null | head -1)
-  if [ -n "$LATEST" ]; then
+  for LATEST in $(ls -td "$HOME"/.maestro/tests/*/ 2>/dev/null | head -2); do
     find "$LATEST" -name '*.png' -exec cp {} "$DEVICE_DIR/" \;
     mkdir -p "$DEVICE_DIR/maestro_logs"
     # Keep command logs; skip the device log (100+ MB, over GitHub's file limit).
     find "$LATEST" \( -name '*.json' -o -name '*.log' -o -name '*.txt' \) -size -5M -exec cp {} "$DEVICE_DIR/maestro_logs/" \;
-  fi
+  done
   COUNT=$(ls "$DEVICE_DIR"/*.png 2>/dev/null | wc -l | tr -d ' ')
-  if [ $RESULT -eq 0 ]; then echo "| $NAME | pass | $COUNT |" >> "$SUMMARY"; else echo "| $NAME | FAIL | $COUNT |" >> "$SUMMARY"; STATUS=1; fi
+  if [ $RESULT -eq 0 ] && [ $REVIEW_RESULT -eq 0 ]; then
+    echo "| $NAME | pass | $COUNT |" >> "$SUMMARY"
+  else
+    echo "| $NAME | FAIL (tour $RESULT, review $REVIEW_RESULT) | $COUNT |" >> "$SUMMARY"; STATUS=1
+  fi
   xcrun simctl shutdown "$UDID" || true
   xcrun simctl delete "$UDID" || true
 done

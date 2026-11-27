@@ -219,6 +219,7 @@ export function ChoiceList({
   markFor,
   disabled,
   testIDPrefix,
+  showIds = true,
 }: {
   readonly options: readonly { readonly id: string; readonly text: string }[];
   readonly selected: string | null;
@@ -226,6 +227,8 @@ export function ChoiceList({
   readonly markFor?: (id: string) => ChoiceMark;
   readonly disabled?: boolean;
   readonly testIDPrefix?: string;
+  /** Prefix each option with its letter ("A. "); off for lists of file names. */
+  readonly showIds?: boolean;
 }) {
   return (
     <View style={{ gap: 6 }}>
@@ -251,7 +254,7 @@ export function ChoiceList({
             })}
           >
             <Text style={ui.text}>
-              <Text style={{ fontWeight: '600' }}>{option.id.toUpperCase()}. </Text>
+              {showIds ? <Text style={{ fontWeight: '600' }}>{option.id.toUpperCase()}. </Text> : null}
               {option.text}
               {mark === 'correct' ? '  ✓' : mark === 'incorrect' ? '  ✗' : ''}
             </Text>
