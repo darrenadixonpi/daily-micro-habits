@@ -1,6 +1,4 @@
-import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs';
-import { HeaderHeightContext } from '@react-navigation/elements';
-import { useContext, useEffect, useRef, type ComponentRef, type ReactNode } from 'react';
+import { useEffect, useRef, type ComponentRef, type ReactNode } from 'react';
 import { ActivityIndicator, Keyboard, ScrollView, Text, View, type StyleProp, type ViewStyle } from 'react-native';
 import { COLORS, ui } from './ui_styles';
 
@@ -22,27 +20,33 @@ export function ScreenScrollView({
   readonly contentStyle?: StyleProp<ViewStyle>;
 }) {
   const scrollRef = useRef<ComponentRef<typeof ScrollView>>(null);
+  const topMarkerRef = useRef<View>(null);
   const offsetY = useRef(0);
   const contentHeight = useRef(0);
-  const viewportHeight = useRef(0);
-  // Stack screens sit under the translucent native header; tab screens have an opaque
-  // header above them. The resting scroll offset is minus the part hidden under a header.
-  const headerHeight = useContext(HeaderHeightContext) ?? 0;
-  const insideTabs = useContext(BottomTabBarHeightContext) !== undefined;
-  const hiddenTop = insideTabs ? 0 : headerHeight;
+  const viewport = useRef({ height: 0, windowY: 0 });
+  // Window y of the first content pixel while the screen is at rest (measured once, before
+  // any scrolling). Comparing against it later needs no knowledge of headers or tab bars.
+  const restingMarkerY = useRef<number | null>(null);
 
-  // React Native scrolls a focused field into view when the keyboard opens but never
-  // scrolls back when it closes, which left short pages under the header (v0.2.1 tour,
-  // journal editor). On close, return to the resting offset or the last valid offset.
+  // React Native scrolls a focused field into view when the keyboard opens but never scrolls
+  // back when it closes, which left short pages under the header (v0.2.1 tour, journal editor).
+  // On close: if the content fits, return to the resting position; if a gap opened above the
+  // content, close it. Longer pages keep the user's position.
   useEffect(() => {
     const subscription = Keyboard.addListener('keyboardDidHide', () => {
-      const restingY = -hiddenTop;
-      const maxY = Math.max(restingY, contentHeight.current - viewportHeight.current);
-      const target = Math.min(Math.max(offsetY.current, restingY), maxY);
-      if (Math.abs(target - offsetY.current) > 1) scrollRef.current?.scrollTo({ y: target, animated: true });
+      const resting = restingMarkerY.current;
+      if (resting === null) return;
+      topMarkerRef.current?.measureInWindow((_x, markerY) => {
+        const scrolledBy = resting - markerY; // > 0: content moved up; < 0: gap above
+        const visibleBelowRest = viewport.current.height - (resting - viewport.current.windowY);
+        const fits = contentHeight.current <= visibleBelowRest + 1;
+        if (Math.abs(scrolledBy) > 1 && (fits || scrolledBy < 0)) {
+          scrollRef.current?.scrollTo({ y: offsetY.current - scrolledBy, animated: true });
+        }
+      });
     });
     return () => subscription.remove();
-  }, [hiddenTop]);
+  }, []);
 
   return (
     <ScrollView
@@ -63,9 +67,20 @@ export function ScreenScrollView({
         contentHeight.current = height;
       }}
       onLayout={(event) => {
-        viewportHeight.current = event.nativeEvent.layout.height;
+        const height = event.nativeEvent.layout.height;
+        scrollRef.current?.measureInWindow((_x, windowY) => {
+          viewport.current = { height, windowY };
+        });
+        if (restingMarkerY.current === null) {
+          requestAnimationFrame(() =>
+            topMarkerRef.current?.measureInWindow((_x, markerY) => {
+              if (restingMarkerY.current === null) restingMarkerY.current = markerY;
+            }),
+          );
+        }
       }}
     >
+      <View ref={topMarkerRef} collapsable={false} pointerEvents="none" style={{ position: 'absolute', top: 0, left: 0, width: 0, height: 0 }} />
       {children}
     </ScrollView>
   );
