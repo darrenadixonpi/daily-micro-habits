@@ -1,5 +1,6 @@
 import { M0001_INITIAL_SCHEMA } from './migrations/m0001_initial_schema';
 import { M0002_REFLECTION_AND_PINGS } from './migrations/m0002_reflection_and_pings';
+import { M0003_LEARNING_AND_GENERATION } from './migrations/m0003_learning_and_generation';
 
 export interface Migration {
   readonly version: number;
@@ -11,6 +12,7 @@ export interface Migration {
 export const MIGRATIONS: readonly Migration[] = [
   { version: 1, name: 'm0001_initial_schema', sql: M0001_INITIAL_SCHEMA },
   { version: 2, name: 'm0002_reflection_and_pings', sql: M0002_REFLECTION_AND_PINGS },
+  { version: 3, name: 'm0003_learning_and_generation', sql: M0003_LEARNING_AND_GENERATION },
 ];
 
 export const CURRENT_SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]?.version ?? 0;
@@ -56,10 +58,13 @@ export const PRIMARY_KEY_BY_TABLE: Record<DataTableName, string> = {
 /** Expected columns per table after the latest migration; checked by diagnostic T2. */
 export const EXPECTED_COLUMNS: Record<DataTableName, readonly string[]> = {
   settings: ['key', 'value_json', 'updated_at'],
-  generation_request: ['id', 'module', 'requested_at', 'items_requested', 'items_accepted', 'status'],
+  generation_request: [
+    'id', 'module', 'requested_at', 'items_requested', 'items_accepted', 'status', 'kind', 'model', 'input_tokens',
+    'output_tokens', 'error',
+  ],
   content_item: [
     'id', 'module', 'language', 'tier_or_level', 'domain', 'payload_json', 'source', 'status', 'served_on',
-    'generation_request_id',
+    'generation_request_id', 'assigned_on', 'parent_id', 'excluded_reason', 'imported_at',
   ],
   daily_session: ['date', 'morning_completed_at', 'evening_completed_at', 'freeze_used'],
   task_completion: ['id', 'date', 'module', 'content_item_id', 'completed_at', 'response_json'],

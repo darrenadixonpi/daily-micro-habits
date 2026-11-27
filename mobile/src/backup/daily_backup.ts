@@ -49,4 +49,27 @@ export function writeDailyBackup(
   return { fileName, bytes: text.length, pruned };
 }
 
+/**
+ * A one-off backup before a risky step (a schema migration, a restore). Named
+ * microhabits_safety_<reason>_<UTC timestamp>.mhbak, so daily pruning never removes it.
+ */
+export function writeSafetyBackup(
+  executor: SqlExecutor,
+  crypto: CryptoPrimitives,
+  store: BackupFileStore,
+  input: { readonly keyMaterial: DerivedKeyMaterial; readonly reason: string; readonly appVersion: string; readonly now: Date },
+): DailyBackupResult {
+  const document = buildBackupDocument(executor, crypto, input.appVersion, input.now);
+  const text = encryptBackupWithKey(crypto, input.keyMaterial, document);
+  const stamp = input.now.toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+  const fileName = `microhabits_safety_${input.reason.replace(/[^a-z0-9-]+/gi, '-')}_${stamp}${BACKUP_FILE_EXTENSION}`;
+  store.writeText(fileName, text);
+  return { fileName, bytes: text.length, pruned: [] };
+}
+
+/** Every backup file in the store (daily and safety), newest name last. */
+export function listAllBackupFiles(store: BackupFileStore): string[] {
+  return store.listNames().filter((name) => name.endsWith(BACKUP_FILE_EXTENSION)).sort();
+}
+
 export { BACKUP_FILE_EXTENSION };

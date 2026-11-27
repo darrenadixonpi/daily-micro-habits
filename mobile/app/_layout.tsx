@@ -10,11 +10,17 @@ export default function RootLayout() {
       <AppLockGate>
         <Stack screenOptions={{ headerBackTitle: 'Back' }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="a1" options={{ title: 'Word of the day' }} />
+          <Stack.Screen name="a3" options={{ title: 'Concept of the day' }} />
+          <Stack.Screen name="a4" options={{ title: 'Phrase of the day' }} />
+          <Stack.Screen name="a5" options={{ title: 'On this day' }} />
           <Stack.Screen name="d1" options={{ title: 'Morning top-3' }} />
           <Stack.Screen name="d2" options={{ title: 'Evening review' }} />
           <Stack.Screen name="journal-entry/[date]" options={{ title: 'Journal' }} />
           <Stack.Screen name="setup/passphrase" options={{ title: 'Recovery passphrase', presentation: 'modal' }} />
           <Stack.Screen name="diagnostics" options={{ title: 'Diagnostics' }} />
+          <Stack.Screen name="data/export" options={{ title: 'Export' }} />
+          <Stack.Screen name="data/restore" options={{ title: 'Restore or verify' }} />
         </Stack>
       </AppLockGate>
     </AppStateProvider>

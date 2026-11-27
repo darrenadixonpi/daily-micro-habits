@@ -15,6 +15,11 @@ import { Card, ScreenMessage, ScreenScrollView, TableRow } from '../../src/ui/sc
 import { COLORS, ui } from '../../src/ui/ui_styles';
 
 const ROUTE_BY_MODULE: Partial<Record<ModuleId, (date: string) => Href>> = {
+  A1: () => '/a1',
+  A2: () => '/review',
+  A3: () => '/a3',
+  A4: () => '/a4',
+  A5: () => '/a5',
   D1: () => '/d1',
   D2: () => '/d2',
   D3: (date) => `/journal-entry/${date}`,
@@ -24,11 +29,12 @@ const MODULE_STATE_LABEL: Record<ModuleState, string> = {
   complete: 'Done',
   incomplete: 'To do',
   not_applicable: 'Not applicable',
+  no_content: 'No content',
   disabled: 'Off',
   not_implemented: '',
 };
 
-/** Today: both windows with their tasks, the streak, and the 7-day ping log (M2 gate evidence). */
+/** Today: both windows with their tasks in the recommended order, the streak, and the 7-day ping log (M2 gate evidence). */
 export default function TodayScreen() {
   const {
     database, openError, daily, dailyError, notificationsAllowed, passphraseSet, diagnostics, diagnosticsRunning, ensureNotificationPermission,
@@ -135,7 +141,11 @@ function WindowCard({
   readonly today: string;
 }) {
   const state = status.windows[window];
-  const modules = MODULES.filter((module) => module.window === window && enabled.includes(module.id));
+  // Recommended session order (spec Section 4): the morning opens with A3 (yesterday's question).
+  const ORDER: Record<WindowId, readonly ModuleId[]> = { morning: ['A3', 'A1', 'A4', 'A5', 'D1'], evening: ['A2', 'D2', 'D3'] };
+  const modules = ORDER[window]
+    .map((id) => MODULES.find((module) => module.id === id))
+    .filter((module): module is (typeof MODULES)[number] => module !== undefined && enabled.includes(module.id));
   return (
     <Card
       testID={`today-${window}`}

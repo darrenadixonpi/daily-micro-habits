@@ -1,7 +1,10 @@
 import * as Application from 'expo-application';
 import { useEffect, useMemo, useState } from 'react';
 import { Text, View } from 'react-native';
-import { listBackupNames, writeDailyBackup } from '../../src/backup/daily_backup';
+import { listAllBackupFiles, listBackupNames, writeDailyBackup } from '../../src/backup/daily_backup';
+import { a1TiersWithContent } from '../../src/content/content_repository';
+import { generationUsage } from '../../src/generation/generation_service';
+import { installedVoices, type InstalledVoice } from '../../src/platform/speech';
 import { createAppBackupFileStore } from '../../src/platform/app_backup_file_store';
 import { appCryptoPrimitives } from '../../src/platform/app_crypto_primitives';
 import { readBackupKey, verifyRecoveryPassphrase } from '../../src/security/recovery_passphrase';
@@ -32,6 +35,7 @@ export default function SettingsScreen() {
   }, []);
 
   if (!database || !values) return <ScreenMessage loading />;
+  const a1Tiers = a1TiersWithContent(database.executor);
 
   const save = (key: string, value: SettingValue) => {
     try {
@@ -53,16 +57,92 @@ export default function SettingsScreen() {
           {definitions.map((definition) => (
             <SettingEditor
               key={definition.key}
-              definition={definition}
+              definition={withAvailableOptions(definition, values.get(definition.key), a1Tiers)}
               value={values.get(definition.key) ?? definition.defaultValue}
               error={errors[definition.key]}
               onChange={(value) => save(definition.key, value)}
             />
           ))}
+          {group === 'A4 Language' ? (
+            <VoicePicker
+              targetLanguage={String(values.get('a4.target_language'))}
+              current={String(values.get('a4.speech_voice'))}
+              onPick={(voice) => save('a4.speech_voice', voice)}
+            />
+          ) : null}
           {group === 'Generation' ? <ApiKeyEditor /> : null}
+          {group === 'Generation' ? <GenerationUsageView /> : null}
         </Card>
       ))}
     </ScreenScrollView>
+  );
+}
+
+/** Decision G3: the A1 tier picker offers only tiers that have words (plus the current value). */
+function withAvailableOptions(definition: SettingDefinition, value: SettingValue | undefined, a1Tiers: readonly string[]): SettingDefinition {
+  if (definition.key !== 'a1.tier' || definition.kind !== 'choice') return definition;
+  return { ...definition, options: definition.options.filter((option) => a1Tiers.includes(option.value) || option.value === value) };
+}
+
+/** Installed text-to-speech voices for the A4 language; picking one stores its identifier. */
+function VoicePicker({ targetLanguage, current, onPick }: { readonly targetLanguage: string; readonly current: string; readonly onPick: (voice: string) => void }) {
+  const [voices, setVoices] = useState<InstalledVoice[] | null>(null);
+  useEffect(() => {
+    let active = true;
+    installedVoices(targetLanguage)
+      .then((list) => active && setVoices(list))
+      .catch(() => active && setVoices([]));
+    return () => {
+      active = false;
+    };
+  }, [targetLanguage]);
+  if (voices === null) return <Text style={ui.muted}>Looking for installed voices…</Text>;
+  if (voices.length === 0) return <Text style={ui.muted}>No installed voices for this language; the system default is used.</Text>;
+  return (
+    <View style={{ gap: 6, paddingVertical: 6 }}>
+      <Text style={ui.muted}>Installed voices (enhanced voices sound better: iOS Settings → Accessibility → Spoken Content → Voices)</Text>
+      <ChipGroup
+        testIDPrefix="setting-voice"
+        options={voices.slice(0, 24).map((voice) => ({ value: voice.identifier, label: `${voice.name} (${voice.language}${voice.quality === 'Enhanced' ? ', enhanced' : ''})` }))}
+        isSelected={(identifier) => identifier === current}
+        onPress={onPick}
+      />
+    </View>
+  );
+}
+
+/** This month's generation requests against the budget, with measured token counts. */
+function GenerationUsageView() {
+  const { database, background, runBackgroundNow } = useAppState();
+  const [running, setRunning] = useState(false);
+  if (!database) return null;
+  const usage = generationUsage(database.executor, readAllSettings(database.executor), new Date());
+  return (
+    <View style={{ gap: 6, paddingVertical: 6 }} testID="settings-generation-usage">
+      <LabelValueRow label="Requests this month" value={`${usage.requests} of ${usage.budget}`} />
+      <LabelValueRow label="Tokens in / out" value={`${usage.inputTokens.toLocaleString()} / ${usage.outputTokens.toLocaleString()}`} />
+      <LabelValueRow label="Items accepted" value={String(usage.itemsAccepted)} />
+      {usage.lastError ? <Text style={[ui.muted, { color: COLORS.fail }]}>Last error: {usage.lastError}</Text> : null}
+      <Text style={ui.muted}>
+        Requests run in the background while the app is open: refills when a module runs low, and A3 Simpler / Go deeper on request. At the
+        budget, the app uses bundled content only. Set a matching monthly spend limit in the Anthropic Console as well.
+      </Text>
+      <ActionButton
+        testID="settings-generation-run"
+        label={running ? 'Checking…' : 'Check for new content now'}
+        disabled={running}
+        onPress={() => {
+          setRunning(true);
+          void runBackgroundNow().finally(() => setRunning(false));
+        }}
+      />
+      {background ? (
+        <Text testID="settings-generation-last" style={ui.muted}>
+          Last run: {background.generation ? `${background.generation.module} ${background.generation.status}, ${background.generation.accepted}/${background.generation.requested} accepted` : 'no refill needed'}
+          {background.onThisDay.length > 0 ? ` · On this day: ${background.onThisDay.join(', ')}` : ''}
+        </Text>
+      ) : null}
+    </View>
   );
 }
 
@@ -229,6 +309,7 @@ function DataAndSecurityCard() {
   if (!database || !daily) return null;
   const store = createAppBackupFileStore();
   const backups = listBackupNames(store);
+  const allBackups = listAllBackupFiles(store);
 
   const testPassphrase = async () => {
     const ok = await verifyRecoveryPassphrase(testInput, database.keyHex, database.location.directory);
@@ -276,8 +357,11 @@ function DataAndSecurityCard() {
 
       <LabelValueRow label="Backups in Files → On My iPhone" value={String(backups.length)} />
       <Text style={ui.muted}>{backups.length > 0 ? `Newest: ${backups[backups.length - 1]}` : 'None yet.'}</Text>
+      {allBackups.length > backups.length ? <Text style={ui.muted}>Plus {allBackups.length - backups.length} safety backup(s) kept indefinitely.</Text> : null}
       <ActionButton testID="settings-backup-now" label="Write a backup now" onPress={() => void backupNow()} />
       {backupMessage ? <Text style={ui.muted}>{backupMessage}</Text> : null}
+      <NavigationRow testID="settings-export" label="Export JSON and journal" href="/data/export" />
+      <NavigationRow testID="settings-restore" label="Restore or verify a backup" href="/data/restore" />
 
       <LabelValueRow
         label="Notifications"

@@ -4,7 +4,7 @@ import {
   PRIMARY_KEY_BY_TABLE,
   type DataTableName,
 } from '../db/database_schema';
-import { readSchemaVersion } from '../db/run_migrations';
+import { readSchemaVersion, runMigrations } from '../db/run_migrations';
 import type { CryptoPrimitives } from '../platform/crypto_primitives';
 import { runInTransaction, type SqlExecutor, type SqlValue } from '../platform/sql_executor';
 import {
@@ -44,8 +44,9 @@ export function backupFileName(localDate: string): string {
   return `microhabits_backup_${localDate}${BACKUP_FILE_EXTENSION}`;
 }
 
-function readTableRows(executor: SqlExecutor, table: DataTableName): Row[] {
-  return executor.all<Row>(`SELECT * FROM ${table} ORDER BY ${PRIMARY_KEY_BY_TABLE[table]}`);
+function readTableRows(executor: SqlExecutor, table: DataTableName, columns?: readonly string[]): Row[] {
+  const list = columns && columns.length > 0 ? columns.join(', ') : '*';
+  return executor.all<Row>(`SELECT ${list} FROM ${table} ORDER BY ${PRIMARY_KEY_BY_TABLE[table]}`);
 }
 
 /** Canonical JSON (sorted keys) so the checksum does not depend on column order. */
@@ -55,10 +56,18 @@ function canonicalJson(rows: readonly Row[]): string {
   );
 }
 
-export function computeTableChecksums(executor: SqlExecutor, crypto: CryptoPrimitives): Record<DataTableName, string> {
+/**
+ * SHA-256 of each table's rows in canonical JSON. `columnsByTable` restricts a table to the
+ * columns a backup from an older schema had, so its checksums still verify after an upgrade.
+ */
+export function computeTableChecksums(
+  executor: SqlExecutor,
+  crypto: CryptoPrimitives,
+  columnsByTable?: Partial<Record<DataTableName, readonly string[]>>,
+): Record<DataTableName, string> {
   const checksums = {} as Record<DataTableName, string>;
   for (const table of DATA_TABLES_IN_DEPENDENCY_ORDER) {
-    checksums[table] = crypto.sha256Hex(utf8Encode(canonicalJson(readTableRows(executor, table))));
+    checksums[table] = crypto.sha256Hex(utf8Encode(canonicalJson(readTableRows(executor, table, columnsByTable?.[table]))));
   }
   return checksums;
 }
@@ -127,23 +136,54 @@ export async function decryptBackup(crypto: CryptoPrimitives, passphrase: string
 export interface RestoreReport {
   readonly rowsByTable: Record<DataTableName, number>;
   readonly checksumsMatch: boolean;
+  readonly fromSchemaVersion: number;
+  /** True when the backup came from an older schema; added columns took their defaults. */
+  readonly upgraded: boolean;
+}
+
+/** Checks the backup can be restored into this app's schema before anything is written. */
+export function checkBackupCompatibility(document: BackupDocument): void {
+  if (document.format !== 'dmh-backup-1') throw new Error('Unknown backup document format');
+  if (!Number.isInteger(document.schema_version) || document.schema_version < 1 || document.schema_version > CURRENT_SCHEMA_VERSION) {
+    throw new Error(`Backup schema version ${document.schema_version} is not supported by this app (schema ${CURRENT_SCHEMA_VERSION})`);
+  }
+  for (const table of DATA_TABLES_IN_DEPENDENCY_ORDER) {
+    if (!Array.isArray(document.tables?.[table])) throw new Error(`Backup has no ${table} table`);
+    if (typeof document.checksums?.[table] !== 'string') throw new Error(`Backup has no checksum for ${table}`);
+  }
+}
+
+function backupColumns(document: BackupDocument): Partial<Record<DataTableName, string[]>> {
+  const columns: Partial<Record<DataTableName, string[]>> = {};
+  for (const table of DATA_TABLES_IN_DEPENDENCY_ORDER) {
+    const first = document.tables[table][0];
+    if (first) columns[table] = Object.keys(first);
+  }
+  return columns;
 }
 
 /**
- * Replaces every data table with the backup's rows in one transaction, then rebuilds
- * the journal search index. The target database must already be migrated to the
- * backup's schema version.
+ * Replaces every data table with the backup's rows in one transaction, then rebuilds the
+ * journal search index. The target database must be at this app's schema version. A backup
+ * from an older schema restores too: migrations are additive, so its rows are inserted with
+ * the columns they have and newer columns take their defaults; its checksums are then
+ * verified over those columns only.
  */
 export function restoreBackupDocument(
   executor: SqlExecutor,
   crypto: CryptoPrimitives,
   document: BackupDocument,
 ): RestoreReport {
+  checkBackupCompatibility(document);
   const targetVersion = readSchemaVersion(executor);
-  if (document.schema_version !== targetVersion || targetVersion !== CURRENT_SCHEMA_VERSION) {
-    throw new Error(
-      `Backup schema version ${document.schema_version} does not match database version ${targetVersion}`,
-    );
+  if (targetVersion !== CURRENT_SCHEMA_VERSION) {
+    throw new Error(`Database schema version ${targetVersion} is not this app's version ${CURRENT_SCHEMA_VERSION}`);
+  }
+  const columnsInBackup = backupColumns(document);
+  for (const table of DATA_TABLES_IN_DEPENDENCY_ORDER) {
+    const known = new Set(executor.all<{ name: string }>(`PRAGMA table_info(${table})`).map((column) => column.name));
+    const unknown = (columnsInBackup[table] ?? []).filter((column) => !known.has(column));
+    if (unknown.length > 0) throw new Error(`Backup column ${table}.${unknown[0]} does not exist in this app's schema`);
   }
   const rowsByTable = {} as Record<DataTableName, number>;
   runInTransaction(executor, () => {
@@ -162,7 +202,46 @@ export function restoreBackupDocument(
     }
     executor.exec("INSERT INTO journal_fts (journal_fts) VALUES ('rebuild')");
   });
-  const restored = computeTableChecksums(executor, crypto);
+  const upgraded = document.schema_version < CURRENT_SCHEMA_VERSION;
+  const restored = computeTableChecksums(executor, crypto, upgraded ? columnsInBackup : undefined);
   const checksumsMatch = DATA_TABLES_IN_DEPENDENCY_ORDER.every((table) => restored[table] === document.checksums[table]);
-  return { rowsByTable, checksumsMatch };
+  return { rowsByTable, checksumsMatch, fromSchemaVersion: document.schema_version, upgraded };
+}
+
+/**
+ * Verify only: restores the backup into a scratch database (migrated to this app's
+ * schema) and reports rows and checksums, without touching the real data.
+ */
+export function verifyBackupDocument(
+  openScratch: () => { readonly executor: SqlExecutor; dispose(): void },
+  crypto: CryptoPrimitives,
+  document: BackupDocument,
+): RestoreReport {
+  checkBackupCompatibility(document);
+  const scratch = openScratch();
+  try {
+    runMigrations(scratch.executor);
+    return restoreBackupDocument(scratch.executor, crypto, document);
+  } finally {
+    scratch.dispose();
+  }
+}
+
+/** A plain JSON export (Settings → Export) carries the same document, unencrypted. */
+export function parseExportText(text: string): BackupDocument {
+  const document = JSON.parse(text) as BackupDocument;
+  checkBackupCompatibility(document);
+  return document;
+}
+
+/** Whether a file's text is an encrypted .mhbak (needs the passphrase) or a plain JSON export. */
+export function backupTextKind(text: string): 'encrypted' | 'export' | 'unknown' {
+  try {
+    const parsed = JSON.parse(text) as { format?: string };
+    if (parsed.format === 'dmh-mhbak-1') return 'encrypted';
+    if (parsed.format === 'dmh-backup-1') return 'export';
+  } catch {
+    // Not JSON.
+  }
+  return 'unknown';
 }

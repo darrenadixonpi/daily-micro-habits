@@ -1,6 +1,6 @@
 import { router, type Href } from 'expo-router';
-import type { ReactNode } from 'react';
-import { Pressable, Switch, Text, TextInput, View, type TextInputProps } from 'react-native';
+import { useEffect, useState, type ReactNode } from 'react';
+import { Linking, Pressable, Switch, Text, TextInput, View, type TextInputProps } from 'react-native';
 import { LabelValueRow } from './screen_layout';
 import { COLORS, ui } from './ui_styles';
 
@@ -204,4 +204,149 @@ export function Stepper({
 /** Label with a switch on the right. */
 export function SwitchRow({ label, value, onChange, testID }: { readonly label: string; readonly value: boolean; readonly onChange: (next: boolean) => void; readonly testID?: string }) {
   return <LabelValueRow label={label} value={<Switch testID={testID} value={value} onValueChange={onChange} />} />;
+}
+
+export type ChoiceMark = 'correct' | 'incorrect' | null;
+
+/**
+ * Full-width list of answer options (A3 questions). Before an answer, every option can be
+ * pressed; afterwards `markFor` colours the correct option and a wrong pick, and presses stop.
+ */
+export function ChoiceList({
+  options,
+  selected,
+  onSelect,
+  markFor,
+  disabled,
+  testIDPrefix,
+}: {
+  readonly options: readonly { readonly id: string; readonly text: string }[];
+  readonly selected: string | null;
+  readonly onSelect: (id: string) => void;
+  readonly markFor?: (id: string) => ChoiceMark;
+  readonly disabled?: boolean;
+  readonly testIDPrefix?: string;
+}) {
+  return (
+    <View style={{ gap: 6 }}>
+      {options.map((option) => {
+        const mark = markFor?.(option.id) ?? null;
+        const isSelected = selected === option.id;
+        const borderColor = mark === 'correct' ? COLORS.pass : mark === 'incorrect' ? COLORS.fail : isSelected ? COLORS.accent : COLORS.border;
+        return (
+          <Pressable
+            key={option.id}
+            testID={testIDPrefix ? `${testIDPrefix}-${option.id}` : undefined}
+            accessibilityRole="button"
+            accessibilityState={{ selected: isSelected, disabled: Boolean(disabled) }}
+            disabled={disabled}
+            onPress={() => onSelect(option.id)}
+            style={({ pressed }) => ({
+              borderWidth: mark || isSelected ? 2 : 1,
+              borderColor,
+              borderRadius: 8,
+              paddingVertical: 10,
+              paddingHorizontal: 12,
+              opacity: pressed ? 0.6 : 1,
+            })}
+          >
+            <Text style={ui.text}>
+              <Text style={{ fontWeight: '600' }}>{option.id.toUpperCase()}. </Text>
+              {option.text}
+              {mark === 'correct' ? '  ✓' : mark === 'incorrect' ? '  ✗' : ''}
+            </Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
+/** A row of equal-width buttons (A2 grades). `highlight` marks a suggested button. */
+export function ButtonRow({
+  buttons,
+  testIDPrefix,
+}: {
+  readonly buttons: readonly { readonly value: string; readonly label: string; readonly color?: string; readonly highlight?: boolean; readonly onPress: () => void }[];
+  readonly testIDPrefix?: string;
+}) {
+  return (
+    <View style={{ flexDirection: 'row', gap: 6 }}>
+      {buttons.map((button) => (
+        <Pressable
+          key={button.value}
+          testID={testIDPrefix ? `${testIDPrefix}-${button.value}` : undefined}
+          accessibilityRole="button"
+          onPress={button.onPress}
+          style={({ pressed }) => ({
+            flex: 1,
+            flexBasis: 0,
+            alignItems: 'center',
+            paddingVertical: 10,
+            borderRadius: 8,
+            borderWidth: button.highlight ? 2 : 1,
+            borderColor: button.highlight ? (button.color ?? COLORS.accent) : COLORS.border,
+            opacity: pressed ? 0.6 : 1,
+          })}
+        >
+          <Text numberOfLines={1} style={[ui.text, { color: button.color ?? COLORS.accent, fontWeight: '600' }]}>
+            {button.label}
+          </Text>
+        </Pressable>
+      ))}
+    </View>
+  );
+}
+
+/**
+ * An action that needs a second tap to confirm (Report error, Restore). The first tap shows
+ * the consequence and a confirm button; the prompt closes again after 8 seconds.
+ */
+export function ConfirmActionButton({
+  label,
+  confirmLabel,
+  consequence,
+  onConfirm,
+  disabled,
+  tone = 'accent',
+  testID,
+}: {
+  readonly label: string;
+  readonly confirmLabel: string;
+  readonly consequence: string;
+  readonly onConfirm: () => void;
+  readonly disabled?: boolean;
+  readonly tone?: 'accent' | 'muted';
+  readonly testID?: string;
+}) {
+  const [armed, setArmed] = useState(false);
+  useEffect(() => {
+    if (!armed) return;
+    const timer = setTimeout(() => setArmed(false), 8000);
+    return () => clearTimeout(timer);
+  }, [armed]);
+  if (!armed) return <ActionButton testID={testID} label={label} tone={tone} disabled={disabled} onPress={() => setArmed(true)} />;
+  return (
+    <View style={{ gap: 4, alignItems: 'center' }}>
+      <Text style={[ui.muted, { textAlign: 'center' }]}>{consequence}</Text>
+      <ActionButton
+        testID={testID ? `${testID}-confirm` : undefined}
+        label={confirmLabel}
+        onPress={() => {
+          setArmed(false);
+          onConfirm();
+        }}
+      />
+      <ActionButton testID={testID ? `${testID}-cancel` : undefined} label="Cancel" tone="muted" onPress={() => setArmed(false)} />
+    </View>
+  );
+}
+
+/** A source link: the title, opened in Safari. */
+export function LinkText({ title, url, testID }: { readonly title: string; readonly url: string; readonly testID?: string }) {
+  return (
+    <Pressable testID={testID} accessibilityRole="link" onPress={() => void Linking.openURL(url)} hitSlop={6}>
+      {({ pressed }) => <Text style={[ui.muted, { color: COLORS.accent, opacity: pressed ? 0.5 : 1 }]}>{title} ↗</Text>}
+    </Pressable>
+  );
 }

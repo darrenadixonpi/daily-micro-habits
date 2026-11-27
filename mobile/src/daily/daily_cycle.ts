@@ -1,4 +1,7 @@
 import { listBackupNames, writeDailyBackup, type BackupFileStore, type DailyBackupResult } from '../backup/daily_backup';
+import { assignDailyContent, selectionSettingsFrom, type DailyAssignment } from '../content/content_selection';
+import type { ReviewDayContext } from '../learning/review_queue';
+import { createNotificationText } from '../notifications/notification_text';
 import { buildNotificationPlan, type ScheduleSettings } from '../notifications/notification_plan';
 import { applyNotificationPlan, type ApplyReport, type Notifier } from '../notifications/notification_ledger';
 import type { CryptoPrimitives } from '../platform/crypto_primitives';
@@ -7,7 +10,7 @@ import type { DerivedKeyMaterial } from '../security/passphrase_encryption';
 import type { SettingValue } from '../settings/settings_definitions';
 import { readAllSettings, readInternalValue, writeInternalValue } from '../settings/settings_repository';
 import { closeDay, INITIAL_STREAK_STATE, type StreakEvent, type StreakState } from '../streaks/streak_engine';
-import { addDays, daysBetween, deviceTimeZone, isValidTimeZone, logicalDate } from '../time/logical_day';
+import { addDays, daysBetween, deviceTimeZone, isValidTimeZone, logicalDate, logicalDayBounds } from '../time/logical_day';
 import { computeDayStatus, dayCounted, recordDayStatus, type DayStatus } from './day_status';
 
 /**
@@ -33,6 +36,10 @@ export interface DailyCycleReport {
   readonly closedDays: number;
   readonly events: readonly StreakEvent[];
   readonly dayStatus: DayStatus;
+  /** Today's learning content (A1, A3, A4, A5). */
+  readonly assignment: DailyAssignment;
+  /** Today's A2 window: logical-day bounds, daily cap and the active A4 language. */
+  readonly review: ReviewDayContext;
   readonly backup: DailyBackupResult | 'not_due' | 'no_passphrase' | 'disabled';
   readonly notifications: ApplyReport | null;
 }
@@ -53,6 +60,16 @@ export function scheduleSettingsFrom(settings: ReadonlyMap<string, SettingValue>
     weekendTimesEnabled: settings.get('schedule.weekend_times_enabled') === true,
     weekendMorningTime: text('schedule.weekend_morning_time'),
     weekendEveningTime: text('schedule.weekend_evening_time'),
+  };
+}
+
+export function reviewContextFrom(settings: ReadonlyMap<string, SettingValue>, today: string, timeZone: string): ReviewDayContext {
+  const { start, end } = logicalDayBounds(today, timeZone);
+  return {
+    dayStart: start,
+    dayEnd: end,
+    cap: Number(settings.get('a2.daily_review_cap') ?? 20),
+    a4Language: String(settings.get('a4.target_language') ?? 'es-419'),
   };
 }
 
@@ -107,7 +124,10 @@ export async function runDailyCycle(deps: DailyCycleDeps): Promise<DailyCycleRep
 
   const { state, closed, events } = closeDaysThrough(executor, today, Number(settings.get('streaks.freeze_earn_days')));
 
-  const dayStatus = computeDayStatus(executor, today, enabled);
+  writeInternalValue(executor, 'last_cycle_today', today);
+  const assignment = assignDailyContent(executor, { today, settings: selectionSettingsFrom(settings) });
+  const review = reviewContextFrom(settings, today, timeZone);
+  const dayStatus = computeDayStatus(executor, today, enabled, review);
   recordDayStatus(executor, dayStatus, now);
 
   let backup: DailyCycleReport['backup'] = 'not_due';
@@ -142,9 +162,10 @@ export async function runDailyCycle(deps: DailyCycleDeps): Promise<DailyCycleRep
       settings: scheduleSettingsFrom(settings, timeZone),
       windowsWithTasks: { morning: dayStatus.windows.morning !== 'no_tasks', evening: dayStatus.windows.evening !== 'no_tasks' },
       todayComplete,
+      contentFor: createNotificationText(executor, { enabled, timeZone, reviewCap: review.cap, a4Language: review.a4Language }),
     });
     notifications = await applyNotificationPlan(executor, deps.notifier, { plan, now, today, todayComplete });
   }
 
-  return { today, timeZone, streak: state, closedDays: closed, events, dayStatus, backup, notifications };
+  return { today, timeZone, streak: state, closedDays: closed, events, dayStatus, assignment, review, backup, notifications };
 }

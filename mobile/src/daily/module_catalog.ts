@@ -12,12 +12,12 @@ export interface ModuleInfo {
 
 /** Window assignment from spec Section 1. A module counts toward its window only once implemented. */
 export const MODULES: readonly ModuleInfo[] = [
-  { id: 'A1', name: 'Word of the day', window: 'morning', implemented: false, arrivesIn: 'M3' },
-  { id: 'A3', name: 'Concept of the day', window: 'morning', implemented: false, arrivesIn: 'M3' },
-  { id: 'A4', name: 'Foreign-language phrase', window: 'morning', implemented: false, arrivesIn: 'M3' },
-  { id: 'A5', name: 'On this day', window: 'morning', implemented: false, arrivesIn: 'M3' },
+  { id: 'A1', name: 'Word of the day', window: 'morning', implemented: true, arrivesIn: 'M3' },
+  { id: 'A3', name: 'Concept of the day', window: 'morning', implemented: true, arrivesIn: 'M3' },
+  { id: 'A4', name: 'Foreign-language phrase', window: 'morning', implemented: true, arrivesIn: 'M3' },
+  { id: 'A5', name: 'On this day', window: 'morning', implemented: true, arrivesIn: 'M3' },
   { id: 'D1', name: 'Morning top-3', window: 'morning', implemented: true, arrivesIn: 'M2' },
-  { id: 'A2', name: 'Review', window: 'evening', implemented: false, arrivesIn: 'M3' },
+  { id: 'A2', name: 'Review', window: 'evening', implemented: true, arrivesIn: 'M3' },
   { id: 'D2', name: 'Evening review', window: 'evening', implemented: true, arrivesIn: 'M2' },
   { id: 'D3', name: 'Journal', window: 'evening', implemented: true, arrivesIn: 'M2' },
 ];

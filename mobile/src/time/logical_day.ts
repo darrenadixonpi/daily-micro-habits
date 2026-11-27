@@ -139,3 +139,9 @@ export function zonedTimeToInstant(date: string, time: string, timeZone: string)
   }
   return new Date(candidate);
 }
+
+/** The instants a logical day spans: [03:00 on `date`, 03:00 on the next date) in `timeZone`. */
+export function logicalDayBounds(date: string, timeZone: string): { readonly start: Date; readonly end: Date } {
+  const hour = `${String(DAY_CLOSE_HOUR).padStart(2, '0')}:00`;
+  return { start: zonedTimeToInstant(date, hour, timeZone), end: zonedTimeToInstant(addDays(date, 1), hour, timeZone) };
+}

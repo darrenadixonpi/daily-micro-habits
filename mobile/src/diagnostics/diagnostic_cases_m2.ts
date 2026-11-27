@@ -11,7 +11,7 @@ import {
   searchJournal,
   setPriorityStatus,
 } from '../daily/reflection_repository';
-import { DATA_TABLES_IN_DEPENDENCY_ORDER, EXPECTED_COLUMNS } from '../db/database_schema';
+import { CURRENT_SCHEMA_VERSION, DATA_TABLES_IN_DEPENDENCY_ORDER, EXPECTED_COLUMNS } from '../db/database_schema';
 import { readSchemaVersion, runMigrations } from '../db/run_migrations';
 import { createFakeNotifier } from '../notifications/fake_notifier';
 import { applyNotificationPlan, readPingLog } from '../notifications/notification_ledger';
@@ -34,7 +34,7 @@ import { insertSampleRows } from './sample_data';
 const ALL_MODULES = ['A1', 'A2', 'A3', 'A4', 'A5', 'D1', 'D2', 'D3'];
 const NEW_YORK = 'America/New_York';
 
-async function withScratch<Result>(
+export async function withScratch<Result>(
   environment: DiagnosticEnvironment,
   name: string,
   work: (executor: SqlExecutor) => Result | Promise<Result>,
@@ -288,7 +288,7 @@ const t12ReflectionRules: DiagnosticCase = {
 
 const t13MigrationWithData: DiagnosticCase = {
   id: 'T13',
-  title: 'Migration v1 → v2 keeps data',
+  title: 'Migration v1 → current keeps data',
   async run(environment) {
     const scheduler = await environment.createScheduler(0.9);
     return withScratch(
@@ -300,10 +300,10 @@ const t13MigrationWithData: DiagnosticCase = {
         const count = (table: string) => executor.get<{ n: number }>(`SELECT count(*) AS n FROM ${table}`)?.n ?? -1;
         const before = DATA_TABLES_IN_DEPENDENCY_ORDER.map(count);
         const report = runMigrations(executor);
-        check(report.fromVersion === 1 && report.toVersion === 2, `migrated ${report.fromVersion}→${report.toVersion}`);
+        check(report.fromVersion === 1 && report.toVersion === CURRENT_SCHEMA_VERSION, `migrated ${report.fromVersion}→${report.toVersion}`);
         const after = DATA_TABLES_IN_DEPENDENCY_ORDER.map(count);
         check(JSON.stringify(before) === JSON.stringify(after), `row counts changed ${before} → ${after}`);
-        for (const table of ['notification_schedule', 'journal_entry'] as const) {
+        for (const table of DATA_TABLES_IN_DEPENDENCY_ORDER) {
           const columns = executor.all<{ name: string }>(`PRAGMA table_info(${table})`).map((c) => c.name);
           check(JSON.stringify(columns) === JSON.stringify(EXPECTED_COLUMNS[table]), `${table} columns ${columns.join(',')}`);
         }

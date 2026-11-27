@@ -17,3 +17,10 @@ export function formatShortDate(date: string): string {
 export function formatLocalTime(isoInstant: string): string {
   return new Date(isoInstant).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
 }
+
+const monthDayFormatter = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric' });
+
+/** "November 27" for an MM-DD key; 2000 is a leap year, so 02-29 works. */
+export function formatMonthDay(dateKey: string): string {
+  return monthDayFormatter.format(noonUtc(`2000-${dateKey}`));
+}

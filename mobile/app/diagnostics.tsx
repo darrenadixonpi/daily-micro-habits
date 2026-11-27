@@ -44,6 +44,12 @@ export default function DiagnosticsScreen() {
               {database.location.movedThisLaunch ? ' · moved this launch' : ''}
               {database.location.note ? ` · ${database.location.note}` : ''}
             </Text>
+            {database.safetyBackup ? <Text testID="diagnostics-safety-backup" style={ui.muted}>Safety backup before migration: {database.safetyBackup}</Text> : null}
+            <Text testID="diagnostics-content-import" style={ui.muted}>
+              Content {database.contentImport.skipped ? 'up to date' : `imported: ${database.contentImport.inserted} new, ${database.contentImport.updated} updated`} · bundle{' '}
+              {database.contentImport.fingerprint} · A1 {database.contentImport.byModule.A1}, A3 {database.contentImport.byModule.A3}, A4{' '}
+              {database.contentImport.byModule.A4}, A5 {database.contentImport.byModule.A5}
+            </Text>
             <Text style={ui.muted}>
               First launch {database.firstLaunchAt} · launch {database.launchCount} · key {database.keyCreatedNow ? 'created' : 'from Keychain'}
             </Text>

@@ -17,6 +17,7 @@ import { Rating } from '../srs/fsrs_scheduler';
 import { createSrsCard, loadSrsCard, recordReview } from '../srs/review_service';
 import { bytesEqual, bytesToHex } from '../util/byte_encoding';
 import { M2_DIAGNOSTIC_CASES } from './diagnostic_cases_m2';
+import { M3_DIAGNOSTIC_CASES } from './diagnostic_cases_m3';
 import { check, type DiagnosticCase, type DiagnosticEnvironment } from './diagnostic_environment';
 import { insertSampleRows, SAMPLE_JOURNAL_SEARCH_TERM } from './sample_data';
 
@@ -66,7 +67,7 @@ const t1FsrsReferenceVectors: DiagnosticCase = {
 
 const t2Migrations: DiagnosticCase = {
   id: 'T2',
-  title: 'Migrations build the 12-table schema',
+  title: 'Migrations build the 12-table schema (v3)',
   async run(environment) {
     const name = 'diag_t2_migrations.db';
     const keyHex = environment.supportsEncryption ? bytesToHex(environment.crypto.randomBytes(32)) : null;
@@ -263,4 +264,5 @@ export const DIAGNOSTIC_CASES: readonly DiagnosticCase[] = [
   t6BackupRoundTrip,
   t7JournalSearch,
   ...M2_DIAGNOSTIC_CASES,
+  ...M3_DIAGNOSTIC_CASES,
 ];

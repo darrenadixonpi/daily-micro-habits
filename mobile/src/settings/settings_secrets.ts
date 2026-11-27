@@ -17,3 +17,8 @@ export async function saveAnthropicApiKey(apiKey: string): Promise<void> {
     keychainAccessible: SecureStore.AFTER_FIRST_UNLOCK_THIS_DEVICE_ONLY,
   });
 }
+
+/** The key itself, for a generation request only; never displayed or logged. */
+export async function readAnthropicApiKey(): Promise<string | null> {
+  return SecureStore.getItemAsync(ANTHROPIC_API_KEY_ITEM);
+}

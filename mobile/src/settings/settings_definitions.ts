@@ -72,6 +72,7 @@ export const SETTING_DEFINITIONS: readonly SettingDefinition[] = [
   {
     key: 'a1.tier', group: 'A1 Word', label: 'Difficulty tier', kind: 'choice', defaultValue: '2', effectiveFrom: 'M3',
     options: [option('1', '1 Common'), option('2', '2 Advanced'), option('3', '3 Rare')],
+    note: 'Only tiers that have words are offered; the bundled set is tier 2 (decision G3)',
   },
   // A2
   { key: 'a2.daily_review_cap', group: 'A2 Review', label: 'Daily review cap', kind: 'number', defaultValue: 20, min: 5, max: 100, step: 5, effectiveFrom: 'M3' },
@@ -123,7 +124,7 @@ export const SETTING_DEFINITIONS: readonly SettingDefinition[] = [
   },
   {
     key: 'a4.speech_voice', group: 'A4 Language', label: 'Speech voice', kind: 'text', defaultValue: 'es-MX', effectiveFrom: 'M3',
-    note: 'Installed voices become selectable in M3',
+    note: 'A language tag such as es-MX (the system voice), or an installed voice picked below',
   },
   { key: 'a4.speech_rate', group: 'A4 Language', label: 'Speech rate', kind: 'number', defaultValue: 0.8, min: 0.5, max: 1, step: 0.05, effectiveFrom: 'M3' },
   // D3

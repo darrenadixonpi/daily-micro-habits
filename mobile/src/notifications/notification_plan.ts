@@ -39,7 +39,7 @@ export function windowFireAt(settings: ScheduleSettings, date: string, window: W
   return zonedTimeToInstant(calendarDate, time, settings.timeZone);
 }
 
-/** Notification text. The morning body names the day's word once A1 ships (M3); until then it points to D1 (decision E3). */
+/** Fallback notification text (decision E3), used when no per-day text is supplied. */
 export function notificationContent(window: WindowId): { title: string; body: string } {
   return window === 'morning'
     ? { title: 'Morning micro-habits', body: 'Set your top 3 for today.' }
@@ -54,6 +54,8 @@ export function buildNotificationPlan(input: {
   readonly windowsWithTasks: Readonly<Record<WindowId, boolean>>;
   readonly todayComplete: Readonly<Record<WindowId, boolean>>;
   readonly days?: number;
+  /** Per-day text (M3: the morning names the day's word, the evening the cards due); defaults to notificationContent. */
+  readonly contentFor?: (date: string, window: WindowId) => { readonly title: string; readonly body: string };
 }): PlannedNotification[] {
   const plan: PlannedNotification[] = [];
   const days = input.days ?? PLAN_DAYS;
@@ -64,7 +66,7 @@ export function buildNotificationPlan(input: {
       if (offset === 0 && input.todayComplete[window]) continue;
       const fireAt = windowFireAt(input.settings, date, window);
       if (fireAt.getTime() <= input.now.getTime()) continue;
-      plan.push({ date, window, fireAt, ...notificationContent(window) });
+      plan.push({ date, window, fireAt, ...(input.contentFor ? input.contentFor(date, window) : notificationContent(window)) });
     }
   }
   if (plan.length > IOS_PENDING_LIMIT) throw new Error(`Plan has ${plan.length} entries; iOS keeps at most 64`);
