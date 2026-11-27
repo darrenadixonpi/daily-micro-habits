@@ -1,6 +1,6 @@
 import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs';
 import { HeaderHeightContext } from '@react-navigation/elements';
-import { useContext, useEffect, useRef, type ReactNode } from 'react';
+import { useContext, useEffect, useRef, type ComponentRef, type ReactNode } from 'react';
 import { ActivityIndicator, Keyboard, ScrollView, Text, View, type StyleProp, type ViewStyle } from 'react-native';
 import { COLORS, ui } from './ui_styles';
 
@@ -21,7 +21,7 @@ export function ScreenScrollView({
   readonly testID?: string;
   readonly contentStyle?: StyleProp<ViewStyle>;
 }) {
-  const scrollRef = useRef<ScrollView>(null);
+  const scrollRef = useRef<ComponentRef<typeof ScrollView>>(null);
   const offsetY = useRef(0);
   const contentHeight = useRef(0);
   const viewportHeight = useRef(0);
