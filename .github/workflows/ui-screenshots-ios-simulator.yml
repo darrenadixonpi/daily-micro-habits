@@ -66,10 +66,14 @@ jobs:
             -destination 'generic/platform=iOS Simulator' \
             -derivedDataPath build \
             ARCHS=arm64 ONLY_ACTIVE_ARCH=NO \
-            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= PROVISIONING_PROFILE_SPECIFIER= \
             build | tee xcodebuild.log | grep -E '^(\*\*|error:|.*error:)' || true
           APP="build/Build/Products/Release-iphonesimulator/$SCHEME.app"
           test -d "$APP" || { tail -200 xcodebuild.log; exit 1; }
+          # The Keychain (database key, expo-secure-store) needs a signed app with entitlements,
+          # so the simulator build is ad-hoc signed ("Sign to Run Locally").
+          codesign -dv "$APP" 2>&1 | grep -E 'Signature|Identifier' || { echo '::error::simulator app is not signed'; exit 1; }
+          codesign -d --entitlements :- "$APP" 2>/dev/null || true
           echo "APP_PATH=$(pwd)/$APP" >> "$GITHUB_ENV"
 
       - name: Install Maestro
