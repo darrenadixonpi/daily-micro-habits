@@ -320,6 +320,9 @@ appId: com.darrendixon.dailymicrohabits
 - tapOn:
     id: "settings-passphrase-test"
 - inputText: "maestro screenshot passphrase"
+# Return ends editing. Without it the secure field stayed first responder on the
+# simulator, and later typing meant for the time fields went into it (run 46020885874).
+- pressKey: Enter
 - tapOn:
     id: "settings-passphrase-test-run"
 - assertVisible:
@@ -411,6 +414,7 @@ appId: com.darrendixon.dailymicrohabits
 - tapOn:
     id: "restore-passphrase"
 - inputText: "maestro screenshot passphrase"
+- pressKey: Enter
 - tapOn:
     text: "Recovery passphrase"
 - tapOn:
