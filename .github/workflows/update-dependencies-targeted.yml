@@ -1,0 +1,62 @@
+name: Update dependencies (targeted)
+
+# Adds or removes specific packages on top of the current lockfile, without
+# re-resolving anything else (unlike refresh-lockfile-and-vectors.yml, which
+# rebuilds the whole lockfile). `install` goes through `npx expo install`, so
+# Expo modules get the version that matches the app's SDK.
+
+on:
+  workflow_dispatch:
+    inputs:
+      install:
+        description: 'Space-separated packages to add with npx expo install (optional)'
+        required: false
+        default: ''
+      uninstall:
+        description: 'Space-separated packages to remove with npm uninstall (optional)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install the locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Remove packages
+        if: ${{ github.event.inputs.uninstall != '' }}
+        run: npm uninstall --no-audit --no-fund ${{ github.event.inputs.uninstall }}
+
+      - name: Add packages
+        if: ${{ github.event.inputs.install != '' }}
+        run: npx expo install ${{ github.event.inputs.install }}
+
+      - name: Check versions against the Expo SDK
+        run: npx expo install --check || echo '::warning::dependency versions differ from Expo SDK recommendations'
+
+      - name: Commit changes
+        working-directory: .
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mobile/package.json mobile/package-lock.json
+          if git diff --cached --quiet; then
+            echo 'No changes.'
+          else
+            git commit -m 'Update dependencies: +[${{ github.event.inputs.install }}] -[${{ github.event.inputs.uninstall }}]'
+            git push
+          fi
