@@ -7,7 +7,7 @@ The simulator screenshot workflow (`.github/workflows/ui-screenshots-ios-simulat
 
 | Rule | Requirement | Use instead | Why |
 |---|---|---|---|
-| R1 | No `ScrollView`, `FlatList`, `SectionList`, `KeyboardAvoidingView` outside `src/ui/screen_layout.tsx` | `ScreenScrollView`, `ScreenMessage` | On iOS 26 the navigation bar is translucent and screens extend beneath it. `ScreenScrollView` sets `contentInsetAdjustmentBehavior="automatic"` and keyboard insets (defect U1, v0.2.0). |
+| R1 | No `ScrollView`, `FlatList`, `SectionList`, `KeyboardAvoidingView` outside `src/ui/screen_layout.tsx` | `ScreenScrollView`, `ScreenMessage` | On iOS 26 the navigation bar is translucent and screens extend beneath it. `ScreenScrollView` does three things. It sets `contentInsetAdjustmentBehavior="automatic"` (defect U1, v0.2.0). It adjusts insets for the keyboard. When the keyboard closes, it returns the content to a valid offset, because React Native scrolls a focused field into view and never scrolls back (found by the simulator tour, v0.2.1). |
 | R2 | No `Link asChild`; no `Link` in screens | `NavigationRow`, `PressableCard`, `ActionButton href` | The slot wrapper dropped row styles and stacked label and value vertically (defect U2, v0.2.0). |
 | R3 | Every route file is registered in `app/_layout.tsx` or `app/(tabs)/_layout.tsx` with a `title`; every registration has a file | — | Unregistered routes get default headers and titles. |
 | R4 | No `TextInput` outside `src/ui/controls.tsx` | `FormField` | Consistent label, error line, placeholder colour and width. |
