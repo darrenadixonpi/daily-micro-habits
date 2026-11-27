@@ -11,6 +11,7 @@ appId: com.darrendixon.dailymicrohabits
 - tapOn:
     text: "Allow"
     optional: true
+- takeScreenshot: 00_after_launch
 
 # Passphrase setup (modal, opened automatically on first launch)
 - extendedWaitUntil:
@@ -20,11 +21,15 @@ appId: com.darrendixon.dailymicrohabits
 - takeScreenshot: 01_passphrase_setup
 - tapOn:
     id: "passphrase-first"
+- takeScreenshot: 01a_passphrase_first_focused
 - inputText: "maestro screenshot passphrase"
+- takeScreenshot: 01b_passphrase_first_typed
 - tapOn:
     id: "passphrase-second"
 - inputText: "maestro screenshot passphrase"
-- hideKeyboard
+- takeScreenshot: 01c_passphrase_second_typed
+- tapOn:
+    id: "passphrase-title"
 - takeScreenshot: 02_passphrase_filled
 - tapOn:
     id: "passphrase-save"

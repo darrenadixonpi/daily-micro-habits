@@ -47,8 +47,12 @@ export function PassphraseSetupForm({ onDone, showTitle }: { readonly onDone: ()
 
   return (
     <ScreenScrollView testID="screen-passphrase">
-      {showTitle ? <Text style={ui.h1}>Recovery passphrase</Text> : null}
-      <Card>
+      {showTitle ? (
+        <Text testID="passphrase-title" style={ui.h1}>
+          Recovery passphrase
+        </Text>
+      ) : null}
+      <Card testID="passphrase-intro">
         <Text style={ui.text}>
           {passphraseSet ? 'Choose a new recovery passphrase. ' : ''}
           The recovery passphrase encrypts your daily backup files and can reopen your data if the iPhone Keychain item is ever
