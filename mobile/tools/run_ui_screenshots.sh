@@ -4,6 +4,9 @@
 # Exit status is non-zero if any device's flow failed; screenshots are kept either way.
 set -uo pipefail
 
+# CI Macs can take minutes to start the XCTest driver on a freshly booted simulator.
+export MAESTRO_DRIVER_STARTUP_TIMEOUT=300000
+
 APP_PATH="$1"
 OUT_ROOT="$(pwd)/ui-screenshots"
 FLOW="$(pwd)/maestro/screen_tour.yaml"
@@ -47,9 +50,17 @@ for PREFS in "iPhone Air|iPhone 17|iPhone 16" "iPhone 16e|iPhone SE (3rd generat
 
   DEVICE_DIR="$OUT_ROOT/$SLUG"
   mkdir -p "$DEVICE_DIR"
-  ( cd "$DEVICE_DIR" && maestro --device "$UDID" test "$FLOW" --format junit --output "$DEVICE_DIR/maestro_report.xml" ) \
-    > "$DEVICE_DIR/maestro_output.txt" 2>&1
-  RESULT=$?
+  for ATTEMPT in 1 2; do
+    ( cd "$DEVICE_DIR" && maestro --device "$UDID" test "$FLOW" --format junit --output "$DEVICE_DIR/maestro_report.xml" ) \
+      > "$DEVICE_DIR/maestro_output.txt" 2>&1
+    RESULT=$?
+    # Retry once only when the driver failed to start (infrastructure), not when the flow failed.
+    if [ $RESULT -ne 0 ] && grep -q 'IOSDriverTimeoutException' "$DEVICE_DIR/maestro_output.txt" && [ $ATTEMPT -eq 1 ]; then
+      echo "Driver start timed out on $NAME; retrying once"
+      continue
+    fi
+    break
+  done
   tail -40 "$DEVICE_DIR/maestro_output.txt"
   # Maestro's own failure screenshot and logs.
   LATEST=$(ls -td "$HOME"/.maestro/tests/*/ 2>/dev/null | head -1)
