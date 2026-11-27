@@ -11,9 +11,20 @@ The simulator screenshot workflow (`.github/workflows/ui-screenshots-ios-simulat
 | R2 | No `Link asChild`; no `Link` in screens | `NavigationRow`, `PressableCard`, `ActionButton href` | The slot wrapper dropped row styles and stacked label and value vertically (defect U2, v0.2.0). |
 | R3 | Every route file is registered in `app/_layout.tsx` or `app/(tabs)/_layout.tsx` with a `title`; every registration has a file | — | Unregistered routes get default headers and titles. |
 | R4 | No `TextInput` outside `src/ui/controls.tsx` | `FormField` | Consistent label, error line, placeholder colour and width. |
-| R5 | No `ui.row` / `flexDirection: 'row'` in screens | `LabelValueRow`, `TableRow`, `ChipGroup`, `Stepper`, `SwitchRow` | These shrink and wrap the label so long text cannot push other content off screen. |
+| R5 | No `ui.row` / `flexDirection: 'row'` in screens | `LabelValueRow`, `TableRow`, `ChipGroup`, `Stepper`, `SwitchRow`, `ButtonRow`, `TrendBars` | These shrink and wrap the label so long text cannot push other content off screen. |
 | R6 | No `Pressable`, `Touchable*`, `Button` or `Switch` in screens | Controls in `src/ui/controls.tsx` | Touch feedback, hit areas and accessibility roles in one place. |
 | R7 | Every screen renders `ScreenScrollView`, `ScreenMessage` or a `src/ui` screen component built on them (`MilestonePlaceholder`, `PassphraseSetupForm`), and never returns `null` | `<ScreenMessage loading />` | A `null` screen shows a blank page under a header. |
+
+## Shared components (v0.3.0)
+
+| Component | File | Used for |
+|---|---|---|
+| `ChoiceList` | `src/ui/controls.tsx` | Full-width answer options (A3 recall, A3 cards in Review); marks the correct and the wrong pick after answering; `showIds={false}` for file lists (Restore). |
+| `ButtonRow` | `src/ui/controls.tsx` | Equal-width button row (A2 grades); `highlight` marks the suggested grade. |
+| `ConfirmActionButton` | `src/ui/controls.tsx` | Two-tap actions with a stated consequence (Report error, Restore). |
+| `LinkText` | `src/ui/controls.tsx` | Source links opened in Safari. |
+| `TrendBars` | `src/ui/charts.tsx` | 30-day trend bars on Stats; days without data show as stubs. |
+| `ReportErrorAction`, `GeneratedBadge` | `src/ui/report_error_action.tsx` | Report error on any content item; the Generated / From Wikipedia label. |
 
 ## First-launch prompts
 
@@ -28,6 +39,12 @@ In Maestro flows, dismiss the keyboard by tapping static text (`tapOn` a `testID
 
 Every interactive element that a Maestro flow touches has a `testID` of the form `<screen>-<element>`, for example `d1-priority-1` or `today-module-D2`.
 Screens set `testID="screen-<name>"` on their `ScreenScrollView`.
+
+## Simulator tour
+
+`tools/run_ui_screenshots.sh` runs two flows per device:
+1. `maestro/screen_tour.yaml`: a fresh install through passphrase setup, every learning module (A3, A1, A4 with a miss, the reveal and a pass, A5 with Save as card), D1–D3, Journal, Stats, Settings, Export, Restore (verify an export and an encrypted backup) and Diagnostics (must read 20/20).
+2. `maestro/screen_tour_review.yaml`: a second launch with the `dmhUiTourMakeCardsDue` flag (launch argument plus the app's preferences file), which makes the first flow's review cards due, so Review is photographed with real A1, A4 and A5 cards, including an Again card returning in the same session.
 
 ## Release order
 

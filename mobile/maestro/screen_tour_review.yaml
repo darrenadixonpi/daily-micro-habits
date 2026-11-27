@@ -29,6 +29,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "review-grade-1"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - takeScreenshot: 31_review_a1_answer
 - tapOn:
     id: "review-grade-1"
@@ -51,6 +53,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "review-grade-4"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - takeScreenshot: 33_review_a4_answer
 - tapOn:
     id: "review-grade-4"
@@ -66,6 +70,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "review-grade-4"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     id: "review-grade-4"
 - extendedWaitUntil:
@@ -81,6 +87,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "review-grade-4"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     id: "review-grade-4"
 - extendedWaitUntil:

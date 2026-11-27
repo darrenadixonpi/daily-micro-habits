@@ -70,6 +70,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "a3-read"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - takeScreenshot: 03b_a3_concept_end
 - tapOn:
     id: "a3-read"
@@ -79,6 +81,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "a3-more"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     id: "a3-more"
 - assertVisible:
@@ -155,6 +159,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "a4-done"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - takeScreenshot: 03i_a4_done
 - tapOn: "Back"
 
@@ -331,6 +337,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "settings-export"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     id: "settings-export"
 - extendedWaitUntil:
@@ -371,6 +379,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       text: "microhabits_backup_.*mhbak"
     direction: UP
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     text: "microhabits_backup_.*mhbak"
 - tapOn:
@@ -396,10 +406,14 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "settings-intro"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - scrollUntilVisible:
     element:
       id: "setting-schedule-morning_time"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     id: "setting-schedule-morning_time"
 - eraseText: 10
@@ -423,11 +437,15 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "setting-api-key"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - takeScreenshot: 22_settings_api_key
 - scrollUntilVisible:
     element:
       id: "settings-generation-run"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - takeScreenshot: 22a_settings_bottom
 
 # Diagnostics (waits for the full run), reached from Today
@@ -437,6 +455,8 @@ appId: com.darrendixon.dailymicrohabits
     element:
       id: "today-diagnostics"
     direction: DOWN
+# A tap during scroll momentum only stops the scroll; let it settle first.
+- waitForAnimationToEnd
 - tapOn:
     id: "today-diagnostics"
 - extendedWaitUntil:
