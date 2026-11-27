@@ -333,12 +333,17 @@ appId: com.darrendixon.dailymicrohabits
     direction: DOWN
 # A tap during scroll momentum only stops the scroll; let it settle first.
 - waitForAnimationToEnd
-- tapOn:
-    id: "setting-schedule-morning_time"
-- eraseText: 10
-- inputText: "07:45"
-- assertVisible:
-    text: "07:45"
+# The first tap on a field near the tab bar sometimes does not focus it on the
+# simulator (3 of 6 device runs on 2026-11-27); retry the whole edit.
+- retry:
+    maxRetries: 3
+    commands:
+      - tapOn:
+          id: "setting-schedule-morning_time"
+      - eraseText: 10
+      - inputText: "07:45"
+      - assertVisible:
+          text: "07:45"
 - tapOn:
     text: "Morning window"
 - takeScreenshot: 18_settings_schedule
@@ -434,14 +439,16 @@ appId: com.darrendixon.dailymicrohabits
       id: "setting-schedule-evening_time"
     direction: DOWN
 - waitForAnimationToEnd
-- tapOn:
-    id: "setting-schedule-evening_time"
-- eraseText: 10
-- inputText: "21:15"
+- retry:
+    maxRetries: 3
+    commands:
+      - tapOn:
+          id: "setting-schedule-evening_time"
+      - eraseText: 10
+      - inputText: "21:15"
+      - assertVisible:
+          text: "21:15"
 - takeScreenshot: 18b_settings_typing_after_detour
-- assertVisible:
-    text: "21:15"
-    optional: true
 - tapOn:
     text: "Evening window"
 - scroll
@@ -485,6 +492,9 @@ appId: com.darrendixon.dailymicrohabits
       id: "diagnostics-summary"
       text: "\\d+/\\d+ passed"
     timeout: 180000
+- assertVisible:
+    id: "diagnostics-summary"
+    text: "20/20 passed"
 - takeScreenshot: 23_diagnostics_top
 - scroll
 - takeScreenshot: 24_diagnostics_scrolled
@@ -494,7 +504,4 @@ appId: com.darrendixon.dailymicrohabits
 - takeScreenshot: 26_diagnostics_scrolled_3
 - scroll
 - takeScreenshot: 27_diagnostics_bottom
-- assertVisible:
-    id: "diagnostics-summary"
-    text: "20/20 passed"
 
