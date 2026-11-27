@@ -1,5 +1,7 @@
-import type { ReactNode } from 'react';
-import { ActivityIndicator, ScrollView, Text, View, type StyleProp, type ViewStyle } from 'react-native';
+import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs';
+import { HeaderHeightContext } from '@react-navigation/elements';
+import { useContext, useEffect, useRef, type ReactNode } from 'react';
+import { ActivityIndicator, Keyboard, ScrollView, Text, View, type StyleProp, type ViewStyle } from 'react-native';
 import { COLORS, ui } from './ui_styles';
 
 /**
@@ -19,8 +21,32 @@ export function ScreenScrollView({
   readonly testID?: string;
   readonly contentStyle?: StyleProp<ViewStyle>;
 }) {
+  const scrollRef = useRef<ScrollView>(null);
+  const offsetY = useRef(0);
+  const contentHeight = useRef(0);
+  const viewportHeight = useRef(0);
+  // Stack screens sit under the translucent native header; tab screens have an opaque
+  // header above them. The resting scroll offset is minus the part hidden under a header.
+  const headerHeight = useContext(HeaderHeightContext) ?? 0;
+  const insideTabs = useContext(BottomTabBarHeightContext) !== undefined;
+  const hiddenTop = insideTabs ? 0 : headerHeight;
+
+  // React Native scrolls a focused field into view when the keyboard opens but never
+  // scrolls back when it closes, which left short pages under the header (v0.2.1 tour,
+  // journal editor). On close, return to the resting offset or the last valid offset.
+  useEffect(() => {
+    const subscription = Keyboard.addListener('keyboardDidHide', () => {
+      const restingY = -hiddenTop;
+      const maxY = Math.max(restingY, contentHeight.current - viewportHeight.current);
+      const target = Math.min(Math.max(offsetY.current, restingY), maxY);
+      if (Math.abs(target - offsetY.current) > 1) scrollRef.current?.scrollTo({ y: target, animated: true });
+    });
+    return () => subscription.remove();
+  }, [hiddenTop]);
+
   return (
     <ScrollView
+      ref={scrollRef}
       testID={testID}
       style={ui.screen}
       contentContainerStyle={[ui.body, contentStyle]}
@@ -28,6 +54,17 @@ export function ScreenScrollView({
       automaticallyAdjustKeyboardInsets
       keyboardShouldPersistTaps="handled"
       keyboardDismissMode="interactive"
+      scrollToOverflowEnabled
+      scrollEventThrottle={32}
+      onScroll={(event) => {
+        offsetY.current = event.nativeEvent.contentOffset.y;
+      }}
+      onContentSizeChange={(_, height) => {
+        contentHeight.current = height;
+      }}
+      onLayout={(event) => {
+        viewportHeight.current = event.nativeEvent.layout.height;
+      }}
     >
       {children}
     </ScrollView>
