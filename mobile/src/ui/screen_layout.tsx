@@ -20,7 +20,7 @@ export function ScreenScrollView({
   readonly contentStyle?: StyleProp<ViewStyle>;
 }) {
   const scrollRef = useRef<ComponentRef<typeof ScrollView>>(null);
-  const topMarkerRef = useRef<View>(null);
+  const topMarkerRef = useRef<ComponentRef<typeof View>>(null);
   const offsetY = useRef(0);
   const contentHeight = useRef(0);
   const viewport = useRef({ height: 0, windowY: 0 });
