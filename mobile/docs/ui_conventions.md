@@ -17,7 +17,7 @@ The simulator screenshot workflow (`.github/workflows/ui-screenshots-ios-simulat
 
 ## First-launch prompts
 
-Prompts that must appear on first launch are rendered by a gate component over the mounted navigator (`FirstLaunchGate`), never pushed with `router.push` from a screen effect. A push issued before the navigator has mounted is dropped (defect found by the simulator tour, v0.2.1).
+Prompts that must appear on first launch are presented by a gate component as a native full-screen `Modal` (`FirstLaunchGate`). They are never pushed with `router.push` from a screen effect, because a push issued before the navigator has mounted is dropped. They are never drawn as a JS overlay beside the navigator either, because the native stack can be re-attached on top of it. Both defects were found by the simulator tour during v0.2.1.
 
 ## Test IDs
 
