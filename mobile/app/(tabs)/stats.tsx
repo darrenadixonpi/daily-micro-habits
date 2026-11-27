@@ -1,10 +1,13 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { Text } from 'react-native';
 import { readPingLog, type PingDay } from '../../src/notifications/notification_ledger';
+import { readInternalValue } from '../../src/settings/settings_repository';
 import { useAppState } from '../../src/ui/app_state_context';
 import { formatShortDate } from '../../src/ui/date_format';
-import { COLORS, ui } from '../../src/ui/ui_styles';
+import { PING_COLOR, PING_LABEL } from '../../src/ui/ping_labels';
+import { Card, ScreenMessage, ScreenScrollView, TableRow } from '../../src/ui/screen_layout';
+import { ui } from '../../src/ui/ui_styles';
 
 interface FreezeRow {
   readonly earned_on: string;
@@ -31,37 +34,43 @@ export default function StatsScreen() {
     }, [database, daily]),
   );
 
-  if (!daily) return null;
+  if (!database || !daily) return <ScreenMessage loading />;
+  const trackingStart = readInternalValue(database.executor, 'cycle_start_date');
   const fired = pings.reduce((n, day) => n + (day.morning === 'fired' ? 1 : 0) + (day.evening === 'fired' ? 1 : 0), 0);
   return (
-    <ScrollView style={ui.screen} contentContainerStyle={ui.body}>
-      <View style={ui.card}>
-        <Text style={ui.h2}>Streak</Text>
+    <ScreenScrollView testID="screen-stats">
+      <Card title="Streak">
         <Text style={ui.text}>Current {daily.streak.currentStreak} · longest {daily.streak.longestStreak}</Text>
         <Text style={ui.text}>Days with a complete window: {countedDays}</Text>
         <Text style={ui.text}>Freezes banked: {daily.streak.bankedFreezes} of 2</Text>
-      </View>
-      <View style={ui.card}>
-        <Text style={ui.h2}>Freeze log</Text>
+      </Card>
+      <Card title="Freeze log">
         {freezes.length === 0 ? <Text style={ui.muted}>No freezes earned yet (one per 7 counted days).</Text> : null}
         {freezes.map((freeze) => (
           <Text key={freeze.earned_on} style={ui.text}>
-            Earned {formatShortDate(freeze.earned_on)} ·{' '}
-            {freeze.used_on ? `used for ${formatShortDate(freeze.used_on)}` : 'banked'}
+            Earned {formatShortDate(freeze.earned_on)} · {freeze.used_on ? `used for ${formatShortDate(freeze.used_on)}` : 'banked'}
           </Text>
         ))}
-      </View>
-      <View style={ui.card}>
-        <Text style={ui.h2}>Pings, last 14 days ({fired} fired)</Text>
-        {pings.map((day) => (
-          <View key={day.date} style={ui.row}>
-            <Text style={[ui.text, { flex: 1 }]}>{formatShortDate(day.date)}</Text>
-            <Text style={[ui.muted, { width: 90, color: day.morning === 'fired' ? COLORS.pass : COLORS.muted }]}>{day.morning}</Text>
-            <Text style={[ui.muted, { width: 90, color: day.evening === 'fired' ? COLORS.pass : COLORS.muted }]}>{day.evening}</Text>
-          </View>
-        ))}
-      </View>
+      </Card>
+      <Card title={`Pings, last 14 days (${fired} fired)`}>
+        <TableRow header cells={[{ text: 'Day' }, { text: 'Morning', width: 104 }, { text: 'Evening', width: 104 }]} />
+        {pings.map((day) => {
+          const untracked = typeof trackingStart === 'string' && day.date < trackingStart;
+          const morning = untracked ? 'untracked' : day.morning;
+          const evening = untracked ? 'untracked' : day.evening;
+          return (
+            <TableRow
+              key={day.date}
+              cells={[
+                { text: formatShortDate(day.date) },
+                { text: PING_LABEL[morning], color: PING_COLOR[morning], width: 104 },
+                { text: PING_LABEL[evening], color: PING_COLOR[evening], width: 104 },
+              ]}
+            />
+          );
+        })}
+      </Card>
       <Text style={ui.muted}>Adherence and learning metrics (spec Section 10) arrive with the learning modules.</Text>
-    </ScrollView>
+    </ScreenScrollView>
   );
 }

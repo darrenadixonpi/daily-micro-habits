@@ -13,11 +13,11 @@ function tabIcon(name: string) {
 export default function TabLayout() {
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: COLORS.accent }}>
-      <Tabs.Screen name="index" options={{ title: 'Today', tabBarIcon: tabIcon('index') }} />
-      <Tabs.Screen name="review" options={{ title: 'Review', tabBarIcon: tabIcon('review') }} />
-      <Tabs.Screen name="journal" options={{ title: 'Journal', tabBarIcon: tabIcon('journal') }} />
-      <Tabs.Screen name="stats" options={{ title: 'Stats', tabBarIcon: tabIcon('stats') }} />
-      <Tabs.Screen name="settings" options={{ title: 'Settings', tabBarIcon: tabIcon('settings') }} />
+      <Tabs.Screen name="index" options={{ title: 'Today', tabBarIcon: tabIcon('index'), tabBarButtonTestID: 'tab-index' }} />
+      <Tabs.Screen name="review" options={{ title: 'Review', tabBarIcon: tabIcon('review'), tabBarButtonTestID: 'tab-review' }} />
+      <Tabs.Screen name="journal" options={{ title: 'Journal', tabBarIcon: tabIcon('journal'), tabBarButtonTestID: 'tab-journal' }} />
+      <Tabs.Screen name="stats" options={{ title: 'Stats', tabBarIcon: tabIcon('stats'), tabBarButtonTestID: 'tab-stats' }} />
+      <Tabs.Screen name="settings" options={{ title: 'Settings', tabBarIcon: tabIcon('settings'), tabBarButtonTestID: 'tab-settings' }} />
     </Tabs>
   );
 }

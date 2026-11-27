@@ -1,12 +1,14 @@
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Text } from 'react-native';
 import { promptForDate } from '../../src/daily/journal_prompts';
 import { getJournalEntry, journalEntryCounts, saveJournalEntry } from '../../src/daily/reflection_repository';
 import { readAllSettings, readInternalValue, writeInternalValue } from '../../src/settings/settings_repository';
 import { useAppState } from '../../src/ui/app_state_context';
 import { formatLocalTime, formatLongDate } from '../../src/ui/date_format';
+import { ActionButton, ChipGroup, FormField } from '../../src/ui/controls';
 import { LightMarkdown } from '../../src/ui/light_markdown';
+import { Card, LabelValueRow, ScreenMessage, ScreenScrollView } from '../../src/ui/screen_layout';
 import { COLORS, ui } from '../../src/ui/ui_styles';
 
 const AUTOSAVE_MS = 5000;
@@ -85,45 +87,52 @@ export default function JournalEntryScreen() {
     ),
   );
 
-  if (!database || !daily || !date) return null;
+  if (!database || !daily || !date) return <ScreenMessage loading />;
   const isPast = date < daily.today;
 
   return (
-    <ScrollView style={ui.screen} contentContainerStyle={ui.body} keyboardShouldPersistTaps="handled">
-      <View style={ui.row}>
-        <Text style={ui.h2}>{formatLongDate(date)}</Text>
-        <Pressable onPress={() => setPreview(!preview)}>
-          <Text style={ui.buttonText}>{preview ? 'Edit' : 'Preview'}</Text>
-        </Pressable>
-      </View>
+    <ScreenScrollView testID="screen-journal-entry">
+      <LabelValueRow
+        label={formatLongDate(date)}
+        labelStyle="heading"
+        value={<ActionButton testID="journal-preview-toggle" align="right" label={preview ? 'Edit' : 'Preview'} onPress={() => setPreview(!preview)} />}
+      />
       <Text style={ui.muted}>
         {savedAt ? `Saved ${formatLocalTime(savedAt)}` : 'Autosaves every 5 seconds and when you leave.'}
         {isPast && lastEditedAt ? ` · Last edited ${new Date(lastEditedAt).toLocaleString('en-US')}` : ''}
       </Text>
 
       {showPrompt && !promptDismissed && prompt ? (
-        <View style={[ui.card, { flexDirection: 'row', alignItems: 'flex-start', gap: 8 }]}>
-          <Text style={[ui.text, { flex: 1, fontStyle: 'italic' }]}>{prompt.text}</Text>
-          <Pressable
-            onPress={() => {
-              writeInternalValue(database.executor, 'prompt_dismissed_date', date);
-              setPromptDismissed(true);
-            }}
-          >
-            <Text style={ui.muted}>Dismiss</Text>
-          </Pressable>
-        </View>
+        <Card>
+          <LabelValueRow
+            label={<Text style={[ui.text, { fontStyle: 'italic' }]}>{prompt.text}</Text>}
+            value={
+              <ActionButton
+                testID="journal-prompt-dismiss"
+                align="right"
+                tone="muted"
+                label="Dismiss"
+                onPress={() => {
+                  writeInternalValue(database.executor, 'prompt_dismissed_date', date);
+                  setPromptDismissed(true);
+                }}
+              />
+            }
+          />
+        </Card>
       ) : null}
 
       {preview ? (
-        <View style={ui.card}>
+        <Card>
           <LightMarkdown source={body === '' ? '*Nothing written yet.*' : body} />
-        </View>
+        </Card>
       ) : (
-        <TextInput
-          style={[ui.input, { minHeight: 260, textAlignVertical: 'top' }]}
+        <FormField
+          testID="journal-body"
           value={body}
           multiline
+          scrollEnabled={false}
+          minHeight={240}
           autoFocus={body === ''}
           placeholder="One line or several paragraphs. **bold**, *italic*, - lists"
           onChangeText={(text) => {
@@ -134,33 +143,24 @@ export default function JournalEntryScreen() {
       )}
 
       {showMood ? (
-        <View style={ui.card}>
-          <Text style={ui.text}>Mood</Text>
-          <View style={{ flexDirection: 'row', gap: 6 }}>
-            {[1, 2, 3, 4, 5].map((value) => {
-              const selected = mood === value;
-              return (
-                <Pressable
-                  key={value}
-                  style={[ui.chip, selected ? ui.chipSelected : null, { minWidth: 40, alignItems: 'center' }]}
-                  onPress={() => {
-                    const next = selected ? null : value;
-                    setMood(next);
-                    latest.current = { ...latest.current, mood: next };
-                  }}
-                >
-                  <Text style={[ui.chipText, selected ? ui.chipTextSelected : null]}>{value}</Text>
-                </Pressable>
-              );
-            })}
-          </View>
-        </View>
+        <Card title="Mood">
+          <ChipGroup
+            testIDPrefix="journal-mood"
+            options={[1, 2, 3, 4, 5].map((value) => ({ value: String(value), label: String(value) }))}
+            isSelected={(value) => mood === Number(value)}
+            onPress={(value) => {
+              const next = mood === Number(value) ? null : Number(value);
+              setMood(next);
+              latest.current = { ...latest.current, mood: next };
+            }}
+          />
+        </Card>
       ) : null}
 
       <Text style={[ui.muted, journalEntryCounts(body) ? { color: COLORS.pass } : null]}>
         {journalEntryCounts(body) ? 'This entry completes D3.' : 'Write at least one line to complete D3.'}
       </Text>
       {error ? <Text style={[ui.muted, { color: COLORS.fail }]}>{error}</Text> : null}
-    </ScrollView>
+    </ScreenScrollView>
   );
 }

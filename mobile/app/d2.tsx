@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Text } from 'react-native';
 import { listPriorities, setPriorityStatus, type Priority, type PriorityStatus } from '../src/daily/reflection_repository';
 import { useAppState } from '../src/ui/app_state_context';
+import { ChipGroup, FormField } from '../src/ui/controls';
+import { Card, ScreenMessage, ScreenScrollView } from '../src/ui/screen_layout';
 import { COLORS, ui } from '../src/ui/ui_styles';
 
 const STATUSES: readonly { readonly value: Exclude<PriorityStatus, 'open'>; readonly label: string }[] = [
@@ -26,7 +28,7 @@ export default function EveningReviewScreen() {
 
   useEffect(reload, [reload]);
 
-  if (!database || !today) return null;
+  if (!database || !today) return <ScreenMessage loading />;
 
   const update = (item: Priority, status: PriorityStatus, note: string) => {
     setPriorityStatus(database.executor, item.id, status, note);
@@ -36,49 +38,41 @@ export default function EveningReviewScreen() {
 
   if (priorities.length === 0) {
     return (
-      <View style={[ui.screen, ui.body]}>
-        <View style={ui.card}>
+      <ScreenScrollView testID="screen-d2">
+        <Card>
           <Text style={ui.text}>No priorities were set this morning, so D2 is recorded as not applicable today, not as a miss.</Text>
-        </View>
-      </View>
+        </Card>
+      </ScreenScrollView>
     );
   }
 
   const remaining = priorities.filter((item) => item.status === 'open').length;
   return (
-    <ScrollView style={ui.screen} contentContainerStyle={ui.body} keyboardShouldPersistTaps="handled">
+    <ScreenScrollView testID="screen-d2">
       <Text style={[ui.muted, remaining === 0 ? { color: COLORS.pass } : null]}>
         {remaining === 0 ? 'Every priority has a status: D2 complete.' : `${remaining} left to mark.`}
       </Text>
       {priorities.map((item) => (
-        <View key={item.id} style={ui.card}>
+        <Card key={item.id}>
           <Text style={ui.text}>
             {item.position}. {item.text}
           </Text>
-          <View style={{ flexDirection: 'row', gap: 6 }}>
-            {STATUSES.map((status) => {
-              const selected = item.status === status.value;
-              return (
-                <Pressable
-                  key={status.value}
-                  style={[ui.chip, selected ? ui.chipSelected : null]}
-                  onPress={() => update(item, status.value, notes[item.id] ?? '')}
-                >
-                  <Text style={[ui.chipText, selected ? ui.chipTextSelected : null]}>{status.label}</Text>
-                </Pressable>
-              );
-            })}
-          </View>
-          <TextInput
-            style={ui.input}
+          <ChipGroup
+            testIDPrefix={`d2-status-${item.position}`}
+            options={STATUSES}
+            isSelected={(value) => item.status === value}
+            onPress={(value) => update(item, value as PriorityStatus, notes[item.id] ?? '')}
+          />
+          <FormField
+            testID={`d2-note-${item.position}`}
             value={notes[item.id] ?? ''}
             placeholder="Optional note"
             maxLength={200}
             onChangeText={(text) => setNotes({ ...notes, [item.id]: text })}
             onEndEditing={() => update(item, item.status, notes[item.id] ?? '')}
           />
-        </View>
+        </Card>
       ))}
-    </ScrollView>
+    </ScreenScrollView>
   );
 }

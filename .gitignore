@@ -26,3 +26,4 @@ __pycache__/
 # Never commit secrets
 .env
 .env.*
+mobile/ui-screenshots/

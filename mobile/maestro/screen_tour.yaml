@@ -1,0 +1,206 @@
+# Visits every screen on a fresh install, types into every text field, and takes a
+# screenshot of each state. A field hidden under a header or the keyboard cannot be
+# typed into, so the following assertVisible fails and the run fails.
+appId: com.darrendixon.dailymicrohabits
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      all: allow
+- tapOn:
+    text: "Allow"
+    optional: true
+
+# Passphrase setup (modal, opened automatically on first launch)
+- extendedWaitUntil:
+    visible:
+      id: "screen-passphrase"
+    timeout: 60000
+- takeScreenshot: 01_passphrase_setup
+- tapOn:
+    id: "passphrase-first"
+- inputText: "maestro screenshot passphrase"
+- tapOn:
+    id: "passphrase-second"
+- inputText: "maestro screenshot passphrase"
+- hideKeyboard
+- takeScreenshot: 02_passphrase_filled
+- tapOn:
+    id: "passphrase-save"
+
+# Today
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 30000
+- takeScreenshot: 03_today_start
+
+# D1 Morning top-3 (first field is the one hidden in v0.2.0)
+- tapOn:
+    id: "today-module-D1"
+- extendedWaitUntil:
+    visible:
+      id: "screen-d1"
+    timeout: 10000
+- takeScreenshot: 04_d1_empty
+- tapOn:
+    id: "d1-priority-1"
+- inputText: "Finish the layout fixes on every screen, review the simulator screenshots on both devices, ship 0.2.1"
+- assertVisible:
+    text: "Finish the layout fixes.*"
+- tapOn:
+    id: "d1-priority-2"
+- inputText: "Short second priority"
+- assertVisible:
+    text: "Short second priority"
+- hideKeyboard
+- takeScreenshot: 05_d1_filled
+- tapOn:
+    id: "d1-save"
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- takeScreenshot: 06_today_after_d1
+
+# D2 Evening review
+- tapOn:
+    id: "today-module-D2"
+- extendedWaitUntil:
+    visible:
+      id: "screen-d2"
+    timeout: 10000
+- tapOn:
+    id: "d2-status-1-done"
+- tapOn:
+    id: "d2-status-2-partial"
+- tapOn:
+    id: "d2-note-2"
+- inputText: "Halfway there"
+- assertVisible:
+    text: "Halfway there"
+- hideKeyboard
+- takeScreenshot: 07_d2_marked
+- tapOn: "Back"
+
+# D3 Journal editor
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- tapOn:
+    id: "today-module-D3"
+- extendedWaitUntil:
+    visible:
+      id: "screen-journal-entry"
+    timeout: 10000
+- tapOn:
+    id: "journal-body"
+- inputText: "Spent the evening on layout fixes. The **header** no longer covers the first field, and every row keeps its label and value on one line."
+- assertVisible:
+    text: "Spent the evening.*"
+- hideKeyboard
+- takeScreenshot: 08_journal_editor
+- tapOn:
+    id: "journal-preview-toggle"
+- takeScreenshot: 09_journal_preview
+- tapOn: "Back"
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
+- takeScreenshot: 10_today_complete
+- scroll
+- takeScreenshot: 11_today_ping_log
+
+# Journal tab and search
+- tapOn:
+    id: "tab-journal"
+- extendedWaitUntil:
+    visible:
+      id: "screen-journal"
+    timeout: 10000
+- takeScreenshot: 12_journal_list
+- tapOn:
+    id: "journal-search"
+- inputText: "layout"
+- assertVisible:
+    text: "1 match"
+- hideKeyboard
+- takeScreenshot: 13_journal_search
+
+# Stats and Review
+- tapOn:
+    id: "tab-stats"
+- extendedWaitUntil:
+    visible:
+      id: "screen-stats"
+    timeout: 10000
+- takeScreenshot: 14_stats
+- tapOn:
+    id: "tab-review"
+- extendedWaitUntil:
+    visible:
+      id: "screen-review"
+    timeout: 10000
+- takeScreenshot: 15_review
+
+# Settings
+- tapOn:
+    id: "tab-settings"
+- extendedWaitUntil:
+    visible:
+      id: "screen-settings"
+    timeout: 10000
+- takeScreenshot: 16_settings_top
+- tapOn:
+    id: "settings-passphrase-test"
+- inputText: "maestro screenshot passphrase"
+- tapOn:
+    id: "settings-passphrase-test-run"
+- assertVisible:
+    text: "Correct: this passphrase unlocks your data."
+- hideKeyboard
+- takeScreenshot: 17_settings_passphrase_tested
+- scrollUntilVisible:
+    element:
+      id: "setting-schedule-morning_time"
+    direction: DOWN
+- tapOn:
+    id: "setting-schedule-morning_time"
+- eraseText: 10
+- inputText: "07:45"
+- assertVisible:
+    text: "07:45"
+- hideKeyboard
+- takeScreenshot: 18_settings_schedule
+- scroll
+- takeScreenshot: 19_settings_scrolled_1
+- scroll
+- takeScreenshot: 20_settings_scrolled_2
+- scroll
+- takeScreenshot: 21_settings_scrolled_3
+- scrollUntilVisible:
+    element:
+      id: "setting-api-key"
+    direction: DOWN
+- takeScreenshot: 22_settings_bottom
+
+# Diagnostics (waits for the full run)
+- scrollUntilVisible:
+    element:
+      id: "settings-diagnostics"
+    direction: UP
+- tapOn:
+    id: "settings-diagnostics"
+- extendedWaitUntil:
+    visible:
+      id: "diagnostics-summary"
+      text: "\\d+/\\d+ passed"
+    timeout: 180000
+- takeScreenshot: 23_diagnostics_top
+- scroll
+- takeScreenshot: 24_diagnostics_scrolled
+- scroll
+- takeScreenshot: 25_diagnostics_bottom

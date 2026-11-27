@@ -1,4 +1,4 @@
-name: Test mobile app (typecheck + Node diagnostics)
+name: Test mobile app (typecheck + Node diagnostics + UI rules)
 
 # Type-checks the app and runs the shared diagnostic cases (T1–T7) under Node, plus
 # unit tests. T3 (SQLCipher) is skipped here and runs only on the iPhone.
@@ -38,3 +38,6 @@ jobs:
 
       - name: FSRS reference vectors are current
         run: npm run check:fsrs-vectors
+
+      - name: UI conventions (docs/ui_conventions.md)
+        run: npm run check:ui

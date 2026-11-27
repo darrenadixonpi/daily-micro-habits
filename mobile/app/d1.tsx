@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { Text } from 'react-native';
 import {
   carryOverCandidates,
   listPriorities,
@@ -10,6 +10,8 @@ import {
   type Priority,
 } from '../src/daily/reflection_repository';
 import { useAppState } from '../src/ui/app_state_context';
+import { ActionButton, ChipGroup, FormField } from '../src/ui/controls';
+import { Card, ScreenMessage, ScreenScrollView } from '../src/ui/screen_layout';
 import { COLORS, ui } from '../src/ui/ui_styles';
 
 interface Slot {
@@ -37,12 +39,13 @@ export default function MorningTopThreeScreen() {
     setCandidates(carryOverCandidates(database.executor, today));
   }, [database, today]);
 
-  if (!database || !today) return null;
+  if (!database || !today) return <ScreenMessage loading />;
 
   const offered = candidates.filter((candidate) => !slots.some((slot) => slot.carriedFromId === candidate.id));
-  const carryOver = (candidate: Priority) => {
+  const carryOver = (id: string) => {
+    const candidate = offered.find((c) => String(c.id) === id);
     const index = slots.findIndex((slot) => slot.text.trim() === '');
-    if (index < 0) return;
+    if (!candidate || index < 0) return;
     setSlots(slots.map((slot, i) => (i === index ? { text: candidate.text, carriedFromId: candidate.id } : slot)));
   };
   const save = async () => {
@@ -56,43 +59,40 @@ export default function MorningTopThreeScreen() {
   };
 
   return (
-    <ScrollView style={ui.screen} contentContainerStyle={ui.body} keyboardShouldPersistTaps="handled">
-      <Text style={ui.muted}>Up to {PRIORITY_MAX_COUNT} priorities for today, {PRIORITY_MAX_LENGTH} characters each. One is enough to complete D1.</Text>
+    <ScreenScrollView testID="screen-d1">
+      <Text style={ui.muted}>
+        Up to {PRIORITY_MAX_COUNT} priorities for today, {PRIORITY_MAX_LENGTH} characters each. One is enough to complete D1.
+      </Text>
       {offered.length > 0 ? (
-        <View style={ui.card}>
-          <Text style={ui.h2}>Carry over from yesterday</Text>
-          {offered.map((candidate) => (
-            <Pressable key={candidate.id} style={[ui.chip, { alignSelf: 'flex-start' }]} onPress={() => carryOver(candidate)}>
-              <Text style={ui.chipText}>
-                + {candidate.text} ({candidate.status === 'partial' ? 'partial' : 'not done'})
-              </Text>
-            </Pressable>
-          ))}
-        </View>
+        <Card title="Carry over from yesterday">
+          <ChipGroup
+            testIDPrefix="d1-carry"
+            options={offered.map((c) => ({ value: String(c.id), label: `+ ${c.text} (${c.status === 'partial' ? 'partial' : 'not done'})` }))}
+            isSelected={() => false}
+            onPress={carryOver}
+          />
+        </Card>
       ) : null}
-      <View style={ui.card}>
+      <Card>
         {slots.map((slot, index) => (
-          <View key={index} style={{ gap: 4 }}>
-            <Text style={ui.muted}>
-              Priority {index + 1}
-              {slot.carriedFromId !== null ? ' · carried over' : ''}
-            </Text>
-            <TextInput
-              style={ui.input}
-              value={slot.text}
-              maxLength={PRIORITY_MAX_LENGTH}
-              placeholder={index === 0 ? 'Most important thing today' : 'Optional'}
-              onChangeText={(text) =>
-                setSlots(slots.map((s, i) => (i === index ? { text, carriedFromId: text === '' ? null : s.carriedFromId } : s)))
-              }
-            />
-          </View>
+          <FormField
+            key={index}
+            testID={`d1-priority-${index + 1}`}
+            label={`Priority ${index + 1}${slot.carriedFromId !== null ? ' · carried over' : ''}`}
+            value={slot.text}
+            maxLength={PRIORITY_MAX_LENGTH}
+            multiline
+            blurOnSubmit
+            returnKeyType="done"
+            placeholder={index === 0 ? 'Most important thing today' : 'Optional'}
+            onChangeText={(text) =>
+              setSlots(slots.map((s, i) => (i === index ? { text: text.replace(/\n/g, ' '), carriedFromId: text === '' ? null : s.carriedFromId } : s)))
+            }
+          />
         ))}
         {error ? <Text style={[ui.muted, { color: COLORS.fail }]}>{error}</Text> : null}
-        <Pressable style={ui.button} onPress={() => void save()}>
-          <Text style={ui.buttonText}>Save priorities</Text>
-        </Pressable>
-      </View>
-    </ScrollView>
+        <ActionButton testID="d1-save" label="Save priorities" onPress={() => void save()} />
+      </Card>
+    </ScreenScrollView>
   );
 }

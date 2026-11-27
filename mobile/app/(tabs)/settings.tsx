@@ -1,22 +1,19 @@
 import * as Application from 'expo-application';
-import { Link } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, Switch, Text, TextInput, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { listBackupNames, writeDailyBackup } from '../../src/backup/daily_backup';
 import { createAppBackupFileStore } from '../../src/platform/app_backup_file_store';
 import { appCryptoPrimitives } from '../../src/platform/app_crypto_primitives';
 import { readBackupKey, verifyRecoveryPassphrase } from '../../src/security/recovery_passphrase';
-import {
-  SETTING_DEFINITIONS,
-  type SettingDefinition,
-  type SettingValue,
-} from '../../src/settings/settings_definitions';
+import { SETTING_DEFINITIONS, type SettingDefinition, type SettingValue } from '../../src/settings/settings_definitions';
 import { readAllSettings, writeSetting } from '../../src/settings/settings_repository';
 import { readAnthropicApiKeyPresent, saveAnthropicApiKey } from '../../src/settings/settings_secrets';
 import { useAppState } from '../../src/ui/app_state_context';
+import { ActionButton, ChipGroup, FormField, NavigationRow, Stepper, SwitchRow } from '../../src/ui/controls';
+import { Card, LabelValueRow, ScreenMessage, ScreenScrollView } from '../../src/ui/screen_layout';
 import { COLORS, ui } from '../../src/ui/ui_styles';
 
-/** Every spec Section 3 setting, stored immediately on change and validated against its definition. */
+/** Data and security controls, then every spec Section 3 setting (saved on change, validated). */
 export default function SettingsScreen() {
   const { database, refreshDaily } = useAppState();
   const [values, setValues] = useState<Map<string, SettingValue> | null>(null);
@@ -34,13 +31,7 @@ export default function SettingsScreen() {
     return [...byGroup.entries()];
   }, []);
 
-  if (!database || !values) {
-    return (
-      <View style={[ui.screen, { justifyContent: 'center' }]}>
-        <ActivityIndicator />
-      </View>
-    );
-  }
+  if (!database || !values) return <ScreenMessage loading />;
 
   const save = (key: string, value: SettingValue) => {
     try {
@@ -54,14 +45,11 @@ export default function SettingsScreen() {
   };
 
   return (
-    <ScrollView style={ui.screen} contentContainerStyle={ui.body} keyboardShouldPersistTaps="handled">
+    <ScreenScrollView testID="screen-settings">
       <DataAndSecurityCard />
-      <Text style={ui.muted}>
-        Settings are saved as you change them. Each shows the milestone in which it starts to take effect.
-      </Text>
+      <Text style={ui.muted}>Settings are saved as you change them. Each shows the milestone in which it starts to take effect.</Text>
       {groups.map(([group, definitions]) => (
-        <View key={group} style={ui.card}>
-          <Text style={ui.h2}>{group}</Text>
+        <Card key={group} title={group} testID={`settings-group-${group.replace(/\W+/g, '-').toLowerCase()}`}>
           {definitions.map((definition) => (
             <SettingEditor
               key={definition.key}
@@ -72,9 +60,9 @@ export default function SettingsScreen() {
             />
           ))}
           {group === 'Generation' ? <ApiKeyEditor /> : null}
-        </View>
+        </Card>
       ))}
-    </ScrollView>
+    </ScreenScrollView>
   );
 }
 
@@ -89,13 +77,18 @@ function SettingEditor({
   readonly error: string | undefined;
   readonly onChange: (value: SettingValue) => void;
 }) {
+  const testID = `setting-${definition.key.replace(/\./g, '-')}`;
+  if (definition.kind === 'boolean') {
+    return (
+      <View style={{ paddingVertical: 4 }}>
+        <SwitchRow testID={testID} label={`${definition.label} · ${definition.effectiveFrom}`} value={value === true} onChange={onChange} />
+      </View>
+    );
+  }
   return (
     <View style={{ gap: 6, paddingVertical: 6 }}>
-      <View style={ui.row}>
-        <Text style={[ui.text, { flex: 1 }]}>{definition.label}</Text>
-        <Text style={ui.muted}>{definition.effectiveFrom}</Text>
-      </View>
-      <EditorControl definition={definition} value={value} onChange={onChange} />
+      <LabelValueRow label={definition.label} value={definition.effectiveFrom} />
+      <EditorControl testID={testID} definition={definition} value={value} onChange={onChange} />
       {definition.note ? <Text style={ui.muted}>{definition.note}</Text> : null}
       {error ? <Text style={[ui.muted, { color: COLORS.fail }]}>{error}</Text> : null}
     </View>
@@ -106,26 +99,23 @@ function EditorControl({
   definition,
   value,
   onChange,
+  testID,
 }: {
   readonly definition: SettingDefinition;
   readonly value: SettingValue;
   readonly onChange: (value: SettingValue) => void;
+  readonly testID: string;
 }) {
   switch (definition.kind) {
     case 'boolean':
-      return <Switch value={value === true} onValueChange={(next) => onChange(next)} />;
+      return null;
     case 'choice':
-      return (
-        <ChipRow
-          options={definition.options}
-          isSelected={(option) => option === value}
-          onPress={(option) => onChange(option)}
-        />
-      );
+      return <ChipGroup testIDPrefix={testID} options={definition.options} isSelected={(option) => option === value} onPress={onChange} />;
     case 'multichoice': {
       const selected = Array.isArray(value) ? (value as readonly string[]) : [];
       return (
-        <ChipRow
+        <ChipGroup
+          testIDPrefix={testID}
           options={definition.options}
           isSelected={(option) => selected.includes(option)}
           onPress={(option) =>
@@ -141,74 +131,62 @@ function EditorControl({
     case 'number': {
       const current = typeof value === 'number' ? value : definition.defaultValue;
       const decimals = (String(definition.step).split('.')[1] ?? '').length;
-      const stepTo = (direction: 1 | -1) => {
-        const next = Number((current + direction * definition.step).toFixed(decimals));
-        if (next >= definition.min - 1e-9 && next <= definition.max + 1e-9) onChange(next);
-      };
       return (
-        <View style={[ui.row, { justifyContent: 'flex-start' }]}>
-          <StepButton label="−" onPress={() => stepTo(-1)} />
-          <Text style={[ui.text, { minWidth: 56, textAlign: 'center' }]}>{current.toFixed(decimals)}</Text>
-          <StepButton label="+" onPress={() => stepTo(1)} />
-          <Text style={ui.muted}>
-            {definition.min}–{definition.max}
-          </Text>
-        </View>
+        <Stepper
+          testID={testID}
+          value={current}
+          decimals={decimals}
+          rangeLabel={`${definition.min}–${definition.max}`}
+          onStep={(direction) => {
+            const next = Number((current + direction * definition.step).toFixed(decimals));
+            if (next >= definition.min - 1e-9 && next <= definition.max + 1e-9) onChange(next);
+          }}
+        />
       );
     }
     case 'time':
     case 'text':
-      return <TextSettingInput value={typeof value === 'string' ? value : ''} placeholder={definition.kind === 'time' ? 'HH:MM' : ''} onCommit={onChange} />;
+      return (
+        <TextSettingInput
+          testID={testID}
+          value={typeof value === 'string' ? value : ''}
+          placeholder={definition.kind === 'time' ? 'HH:MM' : ''}
+          keyboard={definition.kind === 'time' ? 'numbers-and-punctuation' : 'default'}
+          onCommit={onChange}
+        />
+      );
   }
 }
 
-function TextSettingInput({ value, placeholder, onCommit }: { readonly value: string; readonly placeholder: string; readonly onCommit: (value: string) => void }) {
+function TextSettingInput({
+  value,
+  placeholder,
+  keyboard,
+  onCommit,
+  testID,
+}: {
+  readonly value: string;
+  readonly placeholder: string;
+  readonly keyboard: 'default' | 'numbers-and-punctuation';
+  readonly onCommit: (value: string) => void;
+  readonly testID: string;
+}) {
   const [draft, setDraft] = useState(value);
   useEffect(() => setDraft(value), [value]);
   return (
-    <TextInput
-      style={ui.input}
+    <FormField
+      testID={testID}
       value={draft}
       placeholder={placeholder}
+      keyboardType={keyboard}
       autoCapitalize="none"
       autoCorrect={false}
+      returnKeyType="done"
       onChangeText={setDraft}
       onEndEditing={() => {
         if (draft !== value) onCommit(draft.trim());
       }}
-      returnKeyType="done"
     />
-  );
-}
-
-function ChipRow({
-  options,
-  isSelected,
-  onPress,
-}: {
-  readonly options: readonly { readonly value: string; readonly label: string }[];
-  readonly isSelected: (value: string) => boolean;
-  readonly onPress: (value: string) => void;
-}) {
-  return (
-    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
-      {options.map((option) => {
-        const selected = isSelected(option.value);
-        return (
-          <Pressable key={option.value} style={[ui.chip, selected ? ui.chipSelected : null]} onPress={() => onPress(option.value)}>
-            <Text style={[ui.chipText, selected ? ui.chipTextSelected : null]}>{option.label}</Text>
-          </Pressable>
-        );
-      })}
-    </View>
-  );
-}
-
-function StepButton({ label, onPress }: { readonly label: string; readonly onPress: () => void }) {
-  return (
-    <Pressable style={[ui.chip, { minWidth: 40, alignItems: 'center' }]} onPress={onPress}>
-      <Text style={[ui.text, { fontSize: 18 }]}>{label}</Text>
-    </Pressable>
   );
 }
 
@@ -225,27 +203,19 @@ function ApiKeyEditor() {
   };
   return (
     <View style={{ gap: 6, paddingVertical: 6 }}>
-      <View style={ui.row}>
-        <Text style={[ui.text, { flex: 1 }]}>Anthropic API key</Text>
-        <Text style={ui.muted}>M4</Text>
-      </View>
+      <LabelValueRow label="Anthropic API key" value="M4" />
       <Text style={ui.muted}>
         {present === null ? 'Checking Keychain…' : present ? 'Stored in the Keychain.' : 'Not set.'} Saving an empty field removes it.
       </Text>
-      <View style={[ui.row, { justifyContent: 'flex-start' }]}>
-        <TextInput
-          style={[ui.input, { flex: 1 }]}
-          value={draft}
-          onChangeText={setDraft}
-          placeholder="sk-ant-…"
-          secureTextEntry
-          autoCapitalize="none"
-          autoCorrect={false}
-        />
-        <Pressable style={[ui.chip]} onPress={() => void store()}>
-          <Text style={ui.chipText}>Save</Text>
-        </Pressable>
-      </View>
+      <FormField
+        testID="setting-api-key"
+        value={draft}
+        onChangeText={setDraft}
+        placeholder="sk-ant-…"
+        secureTextEntry
+        autoCapitalize="none"
+        trailingAction={{ label: 'Save', onPress: () => void store(), testID: 'setting-api-key-save' }}
+      />
     </View>
   );
 }
@@ -282,53 +252,39 @@ function DataAndSecurityCard() {
   };
 
   return (
-    <View style={ui.card}>
-      <Text style={ui.h2}>Data and security</Text>
-      <View style={ui.row}>
-        <Text style={ui.text}>Recovery passphrase</Text>
-        <Link href="/setup/passphrase" asChild>
-          <Pressable>
-            <Text style={ui.buttonText}>{passphraseSet ? 'Change' : 'Set'}</Text>
-          </Pressable>
-        </Link>
-      </View>
+    <Card title="Data and security" testID="settings-data-security">
+      <NavigationRow
+        testID="settings-passphrase"
+        label="Recovery passphrase"
+        value={passphraseSet ? 'Change' : 'Set'}
+        href="/setup/passphrase"
+      />
       {passphraseSet ? (
-        <View style={[ui.row, { justifyContent: 'flex-start' }]}>
-          <TextInput style={[ui.input, { flex: 1 }]} value={testInput} onChangeText={setTestInput} secureTextEntry placeholder="Test your passphrase" autoCapitalize="none" autoCorrect={false} />
-          <Pressable style={ui.chip} onPress={() => void testPassphrase()}>
-            <Text style={ui.chipText}>Test</Text>
-          </Pressable>
-        </View>
+        <FormField
+          testID="settings-passphrase-test"
+          value={testInput}
+          onChangeText={setTestInput}
+          secureTextEntry
+          placeholder="Test your passphrase"
+          autoCapitalize="none"
+          trailingAction={{ label: 'Test', onPress: () => void testPassphrase(), testID: 'settings-passphrase-test-run' }}
+        />
       ) : (
         <Text style={ui.muted}>Not set: daily backups are off.</Text>
       )}
       {testResult ? <Text style={ui.muted}>{testResult}</Text> : null}
 
-      <View style={ui.row}>
-        <Text style={ui.text}>Backups in Files → On My iPhone</Text>
-        <Text style={ui.muted}>{backups.length}</Text>
-      </View>
+      <LabelValueRow label="Backups in Files → On My iPhone" value={String(backups.length)} />
       <Text style={ui.muted}>{backups.length > 0 ? `Newest: ${backups[backups.length - 1]}` : 'None yet.'}</Text>
-      <Pressable style={ui.button} onPress={() => void backupNow()}>
-        <Text style={ui.buttonText}>Write a backup now</Text>
-      </Pressable>
+      <ActionButton testID="settings-backup-now" label="Write a backup now" onPress={() => void backupNow()} />
       {backupMessage ? <Text style={ui.muted}>{backupMessage}</Text> : null}
 
-      <View style={ui.row}>
-        <Text style={ui.text}>Notifications</Text>
-        <Text style={ui.muted}>
-          {notificationsAllowed === false ? 'off in iOS Settings' : daily.notifications ? `${daily.notifications.scheduled} scheduled` : '—'}
-        </Text>
-      </View>
-      <Pressable style={ui.button} onPress={() => void refreshDaily()}>
-        <Text style={ui.buttonText}>Rebuild notification schedule</Text>
-      </Pressable>
-
-      <Link href="/diagnostics" asChild>
-        <Pressable style={ui.button}>
-          <Text style={ui.buttonText}>Diagnostics</Text>
-        </Pressable>
-      </Link>
-    </View>
+      <LabelValueRow
+        label="Notifications"
+        value={notificationsAllowed === false ? 'off in iOS Settings' : daily.notifications ? `${daily.notifications.scheduled} scheduled` : '—'}
+      />
+      <ActionButton testID="settings-rebuild-notifications" label="Rebuild notification schedule" onPress={() => void refreshDaily()} />
+      <NavigationRow testID="settings-diagnostics" label="Diagnostics" href="/diagnostics" />
+    </Card>
   );
 }
