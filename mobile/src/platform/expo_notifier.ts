@@ -13,10 +13,17 @@ export function configureForegroundNotifications(): void {
   });
 }
 
-export async function notificationsPermitted(): Promise<boolean> {
+/** Current permission, without prompting. */
+export async function readNotificationPermission(): Promise<{ granted: boolean; canAsk: boolean }> {
   const current = await Notifications.getPermissionsAsync();
+  return { granted: current.granted, canAsk: !current.granted && current.canAskAgain };
+}
+
+/** Shows the iOS permission prompt if it has not been answered yet; returns whether notifications are allowed. */
+export async function requestNotificationPermission(): Promise<boolean> {
+  const current = await readNotificationPermission();
   if (current.granted) return true;
-  if (!current.canAskAgain) return false;
+  if (!current.canAsk) return false;
   return (await Notifications.requestPermissionsAsync()).granted;
 }
 

@@ -1,5 +1,5 @@
 import type { Href } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Text } from 'react-native';
 import { enabledModulesFrom } from '../../src/daily/daily_cycle';
 import type { DayStatus, ModuleState } from '../../src/daily/day_status';
@@ -30,8 +30,18 @@ const MODULE_STATE_LABEL: Record<ModuleState, string> = {
 
 /** Today: both windows with their tasks, the streak, and the 7-day ping log (M2 gate evidence). */
 export default function TodayScreen() {
-  const { database, openError, daily, dailyError, notificationsAllowed, passphraseSet, diagnostics, diagnosticsRunning } = useAppState();
+  const {
+    database, openError, daily, dailyError, notificationsAllowed, passphraseSet, diagnostics, diagnosticsRunning, ensureNotificationPermission,
+  } = useAppState();
   const [setupClosed, setSetupClosed] = useState(false);
+  const deferred = database ? readInternalValue(database.executor, 'passphrase_setup_deferred_at') !== undefined : false;
+  const showSetup = Boolean(database && daily && !passphraseSet && !deferred && !setupClosed);
+  const todayVisible = Boolean(database && daily && !showSetup);
+
+  // One prompt at a time: the iOS notification prompt waits until first-launch setup is done.
+  useEffect(() => {
+    if (todayVisible && notificationsAllowed === null) void ensureNotificationPermission();
+  }, [todayVisible, notificationsAllowed, ensureNotificationPermission]);
 
   if (openError) return <ScreenMessage tone="error" message={`The database could not be opened: ${openError}`} />;
   if (!database || !daily) return <ScreenMessage loading message={dailyError ?? undefined} tone={dailyError ? 'error' : 'muted'} />;
@@ -39,8 +49,7 @@ export default function TodayScreen() {
   // First launch: the recovery passphrase form is rendered here, in place of Today, until a
   // passphrase is set or deferred. No push or modal is involved, so nothing depends on when
   // the navigator mounts (docs/ui_conventions.md, "First-launch prompts").
-  const deferred = readInternalValue(database.executor, 'passphrase_setup_deferred_at') !== undefined;
-  if (!passphraseSet && !deferred && !setupClosed) {
+  if (showSetup) {
     return <PassphraseSetupForm showTitle onDone={() => setSetupClosed(true)} />;
   }
 

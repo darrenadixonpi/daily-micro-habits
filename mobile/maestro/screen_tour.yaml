@@ -8,9 +8,6 @@ appId: com.darrendixon.dailymicrohabits
     clearKeychain: true
     permissions:
       all: allow
-- tapOn:
-    text: "Allow"
-    optional: true
 - takeScreenshot: 00_after_launch
 
 # Passphrase setup (modal, opened automatically on first launch)
@@ -34,11 +31,31 @@ appId: com.darrendixon.dailymicrohabits
 - tapOn:
     id: "passphrase-save"
 
-# Today
+# Today (the app asks for notification permission only now, after setup)
 - extendedWaitUntil:
     visible:
       id: "screen-today"
     timeout: 30000
+- extendedWaitUntil:
+    visible: "Allow"
+    timeout: 5000
+    optional: true
+- tapOn:
+    text: "Allow"
+    optional: true
+# Maestro may repeat the tap after the alert closes; if that opened a screen, go back.
+- runFlow:
+    when:
+      notVisible:
+        id: "screen-today"
+    commands:
+      - tapOn:
+          text: "Back"
+          optional: true
+- extendedWaitUntil:
+    visible:
+      id: "screen-today"
+    timeout: 10000
 - takeScreenshot: 03_today_start
 
 # D1 Morning top-3 (first field is the one hidden in v0.2.0)

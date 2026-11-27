@@ -8,7 +8,7 @@ import { runDiagnostics, type DiagnosticRun } from '../diagnostics/run_diagnosti
 import { openAppDatabase, type AppDatabase } from '../maintenance/open_app_database';
 import { createAppBackupFileStore } from '../platform/app_backup_file_store';
 import { appCryptoPrimitives } from '../platform/app_crypto_primitives';
-import { configureForegroundNotifications, expoNotifier, notificationsPermitted } from '../platform/expo_notifier';
+import { configureForegroundNotifications, expoNotifier, readNotificationPermission, requestNotificationPermission } from '../platform/expo_notifier';
 import { readBackupKey } from '../security/recovery_passphrase';
 import type { DerivedKeyMaterial } from '../security/passphrase_encryption';
 import { readInternalValue } from '../settings/settings_repository';
@@ -24,6 +24,11 @@ interface AppState {
   refreshDaily(): Promise<void>;
   /** Re-reads the backup key after the passphrase is set. */
   reloadSecurity(): Promise<void>;
+  /**
+   * Asks for notification permission if iOS has not asked yet, then rebuilds the schedule.
+   * Called by Today once first-launch setup is out of the way, so prompts never stack.
+   */
+  ensureNotificationPermission(): Promise<void>;
   readonly diagnostics: DiagnosticRun | null;
   readonly diagnosticsProgress: readonly DiagnosticResult[];
   readonly diagnosticsRunning: boolean;
@@ -82,6 +87,14 @@ export function AppStateProvider({ children }: { readonly children: ReactNode })
     setPassphraseSet(Boolean(key && opened && readInternalValue(opened.executor, 'passphrase_set_at')));
   }, []);
 
+  const ensureNotificationPermission = useCallback(async () => {
+    if (allowedRef.current) return;
+    const allowed = await requestNotificationPermission();
+    allowedRef.current = allowed;
+    setNotificationsAllowed(allowed);
+    if (allowed) await refreshDaily();
+  }, [refreshDaily]);
+
   const startDiagnostics = useCallback(() => {
     if (runningRef.current) return;
     runningRef.current = true;
@@ -108,9 +121,10 @@ export function AppStateProvider({ children }: { readonly children: ReactNode })
         databaseRef.current = opened;
         setDatabase(opened);
         configureForegroundNotifications();
-        const allowed = await notificationsPermitted();
-        allowedRef.current = allowed;
-        setNotificationsAllowed(allowed);
+        const permission = await readNotificationPermission();
+        allowedRef.current = permission.granted;
+        // null = not asked yet; Today asks after first-launch setup.
+        setNotificationsAllowed(permission.granted ? true : permission.canAsk ? null : false);
         await reloadSecurity();
         await refreshDaily();
         startDiagnostics();
@@ -138,6 +152,7 @@ export function AppStateProvider({ children }: { readonly children: ReactNode })
         passphraseSet: passphraseSet && backupKey !== null,
         refreshDaily,
         reloadSecurity,
+        ensureNotificationPermission,
         diagnostics,
         diagnosticsProgress: progress,
         diagnosticsRunning: running,
