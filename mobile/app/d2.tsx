@@ -49,7 +49,7 @@ export default function EveningReviewScreen() {
   const remaining = priorities.filter((item) => item.status === 'open').length;
   return (
     <ScreenScrollView testID="screen-d2">
-      <Text style={[ui.muted, remaining === 0 ? { color: COLORS.pass } : null]}>
+      <Text testID="d2-summary" style={[ui.muted, remaining === 0 ? { color: COLORS.pass } : null]}>
         {remaining === 0 ? 'Every priority has a status: D2 complete.' : `${remaining} left to mark.`}
       </Text>
       {priorities.map((item) => (

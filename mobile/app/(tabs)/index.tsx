@@ -1,4 +1,5 @@
 import type { Href } from 'expo-router';
+import { useState } from 'react';
 import { Text } from 'react-native';
 import { enabledModulesFrom } from '../../src/daily/daily_cycle';
 import type { DayStatus, ModuleState } from '../../src/daily/day_status';
@@ -8,6 +9,7 @@ import { readAllSettings, readInternalValue } from '../../src/settings/settings_
 import { useAppState } from '../../src/ui/app_state_context';
 import { ActionButton, NavigationRow } from '../../src/ui/controls';
 import { formatLongDate, formatShortDate } from '../../src/ui/date_format';
+import { PassphraseSetupForm } from '../../src/ui/passphrase_setup_form';
 import { PING_COLOR, PING_LABEL } from '../../src/ui/ping_labels';
 import { Card, ScreenMessage, ScreenScrollView, TableRow } from '../../src/ui/screen_layout';
 import { COLORS, ui } from '../../src/ui/ui_styles';
@@ -29,8 +31,18 @@ const MODULE_STATE_LABEL: Record<ModuleState, string> = {
 /** Today: both windows with their tasks, the streak, and the 7-day ping log (M2 gate evidence). */
 export default function TodayScreen() {
   const { database, openError, daily, dailyError, notificationsAllowed, passphraseSet, diagnostics, diagnosticsRunning } = useAppState();
+  const [setupClosed, setSetupClosed] = useState(false);
+
   if (openError) return <ScreenMessage tone="error" message={`The database could not be opened: ${openError}`} />;
   if (!database || !daily) return <ScreenMessage loading message={dailyError ?? undefined} tone={dailyError ? 'error' : 'muted'} />;
+
+  // First launch: the recovery passphrase form is rendered here, in place of Today, until a
+  // passphrase is set or deferred. No push or modal is involved, so nothing depends on when
+  // the navigator mounts (docs/ui_conventions.md, "First-launch prompts").
+  const deferred = readInternalValue(database.executor, 'passphrase_setup_deferred_at') !== undefined;
+  if (!passphraseSet && !deferred && !setupClosed) {
+    return <PassphraseSetupForm showTitle onDone={() => setSetupClosed(true)} />;
+  }
 
   const enabled = enabledModulesFrom(readAllSettings(database.executor));
   const trackingStart = readInternalValue(database.executor, 'cycle_start_date');

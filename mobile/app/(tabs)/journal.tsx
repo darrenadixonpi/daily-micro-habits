@@ -36,7 +36,7 @@ export default function JournalScreen() {
         clearButtonMode="while-editing"
         returnKeyType="search"
       />
-      <Text style={ui.muted}>
+      <Text testID="journal-results-count" style={ui.muted}>
         {query.trim() === '' ? 'Recent entries' : `${entries.length} match${entries.length === 1 ? '' : 'es'}`}
       </Text>
       {entries.map((entry) => (

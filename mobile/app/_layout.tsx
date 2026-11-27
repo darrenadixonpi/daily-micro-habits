@@ -2,14 +2,12 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { AppLockGate } from '../src/ui/app_lock_gate';
 import { AppStateProvider } from '../src/ui/app_state_context';
-import { FirstLaunchGate } from '../src/ui/first_launch_gate';
 
 export default function RootLayout() {
   return (
     <AppStateProvider>
       <StatusBar style="dark" />
       <AppLockGate>
-        <FirstLaunchGate>
         <Stack screenOptions={{ headerBackTitle: 'Back' }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="d1" options={{ title: 'Morning top-3' }} />
@@ -18,7 +16,6 @@ export default function RootLayout() {
           <Stack.Screen name="setup/passphrase" options={{ title: 'Recovery passphrase', presentation: 'modal' }} />
           <Stack.Screen name="diagnostics" options={{ title: 'Diagnostics' }} />
         </Stack>
-        </FirstLaunchGate>
       </AppLockGate>
     </AppStateProvider>
   );

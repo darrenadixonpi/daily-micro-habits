@@ -47,7 +47,7 @@ export default function SettingsScreen() {
   return (
     <ScreenScrollView testID="screen-settings">
       <DataAndSecurityCard />
-      <Text style={ui.muted}>Settings are saved as you change them. Each shows the milestone in which it starts to take effect.</Text>
+      <Text testID="settings-intro" style={ui.muted}>Settings are saved as you change them. Each shows the milestone in which it starts to take effect.</Text>
       {groups.map(([group, definitions]) => (
         <Card key={group} title={group} testID={`settings-group-${group.replace(/\W+/g, '-').toLowerCase()}`}>
           {definitions.map((definition) => (

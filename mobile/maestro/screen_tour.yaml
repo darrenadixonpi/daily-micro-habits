@@ -59,7 +59,8 @@ appId: com.darrendixon.dailymicrohabits
 - inputText: "Short second priority"
 - assertVisible:
     text: "Short second priority"
-- hideKeyboard
+- tapOn:
+    id: "d1-intro"
 - takeScreenshot: 05_d1_filled
 - tapOn:
     id: "d1-save"
@@ -85,7 +86,8 @@ appId: com.darrendixon.dailymicrohabits
 - inputText: "Halfway there"
 - assertVisible:
     text: "Halfway there"
-- hideKeyboard
+- tapOn:
+    id: "d2-summary"
 - takeScreenshot: 07_d2_marked
 - tapOn: "Back"
 
@@ -105,7 +107,8 @@ appId: com.darrendixon.dailymicrohabits
 - inputText: "Spent the evening on layout fixes. The **header** no longer covers the first field, and every row keeps its label and value on one line."
 - assertVisible:
     text: "Spent the evening.*"
-- hideKeyboard
+- tapOn:
+    id: "journal-completion-hint"
 - takeScreenshot: 08_journal_editor
 - tapOn:
     id: "journal-preview-toggle"
@@ -132,7 +135,8 @@ appId: com.darrendixon.dailymicrohabits
 - inputText: "layout"
 - assertVisible:
     text: "1 match"
-- hideKeyboard
+- tapOn:
+    id: "journal-results-count"
 - takeScreenshot: 13_journal_search
 
 # Stats and Review
@@ -166,7 +170,8 @@ appId: com.darrendixon.dailymicrohabits
     id: "settings-passphrase-test-run"
 - assertVisible:
     text: "Correct: this passphrase unlocks your data."
-- hideKeyboard
+- tapOn:
+    id: "settings-intro"
 - takeScreenshot: 17_settings_passphrase_tested
 - scrollUntilVisible:
     element:
@@ -178,7 +183,8 @@ appId: com.darrendixon.dailymicrohabits
 - inputText: "07:45"
 - assertVisible:
     text: "07:45"
-- hideKeyboard
+- tapOn:
+    text: "Morning window"
 - takeScreenshot: 18_settings_schedule
 - scroll
 - takeScreenshot: 19_settings_scrolled_1

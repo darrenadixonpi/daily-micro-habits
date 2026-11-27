@@ -17,7 +17,12 @@ The simulator screenshot workflow (`.github/workflows/ui-screenshots-ios-simulat
 
 ## First-launch prompts
 
-Prompts that must appear on first launch are presented by a gate component as a native full-screen `Modal` (`FirstLaunchGate`). They are never pushed with `router.push` from a screen effect, because a push issued before the navigator has mounted is dropped. They are never drawn as a JS overlay beside the navigator either, because the native stack can be re-attached on top of it. Both defects were found by the simulator tour during v0.2.1.
+Prompts that must appear on first launch are rendered inside the first screen (Today renders `PassphraseSetupForm` in place of its content), never presented. The simulator tour during v0.2.1 found three presentation approaches that failed:
+- `router.push` from a screen effect: dropped before the navigator mounts.
+- A JS overlay beside the native stack: covered when the stack's view is re-attached.
+- A native `Modal` shown at startup: not presented when requested before its presenting view is in the window.
+
+In Maestro flows, dismiss the keyboard by tapping static text (`tapOn` a `testID`), not `hideKeyboard`. On iOS, `hideKeyboard` is a swipe: it scrolls the screen and can tap buttons.
 
 ## Test IDs
 

@@ -60,7 +60,7 @@ export default function MorningTopThreeScreen() {
 
   return (
     <ScreenScrollView testID="screen-d1">
-      <Text style={ui.muted}>
+      <Text testID="d1-intro" style={ui.muted}>
         Up to {PRIORITY_MAX_COUNT} priorities for today, {PRIORITY_MAX_LENGTH} characters each. One is enough to complete D1.
       </Text>
       {offered.length > 0 ? (

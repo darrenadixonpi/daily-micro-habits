@@ -157,7 +157,7 @@ export default function JournalEntryScreen() {
         </Card>
       ) : null}
 
-      <Text style={[ui.muted, journalEntryCounts(body) ? { color: COLORS.pass } : null]}>
+      <Text testID="journal-completion-hint" style={[ui.muted, journalEntryCounts(body) ? { color: COLORS.pass } : null]}>
         {journalEntryCounts(body) ? 'This entry completes D3.' : 'Write at least one line to complete D3.'}
       </Text>
       {error ? <Text style={[ui.muted, { color: COLORS.fail }]}>{error}</Text> : null}
