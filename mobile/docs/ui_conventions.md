@@ -13,7 +13,11 @@ The simulator screenshot workflow (`.github/workflows/ui-screenshots-ios-simulat
 | R4 | No `TextInput` outside `src/ui/controls.tsx` | `FormField` | Consistent label, error line, placeholder colour and width. |
 | R5 | No `ui.row` / `flexDirection: 'row'` in screens | `LabelValueRow`, `TableRow`, `ChipGroup`, `Stepper`, `SwitchRow` | These shrink and wrap the label so long text cannot push other content off screen. |
 | R6 | No `Pressable`, `Touchable*`, `Button` or `Switch` in screens | Controls in `src/ui/controls.tsx` | Touch feedback, hit areas and accessibility roles in one place. |
-| R7 | Every screen renders `ScreenScrollView`, `ScreenMessage` or `MilestonePlaceholder`, and never returns `null` | `<ScreenMessage loading />` | A `null` screen shows a blank page under a header. |
+| R7 | Every screen renders `ScreenScrollView`, `ScreenMessage` or a `src/ui` screen component built on them (`MilestonePlaceholder`, `PassphraseSetupForm`), and never returns `null` | `<ScreenMessage loading />` | A `null` screen shows a blank page under a header. |
+
+## First-launch prompts
+
+Prompts that must appear on first launch are rendered by a gate component over the mounted navigator (`FirstLaunchGate`), never pushed with `router.push` from a screen effect. A push issued before the navigator has mounted is dropped (defect found by the simulator tour, v0.2.1).
 
 ## Test IDs
 

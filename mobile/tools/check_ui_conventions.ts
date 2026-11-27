@@ -119,8 +119,8 @@ for (const name of tabNames) {
 // R7: every screen renders through the shared screen layout.
 for (const file of screenFiles) {
   const source = readFileSync(file, 'utf8');
-  if (!/ScreenScrollView|ScreenMessage|MilestonePlaceholder/.test(source)) {
-    report(file, 1, 'R7', 'Screen does not render ScreenScrollView, ScreenMessage or MilestonePlaceholder');
+  if (!/ScreenScrollView|ScreenMessage|MilestonePlaceholder|PassphraseSetupForm/.test(source)) {
+    report(file, 1, 'R7', 'Screen does not render ScreenScrollView, ScreenMessage or a src/ui screen component (MilestonePlaceholder, PassphraseSetupForm)');
   }
   const start = source.indexOf('export default function');
   const nextFunction = source.indexOf('\nfunction ', start);

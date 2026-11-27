@@ -1,5 +1,4 @@
-import { router, useRootNavigationState, type Href } from 'expo-router';
-import { useEffect, useRef } from 'react';
+import type { Href } from 'expo-router';
 import { Text } from 'react-native';
 import { enabledModulesFrom } from '../../src/daily/daily_cycle';
 import type { DayStatus, ModuleState } from '../../src/daily/day_status';
@@ -30,18 +29,6 @@ const MODULE_STATE_LABEL: Record<ModuleState, string> = {
 /** Today: both windows with their tasks, the streak, and the 7-day ping log (M2 gate evidence). */
 export default function TodayScreen() {
   const { database, openError, daily, dailyError, notificationsAllowed, passphraseSet, diagnostics, diagnosticsRunning } = useAppState();
-  const promptedRef = useRef(false);
-  // A push issued before the root navigator has mounted is silently dropped, so the
-  // first-launch passphrase prompt waits for the navigation state to exist.
-  const navigationReady = Boolean(useRootNavigationState()?.key);
-
-  useEffect(() => {
-    if (!navigationReady || !database || !daily || passphraseSet || promptedRef.current) return;
-    if (readInternalValue(database.executor, 'passphrase_setup_deferred_at') !== undefined) return;
-    promptedRef.current = true;
-    router.push('/setup/passphrase');
-  }, [navigationReady, database, daily, passphraseSet]);
-
   if (openError) return <ScreenMessage tone="error" message={`The database could not be opened: ${openError}`} />;
   if (!database || !daily) return <ScreenMessage loading message={dailyError ?? undefined} tone={dailyError ? 'error' : 'muted'} />;
 
