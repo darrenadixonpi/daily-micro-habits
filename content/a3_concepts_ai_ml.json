@@ -393,6 +393,396 @@
         "neural_networks",
         "computer_vision"
       ]
+    },
+    {
+      "id": "a3-ai_ml-0011",
+      "domain": "ai_ml",
+      "title": "Dropout regularization",
+      "depth": "intermediate",
+      "explainer": "Dropout is a simple trick for reducing overfitting in neural networks. During each training step, every neuron in a chosen layer is switched off at random with some probability, often 10 to 50 percent, so its output is set to zero for that step. The network therefore cannot rely on any single neuron or on fragile combinations of neurons that only work together. Instead it is pushed to spread useful information across many units, which makes the learned features more robust. A helpful way to picture dropout is as training a huge ensemble of thinned networks that share weights, then averaging them at test time. At test time nothing is dropped; instead the activations are scaled so their expected size matches what the next layer saw during training. Most libraries do this scaling during training instead, a variant called inverted dropout, so inference code stays unchanged. Dropout was introduced by Geoffrey Hinton's group around 2012 and helped deep networks win image recognition contests. It is less common in convolutional layers today, where batch normalization and data augmentation do similar work, but it remains standard in fully connected layers and in transformers, which apply dropout to attention weights and residual connections.",
+      "formula": null,
+      "source": {
+        "title": "Dilution (neural networks) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dilution_(neural_networks)"
+      },
+      "question": {
+        "prompt": "What happens to dropout at test time in a standard network?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Neurons are still dropped at random, so predictions vary"
+          },
+          {
+            "id": "b",
+            "text": "The dropped neurons are permanently removed"
+          },
+          {
+            "id": "c",
+            "text": "Nothing is dropped; activations are scaled so their expected size matches training"
+          },
+          {
+            "id": "d",
+            "text": "The dropout rate is doubled to compensate"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "At inference every unit is active; scaling keeps the expected input to the next layer the same as during training (inverted dropout does the scaling during training instead)."
+      },
+      "tags": [
+        "neural_networks",
+        "regularization"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0012",
+      "domain": "ai_ml",
+      "title": "Batch normalization",
+      "depth": "intermediate",
+      "explainer": "Batch normalization is a layer that rescales the activations flowing through a neural network so they have a stable distribution. For each mini-batch during training, it computes the mean and variance of every feature, subtracts the mean and divides by the standard deviation, so the feature has roughly zero mean and unit variance. It then multiplies by a learned scale and adds a learned shift, so the network can still represent whatever distribution works best. Introduced by Sergey Ioffe and Christian Szegedy in 2015, it made deep networks train faster and tolerate higher learning rates. The original motivation was to reduce internal covariate shift, the changing distribution of inputs to each layer as earlier layers learn; later research suggests its main benefit is that it smooths the loss landscape, making gradients more predictable. At inference time the batch statistics are replaced by running averages collected during training, so a single example gives a deterministic output. Batch normalization works poorly with very small batches, because the estimated statistics become noisy. Layer normalization, which normalizes across the features of a single example instead of across the batch, avoids this problem and is the standard choice in transformers.",
+      "formula": "\\hat{x} = \\frac{x - \\mu_B}{\\sqrt{\\sigma^2_B + \\epsilon}}, \\qquad y = \\gamma \\hat{x} + \\beta",
+      "source": {
+        "title": "Batch normalization - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Batch_normalization"
+      },
+      "question": {
+        "prompt": "Why do transformers usually use layer normalization rather than batch normalization?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Layer normalization has no learned parameters"
+          },
+          {
+            "id": "b",
+            "text": "Batch normalization cannot be used with attention mathematically"
+          },
+          {
+            "id": "c",
+            "text": "Layer normalization makes the model smaller"
+          },
+          {
+            "id": "d",
+            "text": "Layer normalization does not depend on batch statistics, so it works with any batch size and sequence length"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Layer normalization normalizes across the features of each example, so it avoids the noisy and batch-dependent statistics that hurt batch normalization."
+      },
+      "tags": [
+        "neural_networks",
+        "training"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0013",
+      "domain": "ai_ml",
+      "title": "Recurrent neural networks and LSTMs",
+      "depth": "intermediate",
+      "explainer": "A recurrent neural network processes a sequence one element at a time while carrying a hidden state, a vector that summarizes what it has seen so far. At each step the same weights combine the current input with the previous hidden state to produce a new one, so the network can in principle remember information across long sequences such as sentences, audio or sensor data. In practice simple recurrent networks struggle to learn long-range dependencies, because gradients passed back through many steps either shrink towards zero or blow up, the vanishing and exploding gradient problems. The long short-term memory network, or LSTM, proposed by Sepp Hochreiter and Jürgen Schmidhuber in 1997, addresses this with a separate cell state and three gates. The forget gate decides what to erase from memory, the input gate decides what new information to store, and the output gate decides what to reveal as the hidden state. Because information can flow along the cell state with little change, gradients survive over many more steps. LSTMs powered speech recognition and machine translation in the 2010s. Transformers have since replaced them for most language tasks, because attention processes all positions in parallel, which trains far faster on modern hardware.",
+      "formula": null,
+      "source": {
+        "title": "Long short-term memory - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Long_short-term_memory"
+      },
+      "question": {
+        "prompt": "What problem were LSTM gates mainly designed to solve?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Vanishing gradients that prevent learning long-range dependencies"
+          },
+          {
+            "id": "b",
+            "text": "Networks being too large to fit in memory"
+          },
+          {
+            "id": "c",
+            "text": "The need for labeled training data"
+          },
+          {
+            "id": "d",
+            "text": "Slow inference on graphics processors"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "The cell state and gates let information and gradients flow across many time steps, which plain recurrent networks fail to do."
+      },
+      "tags": [
+        "neural_networks",
+        "sequences"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0014",
+      "domain": "ai_ml",
+      "title": "Precision, recall and the F1 score",
+      "depth": "introductory",
+      "explainer": "Accuracy, the share of predictions that are correct, can be badly misleading when one class is rare. A fraud detector that labels every transaction as legitimate may be 99.9 percent accurate and completely useless. Precision and recall look at the positive class directly. Precision asks: of all the cases the model flagged as positive, how many really were positive? Recall asks: of all the truly positive cases, how many did the model find? A cautious model that flags only the most obvious cases has high precision but low recall; an aggressive one that flags anything suspicious has high recall but low precision. Most classifiers output a score, and moving the decision threshold trades one against the other. The F1 score combines the two into a single number using the harmonic mean, which is low whenever either precision or recall is low, so a model cannot score well by maximizing only one. Which metric matters depends on the cost of mistakes. Missing a cancer on a screening scan is worse than a false alarm, so recall is prioritized; a spam filter that hides real email is costly, so precision matters more. Precision-recall curves show the trade-off across every threshold.",
+      "formula": "\\mathrm{precision} = \\frac{TP}{TP + FP}, \\qquad \\mathrm{recall} = \\frac{TP}{TP + FN}, \\qquad F_1 = \\frac{2PR}{P + R}",
+      "source": {
+        "title": "Precision and recall - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Precision_and_recall"
+      },
+      "question": {
+        "prompt": "A model flags 50 transactions as fraud; 40 of them are fraud, and 100 frauds exist in total. What are its precision and recall?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Precision 0.4, recall 0.8"
+          },
+          {
+            "id": "b",
+            "text": "Precision 0.8, recall 0.4"
+          },
+          {
+            "id": "c",
+            "text": "Precision 0.5, recall 0.4"
+          },
+          {
+            "id": "d",
+            "text": "Precision 0.8, recall 0.5"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Precision is 40 of 50 flagged (0.8); recall is 40 of the 100 real frauds (0.4)."
+      },
+      "tags": [
+        "evaluation",
+        "statistics"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0015",
+      "domain": "ai_ml",
+      "title": "Decision trees and random forests",
+      "depth": "introductory",
+      "explainer": "A decision tree makes predictions by asking a sequence of yes-or-no questions about the input, such as whether income is above a threshold or whether a symptom is present. Each answer leads down a branch until a leaf gives the prediction. Trees are learned by repeatedly choosing the split that best separates the training examples, measured by criteria such as Gini impurity or information gain. They are easy to interpret, need little data preparation and handle mixed numeric and categorical features. Their weakness is variance: a single deep tree can memorize noise, and a small change in the data can produce a very different tree. A random forest, introduced by Leo Breiman in 2001, fixes this by growing hundreds of trees and averaging their votes. Each tree is trained on a bootstrap sample of the data, drawn with replacement, and at each split it may only consider a random subset of features. These two sources of randomness make the trees different from one another, so their errors partly cancel when averaged. Random forests are strong default models for tabular data, rarely overfit badly and give useful estimates of feature importance. Gradient-boosted trees, which add trees one at a time to correct earlier errors, often do even better.",
+      "formula": null,
+      "source": {
+        "title": "Random forest - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Random_forest"
+      },
+      "question": {
+        "prompt": "Why does a random forest train each tree on a bootstrap sample and a random subset of features?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To make every tree identical"
+          },
+          {
+            "id": "b",
+            "text": "To reduce the number of trees needed to one"
+          },
+          {
+            "id": "c",
+            "text": "To make the trees differ, so their errors partly cancel when averaged"
+          },
+          {
+            "id": "d",
+            "text": "To guarantee zero training error"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Averaging works best when the models are not all making the same mistakes; randomness decorrelates the trees."
+      },
+      "tags": [
+        "machine_learning",
+        "ensembles"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0016",
+      "domain": "ai_ml",
+      "title": "k-means clustering",
+      "depth": "introductory",
+      "explainer": "k-means is a classic method for grouping unlabeled data into k clusters. You choose k in advance. The algorithm starts by placing k centroids, often at randomly chosen data points. It then alternates two steps. In the assignment step, every point joins the cluster of its nearest centroid. In the update step, each centroid moves to the mean of the points assigned to it. The steps repeat until assignments stop changing. Each round can only lower the total squared distance between points and their centroids, so the algorithm always converges, but only to a local optimum that depends on the starting positions. In practice it is run several times with different starts, and the k-means++ method spreads the initial centroids out to improve results. k-means assumes clusters are roughly round and of similar size, because it measures plain Euclidean distance to a single center. It struggles with elongated or nested shapes and is sensitive to features on different scales, so data is usually standardized first. Choosing k is a judgement call; the elbow method plots the total within-cluster distance against k and looks for the point where adding clusters stops helping much. Uses range from customer segmentation to compressing the colors in an image.",
+      "formula": "\\min \\sum_{i=1}^{k} \\sum_{x \\in C_i} \\lVert x - \\mu_i \\rVert^2",
+      "source": {
+        "title": "K-means clustering - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/K-means_clustering"
+      },
+      "question": {
+        "prompt": "Why is k-means usually run several times with different starting centroids?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Each run uses a different k automatically"
+          },
+          {
+            "id": "b",
+            "text": "A single run never converges"
+          },
+          {
+            "id": "c",
+            "text": "Running it once overfits the labels"
+          },
+          {
+            "id": "d",
+            "text": "It converges only to a local optimum that depends on the starting positions"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Different initializations can end in different local optima; keeping the best of several runs gives a better clustering."
+      },
+      "tags": [
+        "machine_learning",
+        "unsupervised"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0017",
+      "domain": "ai_ml",
+      "title": "Principal component analysis",
+      "depth": "intermediate",
+      "explainer": "Principal component analysis, or PCA, reduces many correlated variables to a few new ones that keep most of the information. It finds the direction in the data along which the points vary the most; that is the first principal component. The second component is the direction of greatest remaining variance at right angles to the first, and so on. Mathematically, the components are the eigenvectors of the data's covariance matrix, and each eigenvalue says how much variance its component captures. Projecting the data onto the first few components gives a compact representation: a dataset with hundreds of gene-expression measurements per sample can often be summarized by two or three components that separate the main groups. PCA is used for visualization, for removing noise, and as a preprocessing step that speeds up other algorithms. It has limits. It only finds linear structure, so curved relationships need other methods such as t-SNE or UMAP for visualization. It is sensitive to scale, so variables are usually standardized first, otherwise a variable measured in large units dominates. And the components are mixtures of the original variables, which can make them hard to interpret. The method goes back to Karl Pearson in 1901 and Harold Hotelling in 1933.",
+      "formula": null,
+      "source": {
+        "title": "Principal component analysis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Principal_component_analysis"
+      },
+      "question": {
+        "prompt": "What does the first principal component of a dataset represent?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The direction along which the data varies the most"
+          },
+          {
+            "id": "b",
+            "text": "The variable with the largest mean"
+          },
+          {
+            "id": "c",
+            "text": "The cluster containing the most points"
+          },
+          {
+            "id": "d",
+            "text": "The variable least correlated with the others"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "The first component is the direction of maximum variance; later components capture the remaining variance at right angles."
+      },
+      "tags": [
+        "machine_learning",
+        "dimensionality_reduction"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0018",
+      "domain": "ai_ml",
+      "title": "Generative adversarial networks",
+      "depth": "intermediate",
+      "explainer": "A generative adversarial network, or GAN, learns to create realistic data by setting two neural networks against each other. The generator takes random noise and tries to turn it into a convincing sample, such as a photo of a face. The discriminator receives a mix of real samples and generated ones and tries to tell them apart. The two are trained together: the discriminator is rewarded for spotting fakes, and the generator is rewarded for fooling the discriminator. As each improves, the other must improve too, and in the ideal case the generator ends up producing samples the discriminator cannot distinguish from real data. Ian Goodfellow and colleagues introduced GANs in 2014, and later versions such as StyleGAN produced photorealistic faces of people who do not exist. GANs are fast at generating images, needing only one pass through the generator. They are also notoriously hard to train. The balance between the two networks can collapse, and in mode collapse the generator learns to produce only a few kinds of output that reliably fool the discriminator, ignoring the variety in the real data. Diffusion models, which train more stably and cover the data more fully, have since overtaken GANs for most image generation.",
+      "formula": null,
+      "source": {
+        "title": "Generative adversarial network - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Generative_adversarial_network"
+      },
+      "question": {
+        "prompt": "What is mode collapse in a GAN?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The discriminator stops training"
+          },
+          {
+            "id": "b",
+            "text": "The generator produces only a few kinds of output instead of the full variety of the data"
+          },
+          {
+            "id": "c",
+            "text": "The network runs out of memory"
+          },
+          {
+            "id": "d",
+            "text": "Generated images become identical to the training images"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "In mode collapse the generator settles on a narrow set of outputs that fool the discriminator, losing diversity."
+      },
+      "tags": [
+        "neural_networks",
+        "generative_models"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0019",
+      "domain": "ai_ml",
+      "title": "Diffusion models",
+      "depth": "advanced",
+      "explainer": "Diffusion models generate images, audio and other data by learning to reverse a gradual noising process. In the forward process, a training image is corrupted over many small steps by adding Gaussian noise until nothing but noise remains. A neural network, usually a U-Net or a transformer, is trained to undo one step: given a noisy image and the step number, it predicts the noise that was added. Generation runs this in reverse. Starting from pure noise, the model repeatedly removes a little predicted noise, and an image emerges over tens to hundreds of steps. Because each training example only asks the network to predict noise at a random step, training is stable and covers the variety of the data well, avoiding the mode collapse that troubles GANs. To control what is generated, the network is also given a condition, such as a text embedding, and classifier-free guidance strengthens the condition by comparing predictions with and without it. Running the process in a compressed latent space, as Stable Diffusion does, cuts the cost dramatically. The main drawback is speed, since many network evaluations are needed per sample, and much research aims to reduce the number of steps, for example with distillation.",
+      "formula": null,
+      "source": {
+        "title": "Diffusion model - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Diffusion_model"
+      },
+      "question": {
+        "prompt": "During training, what is a diffusion model's network typically asked to predict?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The class label of the image"
+          },
+          {
+            "id": "b",
+            "text": "The next pixel in raster order"
+          },
+          {
+            "id": "c",
+            "text": "The noise that was added to a noisy image at a given step"
+          },
+          {
+            "id": "d",
+            "text": "Whether the image is real or fake"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "The network learns to predict the added noise; generation then removes predicted noise step by step from pure noise."
+      },
+      "tags": [
+        "neural_networks",
+        "generative_models"
+      ]
+    },
+    {
+      "id": "a3-ai_ml-0020",
+      "domain": "ai_ml",
+      "title": "Retrieval-augmented generation",
+      "depth": "intermediate",
+      "explainer": "Retrieval-augmented generation, or RAG, lets a language model answer questions using documents it was never trained on. Before the model writes an answer, a retrieval step searches a collection of documents for passages relevant to the question, and those passages are inserted into the prompt. The model then answers from the supplied text rather than from memory alone. The collection is usually prepared by splitting documents into chunks and converting each chunk into an embedding, a vector that captures its meaning; the question is embedded the same way, and the chunks whose vectors are closest are retrieved. Keyword search is often combined with this vector search, and a reranking model may reorder the results. RAG has practical advantages. Knowledge can be updated by changing the documents instead of retraining the model, answers can cite their sources, and private data stays in a store the organization controls. It reduces but does not eliminate made-up answers, because the model may still ignore or misread the retrieved text, and a poor retrieval step returns the wrong passages, which no model can fix. Results depend heavily on how documents are chunked, what embedding model is used and how many passages are included.",
+      "formula": null,
+      "source": {
+        "title": "Retrieval-augmented generation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+      },
+      "question": {
+        "prompt": "What is a key advantage of retrieval-augmented generation over retraining a model on new documents?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It makes the model smaller"
+          },
+          {
+            "id": "b",
+            "text": "It removes the need for a language model"
+          },
+          {
+            "id": "c",
+            "text": "It guarantees that answers are always correct"
+          },
+          {
+            "id": "d",
+            "text": "Knowledge can be updated by changing the document store, without retraining"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "RAG supplies current documents at question time, so updating knowledge means updating the store; it does not guarantee correctness."
+      },
+      "tags": [
+        "language_models",
+        "search"
+      ]
     }
   ]
 }

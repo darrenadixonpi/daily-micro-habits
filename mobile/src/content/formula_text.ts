@@ -6,7 +6,7 @@
  */
 const EM_SPACE = '\u2003';
 const SYMBOLS: Record<string, string> = {
-  alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ', epsilon: 'ε', eta: 'η', theta: 'θ', kappa: 'κ', lambda: 'λ',
+  alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ', epsilon: 'ε', varepsilon: 'ε', vartheta: 'ϑ', varphi: 'φ', eta: 'η', theta: 'θ', kappa: 'κ', lambda: 'λ',
   mu: 'μ', nu: 'ν', pi: 'π', rho: 'ρ', sigma: 'σ', tau: 'τ', phi: 'φ', chi: 'χ', psi: 'ψ', omega: 'ω',
   Gamma: 'Γ', Delta: 'Δ', Theta: 'Θ', Lambda: 'Λ', Pi: 'Π', Sigma: 'Σ', Phi: 'Φ', Psi: 'Ψ', Omega: 'Ω',
   hbar: 'ħ', nabla: '∇', partial: '∂', infty: '∞', cdot: '·', times: '×', div: '÷', pm: '±', mp: '∓',
@@ -102,7 +102,7 @@ const SCRIPT_END = '\u0002';
 
 function needsParentheses(text: string): boolean {
   if (/^√\(.*\)$/.test(text.trim())) return false;
-  return /[\s+\-−·×/=,∼|]/.test(text.trim()) && !/^\(.*\)$/.test(text.trim());
+  return /[\s+\-−·×/=,∼|∈]/.test(text.trim()) && !/^\(.*\)$/.test(text.trim());
 }
 
 function script(raw: string, table: Record<string, string>, marker: string): string {
@@ -224,6 +224,24 @@ function spaceOperators(text: string): string {
     out += char;
   }
   return out;
+}
+
+/** Commands handled by renderCommand outside the tables above. */
+const STRUCTURAL = new Set(['frac', 'dfrac', 'tfrac', 'sqrt', 'hat', 'bar', 'overline', 'vec', 'tilde', 'dot', 'mathbb', 'mathcal']);
+
+/** Letter commands in a formula that the renderer does not know, and would print as their bare name. */
+export function unsupportedFormulaCommands(latex: string): string[] {
+  const names = [...latex.matchAll(/\\([A-Za-z]+)/g)].map((match) => match[1] ?? '');
+  return names.filter(
+    (name) =>
+      SYMBOLS[name] === undefined &&
+      !PASS_THROUGH.has(name) &&
+      !TEXT_MODE.has(name) &&
+      !OPERATOR_NAMES.has(name) &&
+      LARGE_OPERATORS[name] === undefined &&
+      !IGNORED.has(name) &&
+      !STRUCTURAL.has(name),
+  );
 }
 
 export function formulaToText(latex: string): string {

@@ -392,6 +392,395 @@
         "clinical_development",
         "strategy"
       ]
+    },
+    {
+      "id": "a3-drug_discovery-0011",
+      "domain": "drug_discovery",
+      "title": "Receptors, agonists and antagonists",
+      "depth": "introductory",
+      "explainer": "Many drugs work by binding to receptors, proteins on or inside cells that normally respond to the body's own signaling molecules, such as hormones and neurotransmitters. A drug that binds a receptor and activates it, mimicking the natural signal, is an agonist. Morphine, for example, activates the mu-opioid receptors that the body's endorphins act on, relieving pain. A drug that binds the receptor without activating it, and so blocks the natural signal, is an antagonist. Naloxone is an opioid antagonist: it binds the same receptors more tightly than morphine or fentanyl, pushes them off, and can reverse an overdose within minutes. Beta blockers such as propranolol are antagonists at receptors for adrenaline, slowing the heart. Between the extremes are partial agonists, which activate a receptor only partly even when every receptor is occupied. Buprenorphine, used to treat opioid addiction, is a partial agonist: it relieves cravings while producing a ceiling on breathing suppression that makes it safer than full agonists. Two separate properties describe a drug at its receptor. Affinity is how tightly it binds, and efficacy is how strongly it activates the receptor once bound. An antagonist can have high affinity but zero efficacy. Prolonged exposure to an agonist can lead the cell to reduce its receptors, which contributes to tolerance.",
+      "formula": null,
+      "source": {
+        "title": "Receptor antagonist - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Receptor_antagonist"
+      },
+      "question": {
+        "prompt": "How does naloxone reverse an opioid overdose?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It activates opioid receptors more strongly than fentanyl"
+          },
+          {
+            "id": "b",
+            "text": "It breaks down opioids in the blood"
+          },
+          {
+            "id": "c",
+            "text": "It is an antagonist that binds opioid receptors tightly, displacing the opioid without activating them"
+          },
+          {
+            "id": "d",
+            "text": "It stimulates the heart directly"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Naloxone has high affinity but no efficacy at opioid receptors, so it displaces the opioid and blocks its effect."
+      },
+      "tags": [
+        "pharmacology",
+        "receptors"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0012",
+      "domain": "drug_discovery",
+      "title": "Dose-response curves, EC50 and IC50",
+      "depth": "intermediate",
+      "explainer": "A dose-response curve plots the effect of a drug against its concentration. Because effects usually rise steeply over a narrow range and then level off, the concentration axis is normally drawn on a logarithmic scale, which turns the curve into a characteristic S shape. Two features of the curve summarize a drug. Its height, the maximum effect it can produce, reflects efficacy. Its position along the concentration axis reflects potency, usually reported as the EC50, the concentration that produces half of the maximum effect. For inhibitors, the equivalent is the IC50, the concentration that reduces a target's activity by half. A lower EC50 or IC50 means a more potent drug: less of it is needed for the same effect. Potency and efficacy are different things. A drug can be very potent but have a low maximum effect, and a less potent drug can still be more useful if it reaches a higher maximum or if its effective dose is well tolerated. Drug discovery teams compare IC50 values to rank compounds, often expressed as pIC50, the negative logarithm, so that bigger numbers mean more potent compounds. An IC50 depends on the assay conditions, such as how much natural substrate is present, so values from different laboratories are not always directly comparable.",
+      "formula": "\\mathrm{pIC_{50}} = -\\log_{10}(\\mathrm{IC_{50}})",
+      "source": {
+        "title": "EC50 - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/EC50"
+      },
+      "question": {
+        "prompt": "Compound X has an IC50 of 10 nanomolar and compound Y an IC50 of 1 micromolar against the same target. Which is more potent?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Compound Y, because its number is larger"
+          },
+          {
+            "id": "b",
+            "text": "They are equally potent"
+          },
+          {
+            "id": "c",
+            "text": "Potency cannot be judged from IC50"
+          },
+          {
+            "id": "d",
+            "text": "Compound X, because less of it is needed to halve the target's activity"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "A lower IC50 means less compound is needed for the same inhibition; 10 nM is 100 times lower than 1 µM."
+      },
+      "tags": [
+        "pharmacology",
+        "assays"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0013",
+      "domain": "drug_discovery",
+      "title": "Bioavailability and first-pass metabolism",
+      "depth": "intermediate",
+      "explainer": "Bioavailability is the fraction of a dose that reaches the general circulation unchanged. A drug injected into a vein has a bioavailability of 100 percent by definition. A drug swallowed as a tablet usually has less, because it faces several obstacles on the way. It must dissolve in the gut fluids, cross the intestinal wall, and then survive first-pass metabolism. Blood from the intestines does not go straight to the rest of the body; it first passes through the liver via the portal vein, and enzymes in the gut wall and liver can break down a large share of the drug before it ever reaches the heart. Morphine taken by mouth, for example, has a bioavailability of roughly 20 to 40 percent, so oral doses are higher than injected ones. Some drugs are broken down almost completely: glyceryl trinitrate, used for angina, is given under the tongue or through the skin, routes that bypass the liver. Bioavailability is affected by food, other drugs, and differences in people's enzymes. It also matters for generic medicines, which must show bioequivalence to the original, meaning that the amount and rate of drug reaching the blood fall within set limits, before they can be approved. Medicinal chemists tune molecules to improve solubility, permeability and metabolic stability.",
+      "formula": "F = \\frac{AUC_{oral}}{AUC_{iv}} \\times \\frac{D_{iv}}{D_{oral}}",
+      "source": {
+        "title": "Bioavailability - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bioavailability"
+      },
+      "question": {
+        "prompt": "Why is glyceryl trinitrate for angina given under the tongue rather than swallowed?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The sublingual route bypasses the liver, avoiding extensive first-pass metabolism"
+          },
+          {
+            "id": "b",
+            "text": "It tastes bitter"
+          },
+          {
+            "id": "c",
+            "text": "Swallowed tablets dissolve too slowly to ever work"
+          },
+          {
+            "id": "d",
+            "text": "It can only be absorbed through bone"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Absorption under the tongue enters the general circulation directly, avoiding the portal vein and liver that would destroy most of an oral dose."
+      },
+      "tags": [
+        "pharmacokinetics"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0014",
+      "domain": "drug_discovery",
+      "title": "Cytochrome P450 enzymes and drug interactions",
+      "depth": "intermediate",
+      "explainer": "The cytochrome P450 enzymes, often shortened to CYPs, are a family of proteins, mostly in the liver, that break down a large share of medicines. A handful of them, especially CYP3A4 and CYP2D6, together handle the majority of drugs in common use. They typically add an oxygen atom to a drug molecule, making it more water-soluble so that it can be excreted, and often less active. Because so many drugs share the same few enzymes, they are a major source of drug interactions. An inhibitor of an enzyme slows the breakdown of other drugs that rely on it, so their levels rise and side effects can appear. Grapefruit juice is a famous example: compounds in it inhibit CYP3A4 in the gut wall, which can multiply the blood levels of some statins and blood pressure drugs. An inducer does the opposite, making the liver produce more enzyme, so other drugs are cleared faster and may stop working; the antibiotic rifampicin and the herbal remedy St John's wort can make hormonal contraceptives fail this way. People also differ genetically. Some carry CYP2D6 variants that make them poor metabolizers and others carry extra copies that make them ultrarapid metabolizers, which matters for drugs such as codeine, which CYP2D6 converts into morphine.",
+      "formula": null,
+      "source": {
+        "title": "Cytochrome P450 - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cytochrome_P450"
+      },
+      "question": {
+        "prompt": "A patient starts taking a strong CYP3A4 inhibitor alongside a drug cleared by CYP3A4. What is the likely result?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Levels of the second drug fall and it may stop working"
+          },
+          {
+            "id": "b",
+            "text": "Levels of the second drug rise, increasing the risk of side effects"
+          },
+          {
+            "id": "c",
+            "text": "Nothing changes, because the drugs are different"
+          },
+          {
+            "id": "d",
+            "text": "The inhibitor is excreted faster"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Inhibiting the enzyme slows clearance of drugs that depend on it, so their blood levels rise."
+      },
+      "tags": [
+        "pharmacokinetics",
+        "safety"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0015",
+      "domain": "drug_discovery",
+      "title": "Prodrugs",
+      "depth": "introductory",
+      "explainer": "A prodrug is a medicine given in an inactive or less active form that the body converts into the active drug. Chemists design prodrugs to get around problems with the active molecule itself, such as poor absorption from the gut, a bad taste, instability, or side effects at the wrong site. The conversion is usually carried out by enzymes, often in the liver, the blood or the target tissue. Some well-known medicines are prodrugs. Codeine is converted into morphine by the liver enzyme CYP2D6, which is why it works poorly in people with low activity of that enzyme. Enalapril, a blood pressure drug, is converted into its active form, enalaprilat, which is poorly absorbed when taken by mouth itself. Valaciclovir is a prodrug of the antiviral aciclovir that is absorbed much better, so it can be taken less often. The blood thinner clopidogrel must be activated by liver enzymes too. Levodopa, used for Parkinson's disease, is a different kind of example: dopamine itself cannot cross the blood-brain barrier, but levodopa can, and it is converted into dopamine once it reaches the brain. Prodrugs can also target tissues: some cancer prodrugs are designed to be activated only by enzymes or conditions found in tumors, sparing healthy cells.",
+      "formula": null,
+      "source": {
+        "title": "Prodrug - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Prodrug"
+      },
+      "question": {
+        "prompt": "Why is levodopa given for Parkinson's disease instead of dopamine itself?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Dopamine is too expensive"
+          },
+          {
+            "id": "b",
+            "text": "Levodopa is a stronger receptor agonist than dopamine"
+          },
+          {
+            "id": "c",
+            "text": "Dopamine cannot cross the blood-brain barrier, but levodopa can and is converted to dopamine in the brain"
+          },
+          {
+            "id": "d",
+            "text": "Dopamine is destroyed by stomach acid only"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Levodopa crosses into the brain and is converted to dopamine there, which dopamine given directly could not do."
+      },
+      "tags": [
+        "pharmacology",
+        "medicinal_chemistry"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0016",
+      "domain": "drug_discovery",
+      "title": "Molecular docking and virtual screening",
+      "depth": "intermediate",
+      "explainer": "Virtual screening uses computers to search large libraries of molecules for ones likely to bind a drug target, so that only the most promising need to be made and tested in the laboratory. The most common structure-based approach is molecular docking. Starting from a three-dimensional structure of the target protein, from X-ray crystallography, cryo-electron microscopy or a prediction such as AlphaFold, the software tries many positions, orientations and shapes of each candidate molecule in the binding pocket. A scoring function then estimates how well each pose fits, rewarding favorable contacts such as hydrogen bonds and penalizing clashes. Modern libraries are enormous: make-on-demand collections of compounds that suppliers can synthesize within weeks now run to billions of molecules, and docking campaigns have screened hundreds of millions of them against a single target. Docking is fast but approximate. Scoring functions are crude estimates of binding energy, proteins flex in ways a rigid model misses, and water molecules in the pocket are hard to account for, so most top-ranked compounds turn out not to bind. Hit rates of a few percent to tens of percent are nevertheless far better than random testing. Ligand-based methods, which search for molecules resembling known active compounds, are a common alternative when no structure is available.",
+      "formula": null,
+      "source": {
+        "title": "Docking (molecular) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Docking_(molecular)"
+      },
+      "question": {
+        "prompt": "What is a key limitation of docking scoring functions?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They require a living animal"
+          },
+          {
+            "id": "b",
+            "text": "They can only score one molecule per year"
+          },
+          {
+            "id": "c",
+            "text": "They work without any target structure"
+          },
+          {
+            "id": "d",
+            "text": "They are approximate estimates of binding, so many top-ranked compounds do not actually bind"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Scoring functions simplify binding physics, flexibility and water, so docking enriches for binders but produces many false positives."
+      },
+      "tags": [
+        "computational_chemistry",
+        "screening"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0017",
+      "domain": "drug_discovery",
+      "title": "Fragment-based drug discovery",
+      "depth": "advanced",
+      "explainer": "Fragment-based drug discovery starts from very small molecules, typically under about 300 daltons, instead of the larger drug-like compounds used in high-throughput screening. The reasoning is combinatorial. The number of possible small fragments is far smaller than the number of possible drug-sized molecules, so a library of a few thousand fragments covers chemical space much more thoroughly than a library of a million larger compounds. Because fragments are small, they bind only weakly, often with affinities in the high micromolar to millimolar range, too weak for ordinary assays to detect. Sensitive biophysical methods are used instead, such as X-ray crystallography, NMR spectroscopy and surface plasmon resonance. A crystal structure showing exactly where a fragment sits in the binding pocket is especially valuable, because chemists can then grow the fragment by adding groups that reach nearby pockets, or link two fragments that bind side by side. A useful measure is ligand efficiency, the binding energy per heavy atom, which shows whether a fragment makes good contacts for its size. Starting efficient and growing carefully tends to give leads with better properties than starting large. Vemurafenib, approved in 2011 for melanoma with a BRAF mutation, was the first approved drug developed this way, and several others, including venetoclax, have followed.",
+      "formula": null,
+      "source": {
+        "title": "Fragment-based lead discovery - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fragment-based_lead_discovery"
+      },
+      "question": {
+        "prompt": "Why do fragment screens rely on biophysical methods such as X-ray crystallography and NMR?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Fragments bind so weakly that ordinary activity assays usually cannot detect them"
+          },
+          {
+            "id": "b",
+            "text": "Fragments are too large for ordinary assays"
+          },
+          {
+            "id": "c",
+            "text": "Biophysical methods are cheaper than all other assays"
+          },
+          {
+            "id": "d",
+            "text": "Fragments are always toxic to cells"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Fragment affinities are often micromolar to millimolar, so sensitive structural or biophysical techniques are needed to see binding."
+      },
+      "tags": [
+        "medicinal_chemistry",
+        "screening"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0018",
+      "domain": "drug_discovery",
+      "title": "Targeted protein degradation and PROTACs",
+      "depth": "advanced",
+      "explainer": "Most drugs work by blocking a protein's activity, which requires a pocket where a small molecule can bind and switch the protein off. Many disease proteins, such as scaffolding proteins and some transcription factors, have no such pocket and have been considered undruggable. Targeted protein degradation takes a different approach: instead of inhibiting the protein, it gets the cell to destroy it. Cells already have a disposal system, in which enzymes called E3 ubiquitin ligases tag unwanted proteins with chains of the small protein ubiquitin, marking them for destruction by the proteasome. A PROTAC, short for proteolysis-targeting chimera, is a molecule with two ends joined by a linker. One end binds the target protein and the other binds an E3 ligase, such as cereblon or VHL, bringing the two together so the ligase tags the target for degradation. The idea was first described by Craig Crews and Raymond Deshaies in 2001. Because a PROTAC is released after each target is tagged, one molecule can trigger the destruction of many protein copies, and weak binding can be enough. Molecular glues are smaller molecules that achieve the same pairing without a linker; thalidomide and lenalidomide turned out to work this way, by reshaping cereblon. PROTACs are large molecules, so making them orally absorbed is a major challenge.",
+      "formula": null,
+      "source": {
+        "title": "Proteolysis targeting chimera - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Proteolysis_targeting_chimera"
+      },
+      "question": {
+        "prompt": "How does a PROTAC eliminate its target protein?",
+        "options": [
+          {
+            "id": "a",
+            "text": "By blocking the target's active site permanently"
+          },
+          {
+            "id": "b",
+            "text": "By bringing the target together with an E3 ubiquitin ligase so it is tagged and destroyed by the proteasome"
+          },
+          {
+            "id": "c",
+            "text": "By cutting the target's gene out of the DNA"
+          },
+          {
+            "id": "d",
+            "text": "By preventing the target's messenger RNA from being made"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "The two-headed molecule recruits an E3 ligase to the target, which ubiquitinates it and sends it to the proteasome."
+      },
+      "tags": [
+        "medicinal_chemistry",
+        "protein_degradation"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0019",
+      "domain": "drug_discovery",
+      "title": "Antibody-drug conjugates",
+      "depth": "intermediate",
+      "explainer": "Chemotherapy drugs kill dividing cells, but they cannot tell cancer cells from healthy ones, which causes severe side effects and limits how much can be given. An antibody-drug conjugate, or ADC, combines the precision of an antibody with the killing power of a toxic drug. It has three parts. The antibody recognizes a protein that is abundant on the surface of cancer cells, such as HER2 in some breast cancers. A highly potent cytotoxic drug, the payload, is often far too toxic to give on its own. A chemical linker joins them and is designed to stay stable in the blood but release the payload once the ADC has been taken inside the cancer cell. After the antibody binds its target, the cell engulfs the whole complex, and enzymes or acidic conditions inside it cut the linker, freeing the payload to kill the cell. Some payloads can also leak out and kill neighboring cancer cells that lack the target, a bystander effect. The number of drug molecules on each antibody, the drug-to-antibody ratio, affects both potency and side effects. Early ADCs were held back by unstable linkers and modest payloads. Newer ones, such as trastuzumab deruxtecan, have shown striking results, and more than a dozen ADCs have now been approved for cancer.",
+      "formula": null,
+      "source": {
+        "title": "Antibody–drug conjugate - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Antibody%E2%80%93drug_conjugate"
+      },
+      "question": {
+        "prompt": "What is the role of the linker in an antibody-drug conjugate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It makes the antibody recognize the tumor"
+          },
+          {
+            "id": "b",
+            "text": "It neutralizes the payload permanently"
+          },
+          {
+            "id": "c",
+            "text": "It keeps the payload attached in the bloodstream and releases it inside the target cell"
+          },
+          {
+            "id": "d",
+            "text": "It replaces the antibody's binding site"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "A good linker is stable in circulation but is cleaved inside the cancer cell, so the toxic payload acts mainly where it is needed."
+      },
+      "tags": [
+        "biologics",
+        "oncology"
+      ]
+    },
+    {
+      "id": "a3-drug_discovery-0020",
+      "domain": "drug_discovery",
+      "title": "Biomarkers and surrogate endpoints",
+      "depth": "intermediate",
+      "explainer": "A biomarker is a measurable sign of a biological state, such as blood pressure, cholesterol level, a gene mutation in a tumor, or the amount of a protein in the blood. In drug development, biomarkers help choose the right patients, confirm that a drug is hitting its target and give early hints of whether it works. A surrogate endpoint is a biomarker used in place of the outcome that patients actually care about, such as survival, heart attacks or quality of life. Surrogates are attractive because they change sooner and need smaller trials. Lowering blood pressure, for instance, reliably reduces strokes, so blood pressure is an accepted surrogate, and regulators such as the FDA can grant accelerated approval on the basis of a surrogate that is reasonably likely to predict benefit, with confirmatory trials required afterwards. The risk is that a drug can improve the surrogate without improving the real outcome, or even while making it worse. In the Cardiac Arrhythmia Suppression Trial, reported in 1989, drugs that suppressed irregular heartbeats after a heart attack, a seemingly sensible surrogate, actually increased deaths. Torcetrapib raised HDL, the so-called good cholesterol, but also increased deaths and cardiovascular events. A surrogate is trustworthy only when trials have shown that changing it changes the real outcome.",
+      "formula": null,
+      "source": {
+        "title": "Surrogate endpoint - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Surrogate_endpoint"
+      },
+      "question": {
+        "prompt": "What did the Cardiac Arrhythmia Suppression Trial illustrate about surrogate endpoints?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Surrogates always predict real outcomes"
+          },
+          {
+            "id": "b",
+            "text": "Blood pressure is not a valid surrogate"
+          },
+          {
+            "id": "c",
+            "text": "Surrogates make trials larger and slower"
+          },
+          {
+            "id": "d",
+            "text": "A drug can improve a surrogate while worsening the outcome that matters, here increasing deaths"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "The drugs suppressed arrhythmias, the surrogate, yet increased mortality, the real outcome."
+      },
+      "tags": [
+        "clinical_trials",
+        "regulation"
+      ]
     }
   ]
 }

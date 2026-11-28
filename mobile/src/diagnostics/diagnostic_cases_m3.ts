@@ -11,7 +11,7 @@ import { BUNDLED_CONTENT, type BundledContentSet } from '../content/bundled_cont
 import { bundledRows, importBundledContent } from '../content/content_import';
 import { assignedItem, excludeContentItem } from '../content/content_repository';
 import { assignDailyContent, selectionSettingsFrom, type SelectionSettings } from '../content/content_selection';
-import { formulaToText } from '../content/formula_text';
+import { formulaToText, unsupportedFormulaCommands } from '../content/formula_text';
 import { computeDayStatus, recordDayStatus } from '../daily/day_status';
 import { CURRENT_SCHEMA_VERSION } from '../db/database_schema';
 import { runMigrations } from '../db/run_migrations';
@@ -87,6 +87,8 @@ const t14ContentImport: DiagnosticCase = {
         if (concept.formula) {
           const rendered = formulaToText(concept.formula);
           check(!/[\\{}\u0001\u0002]/.test(rendered), `${concept.id}: formula renders with markup left: ${rendered}`);
+          const unknown = unsupportedFormulaCommands(concept.formula);
+          check(unknown.length === 0, `${concept.id}: formula uses unsupported commands: ${unknown.join(', ')}`);
           formulas += 1;
         }
       }

@@ -391,6 +391,395 @@
         "physiology",
         "endocrinology"
       ]
+    },
+    {
+      "id": "a3-biology-0011",
+      "domain": "biology",
+      "title": "Photosynthesis",
+      "depth": "introductory",
+      "explainer": "Photosynthesis is the process by which plants, algae and cyanobacteria capture the energy of sunlight and store it in sugar. Overall, six molecules of carbon dioxide and six of water become one molecule of glucose and six of oxygen, but the work happens in two linked stages inside chloroplasts. In the light-dependent reactions, which take place in the thylakoid membranes, the pigment chlorophyll absorbs mainly red and blue light; green light is largely reflected, which is why leaves look green. The absorbed energy is used to split water molecules, releasing oxygen as a by-product, and to make two energy carriers, ATP and NADPH. In the second stage, the Calvin cycle, which runs in the fluid around the thylakoids, these carriers power the fixing of carbon dioxide from the air into sugars. The key enzyme, RuBisCO, is thought to be the most abundant protein on Earth. It is also slow and sometimes grabs oxygen instead of carbon dioxide, a wasteful reaction that some plants, such as maize and sugar cane, limit by concentrating carbon dioxide around it, a strategy known as C4 photosynthesis. Photosynthesis is the source of almost all the oxygen in the atmosphere and of the energy in nearly every food chain.",
+      "formula": "6\\,CO_2 + 6\\,H_2O \\rightarrow C_6H_{12}O_6 + 6\\,O_2",
+      "source": {
+        "title": "Photosynthesis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Photosynthesis"
+      },
+      "question": {
+        "prompt": "Where does the oxygen released by photosynthesis come from?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Carbon dioxide"
+          },
+          {
+            "id": "b",
+            "text": "Glucose"
+          },
+          {
+            "id": "c",
+            "text": "The splitting of water molecules"
+          },
+          {
+            "id": "d",
+            "text": "Chlorophyll"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "In the light-dependent reactions water is split to supply electrons, releasing its oxygen as a by-product."
+      },
+      "tags": [
+        "plants",
+        "metabolism"
+      ]
+    },
+    {
+      "id": "a3-biology-0012",
+      "domain": "biology",
+      "title": "Cellular respiration and ATP",
+      "depth": "introductory",
+      "explainer": "Cells run on adenosine triphosphate, or ATP, a small molecule that acts as the energy currency of life. Breaking off its last phosphate group releases energy that powers muscle contraction, nerve signals and the building of new molecules. Cellular respiration is how cells recharge their ATP by breaking down food, mainly glucose, in three main stages. Glycolysis, in the cytoplasm, splits each glucose into two molecules of pyruvate and makes a small net gain of two ATP; it needs no oxygen. In the presence of oxygen, pyruvate enters the mitochondria and is broken down in the citric acid cycle, also called the Krebs cycle, which releases carbon dioxide and loads high-energy electrons onto carrier molecules. Finally, in oxidative phosphorylation, those electrons pass along a chain of proteins in the inner mitochondrial membrane, pumping protons across it. The protons flow back through the enzyme ATP synthase, a rotating molecular motor that makes most of the cell's ATP. Oxygen is the last stop for the electrons and combines with protons to form water. Altogether one glucose molecule yields roughly 30 to 32 ATP. Without oxygen, cells fall back on fermentation, producing lactate in human muscle or ethanol in yeast, for only the two ATP from glycolysis.",
+      "formula": null,
+      "source": {
+        "title": "Cellular respiration - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cellular_respiration"
+      },
+      "question": {
+        "prompt": "Which stage of cellular respiration produces most of the cell's ATP?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Glycolysis"
+          },
+          {
+            "id": "b",
+            "text": "Fermentation"
+          },
+          {
+            "id": "c",
+            "text": "The splitting of ATP"
+          },
+          {
+            "id": "d",
+            "text": "Oxidative phosphorylation, driven by ATP synthase"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Glycolysis yields only two ATP; most of the roughly 30 ATP per glucose comes from the proton flow through ATP synthase."
+      },
+      "tags": [
+        "metabolism",
+        "cells"
+      ]
+    },
+    {
+      "id": "a3-biology-0013",
+      "domain": "biology",
+      "title": "DNA replication",
+      "depth": "intermediate",
+      "explainer": "Every time a cell divides, it must copy its entire genome, more than three billion base pairs in a human cell, accurately. James Watson and Francis Crick noted in 1953 that the double helix suggests how: the two strands are complementary, A pairing with T and G with C, so each strand can serve as a template for a new partner. Matthew Meselson and Franklin Stahl confirmed in 1958 that replication is semi-conservative, meaning each new double helix keeps one old strand and gains one new one. The enzyme helicase unwinds the helix, creating a replication fork. DNA polymerase then adds nucleotides matching the template, but it can only build in one direction and needs a short RNA primer to start. As a result, one strand, the leading strand, is made continuously, while the other, the lagging strand, is made in short pieces called Okazaki fragments, which DNA ligase later joins. DNA polymerase also proofreads its work, removing wrongly paired bases as it goes. Together with separate repair systems, this keeps the error rate to roughly one mistake per billion bases copied. Replication starts at many origins along each human chromosome at once, which is how the whole genome can be copied in a few hours.",
+      "formula": null,
+      "source": {
+        "title": "DNA replication - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/DNA_replication"
+      },
+      "question": {
+        "prompt": "What does it mean that DNA replication is semi-conservative?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Each new double helix contains one original strand and one newly made strand"
+          },
+          {
+            "id": "b",
+            "text": "Only half the genome is copied"
+          },
+          {
+            "id": "c",
+            "text": "Errors are kept in half of the copies"
+          },
+          {
+            "id": "d",
+            "text": "Replication stops halfway through the cell cycle"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Meselson and Stahl showed each daughter molecule keeps one parental strand and gains one new strand."
+      },
+      "tags": [
+        "genetics",
+        "molecular_biology"
+      ]
+    },
+    {
+      "id": "a3-biology-0014",
+      "domain": "biology",
+      "title": "Hardy-Weinberg equilibrium",
+      "depth": "intermediate",
+      "explainer": "The Hardy-Weinberg principle describes what happens to gene variants in a population when nothing is pushing them to change. Suppose a gene has two alleles, A and a, with frequencies p and q that add up to one. If mating is random, the population is large, and there is no selection, mutation or migration, then the genotype frequencies settle at p squared for AA, 2pq for Aa, and q squared for aa, and they stay there generation after generation. Godfrey Hardy and Wilhelm Weinberg worked this out independently in 1908. The principle matters because real populations rarely meet its assumptions, so departures from the expected frequencies are clues that evolution is happening, whether through natural selection, genetic drift in small populations, migration or non-random mating. It is also a practical tool. If a recessive genetic condition affects one in 2,500 newborns, then q squared is 1/2,500, so q is 1/50, and the share of healthy carriers, 2pq, is about one in 25. This kind of calculation is used in genetic counseling and in checking the quality of genetic data, where large deviations from Hardy-Weinberg proportions can reveal genotyping errors rather than biology.",
+      "formula": "p^2 + 2pq + q^2 = 1",
+      "source": {
+        "title": "Hardy–Weinberg principle - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hardy%E2%80%93Weinberg_principle"
+      },
+      "question": {
+        "prompt": "A recessive condition affects 1 in 10,000 people in a population in Hardy-Weinberg equilibrium. Roughly what share are carriers?",
+        "options": [
+          {
+            "id": "a",
+            "text": "1 in 100"
+          },
+          {
+            "id": "b",
+            "text": "1 in 50"
+          },
+          {
+            "id": "c",
+            "text": "1 in 10,000"
+          },
+          {
+            "id": "d",
+            "text": "1 in 5,000"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "q² = 1/10,000, so q = 1/100 and 2pq ≈ 2 × 0.99 × 0.01 ≈ 1 in 50."
+      },
+      "tags": [
+        "genetics",
+        "evolution"
+      ]
+    },
+    {
+      "id": "a3-biology-0015",
+      "domain": "biology",
+      "title": "Epigenetics",
+      "depth": "intermediate",
+      "explainer": "Every cell in your body carries essentially the same DNA, yet a liver cell and a neuron look and behave completely differently. Part of the explanation is epigenetics: chemical marks on DNA and its packaging that switch genes on or off without changing the DNA sequence itself. One major mark is DNA methylation, the addition of a methyl group to cytosine bases, usually where a cytosine is followed by a guanine. Heavy methylation near a gene's start tends to silence it. Another is the modification of histones, the proteins that DNA wraps around. Adding acetyl groups to histones loosens the packaging and makes genes easier to read; other marks pack DNA more tightly. These patterns are copied when cells divide, so a skin cell's descendants remain skin cells. Epigenetic marks can also respond to the environment. Studies of people conceived during the Dutch famine of 1944 to 1945 found differences in methylation of certain genes decades later. Epigenetic errors play a role in cancer, where tumor suppressor genes can be silenced by abnormal methylation, and some leukemia drugs work by removing those marks. How far epigenetic changes pass from parents to children in humans is still debated.",
+      "formula": null,
+      "source": {
+        "title": "Epigenetics - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Epigenetics"
+      },
+      "question": {
+        "prompt": "What is the defining feature of an epigenetic change?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It alters the DNA sequence"
+          },
+          {
+            "id": "b",
+            "text": "It only occurs in bacteria"
+          },
+          {
+            "id": "c",
+            "text": "It changes gene activity without changing the DNA sequence"
+          },
+          {
+            "id": "d",
+            "text": "It is always inherited by offspring"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Epigenetic marks such as DNA methylation and histone modifications regulate gene activity while leaving the sequence intact."
+      },
+      "tags": [
+        "genetics",
+        "gene_regulation"
+      ]
+    },
+    {
+      "id": "a3-biology-0016",
+      "domain": "biology",
+      "title": "Apoptosis",
+      "depth": "intermediate",
+      "explainer": "Apoptosis is programmed cell death, an orderly process by which cells kill themselves when they are no longer needed or have become dangerous. Unlike necrosis, the messy death of injured cells that burst and trigger inflammation, an apoptotic cell shrinks, condenses its DNA, chops itself into neat membrane-wrapped fragments and displays signals that invite immune cells to eat it. The work is done by caspases, enzymes that cut other proteins at specific sites. They can be activated by two main routes. In the intrinsic pathway, internal stress such as DNA damage causes mitochondria to release cytochrome c, which switches on the caspase cascade; proteins of the BCL-2 family decide whether this happens. In the extrinsic pathway, signal molecules from other cells bind death receptors on the cell surface. Apoptosis is essential for development: the webbing between human fingers disappears before birth because those cells die on schedule. It also removes immune cells that would attack the body. Too little apoptosis lets damaged cells survive and is a hallmark of cancer, and the drug venetoclax treats some leukemias by blocking BCL-2 so cancer cells can die again. Too much contributes to neurodegenerative diseases. Sydney Brenner, Robert Horvitz and John Sulston shared the 2002 Nobel Prize for work on its genetics.",
+      "formula": null,
+      "source": {
+        "title": "Apoptosis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Apoptosis"
+      },
+      "question": {
+        "prompt": "How does apoptosis differ from necrosis?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Apoptosis causes the cell to burst and triggers inflammation"
+          },
+          {
+            "id": "b",
+            "text": "Necrosis is controlled by caspases"
+          },
+          {
+            "id": "c",
+            "text": "They are two names for the same process"
+          },
+          {
+            "id": "d",
+            "text": "Apoptosis is an orderly, regulated self-destruction that avoids inflammation"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Apoptotic cells dismantle themselves into tidy fragments cleared by immune cells, whereas necrotic cells burst and inflame tissue."
+      },
+      "tags": [
+        "cells",
+        "development"
+      ]
+    },
+    {
+      "id": "a3-biology-0017",
+      "domain": "biology",
+      "title": "Circadian rhythms",
+      "depth": "introductory",
+      "explainer": "Most living things, from bacteria to people, have an internal clock that runs on a cycle of roughly 24 hours. These circadian rhythms govern when we feel sleepy, when body temperature peaks and when hormones such as cortisol and melatonin are released. The clock keeps running even without outside cues: people living in caves with no daylight still follow a cycle, although it drifts slightly from 24 hours. In mammals the master clock is the suprachiasmatic nucleus, a small cluster of neurons in the hypothalamus that receives light signals directly from the eyes and keeps clocks in other organs in step. Light, especially in the morning, is the strongest cue for resetting it each day. At the molecular level, the clock is a feedback loop. Clock genes are switched on and their proteins build up, then those proteins return to the nucleus and shut down their own genes, until they are broken down and the cycle starts again. Jeffrey Hall, Michael Rosbash and Michael Young won the 2017 Nobel Prize in Physiology or Medicine for uncovering this loop in fruit flies. Jet lag and shift work disrupt the clock, and long-term disruption has been linked to poorer sleep, metabolism and health.",
+      "formula": null,
+      "source": {
+        "title": "Circadian rhythm - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Circadian_rhythm"
+      },
+      "question": {
+        "prompt": "What is the strongest environmental cue for resetting the human circadian clock?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Light, acting through the eyes on the suprachiasmatic nucleus"
+          },
+          {
+            "id": "b",
+            "text": "Room temperature"
+          },
+          {
+            "id": "c",
+            "text": "Background noise"
+          },
+          {
+            "id": "d",
+            "text": "Air pressure"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Light signals from the retina reach the suprachiasmatic nucleus, the master clock, and reset it daily."
+      },
+      "tags": [
+        "physiology",
+        "sleep"
+      ]
+    },
+    {
+      "id": "a3-biology-0018",
+      "domain": "biology",
+      "title": "Telomeres and cellular aging",
+      "depth": "intermediate",
+      "explainer": "The ends of our chromosomes are capped by telomeres, long stretches of a short DNA sequence, TTAGGG in humans, repeated thousands of times and bound by protective proteins. They solve two problems. First, they stop the cell from mistaking a chromosome end for a broken piece of DNA that needs repair. Second, they act as a buffer for the end-replication problem: because DNA polymerase needs a primer to start, it cannot copy the very tip of a chromosome, so a little telomere is lost every time a cell divides. When telomeres become too short, the cell stops dividing and enters senescence, or dies. Leonard Hayflick observed in the 1960s that normal human cells in culture divide only about 40 to 60 times; shortening telomeres help explain this limit. Some cells, such as stem cells and those in the germline, use the enzyme telomerase to rebuild their telomeres. Elizabeth Blackburn, Carol Greider and Jack Szostak shared the 2009 Nobel Prize for discovering how telomeres and telomerase work. About 85 to 90 percent of cancers switch telomerase back on, which lets their cells divide indefinitely. Telomere length is linked with aging, but it is only one of many factors, and lengthening telomeres is not a proven way to slow aging.",
+      "formula": null,
+      "source": {
+        "title": "Telomere - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Telomere"
+      },
+      "question": {
+        "prompt": "Why do most cancers reactivate telomerase?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To repair mutations in their genes"
+          },
+          {
+            "id": "b",
+            "text": "To rebuild their telomeres so their cells can keep dividing indefinitely"
+          },
+          {
+            "id": "c",
+            "text": "To make their DNA shorter"
+          },
+          {
+            "id": "d",
+            "text": "To trigger apoptosis"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Without telomerase, telomeres shorten with each division until the cell stops dividing; telomerase removes that limit."
+      },
+      "tags": [
+        "cells",
+        "aging"
+      ]
+    },
+    {
+      "id": "a3-biology-0019",
+      "domain": "biology",
+      "title": "Osmosis and membrane transport",
+      "depth": "introductory",
+      "explainer": "Every cell is wrapped in a membrane made of a double layer of lipids, which lets some substances through and blocks others. Small, uncharged molecules such as oxygen and carbon dioxide slip across by simple diffusion, moving from where they are more concentrated to where they are less. Water crosses too, largely through channel proteins called aquaporins, and its movement across a membrane from a dilute solution towards a more concentrated one is called osmosis. If a red blood cell is placed in pure water, water rushes in and the cell swells and can burst; in very salty water, water leaves and the cell shrivels. This is why intravenous drips use saline with about the same salt concentration as blood. Charged ions and larger molecules such as glucose need help. In facilitated diffusion, carrier or channel proteins let them move down their concentration gradient without using energy. Active transport moves substances against their gradient and needs energy, usually from ATP. The most famous example is the sodium-potassium pump, which pushes three sodium ions out of the cell and two potassium ions in for each ATP it uses. It consumes a large share of the body's energy and sets up the gradients that nerves use to fire.",
+      "formula": null,
+      "source": {
+        "title": "Osmosis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Osmosis"
+      },
+      "question": {
+        "prompt": "What happens to a red blood cell placed in pure water?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It shrinks as water leaves"
+          },
+          {
+            "id": "b",
+            "text": "Nothing, because membranes block water"
+          },
+          {
+            "id": "c",
+            "text": "It swells and may burst as water enters by osmosis"
+          },
+          {
+            "id": "d",
+            "text": "It actively pumps the water out with no change"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Pure water is more dilute than the cell's interior, so water moves in by osmosis until the cell swells or bursts."
+      },
+      "tags": [
+        "cells",
+        "physiology"
+      ]
+    },
+    {
+      "id": "a3-biology-0020",
+      "domain": "biology",
+      "title": "Speciation",
+      "depth": "intermediate",
+      "explainer": "Speciation is the evolutionary process by which one species splits into two. Under the widely used biological species concept, species are groups that can interbreed with each other but not with other groups, so speciation is really about how barriers to interbreeding arise. The most common route is allopatric speciation, in which a population is divided by a geographic barrier, such as a mountain range, a river changing course or the colonization of an island. The separated populations then accumulate different mutations and face different selection pressures, and given enough time they become so different that they could no longer interbreed even if reunited. Darwin's finches on the Galápagos Islands, descended from a single ancestor that arrived from the mainland, are a classic example. Speciation can also happen without a physical barrier, called sympatric speciation, for example when insects shift to a new host plant and begin mating only on it, or when plants double their chromosome number, which can create a new species in a single generation. Reproductive barriers include mating at different times, incompatible courtship signals and hybrid offspring that are sterile; a mule, from a horse and a donkey, is usually sterile, so horses and donkeys remain separate species.",
+      "formula": null,
+      "source": {
+        "title": "Speciation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Speciation"
+      },
+      "question": {
+        "prompt": "What is the key event in allopatric speciation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Two species merge into one"
+          },
+          {
+            "id": "b",
+            "text": "Individuals choose mates at random"
+          },
+          {
+            "id": "c",
+            "text": "A single mutation creates a new species overnight in animals"
+          },
+          {
+            "id": "d",
+            "text": "A population is split by a geographic barrier and the parts diverge"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Geographic separation stops gene flow, letting each population diverge until they can no longer interbreed."
+      },
+      "tags": [
+        "evolution"
+      ]
     }
   ]
 }

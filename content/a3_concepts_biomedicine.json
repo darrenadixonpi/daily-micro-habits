@@ -396,6 +396,395 @@
         "clinical_research",
         "statistics"
       ]
+    },
+    {
+      "id": "a3-biomedicine-0011",
+      "domain": "biomedicine",
+      "title": "Innate and adaptive immunity",
+      "depth": "introductory",
+      "explainer": "The immune system has two arms that work together. The innate immune system is the fast, general first line of defense. It includes physical barriers such as skin and mucus, white blood cells such as neutrophils and macrophages that engulf invaders, and proteins that punch holes in bacteria. Innate cells recognize broad patterns common to many microbes, such as parts of bacterial cell walls or viral RNA, using pattern recognition receptors like the Toll-like receptors. They respond within minutes to hours, but the response is the same every time. The adaptive immune system is slower to start but highly specific, and it remembers. Its B cells and T cells each carry receptors that recognize one particular molecular shape, and the body makes millions of different versions by shuffling gene segments. When a cell meets its matching antigen, it multiplies into an army of identical clones. B cells make antibodies that tag invaders; helper T cells coordinate the response; and cytotoxic T cells kill infected cells. A first adaptive response takes a week or more to build, but memory cells left behind make a second encounter far faster and stronger. The two arms are linked: dendritic cells of the innate system present antigens that switch on T cells.",
+      "formula": null,
+      "source": {
+        "title": "Adaptive immune system - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Adaptive_immune_system"
+      },
+      "question": {
+        "prompt": "Which feature belongs to the adaptive immune system but not the innate one?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Physical barriers such as skin"
+          },
+          {
+            "id": "b",
+            "text": "Immediate response within minutes"
+          },
+          {
+            "id": "c",
+            "text": "Immunological memory of specific antigens"
+          },
+          {
+            "id": "d",
+            "text": "Recognition of broad microbial patterns"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Adaptive B and T cells recognize specific antigens and leave memory cells that speed up later responses; innate defences respond the same way each time."
+      },
+      "tags": [
+        "immunology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0012",
+      "domain": "biomedicine",
+      "title": "Inflammation",
+      "depth": "introductory",
+      "explainer": "Inflammation is the body's immediate response to injury or infection. Its classic signs, described since ancient times, are redness, heat, swelling and pain, with loss of function often added as a fifth. They all follow from what happens in the tissue. Damaged cells and immune sentinels such as mast cells and macrophages release signaling molecules, including histamine, prostaglandins and cytokines. These widen nearby blood vessels, increasing blood flow, which causes redness and heat, and make the vessel walls leaky, so fluid and proteins seep into the tissue and cause swelling. Some of the same molecules sensitize nerve endings, producing pain that discourages use of the injured part. White blood cells, first neutrophils and later macrophages, squeeze out of the vessels and move towards the site to destroy microbes and clear debris, after which the inflammation should resolve and repair begins. Acute inflammation is protective. Problems arise when it fails to switch off. Chronic, low-grade inflammation is involved in atherosclerosis, type 2 diabetes, rheumatoid arthritis and some cancers. Common anti-inflammatory drugs act on these signals: ibuprofen and aspirin block the cyclooxygenase enzymes that make prostaglandins, and corticosteroids broadly suppress the production of inflammatory cytokines.",
+      "formula": null,
+      "source": {
+        "title": "Inflammation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Inflammation"
+      },
+      "question": {
+        "prompt": "How do drugs such as ibuprofen reduce inflammation?",
+        "options": [
+          {
+            "id": "a",
+            "text": "By killing bacteria"
+          },
+          {
+            "id": "b",
+            "text": "By increasing histamine release"
+          },
+          {
+            "id": "c",
+            "text": "By stimulating antibody production"
+          },
+          {
+            "id": "d",
+            "text": "By blocking cyclooxygenase enzymes that make prostaglandins"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "NSAIDs inhibit cyclooxygenase, cutting production of the prostaglandins that drive pain, swelling and fever."
+      },
+      "tags": [
+        "immunology",
+        "pharmacology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0013",
+      "domain": "biomedicine",
+      "title": "How antibiotics work",
+      "depth": "introductory",
+      "explainer": "Antibiotics kill bacteria or stop them growing by attacking structures and processes that bacteria have but human cells lack or build differently, so the drug harms the microbe far more than the patient. Penicillin, discovered by Alexander Fleming in 1928, and related drugs called beta-lactams block the enzymes that build the bacterial cell wall, a mesh of peptidoglycan that human cells do not have; without it, growing bacteria burst. Other antibiotics target the bacterial ribosome, which differs in structure from ours: tetracyclines, macrolides such as azithromycin, and aminoglycosides all stop bacteria making proteins. Fluoroquinolones such as ciprofloxacin block the enzymes bacteria use to untangle their DNA during copying, and sulfonamides interfere with the bacterial production of folate, a vitamin that humans get from food. Antibiotics are described as bactericidal if they kill bacteria and bacteriostatic if they only stop them multiplying, leaving the immune system to finish the job. Some act on a narrow range of bacteria, others on a broad spectrum. Antibiotics have no effect on viruses, which have no cell walls or ribosomes of their own, so they do not help colds or flu. Unnecessary use encourages resistant bacteria and also disrupts the helpful bacteria of the gut.",
+      "formula": null,
+      "source": {
+        "title": "Antibiotic - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Antibiotic"
+      },
+      "question": {
+        "prompt": "Why are antibiotics ineffective against the common cold?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Colds are caused by viruses, which lack the bacterial structures antibiotics target"
+          },
+          {
+            "id": "b",
+            "text": "Cold viruses are all resistant to antibiotics"
+          },
+          {
+            "id": "c",
+            "text": "Antibiotics cannot reach the nose"
+          },
+          {
+            "id": "d",
+            "text": "Colds are caused by fungi"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Antibiotics attack bacterial cell walls, ribosomes and enzymes; viruses use the host's machinery, so these drugs have nothing to hit."
+      },
+      "tags": [
+        "infectious_disease",
+        "pharmacology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0014",
+      "domain": "biomedicine",
+      "title": "Autoimmunity",
+      "depth": "intermediate",
+      "explainer": "An autoimmune disease occurs when the immune system attacks the body's own tissues. Normally this is prevented by tolerance. While T cells mature in the thymus, those that react strongly to the body's own proteins are eliminated, a process called central tolerance. Some self-reactive cells escape, so peripheral tolerance adds further safeguards, most importantly regulatory T cells that suppress immune responses, an idea for which Shimon Sakaguchi, Mary Brunkow and Fred Ramsdell shared the 2025 Nobel Prize in Physiology or Medicine. When these controls fail, autoantibodies and self-reactive T cells damage tissue. In type 1 diabetes, T cells destroy the insulin-producing beta cells of the pancreas. In rheumatoid arthritis, the lining of the joints is inflamed. In multiple sclerosis, the fatty myelin insulation around nerve fibers in the brain and spinal cord is attacked, and in lupus, antibodies against components of the cell nucleus cause damage in many organs. The causes combine genetic susceptibility, especially particular variants of the HLA genes that present antigens to T cells, with environmental triggers such as infections; for example, infection with the Epstein-Barr virus greatly raises the risk of multiple sclerosis. Autoimmune diseases are more common in women. Treatments range from broad immune suppression to targeted biologic drugs that block specific inflammatory signals.",
+      "formula": null,
+      "source": {
+        "title": "Autoimmunity - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Autoimmunity"
+      },
+      "question": {
+        "prompt": "What is the role of regulatory T cells in preventing autoimmune disease?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They make antibodies against microbes"
+          },
+          {
+            "id": "b",
+            "text": "They suppress self-reactive immune responses as part of peripheral tolerance"
+          },
+          {
+            "id": "c",
+            "text": "They destroy the thymus"
+          },
+          {
+            "id": "d",
+            "text": "They produce insulin"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Regulatory T cells restrain immune cells that escaped central tolerance, keeping attacks on the body's own tissues in check."
+      },
+      "tags": [
+        "immunology",
+        "disease"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0015",
+      "domain": "biomedicine",
+      "title": "Type 1 and type 2 diabetes",
+      "depth": "introductory",
+      "explainer": "Diabetes is a condition in which blood glucose stays too high because the hormone insulin is missing or not working properly. Insulin, made by the beta cells of the pancreas, tells muscle, fat and liver cells to take up glucose from the blood after a meal. In type 1 diabetes, the immune system destroys the beta cells, so the body makes little or no insulin. It usually begins in childhood or young adulthood, and people with it need insulin injections or a pump to survive; before Frederick Banting and Charles Best isolated insulin in 1921, it was fatal. Type 2 diabetes, which accounts for about 90 percent of cases, starts with insulin resistance: cells respond less to insulin, so the pancreas has to make more, until it can no longer keep up. It is strongly linked to excess body fat, physical inactivity, age and family history, and it can often be managed for years with lifestyle changes and tablets such as metformin before insulin is needed. Newer drugs that mimic the gut hormone GLP-1 lower glucose and also cause weight loss. Over time, high blood glucose damages blood vessels and nerves, raising the risk of heart disease, kidney failure, blindness and amputations. Doctors track control with the HbA1c test.",
+      "formula": null,
+      "source": {
+        "title": "Diabetes - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Diabetes"
+      },
+      "question": {
+        "prompt": "What is the main underlying problem in type 2 diabetes?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Autoimmune destruction of all beta cells"
+          },
+          {
+            "id": "b",
+            "text": "Too much insulin from the liver"
+          },
+          {
+            "id": "c",
+            "text": "Insulin resistance, with the pancreas eventually unable to compensate"
+          },
+          {
+            "id": "d",
+            "text": "A viral infection of the pancreas"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Type 2 diabetes begins with cells responding poorly to insulin; type 1 is the autoimmune loss of beta cells."
+      },
+      "tags": [
+        "endocrinology",
+        "disease"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0016",
+      "domain": "biomedicine",
+      "title": "Atherosclerosis",
+      "depth": "intermediate",
+      "explainer": "Atherosclerosis is the build-up of fatty plaques inside the walls of arteries, and it is the underlying cause of most heart attacks and many strokes. It begins with damage to the endothelium, the thin inner lining of the artery, from factors such as high blood pressure, smoking and high blood sugar. Low-density lipoprotein, or LDL, the particle that carries cholesterol in the blood, slips into the damaged wall and becomes chemically modified. Immune cells called macrophages move in to engulf it and swell into lipid-laden foam cells. Over years, this inflammatory process builds a plaque with a fatty core covered by a fibrous cap. Large plaques can narrow the artery enough to cause chest pain during exercise, known as angina. The greater danger, though, is rupture. If the fibrous cap tears, the plaque's contents come into contact with blood, a clot forms on the spot, and it can block the artery completely within minutes, starving heart or brain tissue of oxygen. This is why heart attacks often strike people whose arteries were not severely narrowed. Prevention focuses on lowering LDL cholesterol, most often with statins, which block the liver enzyme HMG-CoA reductase, and on controlling blood pressure, stopping smoking and managing diabetes.",
+      "formula": null,
+      "source": {
+        "title": "Atherosclerosis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Atherosclerosis"
+      },
+      "question": {
+        "prompt": "What usually triggers the sudden blockage that causes a heart attack?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A plaque slowly closes the artery over decades"
+          },
+          {
+            "id": "b",
+            "text": "The heart muscle stops producing cholesterol"
+          },
+          {
+            "id": "c",
+            "text": "The artery wall becomes too elastic"
+          },
+          {
+            "id": "d",
+            "text": "A plaque ruptures and a blood clot forms on it"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Rupture of a plaque's fibrous cap exposes its contents to blood, forming a clot that can block the artery within minutes."
+      },
+      "tags": [
+        "cardiology",
+        "disease"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0017",
+      "domain": "biomedicine",
+      "title": "Gene therapy and viral vectors",
+      "depth": "intermediate",
+      "explainer": "Gene therapy treats disease by delivering genetic material into a patient's cells, usually to supply a working copy of a faulty gene or to switch a harmful one off. The hard part is delivery. DNA cannot easily cross cell membranes or reach the nucleus by itself, so most therapies use viruses that have been stripped of their disease-causing genes and loaded with the therapeutic gene instead. Adeno-associated viruses, or AAVs, are the most common vectors for treatments given directly into the body. They cause no known disease, infect many tissue types and mostly remain in the nucleus without inserting into chromosomes, so the effect can last for years in cells that do not divide. Onasemnogene abeparvovec, approved in 2019, uses an AAV to deliver the SMN1 gene to babies with spinal muscular atrophy. Lentiviruses, derived from HIV, do insert their cargo into chromosomes, so they are used to modify cells outside the body that will then divide, such as blood stem cells and the T cells used in CAR-T therapy. Gene therapy has had setbacks. In 1999 Jesse Gelsinger died from an immune reaction to a vector, and early trials with other inserting viruses caused leukemia. Immune responses to the vector and very high prices remain major challenges.",
+      "formula": null,
+      "source": {
+        "title": "Gene therapy - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gene_therapy"
+      },
+      "question": {
+        "prompt": "Why are lentiviral vectors used for cells that will go on dividing, such as blood stem cells?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They insert their cargo into the chromosomes, so the gene is copied into every daughter cell"
+          },
+          {
+            "id": "b",
+            "text": "They cannot infect human cells"
+          },
+          {
+            "id": "c",
+            "text": "They are destroyed after one day"
+          },
+          {
+            "id": "d",
+            "text": "They only work in the brain"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Integration into chromosomes means the therapeutic gene is passed on at each division; non-integrating AAV genomes are diluted out in dividing cells."
+      },
+      "tags": [
+        "genetic_medicine",
+        "therapeutics"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0018",
+      "domain": "biomedicine",
+      "title": "Induced pluripotent stem cells",
+      "depth": "intermediate",
+      "explainer": "Pluripotent stem cells can become any cell type in the body, from neurons to heart muscle. Until 2006 the main source was human embryos, which raised ethical objections and created immune-matching problems for transplants. That year Shinya Yamanaka and Kazutoshi Takahashi showed that ordinary adult skin cells from mice could be reprogrammed into a pluripotent state by switching on just four genes, Oct4, Sox2, Klf4 and c-Myc, now called the Yamanaka factors. They did the same with human cells in 2007. These induced pluripotent stem cells, or iPSCs, behave much like embryonic stem cells. Yamanaka shared the 2012 Nobel Prize in Physiology or Medicine with John Gurdon, who had shown decades earlier that a frog egg could reprogram the nucleus of a mature cell. iPSCs have several uses. Researchers can take cells from a patient with a genetic disease, turn them into the affected cell type, and study the disease or test drugs in a dish. Because the cells come from the patient, transplants made from them could in principle avoid immune rejection. The first clinical trials have tested iPSC-derived retinal cells for macular degeneration and dopamine-producing neurons for Parkinson's disease. A key safety concern is that leftover undifferentiated cells could form tumors.",
+      "formula": null,
+      "source": {
+        "title": "Induced pluripotent stem cell - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Induced_pluripotent_stem_cell"
+      },
+      "question": {
+        "prompt": "What did Yamanaka's 2006 discovery show?",
+        "options": [
+          {
+            "id": "a",
+            "text": "That embryos are needed to make any stem cell"
+          },
+          {
+            "id": "b",
+            "text": "That adult cells can be reprogrammed into pluripotent stem cells by switching on four genes"
+          },
+          {
+            "id": "c",
+            "text": "That stem cells cannot become neurons"
+          },
+          {
+            "id": "d",
+            "text": "That frog eggs can be grown from skin cells"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Switching on Oct4, Sox2, Klf4 and c-Myc reprogrammed mature cells into a pluripotent state, without embryos."
+      },
+      "tags": [
+        "regenerative_medicine",
+        "cells"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0019",
+      "domain": "biomedicine",
+      "title": "Polymerase chain reaction",
+      "depth": "introductory",
+      "explainer": "The polymerase chain reaction, or PCR, makes millions to billions of copies of a chosen stretch of DNA in a few hours, so that even a trace amount can be detected and studied. Kary Mullis devised it in 1983 and shared the 1993 Nobel Prize in Chemistry for it. The reaction mixture contains the sample DNA, a heat-stable DNA polymerase, the four DNA building blocks, and two short primers, single-stranded pieces of DNA that match the two ends of the target region. A machine called a thermal cycler then repeats three steps. Heating to about 95 °C separates the two strands of the DNA. Cooling to around 50 to 65 °C lets the primers bind to their matching sequences. Warming to about 72 °C lets the polymerase extend the primers, copying the target. Each cycle roughly doubles the number of copies, so 30 cycles can in principle produce about a billion. The method became practical with Taq polymerase, from the hot-spring bacterium Thermus aquaticus, which survives the repeated heating. Quantitative PCR measures how quickly the copies build up to estimate how much target was there at the start, and reverse transcription PCR first copies RNA into DNA, which is how COVID-19 tests detected the RNA genome of the virus.",
+      "formula": null,
+      "source": {
+        "title": "Polymerase chain reaction - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Polymerase_chain_reaction"
+      },
+      "question": {
+        "prompt": "Why was Taq polymerase important for making PCR practical?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It makes primers automatically"
+          },
+          {
+            "id": "b",
+            "text": "It copies RNA directly into protein"
+          },
+          {
+            "id": "c",
+            "text": "It survives the repeated heating to about 95 °C needed to separate DNA strands"
+          },
+          {
+            "id": "d",
+            "text": "It works only at room temperature"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Taq polymerase, from a hot-spring bacterium, withstands each high-temperature step, so it need not be replaced every cycle."
+      },
+      "tags": [
+        "diagnostics",
+        "molecular_biology"
+      ]
+    },
+    {
+      "id": "a3-biomedicine-0020",
+      "domain": "biomedicine",
+      "title": "Absolute and relative risk",
+      "depth": "introductory",
+      "explainer": "Medical news often reports that a treatment cuts the risk of something by half, but that figure means little without knowing how common the problem was to begin with. Relative risk compares the risk in a treated group with the risk in an untreated group. If 2 in 1,000 untreated people have a heart attack over five years and 1 in 1,000 treated people do, the relative risk is 0.5, a 50 percent relative risk reduction. The absolute risk reduction is the plain difference in risk: 2 minus 1 per 1,000, or 0.1 percentage points. Both numbers are true, but they leave very different impressions. A related measure is the number needed to treat, the number of people who must receive the treatment for one of them to benefit, which is one divided by the absolute risk reduction; here it is 1,000. If the same drug were given to a high-risk group in which 200 in 1,000 would have a heart attack, the same 50 percent relative reduction would prevent 100 heart attacks per 1,000 people, and the number needed to treat would be 10. That is why guidelines target treatments at people with a higher baseline risk. Good reporting gives absolute risks alongside relative ones, together with the harms of the treatment.",
+      "formula": "\\mathrm{NNT} = \\frac{1}{\\mathrm{ARR}}",
+      "source": {
+        "title": "Number needed to treat - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Number_needed_to_treat"
+      },
+      "question": {
+        "prompt": "A drug reduces risk of a stroke from 4% to 3%. What is the number needed to treat?",
+        "options": [
+          {
+            "id": "a",
+            "text": "25"
+          },
+          {
+            "id": "b",
+            "text": "75"
+          },
+          {
+            "id": "c",
+            "text": "33"
+          },
+          {
+            "id": "d",
+            "text": "100"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "The absolute risk reduction is 1 percentage point (0.01), so NNT = 1/0.01 = 100."
+      },
+      "tags": [
+        "epidemiology",
+        "statistics"
+      ]
     }
   ]
 }

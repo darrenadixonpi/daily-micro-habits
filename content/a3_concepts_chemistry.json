@@ -10,19 +10,37 @@
       "depth": "introductory",
       "explainer": "Atoms and molecules are far too small to count one by one, so chemists count them in batches called moles. Since the 2019 redefinition of the SI units, one mole is defined as exactly 6.02214076 times ten to the twenty-third elementary entities, a fixed value known as the Avogadro constant. Before 2019 the mole was defined as the number of atoms in exactly 12 grams of carbon-12, which is why the two definitions agree so closely in everyday work. The mole links the invisible particle scale to the laboratory scale of grams. The molar mass of a substance, in grams per mole, is numerically very close to the mass of one of its molecules in daltons. Water has a molar mass of about 18 grams per mole, so 18 grams of water, roughly a tablespoon, contains about 6.02 times ten to the twenty-third molecules. Balanced chemical equations are written in moles: the equation for burning hydrogen says that 2 moles of hydrogen react with 1 mole of oxygen to give 2 moles of water. Converting between grams, moles and numbers of particles is therefore the first step in almost every quantitative chemistry calculation, from preparing solutions to calculating drug doses.",
       "formula": "n = \\frac{m}{M}, \\qquad N = n \\, N_A, \\qquad N_A = 6.02214076 \\times 10^{23}\\ \\mathrm{mol^{-1}}",
-      "source": {"title": "Mole (unit) - Wikipedia", "url": "https://en.wikipedia.org/wiki/Mole_(unit)"},
+      "source": {
+        "title": "Mole (unit) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mole_(unit)"
+      },
       "question": {
         "prompt": "Approximately how many molecules are in 36 g of water (molar mass about 18 g/mol)?",
         "options": [
-          {"id": "a", "text": "About 1.2 x 10^24"},
-          {"id": "b", "text": "About 6.0 x 10^23"},
-          {"id": "c", "text": "About 3.0 x 10^23"},
-          {"id": "d", "text": "About 2.2 x 10^25"}
+          {
+            "id": "a",
+            "text": "About 1.2 x 10^24"
+          },
+          {
+            "id": "b",
+            "text": "About 6.0 x 10^23"
+          },
+          {
+            "id": "c",
+            "text": "About 3.0 x 10^23"
+          },
+          {
+            "id": "d",
+            "text": "About 2.2 x 10^25"
+          }
         ],
         "correct_option_id": "a",
         "explanation": "36 g divided by 18 g/mol is 2 mol, and 2 x 6.02 x 10^23 is about 1.2 x 10^24 molecules."
       },
-      "tags": ["stoichiometry", "units"]
+      "tags": [
+        "stoichiometry",
+        "units"
+      ]
     },
     {
       "id": "a3-chemistry-0002",
@@ -31,19 +49,37 @@
       "depth": "introductory",
       "explainer": "Many reactions do not run to completion but reach an equilibrium in which the forward and reverse reactions proceed at the same rate, so the amounts of reactants and products stop changing. Le Chatelier's principle predicts what happens when such a system is disturbed: the equilibrium shifts in the direction that partly counteracts the change. Adding more of a reactant pushes the reaction toward products; removing a product does the same. Raising the pressure of a gas reaction favors the side with fewer gas molecules. Heating favors the endothermic direction, the one that absorbs heat. The industrial Haber-Bosch process for making ammonia from nitrogen and hydrogen illustrates the trade-offs. Four gas molecules become two and the reaction releases heat, so high pressure and low temperature both favor ammonia. Yet at low temperature the reaction is impractically slow, so plants compromise at roughly 400 to 500 degrees Celsius and 150 to 250 bar, with an iron catalyst. Two distinctions matter. Changes in concentration or pressure shift the position of equilibrium without changing the equilibrium constant; only a change in temperature changes the constant itself. And a catalyst does not shift the equilibrium at all: it only helps the system reach it faster.",
       "formula": "\\mathrm{N_2 + 3\\,H_2 \\rightleftharpoons 2\\,NH_3}, \\qquad K = \\frac{[\\mathrm{NH_3}]^2}{[\\mathrm{N_2}][\\mathrm{H_2}]^3}",
-      "source": {"title": "Le Chatelier's principle - Wikipedia", "url": "https://en.wikipedia.org/wiki/Le_Chatelier%27s_principle"},
+      "source": {
+        "title": "Le Chatelier's principle - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Le_Chatelier%27s_principle"
+      },
       "question": {
         "prompt": "What happens when a catalyst is added to a reaction mixture that is already at equilibrium?",
         "options": [
-          {"id": "a", "text": "The equilibrium shifts toward the products"},
-          {"id": "b", "text": "The equilibrium composition does not change"},
-          {"id": "c", "text": "The equilibrium constant increases"},
-          {"id": "d", "text": "The equilibrium shifts toward the reactants"}
+          {
+            "id": "a",
+            "text": "The equilibrium shifts toward the products"
+          },
+          {
+            "id": "b",
+            "text": "The equilibrium composition does not change"
+          },
+          {
+            "id": "c",
+            "text": "The equilibrium constant increases"
+          },
+          {
+            "id": "d",
+            "text": "The equilibrium shifts toward the reactants"
+          }
         ],
         "correct_option_id": "b",
         "explanation": "A catalyst speeds the forward and reverse reactions equally, so it changes how fast equilibrium is reached, not where it lies."
       },
-      "tags": ["equilibrium", "industrial_chemistry"]
+      "tags": [
+        "equilibrium",
+        "industrial_chemistry"
+      ]
     },
     {
       "id": "a3-chemistry-0003",
@@ -52,19 +88,37 @@
       "depth": "intermediate",
       "explainer": "For a reaction to occur, molecules must collide with enough energy to break existing bonds and pass through a short-lived, high-energy arrangement called the transition state. The minimum energy required is the activation energy. The Arrhenius equation describes how the rate constant of a reaction depends on temperature: it grows exponentially as temperature rises, because a larger fraction of molecular collisions then carries enough energy to get over the barrier. A rough rule of thumb is that the rate of many reactions near room temperature approximately doubles for every 10 degree Celsius increase, which is why food spoils faster on the counter than in the fridge. Catalysts work by providing an alternative reaction pathway with a lower activation energy. Enzymes are biological catalysts that can accelerate reactions by factors of millions or more by holding reactants in precisely the right orientation and stabilizing the transition state. Importantly, a catalyst changes how fast a reaction happens, not whether it is energetically favorable: the overall energy difference between reactants and products, and therefore the equilibrium position, is unchanged. Plotting the logarithm of the rate constant against the reciprocal of temperature gives a straight line whose slope reveals the activation energy, a standard technique in kinetics laboratories.",
       "formula": "k = A \\, e^{-E_a / (R T)}",
-      "source": {"title": "Arrhenius equation - Wikipedia", "url": "https://en.wikipedia.org/wiki/Arrhenius_equation"},
+      "source": {
+        "title": "Arrhenius equation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Arrhenius_equation"
+      },
       "question": {
         "prompt": "How does a catalyst increase the rate of a chemical reaction?",
         "options": [
-          {"id": "a", "text": "It raises the temperature of the reaction mixture"},
-          {"id": "b", "text": "It makes the overall reaction more energetically favorable"},
-          {"id": "c", "text": "It provides an alternative pathway with a lower activation energy"},
-          {"id": "d", "text": "It increases the concentration of the reactants"}
+          {
+            "id": "a",
+            "text": "It raises the temperature of the reaction mixture"
+          },
+          {
+            "id": "b",
+            "text": "It makes the overall reaction more energetically favorable"
+          },
+          {
+            "id": "c",
+            "text": "It provides an alternative pathway with a lower activation energy"
+          },
+          {
+            "id": "d",
+            "text": "It increases the concentration of the reactants"
+          }
         ],
         "correct_option_id": "c",
         "explanation": "A catalyst lowers the energy barrier without changing the energies of reactants and products, so more collisions succeed while the equilibrium stays the same."
       },
-      "tags": ["kinetics", "catalysis"]
+      "tags": [
+        "kinetics",
+        "catalysis"
+      ]
     },
     {
       "id": "a3-chemistry-0004",
@@ -73,19 +127,37 @@
       "depth": "introductory",
       "explainer": "The pH of a solution measures its acidity through the concentration of hydrogen ions it contains. Formally, pH is the negative base-ten logarithm of the hydrogen-ion activity, which in dilute solutions is close to the concentration in moles per liter. Because the scale is logarithmic, each step of one pH unit corresponds to a tenfold change in hydrogen-ion concentration. Lemon juice at about pH 2 is therefore roughly 100,000 times more acidic than pure water at pH 7, not merely 'a few points' more acidic. Pure water is neutral at pH 7 only at 25 degrees Celsius. Water always splits slightly into hydrogen and hydroxide ions, and the product of their concentrations, the ion product of water, increases with temperature; at 100 degrees Celsius neutral water has a pH of about 6.1 even though it is not acidic. The human body regulates pH tightly: arterial blood stays between about 7.35 and 7.45, and values outside that narrow range can become life-threatening. In the laboratory, pH is measured with a glass electrode meter or estimated with indicator dyes that change color across a known pH range, such as the familiar universal indicator paper.",
       "formula": "\\mathrm{pH} = -\\log_{10} [\\mathrm{H^+}]",
-      "source": {"title": "pH - Wikipedia", "url": "https://en.wikipedia.org/wiki/PH"},
+      "source": {
+        "title": "pH - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/PH"
+      },
       "question": {
         "prompt": "Solution A has a pH of 3 and solution B has a pH of 5. How do their hydrogen-ion concentrations compare?",
         "options": [
-          {"id": "a", "text": "A is 2 times more concentrated than B"},
-          {"id": "b", "text": "B is 100 times more concentrated than A"},
-          {"id": "c", "text": "They are equal, since both are acidic"},
-          {"id": "d", "text": "A is 100 times more concentrated than B"}
+          {
+            "id": "a",
+            "text": "A is 2 times more concentrated than B"
+          },
+          {
+            "id": "b",
+            "text": "B is 100 times more concentrated than A"
+          },
+          {
+            "id": "c",
+            "text": "They are equal, since both are acidic"
+          },
+          {
+            "id": "d",
+            "text": "A is 100 times more concentrated than B"
+          }
         ],
         "correct_option_id": "d",
         "explanation": "A difference of 2 pH units is a factor of 10^2 = 100, and the lower pH has the higher hydrogen-ion concentration."
       },
-      "tags": ["acids_bases", "logarithms"]
+      "tags": [
+        "acids_bases",
+        "logarithms"
+      ]
     },
     {
       "id": "a3-chemistry-0005",
@@ -94,19 +166,37 @@
       "depth": "intermediate",
       "explainer": "A molecule is chiral if it cannot be superimposed on its mirror image, just as a left hand cannot be superimposed on a right hand. The most common cause is a carbon atom bonded to four different groups, called a stereocenter. The two mirror-image forms are enantiomers. In a symmetric environment they are nearly identical: the same melting point, boiling point, solubility and molar mass. They differ in how they rotate plane-polarized light, in equal amounts but in opposite directions, and, crucially, in how they interact with other chiral molecules. Biology is overwhelmingly chiral. Proteins are built almost entirely from L-amino acids and natural sugars are mostly D-sugars, so enzymes and receptors often distinguish sharply between enantiomers. One enantiomer of carvone smells of spearmint while the other smells of caraway. The thalidomide disaster of the late 1950s and early 1960s is the classic warning: one enantiomer had the intended sedative effect while the other was linked to severe birth defects. Because the two forms interconvert in the body, even giving a single enantiomer would not have prevented harm. Today regulators expect each enantiomer of a chiral drug candidate to be characterized, and many drugs are developed and sold as single enantiomers.",
       "formula": null,
-      "source": {"title": "Chirality (chemistry) - Wikipedia", "url": "https://en.wikipedia.org/wiki/Chirality_(chemistry)"},
+      "source": {
+        "title": "Chirality (chemistry) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Chirality_(chemistry)"
+      },
       "question": {
         "prompt": "Which property typically differs between the two enantiomers of a chiral compound?",
         "options": [
-          {"id": "a", "text": "The direction in which they rotate plane-polarized light"},
-          {"id": "b", "text": "Their boiling point"},
-          {"id": "c", "text": "Their molar mass"},
-          {"id": "d", "text": "Their solubility in water"}
+          {
+            "id": "a",
+            "text": "The direction in which they rotate plane-polarized light"
+          },
+          {
+            "id": "b",
+            "text": "Their boiling point"
+          },
+          {
+            "id": "c",
+            "text": "Their molar mass"
+          },
+          {
+            "id": "d",
+            "text": "Their solubility in water"
+          }
         ],
         "correct_option_id": "a",
         "explanation": "Enantiomers share physical properties in achiral settings but rotate plane-polarized light by equal amounts in opposite directions."
       },
-      "tags": ["stereochemistry", "pharmacology"]
+      "tags": [
+        "stereochemistry",
+        "pharmacology"
+      ]
     },
     {
       "id": "a3-chemistry-0006",
@@ -115,19 +205,37 @@
       "depth": "intermediate",
       "explainer": "Whether a process can happen on its own at constant temperature and pressure is decided by the change in Gibbs free energy. That change combines two tendencies: the change in enthalpy, roughly the heat released or absorbed, and the change in entropy, a measure of how many ways energy and matter can be arranged, multiplied by the absolute temperature. If the free-energy change is negative, the process is spontaneous; if it is positive, the reverse process is the spontaneous one. The balance between the two terms explains many everyday observations. Ice melting absorbs heat, which is unfavorable, but increases entropy, which is favorable. Below 0 degrees Celsius the enthalpy term wins and water freezes; above it the temperature-weighted entropy term wins and ice melts. The standard free-energy change is also tied to the equilibrium constant, so thermodynamics predicts how far a reaction will go. What it does not predict is how fast. The conversion of diamond into graphite has a negative free-energy change at ordinary conditions, yet diamonds last for geological time because the activation energy for rearranging their carbon lattice is enormous. Spontaneous therefore means thermodynamically allowed, not quick, a distinction that also applies to many metabolic reactions.",
       "formula": "\\Delta G = \\Delta H - T \\Delta S, \\qquad \\Delta G^{\\circ} = -RT \\ln K",
-      "source": {"title": "Gibbs free energy - Wikipedia", "url": "https://en.wikipedia.org/wiki/Gibbs_free_energy"},
+      "source": {
+        "title": "Gibbs free energy - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gibbs_free_energy"
+      },
       "question": {
         "prompt": "Converting diamond to graphite has a negative Gibbs free-energy change at room conditions. Why do diamonds persist?",
         "options": [
-          {"id": "a", "text": "The free-energy change is actually positive at room temperature"},
-          {"id": "b", "text": "The activation energy is so high that the reaction is immeasurably slow"},
-          {"id": "c", "text": "The entropy of graphite is lower than that of diamond"},
-          {"id": "d", "text": "Diamond and graphite are at equilibrium with each other"}
+          {
+            "id": "a",
+            "text": "The free-energy change is actually positive at room temperature"
+          },
+          {
+            "id": "b",
+            "text": "The activation energy is so high that the reaction is immeasurably slow"
+          },
+          {
+            "id": "c",
+            "text": "The entropy of graphite is lower than that of diamond"
+          },
+          {
+            "id": "d",
+            "text": "Diamond and graphite are at equilibrium with each other"
+          }
         ],
         "correct_option_id": "b",
         "explanation": "A negative free-energy change says the conversion is allowed, not that it is fast. The kinetic barrier keeps diamond effectively stable."
       },
-      "tags": ["thermodynamics", "energy"]
+      "tags": [
+        "thermodynamics",
+        "energy"
+      ]
     },
     {
       "id": "a3-chemistry-0007",
@@ -136,19 +244,37 @@
       "depth": "introductory",
       "explainer": "Electronegativity is the tendency of an atom to pull the shared electrons of a chemical bond toward itself. On the widely used Pauling scale, fluorine is the most electronegative element, at about 4.0, followed by oxygen and nitrogen, while metals such as sodium and cesium sit near the bottom. The difference in electronegativity between two bonded atoms determines how evenly the electrons are shared. Identical atoms, as in the hydrogen molecule, share electrons equally and form a nonpolar covalent bond. When the difference is moderate, as between oxygen and hydrogen, the electrons spend more time near the more electronegative atom, which carries a partial negative charge, giving a polar covalent bond. When the difference is large, as between sodium and chlorine, one atom effectively transfers an electron to the other and the bond is mostly ionic. The cutoffs between these categories are conventions, not sharp physical boundaries. Whether a whole molecule is polar also depends on its shape. Carbon dioxide has two polar carbon-oxygen bonds, but the molecule is linear, so the two bond dipoles point in opposite directions and cancel. Water's bent shape means its bond dipoles add up, making water strongly polar and an excellent solvent for salts.",
       "formula": null,
-      "source": {"title": "Electronegativity - Wikipedia", "url": "https://en.wikipedia.org/wiki/Electronegativity"},
+      "source": {
+        "title": "Electronegativity - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Electronegativity"
+      },
       "question": {
         "prompt": "Carbon dioxide contains polar C=O bonds, yet the molecule has no overall dipole moment. Why?",
         "options": [
-          {"id": "a", "text": "Carbon and oxygen have identical electronegativities"},
-          {"id": "b", "text": "Carbon dioxide is an ionic compound"},
-          {"id": "c", "text": "Its linear shape makes the two bond dipoles cancel"},
-          {"id": "d", "text": "The bonds are too short to carry a dipole"}
+          {
+            "id": "a",
+            "text": "Carbon and oxygen have identical electronegativities"
+          },
+          {
+            "id": "b",
+            "text": "Carbon dioxide is an ionic compound"
+          },
+          {
+            "id": "c",
+            "text": "Its linear shape makes the two bond dipoles cancel"
+          },
+          {
+            "id": "d",
+            "text": "The bonds are too short to carry a dipole"
+          }
         ],
         "correct_option_id": "c",
         "explanation": "Molecular polarity depends on geometry as well as bond polarity. In the linear O=C=O molecule the two equal bond dipoles point in opposite directions."
       },
-      "tags": ["bonding", "molecular_structure"]
+      "tags": [
+        "bonding",
+        "molecular_structure"
+      ]
     },
     {
       "id": "a3-chemistry-0008",
@@ -157,19 +283,37 @@
       "depth": "introductory",
       "explainer": "A hydrogen bond is an attraction between a hydrogen atom covalently bonded to a strongly electronegative atom, usually nitrogen, oxygen or fluorine, and a lone pair of electrons on another such atom nearby. The electronegative partner pulls electron density away from the hydrogen, leaving it with a partial positive charge that is drawn toward the lone pair. Hydrogen bonds are much weaker than covalent bonds, typically a few to a few tens of kilojoules per mole, but they are stronger than most other attractions between molecules, and they add up. They explain why water boils at 100 degrees Celsius while hydrogen sulfide, a heavier molecule of similar shape, boils at around minus 60 degrees. They also explain why ice floats: in ice, hydrogen bonds lock water molecules into an open hexagonal lattice that is less dense than the liquid, so lakes freeze from the top down and the water beneath stays liquid. In biology, hydrogen bonds hold the two strands of DNA together, with two between adenine and thymine and three between guanine and cytosine, and they stabilize the helices and sheets that shape proteins. Their weakness is a feature: it lets DNA unzip for copying and proteins flex as they work.",
       "formula": null,
-      "source": {"title": "Hydrogen bond - Wikipedia", "url": "https://en.wikipedia.org/wiki/Hydrogen_bond"},
+      "source": {
+        "title": "Hydrogen bond - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hydrogen_bond"
+      },
       "question": {
         "prompt": "Why does water boil at 100 degrees Celsius while hydrogen sulfide, a heavier molecule, boils near minus 60 degrees Celsius?",
         "options": [
-          {"id": "a", "text": "Water molecules are larger than hydrogen sulfide molecules"},
-          {"id": "b", "text": "Sulfur forms stronger covalent bonds with hydrogen"},
-          {"id": "c", "text": "Hydrogen sulfide is an ionic compound"},
-          {"id": "d", "text": "Water molecules form extensive hydrogen bonds with each other"}
+          {
+            "id": "a",
+            "text": "Water molecules are larger than hydrogen sulfide molecules"
+          },
+          {
+            "id": "b",
+            "text": "Sulfur forms stronger covalent bonds with hydrogen"
+          },
+          {
+            "id": "c",
+            "text": "Hydrogen sulfide is an ionic compound"
+          },
+          {
+            "id": "d",
+            "text": "Water molecules form extensive hydrogen bonds with each other"
+          }
         ],
         "correct_option_id": "d",
         "explanation": "Oxygen is far more electronegative than sulfur, so water forms a strong hydrogen-bond network that takes much more energy to break when boiling."
       },
-      "tags": ["intermolecular_forces", "biochemistry"]
+      "tags": [
+        "intermolecular_forces",
+        "biochemistry"
+      ]
     },
     {
       "id": "a3-chemistry-0009",
@@ -178,19 +322,37 @@
       "depth": "intermediate",
       "explainer": "A buffer is a solution that resists changes in pH when small amounts of acid or base are added. It contains a weak acid together with its conjugate base, for example acetic acid and acetate. Added hydrogen ions are captured by the conjugate base, and added hydroxide ions are neutralized by the weak acid, so the pH moves only slightly. The Henderson-Hasselbalch equation relates the buffer's pH to the acid's pKa and the ratio of conjugate base to acid. When the two are present in equal amounts, the logarithm term is zero and the pH equals the pKa. Buffers work best within about one pH unit of the pKa, where both components are present in useful quantities; outside that range one component is nearly used up. Blood relies mainly on the carbonic acid and bicarbonate pair. Its pKa of about 6.1 is well below blood's pH of 7.4, which would make it a poor buffer in a sealed flask. It works in the body because the system is open: the lungs adjust carbon dioxide within minutes and the kidneys adjust bicarbonate over hours to days. Laboratory work depends on buffers too, since enzymes and cell cultures function only within narrow pH ranges.",
       "formula": "\\mathrm{pH} = \\mathrm{p}K_a + \\log_{10} \\frac{[\\mathrm{A^-}]}{[\\mathrm{HA}]}",
-      "source": {"title": "Henderson-Hasselbalch equation - Wikipedia", "url": "https://en.wikipedia.org/wiki/Henderson%E2%80%93Hasselbalch_equation"},
+      "source": {
+        "title": "Henderson-Hasselbalch equation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Henderson%E2%80%93Hasselbalch_equation"
+      },
       "question": {
         "prompt": "A buffer contains equal concentrations of a weak acid and its conjugate base. What is its pH?",
         "options": [
-          {"id": "a", "text": "Equal to the pKa of the acid"},
-          {"id": "b", "text": "Exactly 7"},
-          {"id": "c", "text": "Half the pKa of the acid"},
-          {"id": "d", "text": "One unit above the pKa"}
+          {
+            "id": "a",
+            "text": "Equal to the pKa of the acid"
+          },
+          {
+            "id": "b",
+            "text": "Exactly 7"
+          },
+          {
+            "id": "c",
+            "text": "Half the pKa of the acid"
+          },
+          {
+            "id": "d",
+            "text": "One unit above the pKa"
+          }
         ],
         "correct_option_id": "a",
         "explanation": "With equal concentrations the ratio is 1 and log10(1) = 0, so the Henderson-Hasselbalch equation gives pH = pKa."
       },
-      "tags": ["acids_bases", "physiology"]
+      "tags": [
+        "acids_bases",
+        "physiology"
+      ]
     },
     {
       "id": "a3-chemistry-0010",
@@ -199,19 +361,426 @@
       "depth": "introductory",
       "explainer": "Oxidation-reduction, or redox, reactions involve the transfer of electrons from one species to another. Oxidation is the loss of electrons and reduction is the gain of electrons, captured in the mnemonic 'OIL RIG': oxidation is loss, reduction is gain. The two always occur together, because electrons lost by one species must be gained by another. The species that accepts electrons is the oxidizing agent and is itself reduced; the species that donates electrons is the reducing agent and is itself oxidized. Chemists track electron transfer with oxidation states, a bookkeeping system that assigns charges to atoms as if all bonds were ionic. Redox chemistry is everywhere. Iron rusts when it is oxidized by oxygen in the presence of water. In a lithium-ion battery, discharge involves oxidation at one electrode and reduction at the other, with lithium ions moving through the electrolyte while electrons travel through the external circuit and power the device. In cellular respiration, glucose is oxidized step by step and oxygen is the final electron acceptor, reduced to water, and the energy released along the way is captured to make ATP. Photosynthesis runs the process in reverse, using light energy to reduce carbon dioxide into sugars.",
       "formula": "\\mathrm{Zn + Cu^{2+} \\rightarrow Zn^{2+} + Cu}",
-      "source": {"title": "Redox - Wikipedia", "url": "https://en.wikipedia.org/wiki/Redox"},
+      "source": {
+        "title": "Redox - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Redox"
+      },
       "question": {
         "prompt": "In the reaction Zn + Cu2+ -> Zn2+ + Cu, which species is the oxidizing agent?",
         "options": [
-          {"id": "a", "text": "Zn"},
-          {"id": "b", "text": "Cu2+"},
-          {"id": "c", "text": "Zn2+"},
-          {"id": "d", "text": "Cu"}
+          {
+            "id": "a",
+            "text": "Zn"
+          },
+          {
+            "id": "b",
+            "text": "Cu2+"
+          },
+          {
+            "id": "c",
+            "text": "Zn2+"
+          },
+          {
+            "id": "d",
+            "text": "Cu"
+          }
         ],
         "correct_option_id": "b",
         "explanation": "Cu2+ gains two electrons and is reduced to Cu, so it is the oxidizing agent; zinc loses electrons and is the reducing agent."
       },
-      "tags": ["redox", "electrochemistry"]
+      "tags": [
+        "redox",
+        "electrochemistry"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0011",
+      "domain": "chemistry",
+      "title": "The ideal gas law",
+      "depth": "introductory",
+      "explainer": "The ideal gas law ties together the four quantities that describe a gas: pressure, volume, temperature and the amount of gas in moles. It combines several older observations. Boyle's law says that at fixed temperature, squeezing a gas into half the volume doubles its pressure. Charles's law says that at fixed pressure, volume grows in proportion to absolute temperature. Avogadro's law says that equal volumes of gases at the same temperature and pressure hold the same number of molecules. Put together, they give PV = nRT, where R is the gas constant, about 8.314 joules per mole per kelvin. Temperature must be in kelvin, because the law describes a gas whose volume would shrink to zero at absolute zero. At standard temperature and pressure of 0 °C and one atmosphere, one mole of any ideal gas fills about 22.4 liters. The model treats molecules as points that do not attract one another and collide perfectly elastically. Real gases follow it closely at low pressure and high temperature, but they deviate when molecules are crowded together or slow enough for attractions to matter, which is why gases liquefy. The van der Waals equation adds corrections for molecular size and attraction.",
+      "formula": "PV = nRT",
+      "source": {
+        "title": "Ideal gas law - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ideal_gas_law"
+      },
+      "question": {
+        "prompt": "A sealed rigid container of gas is heated from 300 K to 600 K. What happens to its pressure, assuming ideal behavior?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It halves"
+          },
+          {
+            "id": "b",
+            "text": "It stays the same, because the volume is fixed"
+          },
+          {
+            "id": "c",
+            "text": "It doubles"
+          },
+          {
+            "id": "d",
+            "text": "It rises by a factor of four"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "With n and V fixed, pressure is proportional to absolute temperature, so doubling the temperature in kelvin doubles the pressure."
+      },
+      "tags": [
+        "gases",
+        "thermodynamics"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0012",
+      "domain": "chemistry",
+      "title": "Catalysis",
+      "depth": "introductory",
+      "explainer": "A catalyst speeds up a chemical reaction without being used up by it. It works by providing an alternative reaction pathway with a lower activation energy, the energy barrier that molecules must climb before they can react. Because more molecular collisions now have enough energy to get over the barrier, the reaction runs faster at the same temperature. A catalyst speeds up the forward and reverse reactions equally, so it does not change where the equilibrium lies or how much product is formed in the end; it only helps the system get there sooner. Catalysts come in two broad kinds. Homogeneous catalysts are in the same phase as the reactants, such as an acid dissolved in a reaction mixture. Heterogeneous catalysts are usually solids that the reacting gases or liquids touch, such as the platinum, palladium and rhodium in a car's catalytic converter or the iron catalyst of the Haber-Bosch process, which makes ammonia for fertilizer. Enzymes are biological catalysts, proteins whose active sites hold reactants in exactly the right orientation, and some speed up reactions by factors of millions or more. An estimated 90 percent of commercially produced chemicals involve a catalyst at some stage of their manufacture.",
+      "formula": null,
+      "source": {
+        "title": "Catalysis - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Catalysis"
+      },
+      "question": {
+        "prompt": "How does adding a catalyst affect a reaction at equilibrium?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It shifts the equilibrium towards the products"
+          },
+          {
+            "id": "b",
+            "text": "It shifts the equilibrium towards the reactants"
+          },
+          {
+            "id": "c",
+            "text": "It is consumed until equilibrium is reached"
+          },
+          {
+            "id": "d",
+            "text": "It does not change the equilibrium position; it only helps the system reach it faster"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "A catalyst lowers the barrier for the forward and reverse reactions equally, so the equilibrium composition is unchanged."
+      },
+      "tags": [
+        "kinetics",
+        "industry"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0013",
+      "domain": "chemistry",
+      "title": "VSEPR theory and molecular shape",
+      "depth": "introductory",
+      "explainer": "The shape of a molecule determines much of its behavior, from its boiling point to how it fits into an enzyme. Valence shell electron pair repulsion theory, or VSEPR, predicts that shape from a simple idea: the groups of electrons around a central atom repel one another and spread out as far apart as possible. Each bond, whether single, double or triple, counts as one group, and so does each lone pair of electrons that is not shared with another atom. Two groups line up at 180 degrees, giving a linear molecule such as carbon dioxide. Three groups spread to 120 degrees in a flat triangle, as in boron trifluoride. Four groups point to the corners of a tetrahedron at about 109.5 degrees, as in methane. Lone pairs take up more room than bonding pairs, so they squeeze the bonds closer together. Ammonia has three bonds and one lone pair, so it is a trigonal pyramid with angles of about 107 degrees. Water has two bonds and two lone pairs, so it is bent, at about 104.5 degrees. That bend is why water is polar: the partial charges on its atoms do not cancel out, which explains its unusual properties as a solvent.",
+      "formula": null,
+      "source": {
+        "title": "VSEPR theory - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/VSEPR_theory"
+      },
+      "question": {
+        "prompt": "Why is a water molecule bent rather than linear?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The two lone pairs on oxygen, along with the two bonds, spread towards a tetrahedral arrangement"
+          },
+          {
+            "id": "b",
+            "text": "Hydrogen atoms attract each other"
+          },
+          {
+            "id": "c",
+            "text": "Oxygen can only form bonds at 90 degrees"
+          },
+          {
+            "id": "d",
+            "text": "Water molecules are always hydrogen bonded to a neighbor"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Oxygen has four electron groups (two bonds, two lone pairs); repulsion pushes them towards a tetrahedron, leaving the two bonds at about 104.5 degrees."
+      },
+      "tags": [
+        "bonding",
+        "structure"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0014",
+      "domain": "chemistry",
+      "title": "Enthalpy and Hess's law",
+      "depth": "intermediate",
+      "explainer": "Enthalpy is a measure of the heat content of a system at constant pressure, and the enthalpy change of a reaction, written as delta H, tells you how much heat is released or absorbed. A negative value means the reaction is exothermic and gives off heat, like burning fuel. A positive value means it is endothermic and takes heat in, like dissolving ammonium nitrate in an instant cold pack. Because enthalpy is a state function, its change depends only on the starting and finishing states, not on the route taken between them. Germain Hess stated the practical consequence in 1840: if a reaction can be written as the sum of several steps, its enthalpy change is the sum of the steps' enthalpy changes. This lets chemists work out values that are hard to measure directly. The enthalpy of turning carbon into carbon monoxide is awkward to measure because some carbon dioxide always forms, but it can be found by subtracting the enthalpy of burning carbon monoxide to carbon dioxide from that of burning carbon to carbon dioxide. Tables of standard enthalpies of formation make the method routine: the reaction enthalpy equals the formation enthalpies of the products minus those of the reactants.",
+      "formula": "\\Delta H_{rxn} = \\sum \\Delta H_f(\\mathrm{products}) - \\sum \\Delta H_f(\\mathrm{reactants})",
+      "source": {
+        "title": "Hess's law - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hess%27s_law"
+      },
+      "question": {
+        "prompt": "What property of enthalpy makes Hess's law work?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It is always negative"
+          },
+          {
+            "id": "b",
+            "text": "It is a state function, so its change does not depend on the path taken"
+          },
+          {
+            "id": "c",
+            "text": "It equals the activation energy"
+          },
+          {
+            "id": "d",
+            "text": "It depends only on temperature"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Because enthalpy is a state function, adding up the steps of any route gives the same overall change."
+      },
+      "tags": [
+        "thermodynamics",
+        "energy"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0015",
+      "domain": "chemistry",
+      "title": "Electrochemical cells",
+      "depth": "intermediate",
+      "explainer": "An electrochemical cell turns a chemical reaction into electricity, or uses electricity to drive a reaction. In a galvanic cell, the kind found in batteries, a redox reaction is split into two halves that take place at separate electrodes. Oxidation, the loss of electrons, happens at the anode; reduction, the gain of electrons, happens at the cathode. The electrons cannot pass through the electrolyte between them, so they flow through an external wire, and that flow is the current that powers a device. Ions move through the electrolyte or a salt bridge to keep the charges balanced. The voltage of the cell comes from the difference in how strongly the two electrode materials attract electrons, measured as standard reduction potentials against the hydrogen electrode. A zinc and copper cell, the classic Daniell cell, gives about 1.1 volts. In an electrolytic cell the process is reversed: an external power supply forces a non-spontaneous reaction, as in electroplating, purifying copper or splitting water into hydrogen and oxygen. Rechargeable batteries do both. A lithium-ion battery acts as a galvanic cell while discharging, as lithium ions move from the graphite anode to the metal oxide cathode, and as an electrolytic cell while charging.",
+      "formula": "E^{\\circ}_{cell} = E^{\\circ}_{cathode} - E^{\\circ}_{anode}",
+      "source": {
+        "title": "Electrochemical cell - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Electrochemical_cell"
+      },
+      "question": {
+        "prompt": "In a galvanic cell, where does oxidation take place?",
+        "options": [
+          {
+            "id": "a",
+            "text": "At the cathode"
+          },
+          {
+            "id": "b",
+            "text": "In the salt bridge"
+          },
+          {
+            "id": "c",
+            "text": "At the anode"
+          },
+          {
+            "id": "d",
+            "text": "In the external wire"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Oxidation, the loss of electrons, occurs at the anode; the electrons then travel through the wire to the cathode."
+      },
+      "tags": [
+        "electrochemistry",
+        "energy"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0016",
+      "domain": "chemistry",
+      "title": "Chromatography",
+      "depth": "introductory",
+      "explainer": "Chromatography is a family of techniques for separating the components of a mixture. Every version has two phases: a stationary phase that stays put and a mobile phase that flows past it, carrying the sample. Each compound in the sample divides its time between the two phases according to how strongly it sticks to the stationary phase. Compounds that cling tightly move slowly; compounds that prefer the mobile phase race ahead. Over the length of the column or plate, the components spread out into separate bands. The simplest example is ink on paper: as water creeps up a strip of filter paper, different dyes travel different distances. The Russian botanist Mikhail Tsvet coined the name in the early 1900s after separating plant pigments into colored bands. Modern laboratories rely on far more powerful forms. Gas chromatography vaporizes the sample and passes it through a long, thin coated column, and is used for drug testing and for analyzing fragrances. High-performance liquid chromatography pumps a liquid at high pressure through a column packed with fine particles and is the workhorse for checking the purity of medicines. Coupled to a mass spectrometer, which identifies each separated compound by its mass, chromatography can detect traces of substances in blood, food or water.",
+      "formula": null,
+      "source": {
+        "title": "Chromatography - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Chromatography"
+      },
+      "question": {
+        "prompt": "In chromatography, why do the components of a mixture separate?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They have different colors"
+          },
+          {
+            "id": "b",
+            "text": "They are heated to different temperatures"
+          },
+          {
+            "id": "c",
+            "text": "Heavier molecules always move faster"
+          },
+          {
+            "id": "d",
+            "text": "They divide their time differently between the stationary and mobile phases"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "A compound that sticks more strongly to the stationary phase moves more slowly, so components with different affinities spread apart."
+      },
+      "tags": [
+        "analysis",
+        "laboratory"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0017",
+      "domain": "chemistry",
+      "title": "Nuclear magnetic resonance spectroscopy",
+      "depth": "advanced",
+      "explainer": "Nuclear magnetic resonance spectroscopy, or NMR, is the main tool chemists use to work out the structure of an organic molecule. Some atomic nuclei, including hydrogen-1 and carbon-13, behave like tiny magnets. In a strong magnetic field they line up either with or against the field, and the two orientations have slightly different energies. Radio waves of exactly the right frequency can flip nuclei from one state to the other, and as they relax back they emit a signal that the instrument records. The key is that each nucleus feels a slightly different field depending on its surroundings, because nearby electrons partly shield it. This chemical shift, measured in parts per million, reveals what kind of environment each hydrogen or carbon atom sits in, such as next to an oxygen, on a benzene ring or in a methyl group. The area under each hydrogen signal is proportional to the number of hydrogens producing it. Signals are also split into small multiplets by neighboring nuclei, which shows which atoms are connected. Together these clues let chemists assemble a structure piece by piece. Magnetic resonance imaging in hospitals uses the same physics, mapping the hydrogen nuclei of water in the body.",
+      "formula": null,
+      "source": {
+        "title": "Nuclear magnetic resonance spectroscopy - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy"
+      },
+      "question": {
+        "prompt": "What causes hydrogen atoms in different parts of a molecule to give signals at different chemical shifts?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Surrounding electrons shield each nucleus to a different degree, so each feels a slightly different magnetic field"
+          },
+          {
+            "id": "b",
+            "text": "They have different numbers of protons"
+          },
+          {
+            "id": "c",
+            "text": "They absorb visible light of different colors"
+          },
+          {
+            "id": "d",
+            "text": "They are different isotopes"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Local electron density shields each nucleus differently, shifting the frequency at which it resonates."
+      },
+      "tags": [
+        "analysis",
+        "spectroscopy"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0018",
+      "domain": "chemistry",
+      "title": "Polymers and polymerization",
+      "depth": "introductory",
+      "explainer": "A polymer is a very large molecule built from many repeating units called monomers, linked into long chains. Nature is full of them: cellulose and starch are chains of glucose, proteins are chains of amino acids, and DNA is a chain of nucleotides. Synthetic polymers, the materials we call plastics, are made mainly in two ways. In addition or chain-growth polymerization, monomers with a carbon-carbon double bond open up and join end to end, so ethylene becomes polyethylene, the most widely produced plastic, used in bags and bottles. In condensation or step-growth polymerization, two kinds of monomer react and release a small molecule, usually water, each time they join; nylon and polyester are made this way. The properties of a polymer depend on the length of its chains, how they are arranged and how they interact. Long, straight chains that pack neatly give strong, rigid materials, while branched chains give softer, more flexible ones. Thermoplastics such as polyethylene soften when heated and can be remolded, which makes them easier to recycle. Thermosets such as epoxy resins form chemical cross-links between chains as they cure, so they cannot be melted again. The chemical stability that makes plastics useful also makes them slow to break down in the environment.",
+      "formula": null,
+      "source": {
+        "title": "Polymer - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Polymer"
+      },
+      "question": {
+        "prompt": "What distinguishes condensation polymerization from addition polymerization?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Condensation polymerization only makes natural polymers"
+          },
+          {
+            "id": "b",
+            "text": "Condensation polymerization releases a small molecule, such as water, each time monomers join"
+          },
+          {
+            "id": "c",
+            "text": "Addition polymerization requires two different monomers"
+          },
+          {
+            "id": "d",
+            "text": "Addition polymerization produces thermosets only"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "In step-growth (condensation) polymerization each new link releases a small by-product such as water, as in nylon and polyester."
+      },
+      "tags": [
+        "materials",
+        "organic_chemistry"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0019",
+      "domain": "chemistry",
+      "title": "Isotopes and radiocarbon dating",
+      "depth": "introductory",
+      "explainer": "Isotopes are versions of the same element with different numbers of neutrons in their nuclei. They have the same number of protons and electrons, so they behave almost identically in chemical reactions, but they differ in mass and, in some cases, in stability. Carbon has two stable isotopes, carbon-12 and carbon-13, and a radioactive one, carbon-14, which is made continuously in the upper atmosphere when cosmic rays strike nitrogen. Carbon-14 joins carbon dioxide, which plants absorb and animals eat, so every living thing contains a small, roughly constant share of it. When an organism dies it stops taking in carbon, and its carbon-14 decays back to nitrogen with a half-life of about 5,730 years. Measuring how much remains therefore tells you how long ago the organism died. After one half-life, half the original carbon-14 is left; after two, a quarter. Willard Libby developed the method in the late 1940s and won the 1960 Nobel Prize in Chemistry for it. Radiocarbon dating works for organic material up to about 50,000 years old. Because the amount of carbon-14 in the atmosphere has varied over time, raw dates are calibrated against tree rings and other records of known age.",
+      "formula": "N(t) = N_0 \\left(\\frac{1}{2}\\right)^{t/t_{1/2}}",
+      "source": {
+        "title": "Radiocarbon dating - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Radiocarbon_dating"
+      },
+      "question": {
+        "prompt": "A wooden tool contains one quarter of the carbon-14 found in living wood. Roughly how old is it?",
+        "options": [
+          {
+            "id": "a",
+            "text": "About 2,900 years"
+          },
+          {
+            "id": "b",
+            "text": "About 5,700 years"
+          },
+          {
+            "id": "c",
+            "text": "About 11,500 years"
+          },
+          {
+            "id": "d",
+            "text": "About 23,000 years"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "One quarter remaining means two half-lives have passed: 2 × 5,730 ≈ 11,500 years."
+      },
+      "tags": [
+        "nuclear_chemistry",
+        "dating"
+      ]
+    },
+    {
+      "id": "a3-chemistry-0020",
+      "domain": "chemistry",
+      "title": "Rate laws and reaction order",
+      "depth": "intermediate",
+      "explainer": "A rate law describes how the speed of a reaction depends on the concentrations of the reactants. It takes the form rate equals k times the concentration of each reactant raised to some power, where k is the rate constant and the powers are the reaction orders. The orders must be found by experiment; they cannot be read from the balanced equation, because most reactions happen through several elementary steps and the slowest step controls the overall rate. If a reaction is first order in a reactant, doubling that reactant's concentration doubles the rate. If it is second order, doubling the concentration quadruples the rate. If it is zero order, the concentration has no effect, which happens when something else, such as the surface of a catalyst or an enzyme that is already saturated, is the bottleneck. First-order reactions have a special property: their half-life is constant and does not depend on how much reactant is present, which is why radioactive decay and the elimination of many drugs from the body are described by half-lives. The rate constant itself depends on temperature, as described by the Arrhenius equation, and on the presence of catalysts, but not on concentration.",
+      "formula": "\\mathrm{rate} = k [A]^m [B]^n",
+      "source": {
+        "title": "Rate equation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rate_equation"
+      },
+      "question": {
+        "prompt": "A reaction is second order in reactant A. If the concentration of A is tripled, how does the rate change?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It triples"
+          },
+          {
+            "id": "b",
+            "text": "It increases sixfold"
+          },
+          {
+            "id": "c",
+            "text": "It stays the same"
+          },
+          {
+            "id": "d",
+            "text": "It increases ninefold"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "For a second-order dependence the rate scales with the square of the concentration: 3² = 9."
+      },
+      "tags": [
+        "kinetics"
+      ]
     }
   ]
 }

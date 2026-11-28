@@ -394,6 +394,394 @@
         "condensed_matter",
         "electronics"
       ]
+    },
+    {
+      "id": "a3-physics-0011",
+      "domain": "physics",
+      "title": "Mass-energy equivalence",
+      "depth": "introductory",
+      "explainer": "Albert Einstein's equation E = mc² says that mass and energy are two forms of the same thing, and that a small amount of mass corresponds to an enormous amount of energy, because the speed of light squared is a huge number, about nine times ten to the sixteenth meters squared per second squared. Einstein derived it in 1905 as a consequence of special relativity: when a body emits energy, its mass decreases by that energy divided by c squared. In everyday chemistry the effect is far too small to measure, but in nuclear reactions it is central. The nucleus of a helium atom weighs slightly less than the two protons and two neutrons that make it up, and this mass defect, released as energy when the nucleus forms, is what powers the Sun. Nuclear fission reactors convert well under one percent of the mass of their fuel into energy, yet that is still millions of times more energy per kilogram than burning coal. The equation also works in reverse: in particle accelerators, energy from collisions turns into new particles with mass. A common misconception is that E = mc² explains how to build a bomb; it only says how much energy is available, not how to release it.",
+      "formula": "E = mc^2",
+      "source": {
+        "title": "Mass-energy equivalence - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence"
+      },
+      "question": {
+        "prompt": "Why does the Sun release energy when hydrogen fuses into helium?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The helium nucleus has more mass than the particles that formed it"
+          },
+          {
+            "id": "b",
+            "text": "Fusion creates new protons"
+          },
+          {
+            "id": "c",
+            "text": "The helium nucleus has slightly less mass than the particles that formed it, and the difference is released as energy"
+          },
+          {
+            "id": "d",
+            "text": "Gravity converts directly into light"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "The mass defect of the helium nucleus is released as energy, according to E = mc²."
+      },
+      "tags": [
+        "relativity",
+        "nuclear_physics"
+      ]
+    },
+    {
+      "id": "a3-physics-0012",
+      "domain": "physics",
+      "title": "The photoelectric effect",
+      "depth": "introductory",
+      "explainer": "When light shines on a metal surface, it can knock electrons out of it. This photoelectric effect puzzled physicists at the end of the nineteenth century, because it did not behave as a wave theory of light predicted. Brighter light should carry more energy and eject faster electrons, yet the energy of the ejected electrons depended only on the light's color, or frequency, not its brightness. Below a certain threshold frequency, no electrons came out at all, however intense the light. Above it, electrons emerged instantly, even in very dim light. In 1905 Albert Einstein explained this by proposing that light comes in packets of energy, later called photons, each carrying an energy equal to Planck's constant times the frequency. A single photon gives all its energy to a single electron. If that energy is less than the work function, the minimum energy needed to free an electron from the metal, nothing happens; any excess becomes the electron's kinetic energy. Brightness only changes how many photons arrive, and so how many electrons are ejected. Robert Millikan's careful measurements confirmed the prediction, and Einstein's 1921 Nobel Prize in Physics was awarded for this work, not for relativity. Solar cells and camera sensors rely on related effects.",
+      "formula": "E_k = hf - \\phi",
+      "source": {
+        "title": "Photoelectric effect - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Photoelectric_effect"
+      },
+      "question": {
+        "prompt": "Red light below a metal's threshold frequency shines on it. What happens if the light is made much brighter?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Electrons are ejected with more energy"
+          },
+          {
+            "id": "b",
+            "text": "Electrons are ejected after a delay"
+          },
+          {
+            "id": "c",
+            "text": "The threshold frequency decreases"
+          },
+          {
+            "id": "d",
+            "text": "Still no electrons are ejected, because each photon has too little energy"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Ejection depends on the energy per photon, set by frequency; brighter light only adds more photons of the same insufficient energy."
+      },
+      "tags": [
+        "quantum",
+        "light"
+      ]
+    },
+    {
+      "id": "a3-physics-0013",
+      "domain": "physics",
+      "title": "Nuclear fission and fusion",
+      "depth": "intermediate",
+      "explainer": "Both fission and fusion release energy by turning nuclei into ones that are more tightly bound. The binding energy per nucleon, the energy needed to pull a nucleus apart divided by its number of protons and neutrons, rises steeply from hydrogen to a peak around iron and nickel, then declines slowly towards the heaviest elements. Moving towards that peak from either side releases energy. Fission splits a heavy nucleus such as uranium-235 or plutonium-239. When uranium-235 absorbs a slow neutron it becomes unstable and splits into two smaller nuclei, releasing about 200 million electron volts of energy and two or three more neutrons. Those neutrons can split further nuclei, creating a chain reaction that reactors control with absorbing rods and moderators. Fusion joins light nuclei, such as the hydrogen isotopes deuterium and tritium, into helium. It releases even more energy per kilogram of fuel and produces less long-lived radioactive waste, but the positively charged nuclei repel each other strongly, so fusion needs temperatures of over 100 million kelvin to happen on Earth. Stars achieve it with immense gravity. In 2022 the US National Ignition Facility became the first experiment to get more fusion energy out than the laser energy delivered to its fuel.",
+      "formula": null,
+      "source": {
+        "title": "Nuclear binding energy - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nuclear_binding_energy"
+      },
+      "question": {
+        "prompt": "Why can both splitting heavy nuclei and joining light nuclei release energy?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Both move towards nuclei near iron, which have the highest binding energy per nucleon"
+          },
+          {
+            "id": "b",
+            "text": "Both processes destroy protons"
+          },
+          {
+            "id": "c",
+            "text": "Both rely on chemical reactions"
+          },
+          {
+            "id": "d",
+            "text": "Heavy and light nuclei both contain antimatter"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Binding energy per nucleon peaks near iron; fission and fusion both produce more tightly bound nuclei, releasing the difference."
+      },
+      "tags": [
+        "nuclear_physics",
+        "energy"
+      ]
+    },
+    {
+      "id": "a3-physics-0014",
+      "domain": "physics",
+      "title": "Lasers and stimulated emission",
+      "depth": "intermediate",
+      "explainer": "The word laser stands for light amplification by stimulated emission of radiation. Atoms can absorb light and jump to an excited state, and they usually drop back on their own, emitting a photon in a random direction at a random moment; this is spontaneous emission, the source of ordinary light. Einstein showed in 1917 that there is a third process. If a photon of exactly the right energy passes an atom that is already excited, it can trigger the atom to release an identical photon, with the same frequency, direction and phase. That is stimulated emission. Normally more atoms sit in the low-energy state than in the excited one, so photons are absorbed more often than they are copied. A laser creates a population inversion, with more atoms excited than not, by pumping energy in with a flash lamp, an electric current or another laser. The gain medium sits between two mirrors, one partly transparent, so light bounces back and forth, being amplified on every pass, and a beam leaks out through the partial mirror. The result is light that is highly directional, a single color and coherent. Theodore Maiman built the first working laser, using a ruby crystal, in 1960.",
+      "formula": null,
+      "source": {
+        "title": "Laser - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Laser"
+      },
+      "question": {
+        "prompt": "What condition must a laser's gain medium reach for light to be amplified?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Absolute zero temperature"
+          },
+          {
+            "id": "b",
+            "text": "A population inversion, with more atoms excited than in the lower state"
+          },
+          {
+            "id": "c",
+            "text": "Complete transparency"
+          },
+          {
+            "id": "d",
+            "text": "A vacuum between the mirrors"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Only when excited atoms outnumber those in the lower state does stimulated emission outpace absorption, so light grows on each pass."
+      },
+      "tags": [
+        "light",
+        "quantum"
+      ]
+    },
+    {
+      "id": "a3-physics-0015",
+      "domain": "physics",
+      "title": "Superconductivity",
+      "depth": "intermediate",
+      "explainer": "Some materials lose all electrical resistance when cooled below a critical temperature. Heike Kamerlingh Onnes discovered this in 1911, when mercury cooled with liquid helium to about 4 kelvin suddenly stopped resisting current. A current set flowing in a superconducting loop can circulate for years without fading. Superconductors also expel magnetic fields from their interior, the Meissner effect, which is why a magnet can float above a cooled superconductor. The explanation for conventional superconductors came in 1957 from John Bardeen, Leon Cooper and Robert Schrieffer. In BCS theory, electrons interact with vibrations of the crystal lattice and pair up into Cooper pairs. The pairs act together as a single quantum state that moves through the lattice without scattering, so no energy is lost. In 1986 a new class of copper oxide ceramics was found to superconduct at much higher temperatures, and some now work above 77 kelvin, the boiling point of cheap liquid nitrogen. Their mechanism is still not fully understood. Superconducting magnets are used in MRI scanners, particle accelerators such as the Large Hadron Collider, and experimental fusion reactors. A material that superconducts at room temperature and normal pressure has not been confirmed, despite several widely publicized claims.",
+      "formula": null,
+      "source": {
+        "title": "Superconductivity - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Superconductivity"
+      },
+      "question": {
+        "prompt": "In BCS theory, what allows current to flow without resistance in a conventional superconductor?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Electrons move faster than light"
+          },
+          {
+            "id": "b",
+            "text": "The material has no atoms"
+          },
+          {
+            "id": "c",
+            "text": "Electrons pair up into Cooper pairs that move through the lattice without scattering"
+          },
+          {
+            "id": "d",
+            "text": "Magnetic fields push the electrons along"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Lattice-mediated attraction binds electrons into Cooper pairs whose collective quantum state does not scatter off the lattice."
+      },
+      "tags": [
+        "condensed_matter",
+        "quantum"
+      ]
+    },
+    {
+      "id": "a3-physics-0016",
+      "domain": "physics",
+      "title": "Maxwell's equations and light",
+      "depth": "advanced",
+      "explainer": "In the 1860s James Clerk Maxwell brought electricity and magnetism together in a set of equations that still describe them today. In words, they say four things. Electric charges create electric fields that point away from positive and towards negative charges. There are no magnetic charges, so magnetic field lines always form closed loops. A changing magnetic field creates an electric field, which is Faraday's law of induction and the principle behind generators. And an electric current, or a changing electric field, creates a magnetic field. That last term, a changing electric field producing a magnetic one, was Maxwell's own addition. With it, the equations predict that a disturbance can sustain itself: a changing electric field makes a changing magnetic field, which makes a changing electric field, and the pair travels through empty space as a wave. Maxwell calculated the wave's speed from two constants measured in electrical experiments and found it matched the measured speed of light, about 300,000 kilometers per second. He concluded that light is an electromagnetic wave. Heinrich Hertz produced and detected radio waves in the late 1880s, confirming the theory, and the same physics now underlies radio, mobile phones, microwaves and X-rays, which differ only in wavelength.",
+      "formula": "c = \\frac{1}{\\sqrt{\\mu_0 \\, \\varepsilon_0}}",
+      "source": {
+        "title": "Maxwell's equations - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Maxwell%27s_equations"
+      },
+      "question": {
+        "prompt": "What did Maxwell conclude when the predicted speed of electromagnetic waves matched the measured speed of light?",
+        "options": [
+          {
+            "id": "a",
+            "text": "That light travels through a solid medium"
+          },
+          {
+            "id": "b",
+            "text": "That magnetic charges exist"
+          },
+          {
+            "id": "c",
+            "text": "That electricity is made of particles"
+          },
+          {
+            "id": "d",
+            "text": "That light is an electromagnetic wave"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "The speed computed from electrical and magnetic constants equaled the speed of light, so he concluded light is an electromagnetic wave."
+      },
+      "tags": [
+        "electromagnetism",
+        "light"
+      ]
+    },
+    {
+      "id": "a3-physics-0017",
+      "domain": "physics",
+      "title": "Quantum entanglement and Bell's theorem",
+      "depth": "advanced",
+      "explainer": "When two particles are entangled, they share a single quantum state, so measurements on them are correlated in ways no classical system can match, however far apart they are. If two photons are prepared with opposite polarizations in an entangled state, neither has a definite polarization before it is measured, but once one is measured the other is always found to be correlated with it. Einstein, Podolsky and Rosen argued in 1935 that this meant quantum mechanics was incomplete: the particles must carry hidden instructions from the start. In 1964 John Bell showed the question could be tested. He proved that any theory with local hidden variables, in which particles carry preset answers and influences cannot travel faster than light, limits how strongly measurements at different angles can be correlated. Quantum mechanics predicts correlations that break this limit. Experiments by John Clauser, Alain Aspect and later Anton Zeilinger found that the limit is indeed broken, as quantum mechanics predicts, and the three shared the 2022 Nobel Prize in Physics. Entanglement does not allow faster-than-light messages, because each individual result is random; the correlation only appears when the results are compared. It is the key resource for quantum computing and quantum cryptography.",
+      "formula": null,
+      "source": {
+        "title": "Bell's theorem - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bell%27s_theorem"
+      },
+      "question": {
+        "prompt": "Why can't entanglement be used to send a message faster than light?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Each individual measurement result is random; the correlation only shows when results are compared by ordinary means"
+          },
+          {
+            "id": "b",
+            "text": "Entangled particles cannot be separated"
+          },
+          {
+            "id": "c",
+            "text": "Entanglement only works within one meter"
+          },
+          {
+            "id": "d",
+            "text": "Measuring a particle destroys its partner"
+          }
+        ],
+        "correct_option_id": "a",
+        "explanation": "Neither observer controls their outcome, so no information passes until the results are compared through a normal channel."
+      },
+      "tags": [
+        "quantum"
+      ]
+    },
+    {
+      "id": "a3-physics-0018",
+      "domain": "physics",
+      "title": "Dark matter",
+      "depth": "intermediate",
+      "explainer": "Several independent observations suggest that most of the matter in the universe is invisible. In the 1930s Fritz Zwicky noticed that galaxies in the Coma Cluster moved too fast to be held together by the gravity of their visible matter. In the 1970s Vera Rubin and Kent Ford measured how fast stars orbit in spiral galaxies. If the mass were concentrated where the light is, outer stars should orbit more slowly, as the outer planets do around the Sun. Instead, orbital speeds stayed roughly flat far from the center, implying a large halo of unseen mass. Gravitational lensing, the bending of light from distant galaxies by mass in the foreground, reveals the same extra mass, and in the Bullet Cluster, where two galaxy clusters collided, the lensing mass is clearly separated from the hot gas that holds most of the ordinary matter. Measurements of the cosmic microwave background indicate that dark matter makes up about 27 percent of the universe's energy content, compared with about 5 percent for ordinary matter, the rest being dark energy. What dark matter is remains unknown. Candidates include weakly interacting massive particles and axions, but decades of sensitive detector experiments have not yet found them.",
+      "formula": null,
+      "source": {
+        "title": "Dark matter - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dark_matter"
+      },
+      "question": {
+        "prompt": "What did Vera Rubin's measurements of galaxy rotation show?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Outer stars orbit much more slowly than inner stars, as expected"
+          },
+          {
+            "id": "b",
+            "text": "Orbital speeds stay roughly flat far from the center, implying unseen mass"
+          },
+          {
+            "id": "c",
+            "text": "Galaxies do not rotate"
+          },
+          {
+            "id": "d",
+            "text": "Galaxies are shrinking"
+          }
+        ],
+        "correct_option_id": "b",
+        "explanation": "Flat rotation curves mean mass keeps increasing with radius beyond the visible stars, pointing to a dark matter halo."
+      },
+      "tags": [
+        "cosmology",
+        "astronomy"
+      ]
+    },
+    {
+      "id": "a3-physics-0019",
+      "domain": "physics",
+      "title": "Black holes and the event horizon",
+      "depth": "intermediate",
+      "explainer": "A black hole is a region where gravity is so strong that nothing, not even light, can escape. Its boundary is the event horizon. For a non-rotating black hole the horizon is a sphere with the Schwarzschild radius, which Karl Schwarzschild derived from Einstein's equations in 1916: twice the gravitational constant times the mass, divided by the speed of light squared. For the Sun it would be about 3 kilometers; for Earth, about 9 millimeters. Anything that crosses the horizon can only move inwards. Stellar black holes form when a massive star runs out of fuel and its core collapses. Supermassive black holes, millions to billions of times the Sun's mass, sit at the centers of most large galaxies, including the Milky Way's Sagittarius A*, about four million solar masses. Black holes are detected through their effects: stars orbiting an invisible object, X-rays from hot gas spiraling in, and gravitational waves from merging pairs, first detected by LIGO in 2015. In 2019 the Event Horizon Telescope released the first image of a black hole's shadow, in the galaxy M87. Stephen Hawking predicted in 1974 that quantum effects make black holes emit faint radiation and slowly evaporate, though this has not been observed.",
+      "formula": "r_s = \\frac{2GM}{c^2}",
+      "source": {
+        "title": "Event horizon - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Event_horizon"
+      },
+      "question": {
+        "prompt": "How do astronomers detect black holes if no light escapes from them?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They cannot be detected at all"
+          },
+          {
+            "id": "b",
+            "text": "By the visible light emitted from inside the event horizon"
+          },
+          {
+            "id": "c",
+            "text": "Through their effects on nearby stars, hot infalling gas and gravitational waves"
+          },
+          {
+            "id": "d",
+            "text": "Only by sending probes into them"
+          }
+        ],
+        "correct_option_id": "c",
+        "explanation": "Black holes reveal themselves by the orbits of nearby stars, X-rays from accreting gas, gravitational waves and the shadow they cast."
+      },
+      "tags": [
+        "astronomy",
+        "relativity"
+      ]
+    },
+    {
+      "id": "a3-physics-0020",
+      "domain": "physics",
+      "title": "Conservation of momentum",
+      "depth": "introductory",
+      "explainer": "Momentum is mass times velocity. It has a direction as well as a size, so a ball moving left has the opposite momentum to the same ball moving right at the same speed. The law of conservation of momentum says that the total momentum of a system stays constant unless an outside force acts on it. It follows from Newton's third law: when two objects push on each other, the forces are equal and opposite, so whatever momentum one gains, the other loses. In a collision between two billiard balls, the total momentum before equals the total momentum after, whether the balls bounce apart or stick together. Kinetic energy, by contrast, is only conserved in perfectly elastic collisions; in a car crash much of it turns into heat, sound and crumpled metal, but momentum is still conserved. The law explains recoil: when a rifle fires a bullet forwards, the rifle moves backwards, and the small, fast bullet and the heavy, slow rifle end up with equal and opposite momentum. Rockets work the same way in the vacuum of space, throwing exhaust backwards to move forwards, with no need for anything to push against. At a deeper level, Noether's theorem links momentum conservation to the fact that the laws of physics are the same everywhere in space.",
+      "formula": "m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'",
+      "source": {
+        "title": "Momentum - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Momentum"
+      },
+      "question": {
+        "prompt": "Two cars collide and crumple together. Which quantity is conserved in the collision, assuming no outside forces?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Kinetic energy only"
+          },
+          {
+            "id": "b",
+            "text": "Both momentum and kinetic energy"
+          },
+          {
+            "id": "c",
+            "text": "Neither"
+          },
+          {
+            "id": "d",
+            "text": "Momentum, but not kinetic energy"
+          }
+        ],
+        "correct_option_id": "d",
+        "explanation": "Momentum is conserved in every collision without external forces; kinetic energy is conserved only in perfectly elastic ones."
+      },
+      "tags": [
+        "mechanics"
+      ]
     }
   ]
 }
