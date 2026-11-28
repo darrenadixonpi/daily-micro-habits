@@ -1327,6 +1327,1547 @@
           }
         }
       ]
+    },
+    {
+      "date_key": "01-25",
+      "events": [
+        {
+          "year": 1924,
+          "category": "culture",
+          "summary": "The first Winter Olympic Games opened in Chamonix, France. Sixteen nations competed in events such as skiing, skating and ice hockey over eleven days.",
+          "source": {
+            "title": "January 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_25"
+          }
+        },
+        {
+          "year": 2004,
+          "category": "exploration",
+          "summary": "NASA's Opportunity rover landed on Mars at Meridiani Planum. Planned for a 90-day mission, it kept driving and sending data for more than fourteen years.",
+          "source": {
+            "title": "January 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_25"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-26",
+      "events": [
+        {
+          "year": 1788,
+          "category": "history",
+          "summary": "The British First Fleet entered Sydney Cove under Captain Arthur Phillip, founding the penal colony of New South Wales. The date is marked today as Australia Day.",
+          "source": {
+            "title": "January 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_26"
+          }
+        },
+        {
+          "year": 1950,
+          "category": "history",
+          "summary": "The Constitution of India came into effect, making India a republic with Rajendra Prasad as its first president. The day is celebrated as Republic Day.",
+          "source": {
+            "title": "January 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_26"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-27",
+      "events": [
+        {
+          "year": 1945,
+          "category": "history",
+          "summary": "Soviet troops liberated the Auschwitz-Birkenau concentration and extermination camp in occupied Poland. The anniversary is now International Holocaust Remembrance Day.",
+          "source": {
+            "title": "January 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_27"
+          }
+        },
+        {
+          "year": 1967,
+          "category": "exploration",
+          "summary": "A cabin fire during a launch rehearsal for Apollo 1 killed astronauts Gus Grissom, Ed White and Roger Chaffee. NASA redesigned the command module before any crew flew again.",
+          "source": {
+            "title": "January 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_27"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-28",
+      "events": [
+        {
+          "year": 1813,
+          "category": "culture",
+          "summary": "Jane Austen's novel Pride and Prejudice was first published in London. It was issued anonymously, credited only to the author of Sense and Sensibility.",
+          "source": {
+            "title": "January 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_28"
+          }
+        },
+        {
+          "year": 1986,
+          "category": "exploration",
+          "summary": "The Space Shuttle Challenger broke apart 73 seconds after launch, killing its seven crew members. The cause was a failed O-ring seal in a solid rocket booster in cold weather.",
+          "source": {
+            "title": "January 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_28"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-29",
+      "events": [
+        {
+          "year": 1845,
+          "category": "culture",
+          "summary": "Edgar Allan Poe's poem The Raven was published in the New York Evening Mirror. It made Poe famous almost overnight.",
+          "source": {
+            "title": "January 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_29"
+          }
+        },
+        {
+          "year": 1886,
+          "category": "technology",
+          "summary": "Karl Benz applied for a patent on his gasoline-powered Motorwagen in Germany. It is widely regarded as the first practical automobile.",
+          "source": {
+            "title": "January 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_29"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-30",
+      "events": [
+        {
+          "year": 1933,
+          "category": "history",
+          "summary": "Adolf Hitler was appointed Chancellor of Germany by President Paul von Hindenburg. Within months the Nazi government had dismantled the Weimar Republic's democracy.",
+          "source": {
+            "title": "January 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_30"
+          }
+        },
+        {
+          "year": 1948,
+          "category": "history",
+          "summary": "Mahatma Gandhi was assassinated in New Delhi by Nathuram Godse. Gandhi had led India's nonviolent independence movement for decades.",
+          "source": {
+            "title": "January 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_30"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "01-31",
+      "events": [
+        {
+          "year": 1865,
+          "category": "history",
+          "summary": "The United States House of Representatives passed the Thirteenth Amendment, which abolished slavery. It was ratified by the states in December of that year.",
+          "source": {
+            "title": "January 31 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_31"
+          }
+        },
+        {
+          "year": 1958,
+          "category": "exploration",
+          "summary": "Explorer 1, the first satellite of the United States, was launched from Cape Canaveral. Its instruments detected the Van Allen radiation belts around Earth.",
+          "source": {
+            "title": "January 31 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/January_31"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-01",
+      "events": [
+        {
+          "year": 1960,
+          "category": "history",
+          "summary": "Four Black students sat at a whites-only lunch counter at Woolworth's in Greensboro, North Carolina, and refused to leave. The sit-ins spread across the South and helped end segregation in restaurants.",
+          "source": {
+            "title": "February 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_1"
+          }
+        },
+        {
+          "year": 2003,
+          "category": "exploration",
+          "summary": "The Space Shuttle Columbia broke apart over Texas while returning to Earth, killing all seven astronauts. Foam that struck the wing at launch had damaged its heat shield.",
+          "source": {
+            "title": "February 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_1"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-02",
+      "events": [
+        {
+          "year": 1848,
+          "category": "history",
+          "summary": "Mexico and the United States signed the Treaty of Guadalupe Hidalgo, ending the Mexican-American War. Mexico ceded about half of its territory, including California.",
+          "source": {
+            "title": "February 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_2"
+          }
+        },
+        {
+          "year": 1922,
+          "category": "culture",
+          "summary": "James Joyce's novel Ulysses was published in Paris by Sylvia Beach's bookshop Shakespeare and Company. It became a landmark of modernist literature.",
+          "source": {
+            "title": "February 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_2"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-03",
+      "events": [
+        {
+          "year": 1959,
+          "category": "culture",
+          "summary": "A small plane crash in Iowa killed musicians Buddy Holly, Ritchie Valens and J. P. Richardson. The loss was later called the day the music died.",
+          "source": {
+            "title": "February 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_3"
+          }
+        },
+        {
+          "year": 1966,
+          "category": "exploration",
+          "summary": "The Soviet probe Luna 9 made the first soft landing on the Moon. It sent back the first photographs taken from the lunar surface.",
+          "source": {
+            "title": "February 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_3"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-04",
+      "events": [
+        {
+          "year": 1945,
+          "category": "history",
+          "summary": "Franklin Roosevelt, Winston Churchill and Joseph Stalin met at Yalta in Crimea. They planned the final defeat of Germany and the shape of postwar Europe.",
+          "source": {
+            "title": "February 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_4"
+          }
+        },
+        {
+          "year": 2004,
+          "category": "technology",
+          "summary": "Mark Zuckerberg and fellow Harvard students launched the social network that became Facebook. It opened to the general public in 2006.",
+          "source": {
+            "title": "February 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_4"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-05",
+      "events": [
+        {
+          "year": 1919,
+          "category": "culture",
+          "summary": "Charlie Chaplin, Mary Pickford, Douglas Fairbanks and D. W. Griffith founded the film studio United Artists. It let actors and directors control and distribute their own work.",
+          "source": {
+            "title": "February 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_5"
+          }
+        },
+        {
+          "year": 1971,
+          "category": "exploration",
+          "summary": "Apollo 14 landed on the Moon with Alan Shepard and Edgar Mitchell. Shepard famously hit two golf balls on the lunar surface.",
+          "source": {
+            "title": "February 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_5"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-06",
+      "events": [
+        {
+          "year": 1952,
+          "category": "history",
+          "summary": "Elizabeth II became queen of the United Kingdom on the death of her father, George VI. She reigned for seventy years, longer than any other British monarch.",
+          "source": {
+            "title": "February 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_6"
+          }
+        },
+        {
+          "year": 1958,
+          "category": "history",
+          "summary": "A plane carrying the Manchester United football team crashed on take-off in Munich, killing 23 people. Eight of the dead were players.",
+          "source": {
+            "title": "February 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_6"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-07",
+      "events": [
+        {
+          "year": 1964,
+          "category": "culture",
+          "summary": "The Beatles arrived at New York's newly renamed John F. Kennedy airport, starting their first visit to the United States. Their arrival marked the start of the British Invasion in American pop music.",
+          "source": {
+            "title": "February 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_7"
+          }
+        },
+        {
+          "year": 1984,
+          "category": "exploration",
+          "summary": "Astronaut Bruce McCandless made the first untethered spacewalk, flying a jet-powered Manned Maneuvering Unit away from the Space Shuttle Challenger.",
+          "source": {
+            "title": "February 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_7"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-08",
+      "events": [
+        {
+          "year": 1910,
+          "category": "history",
+          "summary": "The Boy Scouts of America was incorporated by William D. Boyce. It grew into one of the largest youth organizations in the United States.",
+          "source": {
+            "title": "February 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_8"
+          }
+        },
+        {
+          "year": 1971,
+          "category": "technology",
+          "summary": "The NASDAQ stock market began trading as the world's first electronic stock exchange. Quotes were shown on computer screens rather than called out on a trading floor.",
+          "source": {
+            "title": "February 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_8"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-09",
+      "events": [
+        {
+          "year": 1964,
+          "category": "culture",
+          "summary": "The Beatles made their first appearance on The Ed Sullivan Show. About 73 million people watched, a record for American television at the time.",
+          "source": {
+            "title": "February 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_9"
+          }
+        },
+        {
+          "year": 1969,
+          "category": "technology",
+          "summary": "The Boeing 747 made its first flight. The wide-body jumbo jet made long-distance air travel far cheaper.",
+          "source": {
+            "title": "February 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_9"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-10",
+      "events": [
+        {
+          "year": 1763,
+          "category": "history",
+          "summary": "The Treaty of Paris ended the Seven Years' War. France ceded Canada to Britain, reshaping colonial North America.",
+          "source": {
+            "title": "February 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_10"
+          }
+        },
+        {
+          "year": 1996,
+          "category": "technology",
+          "summary": "IBM's chess computer Deep Blue defeated world champion Garry Kasparov in a game under tournament conditions for the first time. Kasparov still won that match; Deep Blue won the 1997 rematch.",
+          "source": {
+            "title": "February 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_10"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-11",
+      "events": [
+        {
+          "year": 1990,
+          "category": "history",
+          "summary": "Nelson Mandela walked free after 27 years in prison in South Africa. Four years later he was elected the country's first Black president.",
+          "source": {
+            "title": "February 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_11"
+          }
+        },
+        {
+          "year": 2016,
+          "category": "science",
+          "summary": "Scientists of the LIGO and Virgo collaborations announced the first direct detection of gravitational waves. The signal came from two black holes merging about 1.3 billion light-years away.",
+          "source": {
+            "title": "February 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_11"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-12",
+      "events": [
+        {
+          "year": 1924,
+          "category": "culture",
+          "summary": "George Gershwin's Rhapsody in Blue premiered in New York with Gershwin at the piano. It blended jazz with classical concert music.",
+          "source": {
+            "title": "February 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_12"
+          }
+        },
+        {
+          "year": 2001,
+          "category": "exploration",
+          "summary": "NASA's NEAR Shoemaker spacecraft touched down on the asteroid 433 Eros. It was the first spacecraft to land on an asteroid.",
+          "source": {
+            "title": "February 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_12"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-13",
+      "events": [
+        {
+          "year": 1633,
+          "category": "science",
+          "summary": "Galileo Galilei arrived in Rome to face the Inquisition for supporting the view that the Earth moves around the Sun. He was later convicted and spent his last years under house arrest.",
+          "source": {
+            "title": "February 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_13"
+          }
+        },
+        {
+          "year": 1960,
+          "category": "history",
+          "summary": "France tested its first atomic bomb, code-named Gerboise Bleue, in the Algerian Sahara. France became the fourth country with nuclear weapons.",
+          "source": {
+            "title": "February 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_13"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-14",
+      "events": [
+        {
+          "year": 1876,
+          "category": "technology",
+          "summary": "Alexander Graham Bell and Elisha Gray both filed telephone documents with the US Patent Office on the same day. Bell received the patent, which led to years of legal disputes.",
+          "source": {
+            "title": "February 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_14"
+          }
+        },
+        {
+          "year": 1990,
+          "category": "exploration",
+          "summary": "Voyager 1 turned its camera back toward the inner Solar System and took the photo of Earth later called the Pale Blue Dot. It was about six billion kilometres from home.",
+          "source": {
+            "title": "February 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_14"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-15",
+      "events": [
+        {
+          "year": 1965,
+          "category": "history",
+          "summary": "Canada adopted its red and white maple leaf flag. It replaced the Red Ensign, which included the British Union Jack.",
+          "source": {
+            "title": "February 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_15"
+          }
+        },
+        {
+          "year": 2013,
+          "category": "science",
+          "summary": "A meteor about 20 metres across exploded in the sky over Chelyabinsk, Russia. Its shock wave shattered windows and injured about 1,500 people.",
+          "source": {
+            "title": "February 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_15"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-16",
+      "events": [
+        {
+          "year": 1923,
+          "category": "science",
+          "summary": "Howard Carter opened the sealed burial chamber of Tutankhamun in Egypt's Valley of the Kings. Inside was the king's sarcophagus, still intact.",
+          "source": {
+            "title": "February 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_16"
+          }
+        },
+        {
+          "year": 1959,
+          "category": "history",
+          "summary": "Fidel Castro became Prime Minister of Cuba, weeks after the revolution that ousted Fulgencio Batista. He led the country for nearly five decades.",
+          "source": {
+            "title": "February 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_16"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-17",
+      "events": [
+        {
+          "year": 1600,
+          "category": "science",
+          "summary": "The philosopher Giordano Bruno was burned at the stake in Rome for heresy. Among his views was that stars are distant suns with their own planets.",
+          "source": {
+            "title": "February 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_17"
+          }
+        },
+        {
+          "year": 1959,
+          "category": "technology",
+          "summary": "The United States launched Vanguard 2, the first satellite designed to measure cloud cover from orbit. It was an early forerunner of weather satellites.",
+          "source": {
+            "title": "February 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_17"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-18",
+      "events": [
+        {
+          "year": 1930,
+          "category": "science",
+          "summary": "Clyde Tombaugh at Lowell Observatory in Arizona discovered Pluto by comparing photographic plates. Pluto was reclassified as a dwarf planet in 2006.",
+          "source": {
+            "title": "February 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_18"
+          }
+        },
+        {
+          "year": 2021,
+          "category": "exploration",
+          "summary": "NASA's Perseverance rover landed in Jezero Crater on Mars. It carried the Ingenuity helicopter, which later made the first powered flight on another planet.",
+          "source": {
+            "title": "February 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_18"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-19",
+      "events": [
+        {
+          "year": 1878,
+          "category": "technology",
+          "summary": "Thomas Edison was granted a patent for the phonograph, the first machine that could record and play back sound.",
+          "source": {
+            "title": "February 19 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_19"
+          }
+        },
+        {
+          "year": 1986,
+          "category": "exploration",
+          "summary": "The Soviet Union launched the core module of the Mir space station. Mir was occupied almost continuously for about ten years.",
+          "source": {
+            "title": "February 19 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_19"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-20",
+      "events": [
+        {
+          "year": 1872,
+          "category": "culture",
+          "summary": "The Metropolitan Museum of Art opened in New York City. It became the largest art museum in the United States.",
+          "source": {
+            "title": "February 20 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_20"
+          }
+        },
+        {
+          "year": 1962,
+          "category": "exploration",
+          "summary": "John Glenn became the first American to orbit the Earth, circling it three times in the Friendship 7 capsule.",
+          "source": {
+            "title": "February 20 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_20"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-21",
+      "events": [
+        {
+          "year": 1848,
+          "category": "history",
+          "summary": "Karl Marx and Friedrich Engels published The Communist Manifesto in London. It became one of the most influential political texts ever written.",
+          "source": {
+            "title": "February 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_21"
+          }
+        },
+        {
+          "year": 1972,
+          "category": "history",
+          "summary": "President Richard Nixon arrived in Beijing for a week-long visit to China. The trip opened relations between the two countries after decades of hostility.",
+          "source": {
+            "title": "February 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_21"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-22",
+      "events": [
+        {
+          "year": 1980,
+          "category": "culture",
+          "summary": "The United States men's ice hockey team, mostly college players, beat the heavily favoured Soviet team at the Lake Placid Winter Olympics. The upset became known as the Miracle on Ice.",
+          "source": {
+            "title": "February 22 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_22"
+          }
+        },
+        {
+          "year": 1997,
+          "category": "science",
+          "summary": "Scientists at the Roslin Institute in Scotland announced the birth of Dolly the sheep. She was the first mammal cloned from an adult cell.",
+          "source": {
+            "title": "February 22 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_22"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-23",
+      "events": [
+        {
+          "year": 1945,
+          "category": "history",
+          "summary": "US Marines raised the American flag on Mount Suribachi during the Battle of Iwo Jima. The photograph of the second flag-raising became one of the most famous images of the war.",
+          "source": {
+            "title": "February 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_23"
+          }
+        },
+        {
+          "year": 1987,
+          "category": "science",
+          "summary": "Light from supernova SN 1987A in the Large Magellanic Cloud reached Earth. It was the closest supernova seen in nearly four centuries.",
+          "source": {
+            "title": "February 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_23"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-24",
+      "events": [
+        {
+          "year": 1582,
+          "category": "science",
+          "summary": "Pope Gregory XIII issued the papal bull Inter gravissimas, which introduced the Gregorian calendar. Ten days were dropped to bring the calendar back in step with the seasons.",
+          "source": {
+            "title": "February 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_24"
+          }
+        },
+        {
+          "year": 1968,
+          "category": "science",
+          "summary": "Astronomers at Cambridge announced the discovery of the first pulsar, a rapidly rotating neutron star. Jocelyn Bell Burnell had spotted its regular radio pulses months earlier.",
+          "source": {
+            "title": "February 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_24"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-25",
+      "events": [
+        {
+          "year": 1870,
+          "category": "history",
+          "summary": "Hiram Revels of Mississippi took his seat in the US Senate, becoming the first African American to serve in Congress.",
+          "source": {
+            "title": "February 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_25"
+          }
+        },
+        {
+          "year": 1964,
+          "category": "culture",
+          "summary": "Cassius Clay, soon to be known as Muhammad Ali, defeated Sonny Liston to become world heavyweight boxing champion.",
+          "source": {
+            "title": "February 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_25"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-26",
+      "events": [
+        {
+          "year": 1815,
+          "category": "history",
+          "summary": "Napoleon escaped from exile on the island of Elba and returned to France. His comeback ended at Waterloo about four months later.",
+          "source": {
+            "title": "February 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_26"
+          }
+        },
+        {
+          "year": 1935,
+          "category": "technology",
+          "summary": "Robert Watson-Watt's team showed that a bomber could be detected by the radio waves it reflected. The Daventry experiment led to Britain's radar network.",
+          "source": {
+            "title": "February 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_26"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-27",
+      "events": [
+        {
+          "year": 1933,
+          "category": "history",
+          "summary": "The Reichstag, Germany's parliament building in Berlin, was set on fire. The Nazi government used the fire as a pretext to suspend civil liberties.",
+          "source": {
+            "title": "February 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_27"
+          }
+        },
+        {
+          "year": 1940,
+          "category": "science",
+          "summary": "Martin Kamen and Sam Ruben discovered carbon-14 at the University of California, Berkeley. The isotope later made radiocarbon dating possible.",
+          "source": {
+            "title": "February 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_27"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-28",
+      "events": [
+        {
+          "year": 1953,
+          "category": "science",
+          "summary": "Francis Crick and James Watson worked out the double-helix structure of DNA at Cambridge. Their paper, published that April, relied on X-ray images from Rosalind Franklin.",
+          "source": {
+            "title": "February 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_28"
+          }
+        },
+        {
+          "year": 1986,
+          "category": "history",
+          "summary": "Swedish Prime Minister Olof Palme was shot dead while walking home from a cinema in Stockholm. The case remained officially unsolved for 34 years.",
+          "source": {
+            "title": "February 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_28"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "02-29",
+      "events": [
+        {
+          "year": 1504,
+          "category": "science",
+          "summary": "Stranded in Jamaica, Christopher Columbus used a predicted lunar eclipse to persuade local people to keep supplying his crew with food.",
+          "source": {
+            "title": "February 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_29"
+          }
+        },
+        {
+          "year": 1940,
+          "category": "culture",
+          "summary": "Hattie McDaniel won the Academy Award for Best Supporting Actress for Gone with the Wind. She was the first African American to win an Oscar.",
+          "source": {
+            "title": "February 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/February_29"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-01",
+      "events": [
+        {
+          "year": 1872,
+          "category": "science",
+          "summary": "Yellowstone was established as the first national park in the world by a law signed by President Ulysses S. Grant.",
+          "source": {
+            "title": "March 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_1"
+          }
+        },
+        {
+          "year": 1966,
+          "category": "exploration",
+          "summary": "The Soviet probe Venera 3 crashed onto Venus, the first spacecraft to reach the surface of another planet. Its communications had failed before arrival.",
+          "source": {
+            "title": "March 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_1"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-02",
+      "events": [
+        {
+          "year": 1949,
+          "category": "exploration",
+          "summary": "The US Air Force bomber Lucky Lady II landed in Texas after the first nonstop flight around the world. It was refuelled in the air four times.",
+          "source": {
+            "title": "March 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_2"
+          }
+        },
+        {
+          "year": 1969,
+          "category": "technology",
+          "summary": "The supersonic airliner Concorde made its first test flight, from Toulouse in France. It entered passenger service in 1976.",
+          "source": {
+            "title": "March 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_2"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-03",
+      "events": [
+        {
+          "year": 1875,
+          "category": "culture",
+          "summary": "Georges Bizet's opera Carmen premiered at the Opéra-Comique in Paris. Its first reception was cool, but it became one of the most performed operas.",
+          "source": {
+            "title": "March 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_3"
+          }
+        },
+        {
+          "year": 1931,
+          "category": "history",
+          "summary": "The United States adopted The Star-Spangled Banner as its national anthem by an act of Congress.",
+          "source": {
+            "title": "March 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_3"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-04",
+      "events": [
+        {
+          "year": 1789,
+          "category": "history",
+          "summary": "The first Congress of the United States met in New York City under the newly ratified Constitution. It lacked a quorum and could not begin business until April.",
+          "source": {
+            "title": "March 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_4"
+          }
+        },
+        {
+          "year": 1933,
+          "category": "history",
+          "summary": "Franklin D. Roosevelt was inaugurated as US president during the Great Depression. In his address he said the only thing to fear is fear itself.",
+          "source": {
+            "title": "March 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_4"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-05",
+      "events": [
+        {
+          "year": 1946,
+          "category": "history",
+          "summary": "Winston Churchill gave a speech in Fulton, Missouri, warning that an iron curtain had descended across Europe. The phrase came to define the Cold War divide.",
+          "source": {
+            "title": "March 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_5"
+          }
+        },
+        {
+          "year": 1979,
+          "category": "exploration",
+          "summary": "NASA's Voyager 1 made its closest approach to Jupiter. Its images revealed active volcanoes on the moon Io.",
+          "source": {
+            "title": "March 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_5"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-06",
+      "events": [
+        {
+          "year": 1869,
+          "category": "science",
+          "summary": "Dmitri Mendeleev's periodic table was presented to the Russian Chemical Society. He left gaps for elements not yet discovered and predicted their properties.",
+          "source": {
+            "title": "March 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_6"
+          }
+        },
+        {
+          "year": 1899,
+          "category": "medicine",
+          "summary": "Aspirin was registered as a trademark by the German company Bayer. Acetylsalicylic acid became one of the most widely used drugs in the world.",
+          "source": {
+            "title": "March 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_6"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-07",
+      "events": [
+        {
+          "year": 1876,
+          "category": "technology",
+          "summary": "Alexander Graham Bell was granted a US patent for the telephone. It became one of the most valuable patents ever issued.",
+          "source": {
+            "title": "March 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_7"
+          }
+        },
+        {
+          "year": 1965,
+          "category": "history",
+          "summary": "State troopers attacked civil rights marchers on the Edmund Pettus Bridge in Selma, Alabama. Bloody Sunday helped push the Voting Rights Act through Congress.",
+          "source": {
+            "title": "March 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_7"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-08",
+      "events": [
+        {
+          "year": 1917,
+          "category": "history",
+          "summary": "Protests by women textile workers in Petrograd on International Women's Day grew into the February Revolution. Within a week the Russian monarchy had fallen.",
+          "source": {
+            "title": "March 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_8"
+          }
+        },
+        {
+          "year": 1979,
+          "category": "technology",
+          "summary": "Philips demonstrated a prototype compact disc player to the press in the Netherlands. The CD, developed with Sony, went on sale in 1982.",
+          "source": {
+            "title": "March 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_8"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-09",
+      "events": [
+        {
+          "year": 1959,
+          "category": "culture",
+          "summary": "The Barbie doll made its debut at the American International Toy Fair in New York. It became one of the best-selling toys in history.",
+          "source": {
+            "title": "March 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_9"
+          }
+        },
+        {
+          "year": 1961,
+          "category": "exploration",
+          "summary": "The Soviet Union launched Sputnik 9 carrying the dog Chernushka and a mannequin. It was a final test of the Vostok spacecraft before Yuri Gagarin's flight.",
+          "source": {
+            "title": "March 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_9"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-10",
+      "events": [
+        {
+          "year": 1876,
+          "category": "technology",
+          "summary": "Alexander Graham Bell made the first successful telephone call, saying to his assistant: Mr. Watson, come here, I want to see you.",
+          "source": {
+            "title": "March 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_10"
+          }
+        },
+        {
+          "year": 1977,
+          "category": "science",
+          "summary": "Astronomers watching Uranus pass in front of a star discovered that the planet has rings. They saw the star blink several times before and after it.",
+          "source": {
+            "title": "March 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_10"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-11",
+      "events": [
+        {
+          "year": 1990,
+          "category": "history",
+          "summary": "Lithuania declared its independence from the Soviet Union, the first Soviet republic to do so.",
+          "source": {
+            "title": "March 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_11"
+          }
+        },
+        {
+          "year": 2011,
+          "category": "science",
+          "summary": "A magnitude 9.0 earthquake off northeastern Japan triggered a tsunami that killed about 18,000 people. It also caused meltdowns at the Fukushima Daiichi nuclear plant.",
+          "source": {
+            "title": "March 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_11"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-12",
+      "events": [
+        {
+          "year": 1930,
+          "category": "history",
+          "summary": "Mahatma Gandhi began the Salt March to the Arabian Sea in protest against the British salt tax. The 24-day march drew worldwide attention to Indian independence.",
+          "source": {
+            "title": "March 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_12"
+          }
+        },
+        {
+          "year": 1989,
+          "category": "technology",
+          "summary": "Tim Berners-Lee submitted his proposal for an information management system at CERN. It became the World Wide Web.",
+          "source": {
+            "title": "March 12 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_12"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-13",
+      "events": [
+        {
+          "year": 1781,
+          "category": "science",
+          "summary": "William Herschel discovered Uranus from his garden in Bath, England. It was the first planet found with a telescope.",
+          "source": {
+            "title": "March 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_13"
+          }
+        },
+        {
+          "year": 1881,
+          "category": "history",
+          "summary": "Tsar Alexander II of Russia, who had abolished serfdom, was assassinated by a bomb in Saint Petersburg.",
+          "source": {
+            "title": "March 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_13"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-14",
+      "events": [
+        {
+          "year": 1794,
+          "category": "technology",
+          "summary": "Eli Whitney was granted a patent for the cotton gin. It made cotton far more profitable and deepened the South's reliance on slavery.",
+          "source": {
+            "title": "March 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_14"
+          }
+        },
+        {
+          "year": 1900,
+          "category": "history",
+          "summary": "The Gold Standard Act made gold the sole standard for redeeming paper money in the United States.",
+          "source": {
+            "title": "March 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_14"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-15",
+      "events": [
+        {
+          "year": -44,
+          "category": "history",
+          "summary": "Julius Caesar was stabbed to death by a group of Roman senators led by Brutus and Cassius. The date became known as the Ides of March.",
+          "source": {
+            "title": "March 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_15"
+          }
+        },
+        {
+          "year": 1985,
+          "category": "technology",
+          "summary": "Symbolics.com became the first registered .com internet domain name. Domain registration was free and handled by hand at the time.",
+          "source": {
+            "title": "March 15 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_15"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-16",
+      "events": [
+        {
+          "year": 1926,
+          "category": "technology",
+          "summary": "Robert Goddard launched the first liquid-fuelled rocket in Auburn, Massachusetts. It flew for about two and a half seconds and reached 12 metres.",
+          "source": {
+            "title": "March 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_16"
+          }
+        },
+        {
+          "year": 1966,
+          "category": "exploration",
+          "summary": "Gemini 8, with Neil Armstrong and David Scott, made the first docking of two spacecraft in orbit. A stuck thruster forced an early emergency return.",
+          "source": {
+            "title": "March 16 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_16"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-17",
+      "events": [
+        {
+          "year": 1958,
+          "category": "exploration",
+          "summary": "The United States launched Vanguard 1, the first satellite powered by solar cells. It is the oldest human-made object still in orbit.",
+          "source": {
+            "title": "March 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_17"
+          }
+        },
+        {
+          "year": 1959,
+          "category": "history",
+          "summary": "The 14th Dalai Lama fled Lhasa in disguise during the Tibetan uprising against Chinese rule. He reached exile in India two weeks later.",
+          "source": {
+            "title": "March 17 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_17"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-18",
+      "events": [
+        {
+          "year": 1922,
+          "category": "history",
+          "summary": "A British court in India sentenced Mahatma Gandhi to six years in prison for sedition. He was released after two years on health grounds.",
+          "source": {
+            "title": "March 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_18"
+          }
+        },
+        {
+          "year": 1965,
+          "category": "exploration",
+          "summary": "Soviet cosmonaut Alexei Leonov made the first spacewalk, spending about twelve minutes outside the Voskhod 2 capsule.",
+          "source": {
+            "title": "March 18 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_18"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-19",
+      "events": [
+        {
+          "year": 1915,
+          "category": "science",
+          "summary": "Pluto was photographed for the first time at Lowell Observatory, but nobody recognized it as a planet. It was identified fifteen years later.",
+          "source": {
+            "title": "March 19 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_19"
+          }
+        },
+        {
+          "year": 1932,
+          "category": "technology",
+          "summary": "The Sydney Harbour Bridge was officially opened. Its steel arch was the widest long-span bridge in the world at the time.",
+          "source": {
+            "title": "March 19 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_19"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-20",
+      "events": [
+        {
+          "year": 1852,
+          "category": "culture",
+          "summary": "Harriet Beecher Stowe's anti-slavery novel Uncle Tom's Cabin was published in book form. It became the best-selling novel of the nineteenth century.",
+          "source": {
+            "title": "March 20 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_20"
+          }
+        },
+        {
+          "year": 1916,
+          "category": "science",
+          "summary": "Albert Einstein's paper setting out his general theory of relativity was published in the journal Annalen der Physik.",
+          "source": {
+            "title": "March 20 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_20"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-21",
+      "events": [
+        {
+          "year": 1963,
+          "category": "history",
+          "summary": "The federal prison on Alcatraz Island in San Francisco Bay closed. It had been too costly to run.",
+          "source": {
+            "title": "March 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_21"
+          }
+        },
+        {
+          "year": 2006,
+          "category": "technology",
+          "summary": "Jack Dorsey sent the first message on the service that became Twitter. The service launched to the public that July.",
+          "source": {
+            "title": "March 21 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_21"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-22",
+      "events": [
+        {
+          "year": 1895,
+          "category": "culture",
+          "summary": "Auguste and Louis Lumière showed their first film, workers leaving their factory in Lyon, to a private audience in Paris.",
+          "source": {
+            "title": "March 22 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_22"
+          }
+        },
+        {
+          "year": 1960,
+          "category": "technology",
+          "summary": "Arthur Schawlow and Charles Townes received a US patent for the laser's design, then called an optical maser. The first working laser followed that May.",
+          "source": {
+            "title": "March 22 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_22"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-23",
+      "events": [
+        {
+          "year": 1839,
+          "category": "culture",
+          "summary": "The abbreviation OK first appeared in print in the Boston Morning Post, as a joke spelling of oll korrect. It became one of the most widely used words in the world.",
+          "source": {
+            "title": "March 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_23"
+          }
+        },
+        {
+          "year": 1983,
+          "category": "history",
+          "summary": "President Ronald Reagan proposed the Strategic Defense Initiative, a plan for space-based defences against nuclear missiles. Critics nicknamed it Star Wars.",
+          "source": {
+            "title": "March 23 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_23"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-24",
+      "events": [
+        {
+          "year": 1882,
+          "category": "medicine",
+          "summary": "Robert Koch announced in Berlin that he had found the bacterium that causes tuberculosis. The date is now World Tuberculosis Day.",
+          "source": {
+            "title": "March 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_24"
+          }
+        },
+        {
+          "year": 1989,
+          "category": "science",
+          "summary": "The tanker Exxon Valdez ran aground in Prince William Sound, Alaska, spilling about 41 million litres of crude oil. It became one of the worst environmental disasters in US history.",
+          "source": {
+            "title": "March 24 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_24"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-25",
+      "events": [
+        {
+          "year": 1655,
+          "category": "science",
+          "summary": "Christiaan Huygens discovered Titan, the largest moon of Saturn. It was the first moon found orbiting a planet other than Earth and Jupiter.",
+          "source": {
+            "title": "March 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_25"
+          }
+        },
+        {
+          "year": 1957,
+          "category": "history",
+          "summary": "Six European countries signed the Treaty of Rome, creating the European Economic Community. It grew into today's European Union.",
+          "source": {
+            "title": "March 25 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_25"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-26",
+      "events": [
+        {
+          "year": 1953,
+          "category": "medicine",
+          "summary": "Jonas Salk announced on national radio that he had successfully tested a vaccine against polio. A mass trial in 1954 confirmed it worked.",
+          "source": {
+            "title": "March 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_26"
+          }
+        },
+        {
+          "year": 1979,
+          "category": "history",
+          "summary": "Egypt and Israel signed a peace treaty at the White House, witnessed by President Jimmy Carter. Egypt became the first Arab state to recognize Israel.",
+          "source": {
+            "title": "March 26 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_26"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-27",
+      "events": [
+        {
+          "year": 1513,
+          "category": "exploration",
+          "summary": "Spanish explorer Juan Ponce de León sighted the coast of Florida. He named it after the Easter season, Pascua Florida.",
+          "source": {
+            "title": "March 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_27"
+          }
+        },
+        {
+          "year": 1998,
+          "category": "medicine",
+          "summary": "The US Food and Drug Administration approved sildenafil, sold as Viagra. The drug had first been tested for heart chest pain.",
+          "source": {
+            "title": "March 27 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_27"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-28",
+      "events": [
+        {
+          "year": 1930,
+          "category": "history",
+          "summary": "The Turkish cities of Constantinople and Angora were officially renamed Istanbul and Ankara.",
+          "source": {
+            "title": "March 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_28"
+          }
+        },
+        {
+          "year": 1979,
+          "category": "science",
+          "summary": "A reactor at the Three Mile Island nuclear plant in Pennsylvania partly melted down. It was the most serious accident in US commercial nuclear power.",
+          "source": {
+            "title": "March 28 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_28"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-29",
+      "events": [
+        {
+          "year": 1886,
+          "category": "culture",
+          "summary": "Pharmacist John Pemberton brewed the first batch of Coca-Cola in Atlanta, Georgia. It was first sold as a medicinal tonic.",
+          "source": {
+            "title": "March 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_29"
+          }
+        },
+        {
+          "year": 1974,
+          "category": "exploration",
+          "summary": "NASA's Mariner 10 made the first flyby of Mercury, photographing its cratered surface. It was also the first probe to use a gravity assist from another planet.",
+          "source": {
+            "title": "March 29 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_29"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-30",
+      "events": [
+        {
+          "year": 1842,
+          "category": "medicine",
+          "summary": "Georgia doctor Crawford Long used ether as an anaesthetic to remove a tumour from a patient's neck. It was among the first operations under general anaesthesia.",
+          "source": {
+            "title": "March 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_30"
+          }
+        },
+        {
+          "year": 1867,
+          "category": "history",
+          "summary": "The United States agreed to buy Alaska from Russia for 7.2 million dollars. Critics mocked it as Seward's Folly.",
+          "source": {
+            "title": "March 30 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_30"
+          }
+        }
+      ]
+    },
+    {
+      "date_key": "03-31",
+      "events": [
+        {
+          "year": 1889,
+          "category": "technology",
+          "summary": "The Eiffel Tower was inaugurated in Paris for the World's Fair. At 300 metres it was the tallest structure in the world.",
+          "source": {
+            "title": "March 31 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_31"
+          }
+        },
+        {
+          "year": 1918,
+          "category": "history",
+          "summary": "Daylight saving time took effect in the United States for the first time, as a wartime measure to save fuel.",
+          "source": {
+            "title": "March 31 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/March_31"
+          }
+        }
+      ]
     }
   ]
 }
