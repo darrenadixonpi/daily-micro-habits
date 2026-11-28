@@ -4,6 +4,7 @@ import { Share, Text } from 'react-native';
 import { buildExportFiles } from '../../src/backup/export_files';
 import { appCryptoPrimitives } from '../../src/platform/app_crypto_primitives';
 import { writeExportFolder, type DocumentFileInfo } from '../../src/platform/app_document_files';
+import { writeInternalValue } from '../../src/settings/settings_repository';
 import { useAppState } from '../../src/ui/app_state_context';
 import { ActionButton } from '../../src/ui/controls';
 import { Card, LabelValueRow, ScreenMessage, ScreenScrollView } from '../../src/ui/screen_layout';
@@ -30,6 +31,7 @@ export default function ExportScreen() {
       });
       const stamp = `${daily.today}_${now.toISOString().slice(11, 16).replace(':', '')}Z`;
       const result = writeExportFolder(stamp, built);
+      writeInternalValue(database.executor, 'last_export_at', now.toISOString(), now);
       setFiles(result.written);
       setFolder(result.folder);
       setError(null);

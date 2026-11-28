@@ -11,7 +11,7 @@ import { GeneratedBadge, ReportErrorAction } from '../src/ui/report_error_action
 import { Card, ScreenMessage, ScreenScrollView } from '../src/ui/screen_layout';
 import { COLORS, ui } from '../src/ui/ui_styles';
 
-const RESULT_TEXT = { exact: 'Exact match ✓', close: 'Close enough ✓', fail: 'Not quite' } as const;
+const RESULT_TEXT = { exact: 'Exact match ✓', close: 'Close enough ✓', fail: 'Not quite', skipped: 'Answer shown' } as const;
 
 /** A4 Phrase: the English meaning, the user types the phrase, then the reveal with audio (spec Section 2). */
 export default function PhraseOfTheDayScreen() {
@@ -101,8 +101,23 @@ export default function PhraseOfTheDayScreen() {
           Case and punctuation are ignored{accentsOptional ? ', accents are optional' : ''}; small typos (up to 15% of the phrase) still pass.
         </Text>
         {!done ? <ActionButton testID="a4-check" label="Check" disabled={typed.trim() === ''} onPress={() => void check()} /> : null}
+        {!done && attempts.length === 0 && !revealed ? (
+          <ActionButton
+            testID="a4-skip"
+            label="I don’t know: show the answer"
+            tone="muted"
+            onPress={() => {
+              setAttempts([{ typed: '', result: 'skipped', distance: 0, normalized_distance: 1 }]);
+              setRevealed(true);
+              speak();
+            }}
+          />
+        ) : null}
         {last ? (
-          <Text testID="a4-result" style={[ui.text, { fontWeight: '600', color: last.result === 'fail' ? COLORS.fail : COLORS.pass }]}>
+          <Text
+            testID="a4-result"
+            style={[ui.text, { fontWeight: '600', color: last.result === 'fail' ? COLORS.fail : last.result === 'skipped' ? COLORS.skip : COLORS.pass }]}
+          >
             {RESULT_TEXT[last.result]}
             {last.result === 'close' ? ` (${last.distance} edit${last.distance === 1 ? '' : 's'})` : ''}
             {attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}

@@ -1,6 +1,7 @@
 import { M0001_INITIAL_SCHEMA } from './migrations/m0001_initial_schema';
 import { M0002_REFLECTION_AND_PINGS } from './migrations/m0002_reflection_and_pings';
 import { M0003_LEARNING_AND_GENERATION } from './migrations/m0003_learning_and_generation';
+import { M0004_DAILY_MODULE_STATES } from './migrations/m0004_daily_module_states';
 
 export interface Migration {
   readonly version: number;
@@ -13,6 +14,7 @@ export const MIGRATIONS: readonly Migration[] = [
   { version: 1, name: 'm0001_initial_schema', sql: M0001_INITIAL_SCHEMA },
   { version: 2, name: 'm0002_reflection_and_pings', sql: M0002_REFLECTION_AND_PINGS },
   { version: 3, name: 'm0003_learning_and_generation', sql: M0003_LEARNING_AND_GENERATION },
+  { version: 4, name: 'm0004_daily_module_states', sql: M0004_DAILY_MODULE_STATES },
 ];
 
 export const CURRENT_SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]?.version ?? 0;
@@ -66,7 +68,7 @@ export const EXPECTED_COLUMNS: Record<DataTableName, readonly string[]> = {
     'id', 'module', 'language', 'tier_or_level', 'domain', 'payload_json', 'source', 'status', 'served_on',
     'generation_request_id', 'assigned_on', 'parent_id', 'excluded_reason', 'imported_at',
   ],
-  daily_session: ['date', 'morning_completed_at', 'evening_completed_at', 'freeze_used'],
+  daily_session: ['date', 'morning_completed_at', 'evening_completed_at', 'freeze_used', 'module_states_json'],
   task_completion: ['id', 'date', 'module', 'content_item_id', 'completed_at', 'response_json'],
   srs_card: [
     'id', 'content_item_id', 'card_type', 'language', 'due', 'stability', 'difficulty', 'scheduled_days',

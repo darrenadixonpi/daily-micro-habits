@@ -85,6 +85,7 @@ export function recordDayStatus(executor: SqlExecutor, status: DayStatus, now: D
   const nowIso = now.toISOString();
   runInTransaction(executor, () => {
     executor.run('INSERT OR IGNORE INTO daily_session (date) VALUES (?)', [status.date]);
+    executor.run('UPDATE daily_session SET module_states_json = ? WHERE date = ?', [JSON.stringify(status.modules), status.date]);
     for (const [window, column] of [['morning', 'morning_completed_at'], ['evening', 'evening_completed_at']] as const) {
       if (status.windows[window] === 'complete') {
         executor.run(`UPDATE daily_session SET ${column} = COALESCE(${column}, ?) WHERE date = ?`, [nowIso, status.date]);

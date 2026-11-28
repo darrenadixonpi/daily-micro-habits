@@ -45,6 +45,10 @@ for PREFS in "iPhone Air|iPhone 17|iPhone 16" "iPhone 16e|iPhone SE (3rd generat
   SLUG=$(echo "$NAME" | tr 'A-Z' 'a-z' | tr -c 'a-z0-9' '_' | sed 's/_*$//')
   echo "=== $NAME ($TYPE) ==="
   UDID=$(xcrun simctl create "dmh-$SLUG" "$TYPE" "$RUNTIME")
+  # With a hardware keyboard "connected", the software keyboard stays hidden and typed text can
+  # land in whichever field still holds focus (2026-11-27 runs). Use the software keyboard only.
+  defaults write com.apple.iphonesimulator ConnectHardwareKeyboard -bool false || true
+  xcrun simctl spawn "$UDID" defaults write com.apple.HardwareKeyboard HardwareKeyboardLastSeen -bool false 2>/dev/null || true
   xcrun simctl boot "$UDID"
   xcrun simctl bootstatus "$UDID" -b
   xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 || true

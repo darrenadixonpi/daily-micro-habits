@@ -107,3 +107,34 @@ function cardColumnValues(card: SchedulerCard): (string | number | null)[] {
     card.lapses, card.state, card.scheduleStatus, card.lastReviewAt ? card.lastReviewAt.toISOString() : null,
   ];
 }
+
+/**
+ * What each grade would do to a card right now, as milliseconds until it is due again. Runs
+ * the scheduler on a freshly loaded copy per grade and writes nothing (Review grade buttons).
+ */
+export function previewIntervals(
+  executor: SqlExecutor,
+  scheduler: AppScheduler,
+  cardId: string,
+  now: Date,
+  grades: readonly SchedulerGrade[],
+): Map<SchedulerGrade, number> {
+  const out = new Map<SchedulerGrade, number>();
+  for (const grade of grades) {
+    const after = scheduler.review({ card: loadSrsCard(executor, cardId), grade, now }).card as SchedulerCard;
+    out.set(grade, Math.max(0, after.dueAt.getTime() - now.getTime()));
+  }
+  return out;
+}
+
+/** "1m", "10m", "5h", "3d", "2mo", "1.4y". */
+export function formatInterval(ms: number): string {
+  const minutes = ms / 60_000;
+  if (minutes < 60) return `${Math.max(1, Math.round(minutes))}m`;
+  const hours = minutes / 60;
+  if (hours < 24) return `${Math.round(hours)}h`;
+  const days = hours / 24;
+  if (days < 30) return `${Math.round(days)}d`;
+  if (days < 365) return `${Math.round(days / 30)}mo`;
+  return `${(days / 365).toFixed(1)}y`;
+}

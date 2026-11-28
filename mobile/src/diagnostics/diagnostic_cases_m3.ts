@@ -12,8 +12,9 @@ import { bundledRows, importBundledContent } from '../content/content_import';
 import { assignedItem, excludeContentItem } from '../content/content_repository';
 import { assignDailyContent, selectionSettingsFrom, type SelectionSettings } from '../content/content_selection';
 import { formulaToText } from '../content/formula_text';
-import { computeDayStatus } from '../daily/day_status';
+import { computeDayStatus, recordDayStatus } from '../daily/day_status';
 import { CURRENT_SCHEMA_VERSION } from '../db/database_schema';
+import { runMigrations } from '../db/run_migrations';
 import type { FetchLike } from '../generation/anthropic_client';
 import { runOneRefill } from '../generation/generation_service';
 import { validateA1Batch, validateA3Batch, validateA4Batch } from '../generation/generation_validation';
@@ -28,7 +29,7 @@ import { createNotificationText } from '../notifications/notification_text';
 import type { SqlExecutor } from '../platform/sql_executor';
 import { readAllSettings, writeSetting } from '../settings/settings_repository';
 import { Rating, type AppScheduler } from '../srs/fsrs_scheduler';
-import { recordReview } from '../srs/review_service';
+import { previewIntervals, recordReview } from '../srs/review_service';
 import { computeStats, median, spearman } from '../stats/adherence_metrics';
 import { addDays, logicalDayBounds } from '../time/logical_day';
 import { check, type DiagnosticCase } from './diagnostic_environment';
@@ -206,11 +207,12 @@ const t17ReviewQueue: DiagnosticCase = {
       if (day2.A3) markConceptRead(executor, { date: DAY2, item: day2.A3, now: now2 });
       check(computeDayStatus(executor, DAY2, settings.enabled, ctx2).modules.A3 === 'complete', 'A3 not complete after recall + read');
 
-      const progress = reviewProgress(executor, ctx2);
-      check(progress.queue.length === 3, `day 2 queue ${progress.queue.length}`);
-      const capped = reviewProgress(executor, { ...ctx2, cap: 2 });
+      const at2 = (seconds: number) => new Date(now2.getTime() + seconds * 1000);
+      const progress = reviewProgress(executor, ctx2, now2);
+      check(progress.queue.length === 3 && progress.firstPass.length === 3, `day 2 queue ${progress.queue.length}`);
+      const capped = reviewProgress(executor, { ...ctx2, cap: 2 }, now2);
       check(capped.queue.length === 2 && capped.deferred === 1, 'cap not applied');
-      check(reviewProgress(executor, { ...ctx2, a4Language: 'fr' }).queue.every((card) => !card.id.startsWith('A4:')), 'paused language still queued');
+      check(reviewProgress(executor, { ...ctx2, a4Language: 'fr' }, now2).queue.every((card) => !card.id.startsWith('A4:')), 'paused language still queued');
 
       for (const card of progress.queue) {
         const face = describeCard(executor, card.id);
@@ -218,22 +220,32 @@ const t17ReviewQueue: DiagnosticCase = {
         if (card.id.startsWith('A4:')) check(face?.production?.target === day1.A4.payload.phrase, 'A4 face target');
         if (card.id.startsWith('A1:')) check(face?.cue?.startsWith('Again:') === true, 'A1 cue is not the latest sentence');
       }
-      const firstCard = progress.queue[0];
-      check(firstCard, 'empty queue');
-      recordReview(executor, scheduler, { cardId: firstCard.id, grade: Rating.Again, now: now2, responseMs: 3000 });
-      const afterAgain = reviewProgress(executor, ctx2);
-      check(afterAgain.queue.some((card) => card.id === firstCard.id) && afterAgain.reviewedCards === 1, 'Again card left the session');
-      check(a2State(afterAgain) === 'incomplete', 'A2 complete with cards left');
+      // The v0.3.1 case: new cards graded Again, Hard and Good enter short learning steps.
+      const [c1, c2, c3] = progress.queue;
+      check(c1 && c2 && c3, 'three cards expected');
+      const preview = previewIntervals(executor, scheduler, c1.id, at2(0), [Rating.Again, Rating.Easy]);
+      check((preview.get(Rating.Again) ?? 0) < 3_600_000 && (preview.get(Rating.Easy) ?? 0) >= 86_400_000, 'interval preview');
+      check(reviewProgress(executor, ctx2, at2(0)).firstPass.length === 3, 'preview wrote to the card');
+      recordReview(executor, scheduler, { cardId: c1.id, grade: Rating.Again, now: at2(0), responseMs: 3000 });
+      check(a2State(reviewProgress(executor, ctx2, at2(5))) === 'incomplete', 'A2 complete with cards left');
+      recordReview(executor, scheduler, { cardId: c2.id, grade: Rating.Hard, now: at2(10), responseMs: 3000 });
+      recordReview(executor, scheduler, { cardId: c3.id, grade: Rating.Good, now: at2(20), responseMs: 3000 });
+      const afterPass = reviewProgress(executor, ctx2, at2(30));
+      check(afterPass.queue.length === 0 && afterPass.learningLater.length === 3, `no card may repeat before its step (queue ${afterPass.queue.length})`);
+      check(a2State(afterPass) === 'complete', 'A2 not complete after one pass');
+      check(computeDayStatus(executor, DAY2, settings.enabled, ctx2).modules.A2 === 'complete', 'A2 status after one pass');
+      const later = reviewProgress(executor, ctx2, at2(120));
+      check(later.queue.some((card) => card.id === c1.id) && later.queue.every((card) => card.due <= at2(120).toISOString()), 'Again card did not return after its step');
+      check(!later.queue.some((card) => card.id === c3.id), 'Good card returned before its 10-minute step');
       let guard = 0;
-      for (let next = afterAgain.queue[0]; next && guard < 10; next = reviewProgress(executor, ctx2).queue[0], guard += 1) {
-        recordReview(executor, scheduler, { cardId: next.id, grade: Rating.Easy, now: new Date(now2.getTime() + (guard + 1) * 60_000), responseMs: 2000 });
+      for (let next = later.queue[0]; next && guard < 10; next = reviewProgress(executor, ctx2, at2(700 + guard * 10)).queue[0], guard += 1) {
+        recordReview(executor, scheduler, { cardId: next.id, grade: Rating.Easy, now: at2(700 + guard * 10), responseMs: 2000 });
       }
-      const done = reviewProgress(executor, ctx2);
-      check(done.queue.length === 0 && a2State(done) === 'complete', `queue not emptied (${done.queue.length})`);
-      check(computeDayStatus(executor, DAY2, settings.enabled, ctx2).modules.A2 === 'complete', 'A2 status');
+      const done = reviewProgress(executor, ctx2, at2(800));
+      check(done.queue.length === 0 && done.learningLater.length === 0 && a2State(done) === 'complete', `learning repeats not cleared (${done.queue.length})`);
       const evening = createNotificationText(executor, { enabled: settings.enabled, timeZone: TZ, reviewCap: 20, a4Language: 'es-419' });
       check(/due|journal/.test(evening(addDays(DAY1, 10), 'evening').body), 'evening text');
-      return `3 cards from A1/A3/A4/A5 (no duplicates); recall then read completes A3; cap ${capped.queue.length}+${capped.deferred} deferred; Again stays in session; queue empties → A2 complete`;
+      return `3 cards from A1/A3/A4/A5 (no duplicates); recall then read completes A3; cap ${capped.queue.length}+${capped.deferred} deferred; Again/Hard/Good repeat only after their steps; A2 completes after one pass`;
     });
   },
 };
@@ -426,6 +438,46 @@ const t20Metrics: DiagnosticCase = {
   },
 };
 
+const t21DailyModuleStates: DiagnosticCase = {
+  id: 'T21',
+  title: 'Per-day module states and fair adherence',
+  async run(environment) {
+    return withScratch(
+      environment,
+      'diag_t21_states.db',
+      (executor) => {
+        executor.run("INSERT INTO daily_session (date, morning_completed_at) VALUES ('2026-11-26', '2026-11-26T13:00:00.000Z')");
+        const migration = runMigrations(executor);
+        check(migration.fromVersion === 3 && migration.toVersion === CURRENT_SCHEMA_VERSION, `migrated ${migration.fromVersion}→${migration.toVersion}`);
+        const kept = executor.get<{ morning_completed_at: string | null; module_states_json: string | null }>(
+          "SELECT morning_completed_at, module_states_json FROM daily_session WHERE date = '2026-11-26'",
+        );
+        check(kept?.morning_completed_at === '2026-11-26T13:00:00.000Z' && kept.module_states_json === null, 'v3 row not kept as is');
+
+        const date = '2026-11-27';
+        const enabled = ['A1', 'A2', 'D1', 'D2', 'D3'];
+        const now = at(date, '23:00');
+        executor.run("INSERT INTO daily_session (date) VALUES (?)", [date]);
+        executor.run("INSERT INTO priority (date, position, text) VALUES (?, 1, 'one')", [date]);
+        executor.run("INSERT INTO journal_entry (date, body_md, created_at, updated_at) VALUES (?, 'Some words today.', ?, ?)", [date, now.toISOString(), now.toISOString()]);
+        const status = computeDayStatus(executor, date, enabled, dayContext(date));
+        check(status.modules.A1 === 'no_content' && status.modules.A2 === 'not_applicable', `states ${JSON.stringify(status.modules)}`);
+        check(status.modules.D1 === 'complete' && status.modules.D2 === 'incomplete' && status.modules.D3 === 'complete', 'D states');
+        recordDayStatus(executor, status, now);
+        const stored = executor.get<{ module_states_json: string | null }>('SELECT module_states_json FROM daily_session WHERE date = ?', [date]);
+        check(stored?.module_states_json?.includes('"A2":"not_applicable"') === true, 'states not stored');
+
+        const stats = computeStats(executor, { today: date, trackingStart: '2026-11-26', enabledModules: enabled, targetRetention: 0.9, moodEnabled: false });
+        const today = stats.adherence.series[stats.days.indexOf(date)];
+        check(today !== undefined && today !== null && Math.abs(today - 2 / 3) < 1e-9, `adherence ${today}, expected 2/3 (old formula 2/5)`);
+        check(stats.adherence.basis.applicable === 1 && stats.adherence.basis.enabled === 1, 'basis counts');
+        return 'm0004 keeps v3 rows; states stored per day; adherence 2/3 (D1, D3 of D1–D3) instead of 2/5; earlier days use the old formula';
+      },
+      3,
+    );
+  },
+};
+
 export const M3_DIAGNOSTIC_CASES: readonly DiagnosticCase[] = [
   t14ContentImport,
   t15DailyAssignment,
@@ -434,4 +486,5 @@ export const M3_DIAGNOSTIC_CASES: readonly DiagnosticCase[] = [
   t18ExportRoundTrip,
   t19Generation,
   t20Metrics,
+  t21DailyModuleStates,
 ];

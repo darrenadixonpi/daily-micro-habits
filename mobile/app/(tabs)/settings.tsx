@@ -9,7 +9,8 @@ import { createAppBackupFileStore } from '../../src/platform/app_backup_file_sto
 import { appCryptoPrimitives } from '../../src/platform/app_crypto_primitives';
 import { readBackupKey, verifyRecoveryPassphrase } from '../../src/security/recovery_passphrase';
 import { SETTING_DEFINITIONS, type SettingDefinition, type SettingValue } from '../../src/settings/settings_definitions';
-import { readAllSettings, writeSetting } from '../../src/settings/settings_repository';
+import { readAllSettings, readInternalValue, writeSetting } from '../../src/settings/settings_repository';
+import { formatShortDate } from '../../src/ui/date_format';
 import { readAnthropicApiKeyPresent, saveAnthropicApiKey } from '../../src/settings/settings_secrets';
 import { useAppState } from '../../src/ui/app_state_context';
 import { ActionButton, ChipGroup, FormField, NavigationRow, Stepper, SwitchRow } from '../../src/ui/controls';
@@ -361,6 +362,13 @@ function DataAndSecurityCard() {
       <ActionButton testID="settings-backup-now" label="Write a backup now" onPress={() => void backupNow()} />
       {backupMessage ? <Text style={ui.muted}>{backupMessage}</Text> : null}
       <NavigationRow testID="settings-export" label="Export JSON and journal" href="/data/export" />
+      <Text testID="settings-last-export" style={ui.muted}>
+        {(() => {
+          const last = readInternalValue(database.executor, 'last_export_at');
+          return typeof last === 'string' ? `Last export: ${formatShortDate(last.slice(0, 10))}.` : 'No export yet.';
+        })()}{' '}
+        Off-phone copies: your “Daily Microhabits Backup” Shortcut copies the newest backup to iCloud Drive each night at 04:00.
+      </Text>
       <NavigationRow testID="settings-restore" label="Restore or verify a backup" href="/data/restore" />
 
       <LabelValueRow

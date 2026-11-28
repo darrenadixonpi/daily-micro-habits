@@ -57,7 +57,8 @@ export function matchPhrase(typed: string, target: string, accentsOptional: bool
 
 export interface A4Attempt {
   readonly typed: string;
-  readonly result: MatchResult;
+  /** skipped = "I don't know": the answer was revealed without a typed attempt. */
+  readonly result: MatchResult | 'skipped';
   readonly distance: number;
   readonly normalized_distance: number;
 }
@@ -65,8 +66,9 @@ export interface A4Attempt {
 export interface A4Response {
   readonly attempts: readonly A4Attempt[];
   /** First attempt's result: the basis of the production-accuracy metric (spec Section 10). */
-  readonly first_result: MatchResult;
-  readonly first_normalized_distance: number;
+  readonly first_result: MatchResult | 'skipped';
+  /** Null when the first attempt was skipped. */
+  readonly first_normalized_distance: number | null;
   readonly revealed_before_pass: boolean;
 }
 
@@ -85,7 +87,7 @@ export function completeA4(
 ): void {
   const first = input.attempts[0];
   const last = input.attempts[input.attempts.length - 1];
-  if (!first || !last || last.result === 'fail') throw new Error('A4 completes only on a passing attempt');
+  if (!first || !last || last.result === 'fail' || last.result === 'skipped') throw new Error('A4 completes only on a passing typed attempt');
   runInTransaction(executor, () => {
     recordCompletion(executor, {
       date: input.date,
@@ -94,7 +96,7 @@ export function completeA4(
       response: {
         attempts: input.attempts,
         first_result: first.result,
-        first_normalized_distance: first.normalized_distance,
+        first_normalized_distance: first.result === 'skipped' ? null : first.normalized_distance,
         revealed_before_pass: input.revealedBeforePass,
       } satisfies A4Response,
       now: input.now,

@@ -67,7 +67,7 @@ const t1FsrsReferenceVectors: DiagnosticCase = {
 
 const t2Migrations: DiagnosticCase = {
   id: 'T2',
-  title: 'Migrations build the 12-table schema (v3)',
+  title: 'Migrations build the 12-table schema (v4)',
   async run(environment) {
     const name = 'diag_t2_migrations.db';
     const keyHex = environment.supportsEncryption ? bytesToHex(environment.crypto.randomBytes(32)) : null;

@@ -1,11 +1,15 @@
 import type { SqlExecutor } from '../platform/sql_executor';
 
 /**
- * A2 queue (spec Section 2): every unsuspended card due before the end of the logical day,
- * oldest due first, from A1, A3, A4 and saved A5 events. A4 cards of a language other
- * than the current target are paused, not deleted. The daily cap limits how many distinct
- * cards are reviewed; a card graded Again (relearning, due again within minutes) stays in
- * the queue so it comes back later in the same session, and does not use up the cap again.
+ * A2 queue (spec Section 2). A session has two parts:
+ *
+ * 1. First pass: every unsuspended card due before the end of the logical day that has not
+ *    been reviewed yet today, oldest due first, up to the daily cap (distinct cards). A4
+ *    cards of a language other than the current target are paused, not deleted.
+ * 2. Learning repeats: cards already reviewed today that FSRS put in a short learning step
+ *    (1 or 10 minutes). They come back only once that step has actually passed, after the
+ *    first pass, and they are optional: A2 is complete when the first pass is empty or the
+ *    cap is reached. (v0.3.0 showed them immediately, so the session never ended.)
  */
 export interface QueuedCard {
   readonly id: string;
@@ -24,10 +28,15 @@ export interface ReviewDayContext {
 }
 
 export interface ReviewProgress {
+  /** What the session shows now: the first pass, then learning repeats whose step has passed. */
   readonly queue: readonly QueuedCard[];
+  /** Cards due today not yet reviewed today, within the cap. */
+  readonly firstPass: readonly QueuedCard[];
+  /** Cards reviewed today that are due again later today (learning steps not yet passed). */
+  readonly learningLater: readonly QueuedCard[];
   /** Distinct cards reviewed in this logical day. */
   readonly reviewedCards: number;
-  /** Review events in this logical day (Again repeats count). */
+  /** Review events in this logical day (repeats count). */
   readonly reviews: number;
   readonly capReached: boolean;
   /** Due today but beyond the cap. */
@@ -45,7 +54,7 @@ export function dueCards(executor: SqlExecutor, context: Pick<ReviewDayContext, 
   );
 }
 
-export function reviewProgress(executor: SqlExecutor, context: ReviewDayContext): ReviewProgress {
+export function reviewProgress(executor: SqlExecutor, context: ReviewDayContext, now: Date = new Date()): ReviewProgress {
   const range = [context.dayStart.toISOString(), context.dayEnd.toISOString()];
   const reviewed = new Set(
     executor
@@ -53,25 +62,39 @@ export function reviewProgress(executor: SqlExecutor, context: ReviewDayContext)
       .map((row) => row.card_id),
   );
   const reviews = executor.get<{ n: number }>('SELECT count(*) AS n FROM srs_review_log WHERE reviewed_at >= ? AND reviewed_at < ?', range)?.n ?? 0;
-  const due = dueCards(executor, context);
   let slots = Math.max(0, context.cap - reviewed.size);
-  const queue: QueuedCard[] = [];
+  const firstPass: QueuedCard[] = [];
+  const learningNow: QueuedCard[] = [];
+  const learningLater: QueuedCard[] = [];
   let deferred = 0;
-  for (const card of due) {
+  const nowIso = now.toISOString();
+  for (const card of dueCards(executor, context)) {
     if (reviewed.has(card.id)) {
-      queue.push(card);
+      (card.due <= nowIso ? learningNow : learningLater).push(card);
     } else if (slots > 0) {
-      queue.push(card);
+      firstPass.push(card);
       slots -= 1;
     } else {
       deferred += 1;
     }
   }
-  return { queue, reviewedCards: reviewed.size, reviews, capReached: reviewed.size >= context.cap, deferred };
+  return {
+    queue: [...firstPass, ...learningNow],
+    firstPass,
+    learningLater,
+    reviewedCards: reviewed.size,
+    reviews,
+    capReached: reviewed.size >= context.cap,
+    deferred,
+  };
 }
 
-/** Completion: queue empty or daily cap reached; with nothing due and nothing reviewed, A2 does not apply that day. */
+/**
+ * Completion (spec Section 1: every due card graded): the first pass is empty or the daily
+ * cap is reached. With nothing due and nothing reviewed, A2 does not apply that day.
+ * Learning repeats never block completion.
+ */
 export function a2State(progress: ReviewProgress): A2State {
-  if (progress.reviews === 0) return progress.queue.length === 0 ? 'not_applicable' : 'incomplete';
-  return progress.queue.length === 0 || progress.capReached ? 'complete' : 'incomplete';
+  if (progress.reviews === 0) return progress.firstPass.length === 0 ? 'not_applicable' : 'incomplete';
+  return progress.firstPass.length === 0 || progress.capReached ? 'complete' : 'incomplete';
 }

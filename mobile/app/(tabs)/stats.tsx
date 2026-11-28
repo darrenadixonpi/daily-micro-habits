@@ -8,6 +8,7 @@ import { computeStats, SPEARMAN_MIN_PAIRS, type Share, type StatsReport } from '
 import { useAppState } from '../../src/ui/app_state_context';
 import { TrendBars } from '../../src/ui/charts';
 import { formatShortDate } from '../../src/ui/date_format';
+import { plural } from '../../src/ui/plural';
 import { PING_COLOR, PING_LABEL } from '../../src/ui/ping_labels';
 import { Card, LabelValueRow, ScreenMessage, ScreenScrollView, TableRow } from '../../src/ui/screen_layout';
 import { ui } from '../../src/ui/ui_styles';
@@ -55,17 +56,22 @@ export default function StatsScreen() {
   return (
     <ScreenScrollView testID="screen-stats">
       <Text testID="stats-range" style={ui.muted}>
-        {formatShortDate(r.from)} – {formatShortDate(r.to)} ({r.days.length} day{r.days.length === 1 ? '' : 's'}). Each bar is one day.
+        {formatShortDate(r.from)} – {formatShortDate(r.to)} ({plural(r.days.length, 'day')}). Each bar is one day.
       </Text>
 
       <Card title="Streak" testID="stats-streak">
-        <LabelValueRow label="Current" value={`${daily.streak.currentStreak} days`} />
-        <LabelValueRow label="Longest" value={`${daily.streak.longestStreak} days`} />
+        <LabelValueRow label="Current" value={plural(daily.streak.currentStreak, 'day')} />
+        <LabelValueRow label="Longest" value={plural(daily.streak.longestStreak, 'day')} />
         <LabelValueRow label="Freezes banked" value={`${daily.streak.bankedFreezes} of 2`} />
       </Card>
 
       <Card title="Daily adherence" aside={percent(r.adherence.mean)} testID="stats-adherence">
-        <Text style={ui.muted}>Completed modules ÷ enabled modules, per day.</Text>
+        <Text style={ui.muted}>
+          Completed modules ÷ modules that applied that day (a review with nothing due, or an evening review without priorities, does not count against you).
+          {r.adherence.basis.enabled > 0
+            ? ` ${plural(r.adherence.basis.enabled, 'earlier day')} before v0.3.1 ${r.adherence.basis.enabled === 1 ? 'uses' : 'use'} completed ÷ enabled.`
+            : ''}
+        </Text>
         <TrendBars values={r.adherence.series} max={1} />
       </Card>
 
@@ -84,7 +90,7 @@ export default function StatsScreen() {
           <LabelValueRow key={module} label={`From ${module}`} value={shareText(value)} />
         ))}
         {Object.entries(r.retrieval.byElapsed).map(([bucket, value]) => (
-          <LabelValueRow key={bucket} label={`${bucket} days since last review`} value={shareText(value)} />
+          <LabelValueRow key={bucket} label={`${bucket} ${bucket === '1' ? 'day' : 'days'} since last review`} value={shareText(value)} />
         ))}
       </Card>
 
@@ -96,7 +102,8 @@ export default function StatsScreen() {
         <LabelValueRow label="Exact" value={shareText(r.production.exact)} />
         <LabelValueRow label="Close" value={shareText(r.production.close)} />
         <LabelValueRow label="Fail (first try)" value={shareText(r.production.fail)} />
-        <LabelValueRow label="Mean edit distance" value={percent(r.production.meanNormalizedDistance, 1)} />
+        <LabelValueRow label="I don’t know" value={shareText(r.production.skipped)} />
+        <LabelValueRow label="Mean edit distance (typed)" value={percent(r.production.meanNormalizedDistance, 1)} />
       </Card>
 
       <Card title="Priority completion" aside={r.priorities.meanScore === null ? '—' : r.priorities.meanScore.toFixed(2)} testID="stats-priorities">
@@ -116,7 +123,7 @@ export default function StatsScreen() {
             ? 'Turn on Mood score (Settings → D3 Journal) to track this.'
             : r.moodAdherence.rho === null
               ? `Spearman correlation appears after ${SPEARMAN_MIN_PAIRS} days with a mood score (${r.moodAdherence.pairs} so far).`
-              : `Spearman ρ = ${r.moodAdherence.rho.toFixed(2)} over ${r.moodAdherence.pairs} days.`}
+              : `Spearman ρ = ${r.moodAdherence.rho.toFixed(2)} over ${plural(r.moodAdherence.pairs, 'day')}.`}
         </Text>
       </Card>
 

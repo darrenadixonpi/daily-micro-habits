@@ -24,3 +24,10 @@ const monthDayFormatter = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', mo
 export function formatMonthDay(dateKey: string): string {
   return monthDayFormatter.format(noonUtc(`2000-${dateKey}`));
 }
+
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
+
+/** "9:41 AM" in the device's time zone. */
+export function formatTime(instant: Date): string {
+  return timeFormatter.format(instant);
+}

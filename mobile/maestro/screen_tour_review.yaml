@@ -32,6 +32,8 @@ appId: com.darrendixon.dailymicrohabits
 # A tap during scroll momentum only stops the scroll; let it settle first.
 - waitForAnimationToEnd
 - takeScreenshot: 31_review_a1_answer
+# v0.3.1: grade Again, then Good, then Good. Each card is shown once; none may repeat before
+# its learning step, so the first pass ends on the "A2 complete" screen (v0.3.0 cycled forever).
 - tapOn:
     id: "review-grade-1"
 # A4 production card: type the phrase, then check and reveal
@@ -51,14 +53,13 @@ appId: com.darrendixon.dailymicrohabits
     id: "review-match"
 - scrollUntilVisible:
     element:
-      id: "review-grade-4"
+      id: "review-grade-3"
     direction: DOWN
-# A tap during scroll momentum only stops the scroll; let it settle first.
 - waitForAnimationToEnd
 - takeScreenshot: 33_review_a4_answer
 - tapOn:
-    id: "review-grade-4"
-# A5 saved event, then the A1 card graded Again comes back in the same session
+    id: "review-grade-3"
+# A5 saved event, graded Good
 - extendedWaitUntil:
     visible:
       id: "review-reveal"
@@ -68,34 +69,28 @@ appId: com.darrendixon.dailymicrohabits
     id: "review-reveal"
 - scrollUntilVisible:
     element:
-      id: "review-grade-4"
+      id: "review-grade-3"
     direction: DOWN
-# A tap during scroll momentum only stops the scroll; let it settle first.
 - waitForAnimationToEnd
 - tapOn:
-    id: "review-grade-4"
-- extendedWaitUntil:
-    visible:
-      id: "review-reveal"
-    timeout: 10000
-- assertVisible:
-    text: "obviate"
-- takeScreenshot: 35_review_again_card_returns
-- tapOn:
-    id: "review-reveal"
-- scrollUntilVisible:
-    element:
-      id: "review-grade-4"
-    direction: DOWN
-# A tap during scroll momentum only stops the scroll; let it settle first.
-- waitForAnimationToEnd
-- tapOn:
-    id: "review-grade-4"
+    id: "review-grade-3"
+# First pass done: the end screen, with the three cards in learning steps offered as optional.
 - extendedWaitUntil:
     visible:
       id: "review-empty"
     timeout: 10000
-- takeScreenshot: 36_review_done
+- assertVisible:
+    text: "All of today’s cards are reviewed.*"
+- assertVisible:
+    id: "review-learning-later"
+- takeScreenshot: 35_review_first_pass_done
+- tapOn:
+    id: "review-early"
+- extendedWaitUntil:
+    visible:
+      id: "review-reveal"
+    timeout: 10000
+- takeScreenshot: 36_review_early_card
 - tapOn:
     id: "tab-today"
 - extendedWaitUntil:

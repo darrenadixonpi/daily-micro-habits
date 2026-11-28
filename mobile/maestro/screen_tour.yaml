@@ -498,7 +498,7 @@ appId: com.darrendixon.dailymicrohabits
     timeout: 180000
 - assertVisible:
     id: "diagnostics-summary"
-    text: "20/20 passed"
+    text: "21/21 passed"
 - takeScreenshot: 23_diagnostics_top
 - scroll
 - takeScreenshot: 24_diagnostics_scrolled

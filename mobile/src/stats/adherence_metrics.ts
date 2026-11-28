@@ -22,7 +22,12 @@ export interface StatsReport {
   readonly from: string;
   readonly to: string;
   readonly days: readonly string[];
-  readonly adherence: { readonly mean: number | null; readonly series: readonly (number | null)[] };
+  readonly adherence: {
+    readonly mean: number | null;
+    readonly series: readonly (number | null)[];
+    /** Days scored as completed ÷ applicable (states stored, v0.3.1 on) and as completed ÷ enabled (earlier days). */
+    readonly basis: { readonly applicable: number; readonly enabled: number };
+  };
   readonly windowCompletion: Readonly<Record<WindowId, Share>>;
   readonly retrieval: {
     readonly overall: Share;
@@ -31,7 +36,15 @@ export interface StatsReport {
     readonly calibrationGap: number | null;
   };
   readonly delayedRecall: Share;
-  readonly production: { readonly exact: Share; readonly close: Share; readonly fail: Share; readonly meanNormalizedDistance: number | null };
+  readonly production: {
+    readonly exact: Share;
+    readonly close: Share;
+    readonly fail: Share;
+    /** "I don't know": revealed without a typed first attempt. */
+    readonly skipped: Share;
+    /** Mean over typed first attempts only. */
+    readonly meanNormalizedDistance: number | null;
+  };
   readonly priorities: { readonly meanScore: number | null; readonly series: readonly (number | null)[]; readonly carriedOver: number };
   readonly journal: { readonly entriesPerWeek: number | null; readonly wordsPerEntry: number | null; readonly series: readonly (number | null)[] };
   readonly moodAdherence: { readonly pairs: number; readonly rho: number | null; readonly enabled: boolean };
@@ -123,7 +136,27 @@ export function computeStats(
     set.add(row.module);
     completedByDay.set(row.date, set);
   }
-  const adherenceSeries = days.map((date) => (enabled.length === 0 ? null : (completedByDay.get(date)?.size ?? 0) / enabled.length));
+  // Days with stored module states (v0.3.1 on): completed ÷ modules that applied that day.
+  // Earlier days: completed ÷ enabled.
+  const storedStates = new Map(
+    executor
+      .all<{ date: string; module_states_json: string | null }>(
+        'SELECT date, module_states_json FROM daily_session WHERE date >= ? AND date <= ? AND module_states_json IS NOT NULL',
+        [from, input.today],
+      )
+      .map((row) => [row.date, JSON.parse(row.module_states_json ?? '{}') as Record<string, string>]),
+  );
+  const basis = { applicable: 0, enabled: 0 };
+  const adherenceSeries = days.map((date) => {
+    const states = storedStates.get(date);
+    if (states) {
+      const applicable = Object.values(states).filter((state) => state === 'complete' || state === 'incomplete');
+      basis.applicable += 1;
+      return applicable.length === 0 ? null : applicable.filter((state) => state === 'complete').length / applicable.length;
+    }
+    basis.enabled += 1;
+    return enabled.length === 0 ? null : (completedByDay.get(date)?.size ?? 0) / enabled.length;
+  });
   const adherenceValues = adherenceSeries.filter((value): value is number => value !== null);
   const adherenceMean = adherenceValues.length > 0 ? adherenceValues.reduce((s, v) => s + v, 0) / adherenceValues.length : null;
 
@@ -221,7 +254,7 @@ export function computeStats(
     from,
     to: input.today,
     days,
-    adherence: { mean: adherenceMean, series: adherenceSeries },
+    adherence: { mean: adherenceMean, series: adherenceSeries, basis },
     windowCompletion: { morning: windowShare('morning_completed_at'), evening: windowShare('evening_completed_at') },
     retrieval: {
       overall,
@@ -234,6 +267,7 @@ export function computeStats(
       exact: share(firstResults.filter((r) => r === 'exact').length, firstResults.length),
       close: share(firstResults.filter((r) => r === 'close').length, firstResults.length),
       fail: share(firstResults.filter((r) => r === 'fail').length, firstResults.length),
+      skipped: share(firstResults.filter((r) => r === 'skipped').length, firstResults.length),
       meanNormalizedDistance: distances.length > 0 ? distances.reduce((s, d) => s + d, 0) / distances.length : null,
     },
     priorities: {
