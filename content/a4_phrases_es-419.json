@@ -852,6 +852,790 @@
         "restaurant",
         "requests"
       ]
+    },
+    {
+      "id": "a4-es419-0061",
+      "phrase": "¿Qué tal tu fin de semana?",
+      "literal_translation": "What such your end of week?",
+      "idiomatic_translation": "How was your weekend?",
+      "usage_note": "A standard Monday greeting at work or school. 'Qué tal' works for any 'how was' question.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "small_talk"
+      ]
+    },
+    {
+      "id": "a4-es419-0062",
+      "phrase": "Me levanto temprano entre semana.",
+      "literal_translation": "I raise myself early between week.",
+      "idiomatic_translation": "I get up early on weekdays.",
+      "usage_note": "'Entre semana' means Monday to Friday; the opposite is 'el fin de semana'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "id": "a4-es419-0063",
+      "phrase": "¿Te gustaría ir al cine conmigo?",
+      "literal_translation": "Would it please you to go to the cinema with me?",
+      "idiomatic_translation": "Would you like to go to the movies with me?",
+      "usage_note": "A polite invitation. 'Gustar' works backwards: the outing pleases you.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "invitations"
+      ]
+    },
+    {
+      "id": "a4-es419-0064",
+      "phrase": "Está a dos cuadras de aquí.",
+      "literal_translation": "It is at two blocks from here.",
+      "idiomatic_translation": "It's two blocks from here.",
+      "usage_note": "'Cuadra' is the usual Latin American word for a city block; Spain says 'manzana'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "directions"
+      ]
+    },
+    {
+      "id": "a4-es419-0065",
+      "phrase": "¿A qué hora sale el próximo autobús?",
+      "literal_translation": "At what hour leaves the next bus?",
+      "idiomatic_translation": "What time does the next bus leave?",
+      "usage_note": "'Autobús' is understood everywhere; in Mexico city buses are also called 'camión'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "id": "a4-es419-0066",
+      "phrase": "Perdón, me equivoqué de número.",
+      "literal_translation": "Pardon, I mistook myself of number.",
+      "idiomatic_translation": "Sorry, wrong number.",
+      "usage_note": "'Equivocarse de' + noun means to pick the wrong one: 'me equivoqué de calle' is 'I took the wrong street'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "phone"
+      ]
+    },
+    {
+      "id": "a4-es419-0067",
+      "phrase": "¿Me puede cobrar, por favor?",
+      "literal_translation": "Can you charge me, please?",
+      "idiomatic_translation": "Can I pay, please? / Could you ring me up?",
+      "usage_note": "Used at a counter or to a waiter in Mexico when you want to pay.",
+      "register": "formal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "id": "a4-es419-0068",
+      "phrase": "Quiero cambiar esta camisa por una talla más grande.",
+      "literal_translation": "I want to change this shirt for a size more big.",
+      "idiomatic_translation": "I'd like to exchange this shirt for a bigger size.",
+      "usage_note": "'Cambiar X por Y' means to exchange X for Y. Use 'talla' for clothes and 'número' for shoes.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "id": "a4-es419-0069",
+      "phrase": "¿Tiene algo más barato?",
+      "literal_translation": "Do you have something more cheap?",
+      "idiomatic_translation": "Do you have anything cheaper?",
+      "usage_note": "Uses 'usted' (tiene) with a shop assistant; with a friend say '¿tienes...?'.",
+      "register": "formal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "id": "a4-es419-0070",
+      "phrase": "Me quedé dormido.",
+      "literal_translation": "I stayed asleep.",
+      "idiomatic_translation": "I overslept.",
+      "usage_note": "Also means 'I fell asleep'. A woman says 'me quedé dormida'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "id": "a4-es419-0071",
+      "phrase": "Llevo media hora esperando.",
+      "literal_translation": "I carry half hour waiting.",
+      "idiomatic_translation": "I've been waiting for half an hour.",
+      "usage_note": "'Llevar' + time + gerund expresses how long something has been going on.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0072",
+      "phrase": "¿Me pasas la sal?",
+      "literal_translation": "Do you pass me the salt?",
+      "idiomatic_translation": "Can you pass me the salt?",
+      "usage_note": "Requests at the table use the present tense; it sounds natural, not rude.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "id": "a4-es419-0073",
+      "phrase": "Se me acabó la batería.",
+      "literal_translation": "To me it finished the battery.",
+      "idiomatic_translation": "My battery died.",
+      "usage_note": "The 'se me' construction presents accidents as things that happened to you.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "technology"
+      ]
+    },
+    {
+      "id": "a4-es419-0074",
+      "phrase": "¿Dónde puedo tomar un taxi?",
+      "literal_translation": "Where can I take a taxi?",
+      "idiomatic_translation": "Where can I get a taxi?",
+      "usage_note": "'Tomar' is the normal Latin American verb for catching transport.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "travel"
+      ]
+    },
+    {
+      "id": "a4-es419-0075",
+      "phrase": "Estoy resfriado.",
+      "literal_translation": "I am colded.",
+      "idiomatic_translation": "I have a cold.",
+      "usage_note": "A woman says 'estoy resfriada'. In Mexico 'tengo gripa' is at least as common for a cold.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "health"
+      ]
+    },
+    {
+      "id": "a4-es419-0076",
+      "phrase": "¿Puedo dejar un mensaje?",
+      "literal_translation": "Can I leave a message?",
+      "idiomatic_translation": "Can I leave a message?",
+      "usage_note": "Useful on the phone or at a reception desk.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "phone"
+      ]
+    },
+    {
+      "id": "a4-es419-0077",
+      "phrase": "Va a llover más tarde.",
+      "literal_translation": "It goes to rain more late.",
+      "idiomatic_translation": "It's going to rain later.",
+      "usage_note": "'Ir a' + infinitive is the everyday way to talk about the near future.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "weather"
+      ]
+    },
+    {
+      "id": "a4-es419-0078",
+      "phrase": "¿Cuál es tu comida favorita?",
+      "literal_translation": "Which is your favourite food?",
+      "idiomatic_translation": "What's your favourite food?",
+      "usage_note": "With 'ser' + noun, Spanish asks '¿cuál?' where English says 'what'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "small_talk"
+      ]
+    },
+    {
+      "id": "a4-es419-0079",
+      "phrase": "Me falta un poco de práctica.",
+      "literal_translation": "To me lacks a little of practice.",
+      "idiomatic_translation": "I need a bit more practice.",
+      "usage_note": "'Faltar' works like 'gustar': the thing that is missing is the subject.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "learning"
+      ]
+    },
+    {
+      "id": "a4-es419-0080",
+      "phrase": "¿Ya terminaste?",
+      "literal_translation": "Already you finished?",
+      "idiomatic_translation": "Are you done yet?",
+      "usage_note": "'Ya' in a question means 'yet' or 'already'. Latin America prefers the simple past here.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0081",
+      "phrase": "Pásale, estás en tu casa.",
+      "literal_translation": "Pass to it, you are in your house.",
+      "idiomatic_translation": "Come on in, make yourself at home.",
+      "usage_note": "A warm Mexican welcome at the door. 'Pásale' also invites customers into a shop.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "hospitality"
+      ]
+    },
+    {
+      "id": "a4-es419-0082",
+      "phrase": "¿Hay una farmacia cerca?",
+      "literal_translation": "Is there a pharmacy near?",
+      "idiomatic_translation": "Is there a pharmacy nearby?",
+      "usage_note": "'Hay' means 'there is/are' and never changes for plural.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "directions",
+        "health"
+      ]
+    },
+    {
+      "id": "a4-es419-0083",
+      "phrase": "No me queda bien.",
+      "literal_translation": "It doesn't stay well on me.",
+      "idiomatic_translation": "It doesn't fit me.",
+      "usage_note": "'Quedar' describes how clothes fit or suit you: 'te queda muy bien' means 'it looks great on you'.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "id": "a4-es419-0084",
+      "phrase": "Quedamos a las ocho.",
+      "literal_translation": "We stay at the eight.",
+      "idiomatic_translation": "Let's meet at eight.",
+      "usage_note": "'Quedar' also means to arrange to meet. 'Quedamos en el café' sets the place.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "plans"
+      ]
+    },
+    {
+      "id": "a4-es419-0085",
+      "phrase": "¿Me avisas cuando llegues?",
+      "literal_translation": "Do you notify me when you arrive?",
+      "idiomatic_translation": "Will you let me know when you get there?",
+      "usage_note": "'Cuando' about the future takes the subjunctive: 'llegues', not 'llegas'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "plans"
+      ]
+    },
+    {
+      "id": "a4-es419-0086",
+      "phrase": "Tengo prisa.",
+      "literal_translation": "I have hurry.",
+      "idiomatic_translation": "I'm in a hurry.",
+      "usage_note": "In Mexico 'tengo prisa' and 'ando con prisa' are both common.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0087",
+      "phrase": "¿Qué me pongo?",
+      "literal_translation": "What do I put on myself?",
+      "idiomatic_translation": "What should I wear?",
+      "usage_note": "'Ponerse' means to put on clothes; 'ponte un suéter' means 'put on a sweater'.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "id": "a4-es419-0088",
+      "phrase": "Me caí de la bicicleta.",
+      "literal_translation": "I fell myself from the bicycle.",
+      "idiomatic_translation": "I fell off my bike.",
+      "usage_note": "'Caerse' takes the reflexive pronoun when you fall.",
+      "register": "neutral",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "accidents"
+      ]
+    },
+    {
+      "id": "a4-es419-0089",
+      "phrase": "¿Puedes bajarle al volumen?",
+      "literal_translation": "Can you lower to it at the volume?",
+      "idiomatic_translation": "Can you turn the volume down?",
+      "usage_note": "'Bajarle' and 'subirle' are everyday Mexican for turning sound down or up.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "home"
+      ]
+    },
+    {
+      "id": "a4-es419-0090",
+      "phrase": "Ya casi llego.",
+      "literal_translation": "Already almost I arrive.",
+      "idiomatic_translation": "I'm almost there.",
+      "usage_note": "A standard reply to '¿dónde estás?'. The present tense describes the near future.",
+      "register": "informal",
+      "cefr": "A2",
+      "transliteration": null,
+      "tags": [
+        "plans"
+      ]
+    },
+    {
+      "id": "a4-es419-0091",
+      "phrase": "Me hubiera gustado ir.",
+      "literal_translation": "To me it would have pleased to go.",
+      "idiomatic_translation": "I would have liked to go.",
+      "usage_note": "The past subjunctive 'hubiera' expresses regret about something that did not happen.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "regret"
+      ]
+    },
+    {
+      "id": "a4-es419-0092",
+      "phrase": "No es para tanto.",
+      "literal_translation": "It is not for so much.",
+      "idiomatic_translation": "It's not that big a deal.",
+      "usage_note": "Used to calm someone down or to downplay a problem.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "reassurance"
+      ]
+    },
+    {
+      "id": "a4-es419-0093",
+      "phrase": "Me da pena pedírselo.",
+      "literal_translation": "It gives me shame to ask it of him.",
+      "idiomatic_translation": "I'm embarrassed to ask him.",
+      "usage_note": "In Mexico 'pena' usually means embarrassment; in other countries it often means sorrow.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "feelings"
+      ]
+    },
+    {
+      "id": "a4-es419-0094",
+      "phrase": "A lo mejor llego tarde.",
+      "literal_translation": "At the best I arrive late.",
+      "idiomatic_translation": "I might be late.",
+      "usage_note": "'A lo mejor' means 'maybe' and takes the indicative, unlike 'quizás', which often takes the subjunctive.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "plans"
+      ]
+    },
+    {
+      "id": "a4-es419-0095",
+      "phrase": "Más vale prevenir que lamentar.",
+      "literal_translation": "More worth to prevent than to lament.",
+      "idiomatic_translation": "Better safe than sorry.",
+      "usage_note": "A common saying when you take a precaution.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "sayings"
+      ]
+    },
+    {
+      "id": "a4-es419-0096",
+      "phrase": "Te lo digo en serio.",
+      "literal_translation": "I tell it to you in seriousness.",
+      "idiomatic_translation": "I mean it. / I'm serious.",
+      "usage_note": "Stresses that you are not joking.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "emphasis"
+      ]
+    },
+    {
+      "id": "a4-es419-0097",
+      "phrase": "Ni modo.",
+      "literal_translation": "Not a way.",
+      "idiomatic_translation": "Oh well. / Nothing we can do.",
+      "usage_note": "Very common in Mexico to accept a setback calmly.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "reactions"
+      ]
+    },
+    {
+      "id": "a4-es419-0098",
+      "phrase": "Estoy hasta el gorro.",
+      "literal_translation": "I am up to the cap.",
+      "idiomatic_translation": "I'm fed up.",
+      "usage_note": "Mexican and Central American. 'Estoy harto' is the general equivalent.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "feelings"
+      ]
+    },
+    {
+      "id": "a4-es419-0099",
+      "phrase": "Se me hace que va a llover.",
+      "literal_translation": "To me it makes itself that it goes to rain.",
+      "idiomatic_translation": "I think it's going to rain.",
+      "usage_note": "In Mexico 'se me hace que' introduces a hunch or impression.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "opinions",
+        "weather"
+      ]
+    },
+    {
+      "id": "a4-es419-0100",
+      "phrase": "Al rato te marco.",
+      "literal_translation": "At the while I dial you.",
+      "idiomatic_translation": "I'll call you in a bit.",
+      "usage_note": "Mexican: 'al rato' means 'later on', and 'marcar' means to phone someone.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "phone"
+      ]
+    },
+    {
+      "id": "a4-es419-0101",
+      "phrase": "Cuando tengas tiempo, me avisas.",
+      "literal_translation": "When you have time, you notify me.",
+      "idiomatic_translation": "Let me know when you have time.",
+      "usage_note": "'Cuando' referring to the future takes the subjunctive 'tengas'.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "plans"
+      ]
+    },
+    {
+      "id": "a4-es419-0102",
+      "phrase": "Aunque llueva, vamos a ir.",
+      "literal_translation": "Although it may rain, we go to go.",
+      "idiomatic_translation": "Even if it rains, we're going.",
+      "usage_note": "'Aunque' + subjunctive means 'even if'; with the indicative it means 'even though'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "plans",
+        "weather"
+      ]
+    },
+    {
+      "id": "a4-es419-0103",
+      "phrase": "Me costó mucho acostumbrarme.",
+      "literal_translation": "It cost me a lot to accustom myself.",
+      "idiomatic_translation": "It took me a long time to get used to it.",
+      "usage_note": "'Costar' expresses difficulty as well as price: 'me cuesta levantarme temprano'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "change"
+      ]
+    },
+    {
+      "id": "a4-es419-0104",
+      "phrase": "No tengo ni idea.",
+      "literal_translation": "I don't have not even idea.",
+      "idiomatic_translation": "I have no idea.",
+      "usage_note": "The double negative is correct and emphatic in Spanish.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "reactions"
+      ]
+    },
+    {
+      "id": "a4-es419-0105",
+      "phrase": "Eso depende de ti.",
+      "literal_translation": "That depends on you.",
+      "idiomatic_translation": "That's up to you.",
+      "usage_note": "Spanish uses 'depender de', with 'de' where English uses 'on'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "decisions"
+      ]
+    },
+    {
+      "id": "a4-es419-0106",
+      "phrase": "¿Te importa si abro la ventana?",
+      "literal_translation": "Does it matter to you if I open the window?",
+      "idiomatic_translation": "Do you mind if I open the window?",
+      "usage_note": "A polite request for permission; with 'usted' say '¿le importa...?'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "requests"
+      ]
+    },
+    {
+      "id": "a4-es419-0107",
+      "phrase": "Estoy a punto de salir.",
+      "literal_translation": "I am at point of leaving.",
+      "idiomatic_translation": "I'm about to leave.",
+      "usage_note": "'Estar a punto de' + infinitive means 'to be about to'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "time"
+      ]
+    },
+    {
+      "id": "a4-es419-0108",
+      "phrase": "¡Órale!",
+      "literal_translation": "Now to it! (from 'ahora' + 'le')",
+      "idiomatic_translation": "Come on! / Wow! / OK, let's do it!",
+      "usage_note": "A very Mexican word whose meaning depends on tone: encouragement, surprise or agreement.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "reactions"
+      ]
+    },
+    {
+      "id": "a4-es419-0109",
+      "phrase": "Me cuesta trabajo concentrarme.",
+      "literal_translation": "It costs me work to concentrate myself.",
+      "idiomatic_translation": "I find it hard to concentrate.",
+      "usage_note": "'Costar trabajo' is the usual Mexican way to say something is hard for you.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "feelings",
+        "learning"
+      ]
+    },
+    {
+      "id": "a4-es419-0110",
+      "phrase": "Lo hice a propósito.",
+      "literal_translation": "I did it on purpose.",
+      "idiomatic_translation": "I did it on purpose.",
+      "usage_note": "'A propósito' also means 'by the way' at the start of a sentence.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "actions"
+      ]
+    },
+    {
+      "id": "a4-es419-0111",
+      "phrase": "Sin querer queriendo.",
+      "literal_translation": "Without wanting, wanting.",
+      "idiomatic_translation": "Accidentally on purpose.",
+      "usage_note": "Made famous by the Mexican TV character El Chavo del Ocho; used jokingly.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "humor"
+      ]
+    },
+    {
+      "id": "a4-es419-0112",
+      "phrase": "Hay que ver el lado positivo.",
+      "literal_translation": "There is to see the positive side.",
+      "idiomatic_translation": "You have to look on the bright side.",
+      "usage_note": "'Hay que' + infinitive gives a general obligation, with no specific subject.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "reassurance"
+      ]
+    },
+    {
+      "id": "a4-es419-0113",
+      "phrase": "Ya me cayó el veinte.",
+      "literal_translation": "Already the twenty fell to me.",
+      "idiomatic_translation": "Now I get it.",
+      "usage_note": "Mexican: from old pay phones, where the call connected once the 20-centavo coin dropped.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "understanding"
+      ]
+    },
+    {
+      "id": "a4-es419-0114",
+      "phrase": "Me echó la culpa.",
+      "literal_translation": "He threw me the blame.",
+      "idiomatic_translation": "He blamed me.",
+      "usage_note": "'Echarle la culpa a alguien' is the everyday way to say 'to blame someone'.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "conflict"
+      ]
+    },
+    {
+      "id": "a4-es419-0115",
+      "phrase": "Esto está en chino.",
+      "literal_translation": "This is in Chinese.",
+      "idiomatic_translation": "This is really hard to understand.",
+      "usage_note": "Mexican expression for something very difficult, like 'it's all Greek to me'.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "understanding"
+      ]
+    },
+    {
+      "id": "a4-es419-0116",
+      "phrase": "Me urge hablar contigo.",
+      "literal_translation": "To me it urges to speak with you.",
+      "idiomatic_translation": "I really need to talk to you.",
+      "usage_note": "'Me urge' is common in Mexico for anything urgent: 'me urge un café'.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "requests"
+      ]
+    },
+    {
+      "id": "a4-es419-0117",
+      "phrase": "Te lo encargo.",
+      "literal_translation": "I entrust it to you.",
+      "idiomatic_translation": "I'm counting on you with this. / Please take care of it.",
+      "usage_note": "In Mexico also a friendly way to ask a favour: 'te encargo las llaves'.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "requests"
+      ]
+    },
+    {
+      "id": "a4-es419-0118",
+      "phrase": "Vamos a echarle un ojo.",
+      "literal_translation": "Let's throw it an eye.",
+      "idiomatic_translation": "Let's take a look at it.",
+      "usage_note": "'Echar un ojo' or 'echar un vistazo' means to have a quick look.",
+      "register": "informal",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "actions"
+      ]
+    },
+    {
+      "id": "a4-es419-0119",
+      "phrase": "Ojalá hubiera estudiado más.",
+      "literal_translation": "Hopefully I had studied more.",
+      "idiomatic_translation": "I wish I had studied more.",
+      "usage_note": "'Ojalá' + past perfect subjunctive expresses regret about the past.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "regret"
+      ]
+    },
+    {
+      "id": "a4-es419-0120",
+      "phrase": "Si pudiera, te ayudaría.",
+      "literal_translation": "If I could, I would help you.",
+      "idiomatic_translation": "If I could, I'd help you.",
+      "usage_note": "A hypothetical: imperfect subjunctive in the 'si' clause, conditional in the result.",
+      "register": "neutral",
+      "cefr": "B1",
+      "transliteration": null,
+      "tags": [
+        "grammar"
+      ]
     }
   ]
 }
