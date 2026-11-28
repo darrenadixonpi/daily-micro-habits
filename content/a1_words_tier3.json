@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "module": "A1",
+  "tier": 3,
+  "items": [
+    {
+      "id": "a1-t3-0001",
+      "headword": "defenestrate",
+      "part_of_speech": "verb",
+      "ipa": "/diˈfɛnəˌstreɪt/",
+      "definition": "To throw someone or something out of a window; figuratively, to remove someone abruptly from a position.",
+      "etymology": "From Latin de 'down from' and fenestra 'window', coined after the Defenestration of Prague in 1618.",
+      "example_sentence": "The board moved to defenestrate the chief executive after the scandal.",
+      "inflections": [
+        "defenestrate",
+        "defenestrates",
+        "defenestrated",
+        "defenestrating"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "politics"
+      ]
+    },
+    {
+      "id": "a1-t3-0002",
+      "headword": "perspicacious",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌpɝspɪˈkeɪʃəs/",
+      "definition": "Having a ready insight into things; shrewd and quick to understand.",
+      "etymology": "From Latin perspicax 'sharp-sighted', from perspicere 'to look through'.",
+      "example_sentence": "A perspicacious editor spotted the flaw in the argument at once.",
+      "inflections": [
+        "perspicacious",
+        "perspicaciously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "intelligence"
+      ]
+    },
+    {
+      "id": "a1-t3-0003",
+      "headword": "sesquipedalian",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌsɛskwəpəˈdeɪliən/",
+      "definition": "Using long words, or characterised by long words.",
+      "etymology": "From Latin sesquipedalis 'a foot and a half long', a joke by the poet Horace about long words.",
+      "example_sentence": "His sesquipedalian prose made the manual hard to follow.",
+      "inflections": [
+        "sesquipedalian"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "language"
+      ]
+    },
+    {
+      "id": "a1-t3-0004",
+      "headword": "lugubrious",
+      "part_of_speech": "adjective",
+      "ipa": "/ləˈɡubriəs/",
+      "definition": "Looking or sounding sad and dismal, often to an exaggerated degree.",
+      "etymology": "From Latin lugubris 'mournful', from lugere 'to mourn'.",
+      "example_sentence": "The cellist played a lugubrious melody as the credits rolled.",
+      "inflections": [
+        "lugubrious",
+        "lugubriously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "mood"
+      ]
+    },
+    {
+      "id": "a1-t3-0005",
+      "headword": "susurrus",
+      "part_of_speech": "noun",
+      "ipa": "/sʊˈsɝəs/",
+      "definition": "A soft whispering or rustling sound.",
+      "etymology": "From Latin susurrus 'a whisper', an imitation of the sound.",
+      "example_sentence": "The susurrus of the wind in the pines put her to sleep.",
+      "inflections": [
+        "susurrus",
+        "susurruses"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "sound"
+      ]
+    },
+    {
+      "id": "a1-t3-0006",
+      "headword": "crepuscular",
+      "part_of_speech": "adjective",
+      "ipa": "/krɪˈpʌskjələr/",
+      "definition": "Relating to twilight; in zoology, active mainly at dawn and dusk.",
+      "etymology": "From Latin crepusculum 'twilight'.",
+      "example_sentence": "Deer are crepuscular, so drive carefully at dusk.",
+      "inflections": [
+        "crepuscular"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "nature"
+      ]
+    },
+    {
+      "id": "a1-t3-0007",
+      "headword": "petrichor",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpɛtrɪˌkɔr/",
+      "definition": "The pleasant earthy smell that comes with the first rain after a dry spell.",
+      "etymology": "Coined in 1964 by two Australian chemists from Greek petra 'stone' and ichor, the fluid in the veins of the gods.",
+      "example_sentence": "After weeks of drought, the petrichor drifted in through the open window.",
+      "inflections": [
+        "petrichor"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "nature"
+      ]
+    },
+    {
+      "id": "a1-t3-0008",
+      "headword": "apricity",
+      "part_of_speech": "noun",
+      "ipa": "/əˈprɪsɪti/",
+      "definition": "The warmth of the sun on a cold winter day.",
+      "etymology": "From Latin apricitas 'sunniness', from apricus 'exposed to the sun'; recorded in English in the 1620s.",
+      "example_sentence": "They ate lunch on the bench, grateful for the apricity of the January noon.",
+      "inflections": [
+        "apricity"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "weather"
+      ]
+    },
+    {
+      "id": "a1-t3-0009",
+      "headword": "pulchritude",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpʌlkrɪˌtud/",
+      "definition": "Physical beauty; a formal or humorous word.",
+      "etymology": "From Latin pulchritudo, from pulcher 'beautiful'.",
+      "example_sentence": "The travel guide praised the pulchritude of the coastline.",
+      "inflections": [
+        "pulchritude"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "beauty"
+      ]
+    },
+    {
+      "id": "a1-t3-0010",
+      "headword": "obstreperous",
+      "part_of_speech": "adjective",
+      "ipa": "/əbˈstrɛpərəs/",
+      "definition": "Noisy and difficult to control.",
+      "etymology": "From Latin obstreperus 'clamorous', from ob 'against' and strepere 'to make a noise'.",
+      "example_sentence": "The obstreperous fans were escorted out of the stadium.",
+      "inflections": [
+        "obstreperous",
+        "obstreperously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "behaviour"
+      ]
+    },
+    {
+      "id": "a1-t3-0011",
+      "headword": "otiose",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈoʊʃiˌoʊs/",
+      "definition": "Serving no practical purpose; superfluous.",
+      "etymology": "From Latin otiosus 'at leisure', from otium 'leisure'.",
+      "example_sentence": "Half of the clauses in the old policy were otiose and could be deleted.",
+      "inflections": [
+        "otiose"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "usefulness"
+      ]
+    },
+    {
+      "id": "a1-t3-0012",
+      "headword": "tergiversate",
+      "part_of_speech": "verb",
+      "ipa": "/tərˈdʒɪvərˌseɪt/",
+      "definition": "To keep changing one's stated opinion; to equivocate.",
+      "etymology": "From Latin tergiversari 'to turn one's back', from tergum 'back' and vertere 'to turn'.",
+      "example_sentence": "The minister continued to tergiversate on the question of taxes.",
+      "inflections": [
+        "tergiversate",
+        "tergiversates",
+        "tergiversated",
+        "tergiversating"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "politics"
+      ]
+    },
+    {
+      "id": "a1-t3-0013",
+      "headword": "borborygmus",
+      "part_of_speech": "noun",
+      "ipa": "/ˌbɔrbəˈrɪɡməs/",
+      "definition": "A rumbling or gurgling noise made by gas moving in the intestines.",
+      "etymology": "From Greek borborygmos, an imitation of the sound.",
+      "example_sentence": "An embarrassing borborygmus broke the silence of the exam hall.",
+      "inflections": [
+        "borborygmus",
+        "borborygmi"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "body"
+      ]
+    },
+    {
+      "id": "a1-t3-0014",
+      "headword": "mellifluous",
+      "part_of_speech": "adjective",
+      "ipa": "/məˈlɪfluəs/",
+      "definition": "Sweet or musical; pleasant to hear.",
+      "etymology": "From Latin mellifluus 'flowing with honey', from mel 'honey' and fluere 'to flow'.",
+      "example_sentence": "The narrator's mellifluous voice made the audiobook a pleasure.",
+      "inflections": [
+        "mellifluous",
+        "mellifluously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "sound"
+      ]
+    },
+    {
+      "id": "a1-t3-0015",
+      "headword": "pusillanimous",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌpjusəˈlænəməs/",
+      "definition": "Showing a lack of courage or determination; timid.",
+      "etymology": "From Latin pusillanimis, from pusillus 'very small' and animus 'mind, spirit'.",
+      "example_sentence": "Critics called the decision to drop the investigation pusillanimous.",
+      "inflections": [
+        "pusillanimous",
+        "pusillanimously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "character"
+      ]
+    },
+    {
+      "id": "a1-t3-0016",
+      "headword": "sybarite",
+      "part_of_speech": "noun",
+      "ipa": "/ˈsɪbəˌraɪt/",
+      "definition": "A person who is devoted to luxury and pleasure.",
+      "etymology": "From Sybaris, an ancient Greek city in Italy famous for its luxury.",
+      "example_sentence": "The resort caters to sybarites who expect champagne at breakfast.",
+      "inflections": [
+        "sybarite",
+        "sybarites"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "lifestyle"
+      ]
+    },
+    {
+      "id": "a1-t3-0017",
+      "headword": "quotidian",
+      "part_of_speech": "adjective",
+      "ipa": "/kwoʊˈtɪdiən/",
+      "definition": "Of or occurring every day; ordinary or everyday.",
+      "etymology": "From Latin quotidianus, from quotidie 'daily'.",
+      "example_sentence": "The novel finds beauty in quotidian routines like making coffee.",
+      "inflections": [
+        "quotidian"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "daily_life"
+      ]
+    },
+    {
+      "id": "a1-t3-0018",
+      "headword": "recondite",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈrɛkənˌdaɪt/",
+      "definition": "Little known; requiring specialised or obscure knowledge.",
+      "etymology": "From Latin reconditus 'hidden', from recondere 'to put away'.",
+      "example_sentence": "The lecture wandered into recondite details of medieval tax law.",
+      "inflections": [
+        "recondite"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "knowledge"
+      ]
+    },
+    {
+      "id": "a1-t3-0019",
+      "headword": "anfractuous",
+      "part_of_speech": "adjective",
+      "ipa": "/ænˈfræktʃuəs/",
+      "definition": "Winding or circuitous; full of twists.",
+      "etymology": "From Latin anfractuosus, from anfractus 'a bending'.",
+      "example_sentence": "The anfractuous coastal road doubled the driving time.",
+      "inflections": [
+        "anfractuous"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "shape"
+      ]
+    },
+    {
+      "id": "a1-t3-0020",
+      "headword": "vicissitude",
+      "part_of_speech": "noun",
+      "ipa": "/vɪˈsɪsɪˌtud/",
+      "definition": "A change of circumstances, typically one that is unwelcome or unpleasant.",
+      "etymology": "From Latin vicissitudo, from vicissim 'in turn'.",
+      "example_sentence": "The family business survived the vicissitudes of three recessions.",
+      "inflections": [
+        "vicissitude",
+        "vicissitudes"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "change"
+      ]
+    },
+    {
+      "id": "a1-t3-0021",
+      "headword": "logorrhea",
+      "part_of_speech": "noun",
+      "ipa": "/ˌlɔɡəˈriə/",
+      "definition": "A tendency to talk at great length, often incoherently.",
+      "etymology": "From Greek logos 'word' and rhoia 'flow', modelled on diarrhea.",
+      "example_sentence": "The panel's moderator struggled to contain one guest's logorrhea.",
+      "inflections": [
+        "logorrhea",
+        "logorrhoea"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "speech"
+      ]
+    },
+    {
+      "id": "a1-t3-0022",
+      "headword": "sangfroid",
+      "part_of_speech": "noun",
+      "ipa": "/sɑnˈfrwɑ/",
+      "definition": "Composure or coolness under pressure.",
+      "etymology": "From French sang-froid 'cold blood'.",
+      "example_sentence": "The pilot landed the damaged plane with remarkable sangfroid.",
+      "inflections": [
+        "sangfroid"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "character"
+      ]
+    },
+    {
+      "id": "a1-t3-0023",
+      "headword": "lacuna",
+      "part_of_speech": "noun",
+      "ipa": "/ləˈkunə/",
+      "definition": "A gap or missing portion, especially in a text or in knowledge.",
+      "etymology": "From Latin lacuna 'pool, hole', from lacus 'lake'.",
+      "example_sentence": "The study fills a lacuna in research on adult language learning.",
+      "inflections": [
+        "lacuna",
+        "lacunae",
+        "lacunas"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "knowledge"
+      ]
+    },
+    {
+      "id": "a1-t3-0024",
+      "headword": "palimpsest",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpælɪmpˌsɛst/",
+      "definition": "A manuscript page scraped and reused; anything with layers of earlier forms still visible.",
+      "etymology": "From Greek palimpsestos 'scraped again', from palin 'again' and psen 'to scrape'.",
+      "example_sentence": "The old city is a palimpsest of Roman, medieval and modern streets.",
+      "inflections": [
+        "palimpsest",
+        "palimpsests"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "history"
+      ]
+    },
+    {
+      "id": "a1-t3-0025",
+      "headword": "perfidious",
+      "part_of_speech": "adjective",
+      "ipa": "/pərˈfɪdiəs/",
+      "definition": "Deceitful and untrustworthy; betraying trust.",
+      "etymology": "From Latin perfidiosus, from perfidia 'treachery', from per fidem decipere 'to deceive through trust'.",
+      "example_sentence": "The perfidious ally switched sides on the eve of battle.",
+      "inflections": [
+        "perfidious",
+        "perfidiously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "trust"
+      ]
+    },
+    {
+      "id": "a1-t3-0026",
+      "headword": "nugatory",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈnuɡəˌtɔri/",
+      "definition": "Of no value or importance; also, having no force.",
+      "etymology": "From Latin nugatorius 'worthless', from nugae 'trifles'.",
+      "example_sentence": "The savings from the change were nugatory compared with its cost.",
+      "inflections": [
+        "nugatory"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "value"
+      ]
+    },
+    {
+      "id": "a1-t3-0027",
+      "headword": "prolix",
+      "part_of_speech": "adjective",
+      "ipa": "/proʊˈlɪks/",
+      "definition": "Using or containing too many words; tediously long.",
+      "etymology": "From Latin prolixus 'poured out, extended'.",
+      "example_sentence": "The prolix report buried its single recommendation on page forty.",
+      "inflections": [
+        "prolix",
+        "prolixity"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "writing"
+      ]
+    },
+    {
+      "id": "a1-t3-0028",
+      "headword": "abstemious",
+      "part_of_speech": "adjective",
+      "ipa": "/əbˈstimiəs/",
+      "definition": "Not self-indulgent, especially in eating and drinking.",
+      "etymology": "From Latin abstemius, from abs 'from' and temetum 'strong drink'.",
+      "example_sentence": "An abstemious diet kept the old monk healthy into his nineties.",
+      "inflections": [
+        "abstemious",
+        "abstemiously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "health"
+      ]
+    },
+    {
+      "id": "a1-t3-0029",
+      "headword": "brobdingnagian",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌbrɑbdɪŋˈnæɡiən/",
+      "definition": "Gigantic; enormous in size or scale, like the giants of Swift's satire.",
+      "etymology": "From Brobdingnag, the land of giants in Jonathan Swift's Gulliver's Travels (1726).",
+      "example_sentence": "The new data centre has brobdingnagian cooling towers.",
+      "inflections": [
+        "brobdingnagian"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "size"
+      ]
+    },
+    {
+      "id": "a1-t3-0030",
+      "headword": "widdershins",
+      "part_of_speech": "adverb",
+      "ipa": "/ˈwɪdərˌʃɪnz/",
+      "definition": "In a direction contrary to the sun's course; counterclockwise.",
+      "etymology": "From Middle Low German weddersinnes 'against the way'.",
+      "example_sentence": "Folklore warned against walking widdershins around a church.",
+      "inflections": [
+        "widdershins"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "direction"
+      ]
+    },
+    {
+      "id": "a1-t3-0031",
+      "headword": "gallimaufry",
+      "part_of_speech": "noun",
+      "ipa": "/ˌɡæləˈmɔfri/",
+      "definition": "A confused jumble or medley of things.",
+      "etymology": "From French galimafrée, a kind of stew or ragout.",
+      "example_sentence": "The attic held a gallimaufry of toys, tools and old letters.",
+      "inflections": [
+        "gallimaufry",
+        "gallimaufries"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "mixture"
+      ]
+    },
+    {
+      "id": "a1-t3-0032",
+      "headword": "ultracrepidarian",
+      "part_of_speech": "noun",
+      "ipa": "/ˌʌltrəˌkrɛpɪˈdɛəriən/",
+      "definition": "A person who gives opinions on matters beyond their knowledge.",
+      "etymology": "From Latin ultra crepidam 'beyond the sandal', after a painter's advice to a cobbler to judge only the shoes.",
+      "example_sentence": "The comment section filled with ultracrepidarians explaining virology.",
+      "inflections": [
+        "ultracrepidarian",
+        "ultracrepidarians"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "opinion"
+      ]
+    },
+    {
+      "id": "a1-t3-0033",
+      "headword": "velleity",
+      "part_of_speech": "noun",
+      "ipa": "/vəˈliəti/",
+      "definition": "A wish or inclination too weak to lead to action.",
+      "etymology": "From Medieval Latin velleitas, from Latin velle 'to wish'.",
+      "example_sentence": "Learning the cello remained a velleity rather than a plan.",
+      "inflections": [
+        "velleity",
+        "velleities"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "motivation"
+      ]
+    },
+    {
+      "id": "a1-t3-0034",
+      "headword": "lambent",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈlæmbənt/",
+      "definition": "Glowing or flickering softly; also, lightly brilliant, as of wit.",
+      "etymology": "From Latin lambere 'to lick', of flames that seem to lick a surface.",
+      "example_sentence": "The lambent glow of the candles softened the room.",
+      "inflections": [
+        "lambent"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "light"
+      ]
+    },
+    {
+      "id": "a1-t3-0035",
+      "headword": "coruscate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈkɔrəˌskeɪt/",
+      "definition": "To flash or sparkle; figuratively, to be brilliantly witty.",
+      "etymology": "From Latin coruscare 'to glitter'.",
+      "example_sentence": "Sunlight coruscated on the waves below the cliff.",
+      "inflections": [
+        "coruscate",
+        "coruscates",
+        "coruscated",
+        "coruscating"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "light"
+      ]
+    },
+    {
+      "id": "a1-t3-0036",
+      "headword": "effulgent",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪˈfʌldʒənt/",
+      "definition": "Shining brightly; radiant.",
+      "etymology": "From Latin effulgere 'to shine out', from ex 'out' and fulgere 'to shine'.",
+      "example_sentence": "An effulgent sunrise lit the snowfields gold.",
+      "inflections": [
+        "effulgent",
+        "effulgence"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "light"
+      ]
+    },
+    {
+      "id": "a1-t3-0037",
+      "headword": "inveigle",
+      "part_of_speech": "verb",
+      "ipa": "/ɪnˈveɪɡəl/",
+      "definition": "To persuade someone to do something by flattery or deception.",
+      "etymology": "From Anglo-Norman envegler 'to blind', from Old French aveugler.",
+      "example_sentence": "He inveigled his way into the private reception.",
+      "inflections": [
+        "inveigle",
+        "inveigles",
+        "inveigled",
+        "inveigling"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "persuasion"
+      ]
+    },
+    {
+      "id": "a1-t3-0038",
+      "headword": "mendacious",
+      "part_of_speech": "adjective",
+      "ipa": "/mɛnˈdeɪʃəs/",
+      "definition": "Not telling the truth; lying.",
+      "etymology": "From Latin mendax 'lying', from mentiri 'to lie'.",
+      "example_sentence": "The investigation exposed a mendacious account of the accident.",
+      "inflections": [
+        "mendacious",
+        "mendaciously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "honesty"
+      ]
+    },
+    {
+      "id": "a1-t3-0039",
+      "headword": "peregrination",
+      "part_of_speech": "noun",
+      "ipa": "/ˌpɛrəɡrɪˈneɪʃən/",
+      "definition": "A long and meandering journey, especially on foot or abroad.",
+      "etymology": "From Latin peregrinatio, from peregrinus 'foreign, from abroad'.",
+      "example_sentence": "Her peregrinations across Central Asia filled three notebooks.",
+      "inflections": [
+        "peregrination",
+        "peregrinations"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "travel"
+      ]
+    },
+    {
+      "id": "a1-t3-0040",
+      "headword": "phantasmagoria",
+      "part_of_speech": "noun",
+      "ipa": "/fænˌtæzməˈɡɔriə/",
+      "definition": "A sequence of real or imagined images, like those in a dream.",
+      "etymology": "From French fantasmagorie, an 1802 name for a magic-lantern show, from Greek phantasma 'image'.",
+      "example_sentence": "The festival was a phantasmagoria of lanterns, masks and music.",
+      "inflections": [
+        "phantasmagoria",
+        "phantasmagorias",
+        "phantasmagorical"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "imagination"
+      ]
+    },
+    {
+      "id": "a1-t3-0041",
+      "headword": "rebarbative",
+      "part_of_speech": "adjective",
+      "ipa": "/rɪˈbɑrbətɪv/",
+      "definition": "Unattractive and objectionable; off-putting.",
+      "etymology": "From French rébarbatif, from se rebarber 'to face each other beard to beard'.",
+      "example_sentence": "The building's rebarbative concrete facade divided critics.",
+      "inflections": [
+        "rebarbative"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "aesthetics"
+      ]
+    },
+    {
+      "id": "a1-t3-0042",
+      "headword": "solipsism",
+      "part_of_speech": "noun",
+      "ipa": "/ˈsɑlɪpˌsɪzəm/",
+      "definition": "The view that only one's own mind is sure to exist; extreme self-centredness.",
+      "etymology": "From Latin solus 'alone' and ipse 'self'.",
+      "example_sentence": "The memoir's solipsism left little room for anyone else's perspective.",
+      "inflections": [
+        "solipsism",
+        "solipsistic"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "a1-t3-0043",
+      "headword": "threnody",
+      "part_of_speech": "noun",
+      "ipa": "/ˈθrɛnədi/",
+      "definition": "A song, poem or lament of mourning.",
+      "etymology": "From Greek threnoidia, from threnos 'wailing' and oide 'song'.",
+      "example_sentence": "The orchestra closed the memorial with a threnody for strings.",
+      "inflections": [
+        "threnody",
+        "threnodies"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "music"
+      ]
+    },
+    {
+      "id": "a1-t3-0044",
+      "headword": "vituperation",
+      "part_of_speech": "noun",
+      "ipa": "/vaɪˌtupəˈreɪʃən/",
+      "definition": "Bitter and abusive language.",
+      "etymology": "From Latin vituperatio, from vituperare 'to blame', from vitium 'fault'.",
+      "example_sentence": "The debate descended into vituperation on both sides.",
+      "inflections": [
+        "vituperation",
+        "vituperative"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "speech"
+      ]
+    },
+    {
+      "id": "a1-t3-0045",
+      "headword": "apotheosis",
+      "part_of_speech": "noun",
+      "ipa": "/əˌpɑθiˈoʊsɪs/",
+      "definition": "The highest point in the development of something; a perfect example; also, deification.",
+      "etymology": "From Greek apotheosis, from apotheoun 'to make a god of', from theos 'god'.",
+      "example_sentence": "Many critics see the final symphony as the apotheosis of his style.",
+      "inflections": [
+        "apotheosis",
+        "apotheoses"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "excellence"
+      ]
+    },
+    {
+      "id": "a1-t3-0046",
+      "headword": "bowdlerize",
+      "part_of_speech": "verb",
+      "ipa": "/ˈboʊdləˌraɪz/",
+      "definition": "To remove material considered improper from a text, often weakening it.",
+      "etymology": "From Thomas Bowdler, who published an expurgated Shakespeare in 1818.",
+      "example_sentence": "The school edition bowdlerized the play's most famous jokes.",
+      "inflections": [
+        "bowdlerize",
+        "bowdlerizes",
+        "bowdlerized",
+        "bowdlerizing",
+        "bowdlerise"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "censorship"
+      ]
+    },
+    {
+      "id": "a1-t3-0047",
+      "headword": "contumacious",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌkɑntəˈmeɪʃəs/",
+      "definition": "Stubbornly or wilfully disobedient to authority.",
+      "etymology": "From Latin contumax 'insolent, stubborn'.",
+      "example_sentence": "The contumacious witness refused to answer the court's questions.",
+      "inflections": [
+        "contumacious",
+        "contumaciously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "law"
+      ]
+    },
+    {
+      "id": "a1-t3-0048",
+      "headword": "eleemosynary",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌɛləˈmɑsəˌnɛri/",
+      "definition": "Relating to or dependent on charity.",
+      "etymology": "From Medieval Latin eleemosynarius, from eleemosyna 'alms', from Greek eleos 'mercy'.",
+      "example_sentence": "The hospital began as an eleemosynary institution run by monks.",
+      "inflections": [
+        "eleemosynary"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "charity"
+      ]
+    },
+    {
+      "id": "a1-t3-0049",
+      "headword": "hebetude",
+      "part_of_speech": "noun",
+      "ipa": "/ˈhɛbɪˌtud/",
+      "definition": "Mental dullness or lethargy.",
+      "etymology": "From Latin hebetudo, from hebes 'blunt, dull'.",
+      "example_sentence": "The heat produced a hebetude that no amount of coffee could lift.",
+      "inflections": [
+        "hebetude"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "mind"
+      ]
+    },
+    {
+      "id": "a1-t3-0050",
+      "headword": "jejune",
+      "part_of_speech": "adjective",
+      "ipa": "/dʒɪˈdʒun/",
+      "definition": "Naive and simplistic; also, dull and lacking in substance.",
+      "etymology": "From Latin jejunus 'fasting, barren'.",
+      "example_sentence": "His jejune analysis ignored every complicating factor.",
+      "inflections": [
+        "jejune"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "judgement"
+      ]
+    },
+    {
+      "id": "a1-t3-0051",
+      "headword": "kakistocracy",
+      "part_of_speech": "noun",
+      "ipa": "/ˌkækɪˈstɑkrəsi/",
+      "definition": "Government by the least qualified or most unprincipled citizens.",
+      "etymology": "From Greek kakistos 'worst' and kratos 'rule'; first recorded in 1829.",
+      "example_sentence": "The satirist described the council as a kakistocracy.",
+      "inflections": [
+        "kakistocracy",
+        "kakistocracies"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "politics"
+      ]
+    },
+    {
+      "id": "a1-t3-0052",
+      "headword": "lucubration",
+      "part_of_speech": "noun",
+      "ipa": "/ˌlukjuˈbreɪʃən/",
+      "definition": "Laborious study or meditation, originally by lamplight; also a pedantic piece of writing.",
+      "etymology": "From Latin lucubratio, from lucubrare 'to work by lamplight', from lux 'light'.",
+      "example_sentence": "Years of lucubration produced a thousand-page commentary.",
+      "inflections": [
+        "lucubration",
+        "lucubrations"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "study"
+      ]
+    },
+    {
+      "id": "a1-t3-0053",
+      "headword": "panjandrum",
+      "part_of_speech": "noun",
+      "ipa": "/pænˈdʒændrəm/",
+      "definition": "A person who has or claims a great deal of authority or influence.",
+      "etymology": "From the Grand Panjandrum, a nonsense title invented by the playwright Samuel Foote in 1755.",
+      "example_sentence": "The company's panjandrums approved the budget without reading it.",
+      "inflections": [
+        "panjandrum",
+        "panjandrums"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "power"
+      ]
+    },
+    {
+      "id": "a1-t3-0054",
+      "headword": "quiddity",
+      "part_of_speech": "noun",
+      "ipa": "/ˈkwɪdɪti/",
+      "definition": "The inherent nature or essence of something; also, a trivial objection.",
+      "etymology": "From Medieval Latin quidditas, from Latin quid 'what'.",
+      "example_sentence": "The essay tries to capture the quiddity of a New York summer.",
+      "inflections": [
+        "quiddity",
+        "quiddities"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "philosophy"
+      ]
+    },
+    {
+      "id": "a1-t3-0055",
+      "headword": "rodomontade",
+      "part_of_speech": "noun",
+      "ipa": "/ˌrɑdəmənˈteɪd/",
+      "definition": "Boastful or inflated talk or behaviour.",
+      "etymology": "From Rodomonte, a boastful king in Italian epics by Boiardo and Ariosto.",
+      "example_sentence": "Behind the rodomontade, the team had no real plan.",
+      "inflections": [
+        "rodomontade",
+        "rodomontades"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "speech"
+      ]
+    },
+    {
+      "id": "a1-t3-0056",
+      "headword": "uxorious",
+      "part_of_speech": "adjective",
+      "ipa": "/ʌkˈsɔriəs/",
+      "definition": "Showing great or excessive fondness for one's wife.",
+      "etymology": "From Latin uxorius, from uxor 'wife'.",
+      "example_sentence": "The uxorious king granted his queen every wish.",
+      "inflections": [
+        "uxorious",
+        "uxoriously"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "relationships"
+      ]
+    },
+    {
+      "id": "a1-t3-0057",
+      "headword": "zephyr",
+      "part_of_speech": "noun",
+      "ipa": "/ˈzɛfər/",
+      "definition": "A soft, gentle breeze.",
+      "etymology": "From Greek Zephyros, the god of the west wind.",
+      "example_sentence": "A warm zephyr stirred the curtains on the balcony.",
+      "inflections": [
+        "zephyr",
+        "zephyrs"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "weather"
+      ]
+    },
+    {
+      "id": "a1-t3-0058",
+      "headword": "defalcate",
+      "part_of_speech": "verb",
+      "ipa": "/dɪˈfælˌkeɪt/",
+      "definition": "To misappropriate money held in trust; to embezzle.",
+      "etymology": "From Medieval Latin defalcare 'to lop off', from falx 'sickle'.",
+      "example_sentence": "The treasurer was found to have defalcated funds from the club account.",
+      "inflections": [
+        "defalcate",
+        "defalcates",
+        "defalcated",
+        "defalcating"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "finance"
+      ]
+    },
+    {
+      "id": "a1-t3-0059",
+      "headword": "fissiparous",
+      "part_of_speech": "adjective",
+      "ipa": "/fɪˈsɪpərəs/",
+      "definition": "Inclined to cause or undergo division into separate parts or groups.",
+      "etymology": "From Latin fissus 'split' and parere 'to bring forth'.",
+      "example_sentence": "The fissiparous coalition split into four parties within a year.",
+      "inflections": [
+        "fissiparous"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "politics"
+      ]
+    },
+    {
+      "id": "a1-t3-0060",
+      "headword": "maunder",
+      "part_of_speech": "verb",
+      "ipa": "/ˈmɔndər/",
+      "definition": "To talk or move in a rambling, aimless way.",
+      "etymology": "Perhaps from obsolete maunder 'to beg'; origin uncertain.",
+      "example_sentence": "He maundered on about his holiday long after everyone had stopped listening.",
+      "inflections": [
+        "maunder",
+        "maunders",
+        "maundered",
+        "maundering"
+      ],
+      "tier": 3,
+      "tags": [
+        "rare",
+        "speech"
+      ]
+    }
+  ]
+}

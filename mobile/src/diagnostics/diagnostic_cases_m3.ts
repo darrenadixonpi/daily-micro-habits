@@ -125,8 +125,9 @@ const t15DailyAssignment: DiagnosticCase = {
       for (let offset = 2; offset < 6; offset += 1) domains.add(assignDailyContent(executor, { today: addDays(DAY1, offset), settings }).A3?.row.domain ?? '');
       check(domains.size === 6, `A3 rotated through ${domains.size} of 6 domains in 6 days`);
 
-      assignDailyContent(executor, { today: addDays(DAY1, 6), settings: { ...settings, a1Tier: '3' } });
-      check(count(executor, "SELECT count(*) AS n FROM content_item WHERE module = 'A1' AND status = 'unserved' AND assigned_on IS NOT NULL") === 0, 'tier change kept reservations');
+      const tier3 = assignDailyContent(executor, { today: addDays(DAY1, 6), settings: { ...settings, a1Tier: '3' } });
+      check(count(executor, "SELECT count(*) AS n FROM content_item WHERE module = 'A1' AND status = 'unserved' AND assigned_on IS NOT NULL AND tier_or_level != '3'") === 0, 'tier change kept old-tier reservations');
+      check(tier3.A1?.payload.tier === 3, 'tier change did not switch the word of the day');
 
       const before = assignDailyContent(executor, { today: addDays(DAY1, 7), settings }).A1;
       check(before, 'no A1 on day 8');

@@ -1,0 +1,1122 @@
+{
+  "schema_version": 1,
+  "module": "A1",
+  "tier": 1,
+  "items": [
+    {
+      "id": "a1-t1-0001",
+      "headword": "affect",
+      "part_of_speech": "verb",
+      "ipa": "/əˈfɛkt/",
+      "definition": "To have an influence on something or someone; often confused with the noun effect.",
+      "etymology": "From Latin affectus, past participle of afficere 'to act on', from ad 'to' and facere 'to do'.",
+      "example_sentence": "Lack of sleep can affect your judgement more than you notice.",
+      "inflections": [
+        "affect",
+        "affects",
+        "affected",
+        "affecting"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "influence"
+      ]
+    },
+    {
+      "id": "a1-t1-0002",
+      "headword": "effect",
+      "part_of_speech": "noun",
+      "ipa": "/ɪˈfɛkt/",
+      "definition": "A result or change produced by a cause; as a verb it means to bring about.",
+      "etymology": "From Latin effectus 'accomplishment', from efficere 'to work out', from ex 'out' and facere 'to do'.",
+      "example_sentence": "The new schedule had an immediate effect on morale.",
+      "inflections": [
+        "effect",
+        "effects"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "cause"
+      ]
+    },
+    {
+      "id": "a1-t1-0003",
+      "headword": "imply",
+      "part_of_speech": "verb",
+      "ipa": "/ɪmˈplaɪ/",
+      "definition": "To suggest something without saying it directly; the speaker implies, the listener infers.",
+      "etymology": "From Old French emplier 'to enfold', from Latin implicare 'to entwine'.",
+      "example_sentence": "Her silence seemed to imply that she disagreed.",
+      "inflections": [
+        "imply",
+        "implies",
+        "implied",
+        "implying"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t1-0004",
+      "headword": "infer",
+      "part_of_speech": "verb",
+      "ipa": "/ɪnˈfɝ/",
+      "definition": "To reach a conclusion from evidence or reasoning rather than from a direct statement.",
+      "etymology": "From Latin inferre 'to bring in', from in 'in' and ferre 'to carry'.",
+      "example_sentence": "From the empty parking lot, we inferred that the shop had closed early.",
+      "inflections": [
+        "infer",
+        "infers",
+        "inferred",
+        "inferring"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "a1-t1-0005",
+      "headword": "comprise",
+      "part_of_speech": "verb",
+      "ipa": "/kəmˈpraɪz/",
+      "definition": "To consist of or be made up of; the whole comprises the parts.",
+      "etymology": "From French compris, past participle of comprendre 'to contain', from Latin comprehendere.",
+      "example_sentence": "The committee comprises five scientists and two lawyers.",
+      "inflections": [
+        "comprise",
+        "comprises",
+        "comprised",
+        "comprising"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "parts"
+      ]
+    },
+    {
+      "id": "a1-t1-0006",
+      "headword": "flout",
+      "part_of_speech": "verb",
+      "ipa": "/flaʊt/",
+      "definition": "To openly disregard a rule or convention; often confused with flaunt.",
+      "etymology": "Possibly from Dutch fluiten 'to whistle, to hiss at'.",
+      "example_sentence": "Drivers who flout the speed limit near schools face heavy fines.",
+      "inflections": [
+        "flout",
+        "flouts",
+        "flouted",
+        "flouting"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "rules"
+      ]
+    },
+    {
+      "id": "a1-t1-0007",
+      "headword": "flaunt",
+      "part_of_speech": "verb",
+      "ipa": "/flɔnt/",
+      "definition": "To display something conspicuously to attract admiration or envy.",
+      "etymology": "Origin uncertain; first recorded in English in the sixteenth century.",
+      "example_sentence": "He liked to flaunt his new watch at every meeting.",
+      "inflections": [
+        "flaunt",
+        "flaunts",
+        "flaunted",
+        "flaunting"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "display"
+      ]
+    },
+    {
+      "id": "a1-t1-0008",
+      "headword": "nauseous",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈnɔʃəs/",
+      "definition": "Feeling sick to the stomach; traditionally it meant causing nausea.",
+      "etymology": "From Latin nauseosus, from nausea 'seasickness', from Greek naus 'ship'.",
+      "example_sentence": "The winding mountain road made everyone in the back seat nauseous.",
+      "inflections": [
+        "nauseous",
+        "nauseously"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "health"
+      ]
+    },
+    {
+      "id": "a1-t1-0009",
+      "headword": "ironic",
+      "part_of_speech": "adjective",
+      "ipa": "/aɪˈrɑnɪk/",
+      "definition": "Opposite to what was expected or intended, in a way that is pointed or amusing; not simply unlucky.",
+      "etymology": "From Greek eironikos 'dissembling', from eiron 'one who feigns ignorance'.",
+      "example_sentence": "It was ironic that the fire station burned down during a safety inspection.",
+      "inflections": [
+        "ironic",
+        "ironically"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "rhetoric"
+      ]
+    },
+    {
+      "id": "a1-t1-0010",
+      "headword": "literally",
+      "part_of_speech": "adverb",
+      "ipa": "/ˈlɪtərəli/",
+      "definition": "In the exact sense of the words, without exaggeration or metaphor.",
+      "etymology": "From Late Latin litteralis 'of letters or writing', from littera 'letter'.",
+      "example_sentence": "The old bridge literally shook every time a truck crossed it.",
+      "inflections": [
+        "literally"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "precision"
+      ]
+    },
+    {
+      "id": "a1-t1-0011",
+      "headword": "decimate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈdɛsəˌmeɪt/",
+      "definition": "To kill or destroy a large part of something; originally to kill one in every ten.",
+      "etymology": "From Latin decimare, the Roman punishment of executing every tenth soldier, from decimus 'tenth'.",
+      "example_sentence": "A late frost decimated the region's apple harvest.",
+      "inflections": [
+        "decimate",
+        "decimates",
+        "decimated",
+        "decimating"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "loss"
+      ]
+    },
+    {
+      "id": "a1-t1-0012",
+      "headword": "enormity",
+      "part_of_speech": "noun",
+      "ipa": "/ɪˈnɔrməti/",
+      "definition": "Great wickedness, or the extreme seriousness of something bad; often misused to mean large size.",
+      "etymology": "From Latin enormitas, from enormis 'irregular, huge', from ex 'out of' and norma 'rule'.",
+      "example_sentence": "Only years later did the public grasp the enormity of the fraud.",
+      "inflections": [
+        "enormity",
+        "enormities"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "morality"
+      ]
+    },
+    {
+      "id": "a1-t1-0013",
+      "headword": "nonplussed",
+      "part_of_speech": "adjective",
+      "ipa": "/nɑnˈplʌst/",
+      "definition": "So surprised or confused that one does not know how to react.",
+      "etymology": "From Latin non plus 'no more', meaning a state in which nothing more can be said or done.",
+      "example_sentence": "The interviewer was nonplussed when the candidate asked to reschedule mid-interview.",
+      "inflections": [
+        "nonplussed",
+        "nonplused"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "confusion"
+      ]
+    },
+    {
+      "id": "a1-t1-0014",
+      "headword": "bemused",
+      "part_of_speech": "adjective",
+      "ipa": "/bɪˈmjuzd/",
+      "definition": "Puzzled or bewildered; not the same as amused.",
+      "etymology": "From be- 'thoroughly' and muse 'to ponder'.",
+      "example_sentence": "She gave a bemused look at the instructions, which were printed upside down.",
+      "inflections": [
+        "bemused",
+        "bemusedly"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "confusion"
+      ]
+    },
+    {
+      "id": "a1-t1-0015",
+      "headword": "disinterested",
+      "part_of_speech": "adjective",
+      "ipa": "/dɪsˈɪntrəstɪd/",
+      "definition": "Impartial and not influenced by personal advantage; distinct from uninterested.",
+      "etymology": "From dis- 'not' and interested in the old sense 'having a stake in'.",
+      "example_sentence": "A disinterested referee has no ties to either team.",
+      "inflections": [
+        "disinterested",
+        "disinterestedly"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "fairness"
+      ]
+    },
+    {
+      "id": "a1-t1-0016",
+      "headword": "peruse",
+      "part_of_speech": "verb",
+      "ipa": "/pəˈruz/",
+      "definition": "To read something thoroughly and carefully, though it is often used to mean skim.",
+      "etymology": "Probably from per- 'thoroughly' and use, in late Middle English.",
+      "example_sentence": "Peruse the contract before you sign it, every clause included.",
+      "inflections": [
+        "peruse",
+        "peruses",
+        "perused",
+        "perusing"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "reading"
+      ]
+    },
+    {
+      "id": "a1-t1-0017",
+      "headword": "penultimate",
+      "part_of_speech": "adjective",
+      "ipa": "/pɪˈnʌltəmət/",
+      "definition": "Last but one in a series; second to last, not the very last.",
+      "etymology": "From Latin paenultimus, from paene 'almost' and ultimus 'last'.",
+      "example_sentence": "The penultimate chapter sets up the twist in the final one.",
+      "inflections": [
+        "penultimate"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "order"
+      ]
+    },
+    {
+      "id": "a1-t1-0018",
+      "headword": "compliment",
+      "part_of_speech": "noun",
+      "ipa": "/ˈkɑmpləmənt/",
+      "definition": "A remark that expresses praise or admiration.",
+      "etymology": "From Italian complimento, from Spanish cumplimiento 'fulfilment of courtesy'.",
+      "example_sentence": "Her thoughtful compliment on the design made the team's week.",
+      "inflections": [
+        "compliment",
+        "compliments"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "social"
+      ]
+    },
+    {
+      "id": "a1-t1-0019",
+      "headword": "complement",
+      "part_of_speech": "noun",
+      "ipa": "/ˈkɑmpləmənt/",
+      "definition": "Something that completes or goes well with something else.",
+      "etymology": "From Latin complementum, from complere 'to fill up'.",
+      "example_sentence": "A crisp white wine is a good complement to grilled fish.",
+      "inflections": [
+        "complement",
+        "complements"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "pairing"
+      ]
+    },
+    {
+      "id": "a1-t1-0020",
+      "headword": "principle",
+      "part_of_speech": "noun",
+      "ipa": "/ˈprɪnsəpəl/",
+      "definition": "A fundamental truth, rule or belief that guides behaviour or reasoning.",
+      "etymology": "From Latin principium 'beginning, source', from princeps 'first'.",
+      "example_sentence": "The design follows one principle: never lose the user's data.",
+      "inflections": [
+        "principle",
+        "principles"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "ethics"
+      ]
+    },
+    {
+      "id": "a1-t1-0021",
+      "headword": "principal",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈprɪnsəpəl/",
+      "definition": "First in order of importance; main. As a noun it can mean the head of a school or a sum of money.",
+      "etymology": "From Latin principalis 'first, chief', from princeps 'first'.",
+      "example_sentence": "Cost was the principal reason the project was cancelled.",
+      "inflections": [
+        "principal",
+        "principally"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "importance"
+      ]
+    },
+    {
+      "id": "a1-t1-0022",
+      "headword": "discreet",
+      "part_of_speech": "adjective",
+      "ipa": "/dɪˈskrit/",
+      "definition": "Careful and tactful in what one says or does, so as to avoid embarrassment.",
+      "etymology": "From Medieval Latin discretus 'discerning', from discernere 'to separate'.",
+      "example_sentence": "Please be discreet about the merger until it is announced.",
+      "inflections": [
+        "discreet",
+        "discreetly"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "tact"
+      ]
+    },
+    {
+      "id": "a1-t1-0023",
+      "headword": "discrete",
+      "part_of_speech": "adjective",
+      "ipa": "/dɪˈskrit/",
+      "definition": "Separate and distinct; made of individual parts.",
+      "etymology": "From Latin discretus 'separated', from discernere 'to separate'.",
+      "example_sentence": "The course is split into discrete modules you can take in any order.",
+      "inflections": [
+        "discrete",
+        "discretely"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "math"
+      ]
+    },
+    {
+      "id": "a1-t1-0024",
+      "headword": "elicit",
+      "part_of_speech": "verb",
+      "ipa": "/ɪˈlɪsɪt/",
+      "definition": "To draw out a response, answer or fact from someone.",
+      "etymology": "From Latin elicere 'to draw out by trickery', from ex 'out' and lacere 'to entice'.",
+      "example_sentence": "The survey was designed to elicit honest feedback.",
+      "inflections": [
+        "elicit",
+        "elicits",
+        "elicited",
+        "eliciting"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t1-0025",
+      "headword": "illicit",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪˈlɪsɪt/",
+      "definition": "Forbidden by law, rules or custom.",
+      "etymology": "From Latin illicitus, from in 'not' and licitus 'allowed'.",
+      "example_sentence": "Customs officers seized a shipment of illicit tobacco.",
+      "inflections": [
+        "illicit",
+        "illicitly"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "law"
+      ]
+    },
+    {
+      "id": "a1-t1-0026",
+      "headword": "allude",
+      "part_of_speech": "verb",
+      "ipa": "/əˈlud/",
+      "definition": "To refer to something indirectly, without naming it explicitly.",
+      "etymology": "From Latin alludere 'to play with', from ad 'towards' and ludere 'to play'.",
+      "example_sentence": "The speech alluded to last year's layoffs without mentioning them.",
+      "inflections": [
+        "allude",
+        "alludes",
+        "alluded",
+        "alluding"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "communication"
+      ]
+    },
+    {
+      "id": "a1-t1-0027",
+      "headword": "elude",
+      "part_of_speech": "verb",
+      "ipa": "/ɪˈlud/",
+      "definition": "To escape or avoid someone or something, often cleverly; to fail to be grasped.",
+      "etymology": "From Latin eludere 'to escape by trickery', from ex 'out' and ludere 'to play'.",
+      "example_sentence": "The answer continued to elude the researchers for a decade.",
+      "inflections": [
+        "elude",
+        "eludes",
+        "eluded",
+        "eluding"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "escape"
+      ]
+    },
+    {
+      "id": "a1-t1-0028",
+      "headword": "ensure",
+      "part_of_speech": "verb",
+      "ipa": "/ɛnˈʃʊr/",
+      "definition": "To make certain that something happens or is the case.",
+      "etymology": "From Anglo-Norman enseurer, related to Old French aseurer 'to assure'.",
+      "example_sentence": "Double-check the address to ensure the package arrives.",
+      "inflections": [
+        "ensure",
+        "ensures",
+        "ensured",
+        "ensuring"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "certainty"
+      ]
+    },
+    {
+      "id": "a1-t1-0029",
+      "headword": "insure",
+      "part_of_speech": "verb",
+      "ipa": "/ɪnˈʃʊr/",
+      "definition": "To arrange for compensation in the event of loss or damage, usually through a policy.",
+      "etymology": "A variant of ensure, specialised in the seventeenth century for financial protection.",
+      "example_sentence": "They decided to insure the camera before the trip.",
+      "inflections": [
+        "insure",
+        "insures",
+        "insured",
+        "insuring"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "finance"
+      ]
+    },
+    {
+      "id": "a1-t1-0030",
+      "headword": "stationary",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈsteɪʃəˌnɛri/",
+      "definition": "Not moving or not intended to be moved.",
+      "etymology": "From Latin stationarius 'belonging to a military station', from statio 'standing'.",
+      "example_sentence": "The bus was stationary when the cyclist hit its mirror.",
+      "inflections": [
+        "stationary"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "motion"
+      ]
+    },
+    {
+      "id": "a1-t1-0031",
+      "headword": "stationery",
+      "part_of_speech": "noun",
+      "ipa": "/ˈsteɪʃəˌnɛri/",
+      "definition": "Writing materials such as paper, envelopes and pens.",
+      "etymology": "From stationer, a medieval bookseller with a fixed shop, from Latin stationarius.",
+      "example_sentence": "The hotel left monogrammed stationery on the desk.",
+      "inflections": [
+        "stationery"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "objects"
+      ]
+    },
+    {
+      "id": "a1-t1-0032",
+      "headword": "continual",
+      "part_of_speech": "adjective",
+      "ipa": "/kənˈtɪnjuəl/",
+      "definition": "Happening again and again, with breaks in between.",
+      "etymology": "From Old French continuel, from Latin continuus 'uninterrupted'.",
+      "example_sentence": "The continual interruptions made it hard to finish the report.",
+      "inflections": [
+        "continual",
+        "continually"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "time"
+      ]
+    },
+    {
+      "id": "a1-t1-0033",
+      "headword": "continuous",
+      "part_of_speech": "adjective",
+      "ipa": "/kənˈtɪnjuəs/",
+      "definition": "Without any pause or interruption at all.",
+      "etymology": "From Latin continuus 'uninterrupted', from continere 'to hang together'.",
+      "example_sentence": "The factory runs on continuous power from two separate lines.",
+      "inflections": [
+        "continuous",
+        "continuously"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "time"
+      ]
+    },
+    {
+      "id": "a1-t1-0034",
+      "headword": "farther",
+      "part_of_speech": "adverb",
+      "ipa": "/ˈfɑrðər/",
+      "definition": "At or to a greater physical distance; further is preferred for extent or degree.",
+      "etymology": "A Middle English variant of further, influenced by far.",
+      "example_sentence": "The trail goes farther into the canyon than the map shows.",
+      "inflections": [
+        "farther",
+        "farthest"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "distance"
+      ]
+    },
+    {
+      "id": "a1-t1-0035",
+      "headword": "regrettable",
+      "part_of_speech": "adjective",
+      "ipa": "/rɪˈɡrɛtəbəl/",
+      "definition": "Deserving regret; unfortunate. A situation is regrettable, a person is regretful.",
+      "etymology": "From regret, from Old French regreter 'to lament'.",
+      "example_sentence": "The delay was regrettable but could not have been avoided.",
+      "inflections": [
+        "regrettable",
+        "regrettably"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "emotion"
+      ]
+    },
+    {
+      "id": "a1-t1-0036",
+      "headword": "credible",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈkrɛdəbəl/",
+      "definition": "Able to be believed; convincing.",
+      "etymology": "From Latin credibilis, from credere 'to believe'.",
+      "example_sentence": "The witness gave a credible account of the accident.",
+      "inflections": [
+        "credible",
+        "credibly"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "trust"
+      ]
+    },
+    {
+      "id": "a1-t1-0037",
+      "headword": "credulous",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈkrɛdʒələs/",
+      "definition": "Too ready to believe things, especially on weak evidence.",
+      "etymology": "From Latin credulus, from credere 'to believe'.",
+      "example_sentence": "Scammers target credulous buyers with offers that are too good to be true.",
+      "inflections": [
+        "credulous",
+        "credulously"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "trust"
+      ]
+    },
+    {
+      "id": "a1-t1-0038",
+      "headword": "tortuous",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈtɔrtʃuəs/",
+      "definition": "Full of twists and turns; excessively complex. Distinct from torturous.",
+      "etymology": "From Latin tortuosus, from tortus 'a twisting'.",
+      "example_sentence": "The bill took a tortuous path through three committees.",
+      "inflections": [
+        "tortuous",
+        "tortuously"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "complexity"
+      ]
+    },
+    {
+      "id": "a1-t1-0039",
+      "headword": "torturous",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈtɔrtʃərəs/",
+      "definition": "Causing great pain or suffering.",
+      "etymology": "From torture, from Latin tortura 'twisting'.",
+      "example_sentence": "The final kilometre of the climb was torturous in the heat.",
+      "inflections": [
+        "torturous",
+        "torturously"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "pain"
+      ]
+    },
+    {
+      "id": "a1-t1-0040",
+      "headword": "prescribe",
+      "part_of_speech": "verb",
+      "ipa": "/prɪˈskraɪb/",
+      "definition": "To recommend or order a treatment, or to lay down a rule.",
+      "etymology": "From Latin praescribere 'to write before', from prae 'before' and scribere 'to write'.",
+      "example_sentence": "The doctor prescribed rest and plenty of fluids.",
+      "inflections": [
+        "prescribe",
+        "prescribes",
+        "prescribed",
+        "prescribing"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "medicine"
+      ]
+    },
+    {
+      "id": "a1-t1-0041",
+      "headword": "proscribe",
+      "part_of_speech": "verb",
+      "ipa": "/proʊˈskraɪb/",
+      "definition": "To forbid something, especially by law; nearly the opposite of prescribe.",
+      "etymology": "From Latin proscribere 'to publish in writing', the Roman practice of posting names of outlaws.",
+      "example_sentence": "The new rules proscribe the use of phones during exams.",
+      "inflections": [
+        "proscribe",
+        "proscribes",
+        "proscribed",
+        "proscribing"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "rules"
+      ]
+    },
+    {
+      "id": "a1-t1-0042",
+      "headword": "averse",
+      "part_of_speech": "adjective",
+      "ipa": "/əˈvɝs/",
+      "definition": "Having a strong dislike of or opposition to something.",
+      "etymology": "From Latin aversus 'turned away', from avertere.",
+      "example_sentence": "Most investors are averse to losing money they cannot recover.",
+      "inflections": [
+        "averse"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "attitude"
+      ]
+    },
+    {
+      "id": "a1-t1-0043",
+      "headword": "adverse",
+      "part_of_speech": "adjective",
+      "ipa": "/ædˈvɝs/",
+      "definition": "Harmful or unfavourable.",
+      "etymology": "From Latin adversus 'turned against', from advertere.",
+      "example_sentence": "The trial recorded no serious adverse effects.",
+      "inflections": [
+        "adverse",
+        "adversely"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "risk"
+      ]
+    },
+    {
+      "id": "a1-t1-0044",
+      "headword": "alternate",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈɔltərnət/",
+      "definition": "Every other one in a series; or occurring by turns.",
+      "etymology": "From Latin alternatus, from alternare 'to do by turns', from alter 'other'.",
+      "example_sentence": "The pool is open to children on alternate Saturdays.",
+      "inflections": [
+        "alternate",
+        "alternately"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "order"
+      ]
+    },
+    {
+      "id": "a1-t1-0045",
+      "headword": "alternative",
+      "part_of_speech": "noun",
+      "ipa": "/ɔlˈtɝnətɪv/",
+      "definition": "One of two or more available possibilities.",
+      "etymology": "From Medieval Latin alternativus, from alternare 'to do by turns'.",
+      "example_sentence": "If the bridge is closed, the ferry is the only alternative.",
+      "inflections": [
+        "alternative",
+        "alternatives"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "choice"
+      ]
+    },
+    {
+      "id": "a1-t1-0046",
+      "headword": "assure",
+      "part_of_speech": "verb",
+      "ipa": "/əˈʃʊr/",
+      "definition": "To tell someone confidently that something is true, to remove their doubt.",
+      "etymology": "From Old French aseurer, from Latin ad 'to' and securus 'safe'.",
+      "example_sentence": "I can assure you the data is backed up every night.",
+      "inflections": [
+        "assure",
+        "assures",
+        "assured",
+        "assuring"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "certainty"
+      ]
+    },
+    {
+      "id": "a1-t1-0047",
+      "headword": "emigrate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈɛmɪˌɡreɪt/",
+      "definition": "To leave one's own country to settle permanently in another.",
+      "etymology": "From Latin emigrare, from ex 'out of' and migrare 'to move'.",
+      "example_sentence": "Her grandparents emigrated from Ireland in the 1950s.",
+      "inflections": [
+        "emigrate",
+        "emigrates",
+        "emigrated",
+        "emigrating"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "migration"
+      ]
+    },
+    {
+      "id": "a1-t1-0048",
+      "headword": "immigrate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈɪməˌɡreɪt/",
+      "definition": "To come to live permanently in a foreign country.",
+      "etymology": "From Latin immigrare, from in 'into' and migrare 'to move'.",
+      "example_sentence": "Many engineers immigrate to the city for its tech jobs.",
+      "inflections": [
+        "immigrate",
+        "immigrates",
+        "immigrated",
+        "immigrating"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "migration"
+      ]
+    },
+    {
+      "id": "a1-t1-0049",
+      "headword": "eminent",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈɛmənənt/",
+      "definition": "Famous and respected within a particular field.",
+      "etymology": "From Latin eminere 'to stand out', from ex 'out' and minere 'to project'.",
+      "example_sentence": "An eminent surgeon reviewed the case.",
+      "inflections": [
+        "eminent",
+        "eminently"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "status"
+      ]
+    },
+    {
+      "id": "a1-t1-0050",
+      "headword": "imminent",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈɪmənənt/",
+      "definition": "About to happen very soon.",
+      "etymology": "From Latin imminere 'to overhang, to threaten', from in 'upon' and minere 'to project'.",
+      "example_sentence": "Dark clouds warned of an imminent storm.",
+      "inflections": [
+        "imminent",
+        "imminently"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "time"
+      ]
+    },
+    {
+      "id": "a1-t1-0051",
+      "headword": "precede",
+      "part_of_speech": "verb",
+      "ipa": "/prɪˈsid/",
+      "definition": "To come before something in time, order or position.",
+      "etymology": "From Latin praecedere, from prae 'before' and cedere 'to go'.",
+      "example_sentence": "A short welcome will precede the keynote.",
+      "inflections": [
+        "precede",
+        "precedes",
+        "preceded",
+        "preceding"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "order"
+      ]
+    },
+    {
+      "id": "a1-t1-0052",
+      "headword": "proceed",
+      "part_of_speech": "verb",
+      "ipa": "/proʊˈsid/",
+      "definition": "To begin or continue a course of action; to move forward.",
+      "etymology": "From Latin procedere, from pro 'forward' and cedere 'to go'.",
+      "example_sentence": "Once the form is signed, we can proceed with the order.",
+      "inflections": [
+        "proceed",
+        "proceeds",
+        "proceeded",
+        "proceeding"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "action"
+      ]
+    },
+    {
+      "id": "a1-t1-0053",
+      "headword": "historic",
+      "part_of_speech": "adjective",
+      "ipa": "/hɪˈstɔrɪk/",
+      "definition": "Famous or important in history; historical means simply concerning the past.",
+      "etymology": "From Greek historikos, from historia 'inquiry, narrative'.",
+      "example_sentence": "The treaty was signed in a historic hall in Vienna.",
+      "inflections": [
+        "historic"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "history"
+      ]
+    },
+    {
+      "id": "a1-t1-0054",
+      "headword": "historical",
+      "part_of_speech": "adjective",
+      "ipa": "/hɪˈstɔrɪkəl/",
+      "definition": "Relating to the past or to the study of history.",
+      "etymology": "From Latin historicus, from Greek historikos 'of history'.",
+      "example_sentence": "The museum holds historical records from the founding of the town.",
+      "inflections": [
+        "historical",
+        "historically"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "history"
+      ]
+    },
+    {
+      "id": "a1-t1-0055",
+      "headword": "economic",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌɛkəˈnɑmɪk/",
+      "definition": "Relating to the economy or to economics; economical means thrifty.",
+      "etymology": "From Greek oikonomikos 'skilled in household management', from oikos 'house'.",
+      "example_sentence": "The report forecasts slower economic growth next year.",
+      "inflections": [
+        "economic",
+        "economically"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "money"
+      ]
+    },
+    {
+      "id": "a1-t1-0056",
+      "headword": "economical",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌɛkəˈnɑmɪkəl/",
+      "definition": "Giving good value for the money or effort spent; thrifty.",
+      "etymology": "From economic, from Greek oikonomia 'household management'.",
+      "example_sentence": "A smaller car is more economical to run in the city.",
+      "inflections": [
+        "economical",
+        "economically"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "money"
+      ]
+    },
+    {
+      "id": "a1-t1-0057",
+      "headword": "moot",
+      "part_of_speech": "adjective",
+      "ipa": "/mut/",
+      "definition": "Open to debate; in American usage also of no practical relevance.",
+      "etymology": "From Old English mot 'assembly', where matters were discussed.",
+      "example_sentence": "Since the event was cancelled, the question of tickets is moot.",
+      "inflections": [
+        "moot"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "debate"
+      ]
+    },
+    {
+      "id": "a1-t1-0058",
+      "headword": "aggravate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈæɡrəˌveɪt/",
+      "definition": "To make a problem or injury worse; informally, to annoy.",
+      "etymology": "From Latin aggravare 'to make heavy', from ad 'to' and gravis 'heavy'.",
+      "example_sentence": "Running on the sprained ankle will only aggravate it.",
+      "inflections": [
+        "aggravate",
+        "aggravates",
+        "aggravated",
+        "aggravating"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "harm"
+      ]
+    },
+    {
+      "id": "a1-t1-0059",
+      "headword": "travesty",
+      "part_of_speech": "noun",
+      "ipa": "/ˈtrævəsti/",
+      "definition": "A false, distorted or absurd imitation of something serious.",
+      "etymology": "From French travesti 'disguised', from Italian travestire 'to disguise'.",
+      "example_sentence": "The rushed trial was a travesty of justice.",
+      "inflections": [
+        "travesty",
+        "travesties"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "justice"
+      ]
+    },
+    {
+      "id": "a1-t1-0060",
+      "headword": "unique",
+      "part_of_speech": "adjective",
+      "ipa": "/juˈnik/",
+      "definition": "Being the only one of its kind; strictly, it does not take degrees like very.",
+      "etymology": "From French unique, from Latin unicus 'only, single', from unus 'one'.",
+      "example_sentence": "Each snowflake's pattern is effectively unique.",
+      "inflections": [
+        "unique",
+        "uniquely"
+      ],
+      "tier": 1,
+      "tags": [
+        "usage",
+        "precision"
+      ]
+    }
+  ]
+}

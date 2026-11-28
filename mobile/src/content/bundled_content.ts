@@ -1,4 +1,6 @@
+import a1Tier1 from '../../../content/a1_words_tier1.json';
 import a1Tier2 from '../../../content/a1_words_tier2.json';
+import a1Tier3 from '../../../content/a1_words_tier3.json';
 import a3AiMl from '../../../content/a3_concepts_ai_ml.json';
 import a3Biology from '../../../content/a3_concepts_biology.json';
 import a3Biomedicine from '../../../content/a3_concepts_biomedicine.json';
@@ -23,7 +25,9 @@ export interface BundledContentSet {
 }
 
 export const BUNDLED_FILE_NAMES = [
+  'a1_words_tier1.json',
   'a1_words_tier2.json',
+  'a1_words_tier3.json',
   'a3_concepts_ai_ml.json',
   'a3_concepts_biology.json',
   'a3_concepts_biomedicine.json',
@@ -35,7 +39,7 @@ export const BUNDLED_FILE_NAMES = [
 ] as const;
 
 export const BUNDLED_CONTENT: BundledContentSet = {
-  a1: [...(a1Tier2.items as unknown as A1Word[])],
+  a1: [a1Tier1, a1Tier2, a1Tier3].flatMap((file) => file.items as unknown as A1Word[]),
   a3: [a3AiMl, a3Biology, a3Biomedicine, a3Chemistry, a3DrugDiscovery, a3Physics].flatMap(
     (file) => file.items as unknown as A3Concept[],
   ),
