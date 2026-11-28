@@ -115,7 +115,22 @@ def check_a1(report: list[str]) -> int:
     return missing
 
 
+def dump_events(date_keys: list[str]) -> int:
+    """Print the Events section of Wikipedia date pages, to choose events that the page lists."""
+    for date_key in date_keys:
+        month, day = map(int, date_key.split("-"))
+        _, text = raw_wiki("en.wikipedia.org", f"{MONTHS[month - 1]}_{day}")
+        events = text.split("==Events==", 1)[1].split("\n==Births", 1)[0] if "==Events==" in text else text[:20000]
+        print(f"===== {date_key} =====")
+        for line in events.splitlines():
+            if line.startswith("*"):
+                print(re.sub(r"<ref[^>]*>.*?</ref>|<ref[^>]*/>", "", line)[:300])
+    return 0
+
+
 def main() -> int:
+    if len(sys.argv) > 2 and sys.argv[1] == "--dump-events":
+        return dump_events(sys.argv[2].split(","))
     report: list[str] = ["# Content source verification\n"]
     failures = check_a5(report) + check_a3(report)
     missing = check_a1(report)

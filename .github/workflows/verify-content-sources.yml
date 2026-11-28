@@ -4,6 +4,11 @@ name: Verify content against sources
 # Wikipedia date pages, A3 source links, A1 headwords and IPA against Wiktionary.
 on:
   workflow_dispatch:
+    inputs:
+      dump_dates:
+        description: 'Comma-separated MM-DD dates: print their Wikipedia Events sections instead of verifying'
+        required: false
+        default: ''
   push:
     branches: [main]
     paths:
@@ -20,7 +25,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Print Wikipedia events for chosen dates
+        if: ${{ github.event.inputs.dump_dates != '' }}
+        run: python3 -I tools/verify_content_sources.py --dump-events "${{ github.event.inputs.dump_dates }}"
       - name: Check sources
+        if: ${{ github.event.inputs.dump_dates == '' || github.event.inputs.dump_dates == null }}
         run: python3 -I tools/verify_content_sources.py "$RUNNER_TEMP/content_verification.md"
       - name: Report
         if: always()
