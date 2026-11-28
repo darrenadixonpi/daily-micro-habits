@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="dmh-iphone_16e - iOS 26.5 - 202F03EA-2CFD-4040-BA25-7C672C65F488" tests="1" failures="0" time="77.059" timestamp="2026-11-28T15:24:13">
+    <testcase id="screen_tour_review" name="screen_tour_review" classname="screen_tour_review" file="/Users/runner/work/daily-micro-habits/daily-micro-habits/mobile/maestro/screen_tour_review.yaml" time="76.943" timestamp="2026-11-28T15:24:13" status="SUCCESS"/>
+  </testsuite>
+</testsuites>
