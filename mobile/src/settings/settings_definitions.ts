@@ -72,7 +72,7 @@ export const SETTING_DEFINITIONS: readonly SettingDefinition[] = [
   {
     key: 'a1.tier', group: 'A1 Word', label: 'Difficulty tier', kind: 'choice', defaultValue: '2', effectiveFrom: 'M3',
     options: [option('1', '1 Common'), option('2', '2 Advanced'), option('3', '3 Rare')],
-    note: 'Only tiers that have words are offered; the bundled set is tier 2 (decision G3)',
+    note: 'All three tiers have bundled words; tier 2 is the default. Only tiers that have words are offered (decision G3).',
   },
   // A2
   { key: 'a2.daily_review_cap', group: 'A2 Review', label: 'Daily review cap', kind: 'number', defaultValue: 20, min: 5, max: 100, step: 5, effectiveFrom: 'M3' },
